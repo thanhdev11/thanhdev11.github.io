@@ -9,21 +9,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <!-- Premium Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-premium fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#"><i class="fas fa-robot me-2"></i>AI Agent Solutions</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-sparkles me-2"></i><strong>AI Agent Solutions</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home page</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Our Services</a></li>
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="case_studies.html">Case Studies</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about_us.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-primary ms-3 px-4 active" href="book_a_call.html">Book a Call</a></li>
-
+                    <li class="nav-item"><a class="nav-link" href="about_us.html">About</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-cta-nav" href="book_a_call.html">Book a Call</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -391,6 +394,27 @@
             </div>
         </div>
     </footer>
+
+    <!-- Social Media Floating Buttons - Always Visible -->
+    <div class="social-float-simple">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/84795777607" class="social-float-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="social-tooltip">Chat on WhatsApp</span>
+        </a>
+        
+        <!-- Upwork -->
+        <a href="https://www.upwork.com/freelancers/~010a44b10aee062327" class="social-float-btn upwork-btn" target="_blank" rel="noopener noreferrer" aria-label="View Upwork Profile">
+            <i class="fab fa-upwork"></i>
+            <span class="social-tooltip">View Upwork Profile</span>
+        </a>
+        
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/huu-thanh-nguyen-16170a329" class="social-float-btn linkedin-btn" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+            <span class="social-tooltip">Connect on LinkedIn</span>
+        </a>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </body>
