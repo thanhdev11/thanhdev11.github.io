@@ -52,7 +52,7 @@
         <div class="container">
             <div class="row g-5">
                 <!-- Option 1: Calendar Booking -->
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class="booking-card">
                         <div class="booking-option-badge">
                             <i class="fas fa-star me-2"></i>Recommended
@@ -60,25 +60,27 @@
                         <div class="booking-icon mb-4">
                             <i class="fas fa-calendar-alt"></i>
                         </div>
-                        <h2 class="h3 mb-4">Option 1: Schedule Your Session Now</h2>
+                        <h2 class="h3 mb-4">Schedule Your Session Now</h2>
                         <p class="text-muted mb-4">Use the calendar below to instantly book a 30-minute introductory call with our Head of Strategy. We will discuss your top three operational pain points and evaluate a preliminary ROI scope.</p>
                         
                         <!-- Calendar Placeholder -->
                         <div class="calendar-embed-placeholder">
                             <div class="text-center py-5">
                                 <i class="fas fa-calendar fa-4x text-primary mb-3"></i>
-                                <h5 class="mb-3">Calendly Embed Goes Here</h5>
-                                <p class="text-muted mb-4">Replace this section with your Calendly/HubSpot scheduling widget</p>
-                                <div class="code-snippet">
-                                    <code>&lt;!-- Calendly inline widget begin --&gt;<br>
-                                    &lt;div class="calendly-inline-widget" <br>
-                                    data-url="YOUR_CALENDLY_LINK" <br>
-                                    style="min-width:320px;height:630px;"&gt;&lt;/div&gt;<br>
-                                    &lt;!-- Calendly inline widget end --&gt;</code>
-                                </div>
-                                <button class="btn btn-primary-custom mt-4">
-                                    <i class="fas fa-external-link-alt me-2"></i>Open Booking Calendar
-                                </button>
+                                <h5 class="mb-3">Book Your Free Strategy Session</h5>
+                                <p class="text-muted mb-4">Click the button below to view available time slots on Calendly</p>
+                                
+                                <a href="https://calendly.com/momervn/30min" 
+                                class="btn btn-primary-custom btn-lg mt-4" 
+                                target="_blank"
+                                style="padding: 15px 40px; font-size: 18px;">
+                                    <i class="fas fa-external-link-alt me-2"></i>View Available Times
+                                </a>
+                                
+                                <p class="text-muted small mt-4">
+                                    <i class="fas fa-info-circle me-1"></i>
+                                    Opens in a new window. Time slots shown in your local timezone.
+                                </p>
                             </div>
                         </div>
 
@@ -95,49 +97,7 @@
                     </div>
                 </div>
 
-                <!-- Option 2: Contact Form -->
-                <div class="col-lg-6">
-                    <div class="booking-card">
-                        <div class="booking-icon mb-4">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <h2 class="h3 mb-4">Option 2: Send Us a Direct Message</h2>
-                        <p class="text-muted mb-4">If you prefer email, tell us about your project and we'll reply within one business day.</p>
-                        
-                        <!-- Contact Form -->
-                        <form id="contactForm" class="contact-form">
-                            <div class="mb-4">
-                                <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control form-control-lg" id="fullName" required>
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="email" class="form-label">Company Email <span class="text-danger">*</span></label>
-                                <input type="email" class="form-control form-control-lg" id="email" required>
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="company" class="form-label">Company/Industry <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control form-control-lg" id="company" placeholder="e.g., Tech Startup, E-commerce" required>
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="challenge" class="form-label">Your Automation Challenge <span class="text-danger">*</span></label>
-                                <textarea class="form-control form-control-lg" id="challenge" rows="5" placeholder="Describe your current operational challenges and what you're looking to automate..." required></textarea>
-                                <small class="form-text text-muted">Be as specific as possible to help us prepare for our discussion.</small>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary-custom w-100">
-                                <i class="fas fa-paper-plane me-2"></i>Send My Request
-                            </button>
-                        </form>
-
-                        <!-- Success Message (Hidden by default) -->
-                        <div id="successMessage" class="alert alert-success mt-4" style="display: none;">
-                            <i class="fas fa-check-circle me-2"></i>Thank you! We'll get back to you within one business day.
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -153,7 +113,7 @@
                         </div>
                         <h5 class="mb-3">Working Hours</h5>
                         <p class="mb-2"><strong>Monday - Friday</strong></p>
-                        <p class="text-muted mb-0">9:00 AM - 6:00 PM EST/CET Overlap</p>
+                        <p class="text-muted mb-0">8:00 PM - 1:00 AM EST/CET Overlap</p>
                         <p class="text-muted small mt-2">We work across time zones to serve both US and European clients effectively.</p>
                     </div>
                 </div>
@@ -164,7 +124,7 @@
                             <i class="fas fa-envelope-open-text"></i>
                         </div>
                         <h5 class="mb-3">Email Support</h5>
-                        <p class="mb-2"><a href="mailto:support@yourcompanydomain.com" class="contact-link">support@yourcompanydomain.com</a></p>
+                        <p class="mb-2"><a href="mailto:support@yourcompanydomain.com" class="contact-link">momervn@gmail.com</a></p>
                         <p class="text-muted small">For general inquiries, technical support, or partnership opportunities.</p>
                     </div>
                 </div>
@@ -176,9 +136,9 @@
                         </div>
                         <h5 class="mb-3">Business Address</h5>
                         <p class="text-muted mb-2">Primary Office:</p>
-                        <p class="mb-0">1234 Innovation Drive</p>
-                        <p class="mb-0">Delaware, US 19801</p>
-                        <p class="text-muted small mt-2">Operational Base in Europe</p>
+                        <p class="mb-0">82 Nguyen Luong Bang</p>
+                        <p class="mb-0">Da Nang, Viet Nam</p>
+                        <p class="text-muted small mt-2">Operational Base in Viet Nam</p>
                     </div>
                 </div>
             </div>
@@ -191,7 +151,7 @@
             <div class="cta-content text-center">
                 <h2 class="display-5 fw-bold mb-4">Don't wait to increase your efficiency. Our AI Agents are ready to work for you.</h2>
                 <p class="lead mb-5">Join the growing number of businesses automating up to 80% of their repetitive operations.</p>
-                <a href="#booking-section" class="btn btn-primary-custom btn-lg">
+                <a href="https://calendly.com/momervn/30min" class="btn btn-primary-custom btn-lg">
                     <i class="fas fa-calendar-check me-2"></i>Schedule My Blueprint Session
                 </a>
             </div>
@@ -279,22 +239,6 @@
             });
         });
 
-        // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Here you would typically send the form data to your backend
-            // For now, we'll just show the success message
-            
-            // Hide form
-            this.style.display = 'none';
-            
-            // Show success message
-            document.getElementById('successMessage').style.display = 'block';
-            
-            // Scroll to success message
-            document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
-        });
     </script>
 </body>
 </html>
