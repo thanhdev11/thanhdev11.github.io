@@ -1780,3 +1780,24 @@
         display: none;
     }
 }
+
+/* Active Navigation Styles */
+.nav-link.active {
+    color: var(--accent-color) !important;
+    font-weight: 600;
+}
+
+.nav-link.active::after {
+    width: 60% !important;
+    background: var(--accent-color);
+}
+
+/* Hover effect for active link */
+.nav-link.active:hover {
+    color: var(--accent-color) !important;
+}
+
+.navbar-toggler {
+    color: rgb(255 255 255);
+    background-color: #1b6ae7;
+}
