@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOMER AI - Giải Pháp Tự Động Hóa Thực Chiến</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --primary-color: #6366f1;    /* Blue-Violet */
+            --accent-brand: #92eb52;     /* Green Brand (Màu anh thích) */
+            --dark-deep: #0f172a;        /* Navy Dark */
+            --light-surface: #f8fafc;
+            --text-main: #1e293b;
+            --glass: rgba(255, 255, 255, 0.8);
+        }
+
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            color: var(--text-main); 
+            background-color: #ffffff; 
+            line-height: 1.6;
+        }
+
+        /* Helpers */
+        .fw-800 { font-weight: 800; }
+        .text-brand { color: #76c93d; } /* Darker green for readability */
+        .bg-brand { background-color: var(--accent-brand) !important; }
+        .text-gradient { 
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        /* Hero */
+        .hero-section {
+            padding: 80px 0;
+            background: radial-gradient(circle at top right, rgba(146, 235, 82, 0.1), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(99, 102, 241, 0.05), transparent 40%);
+        }
+
+        /* Card & UI Elements */
+        .card-custom {
+            border: none;
+            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            background: #fff;
+        }
+        .card-custom:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .btn-main {
+            background-color: var(--dark-deep);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 14px;
+            font-weight: 700;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-main:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: scale(1.02);
+        }
+
+        /* Case Study Carousel */
+        .carousel-item { height: 450px; }
+        .object-fit-cover { object-fit: cover; width: 100%; height: 100%; }
+
+        /* Mentor Section Gradient */
+        .mentor-gradient {
+            background: linear-gradient(180deg, #fff 0%, #f0fdf4 100%);
+            border-radius: 60px 60px 0 0;
+        }
+
+        /* Highlight decoration */
+        .highlight-draw {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+        .highlight-draw::after {
+            content: "";
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            background: var(--accent-brand);
+            z-index: -1;
+            opacity: 0.6;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section { padding: 40px 0; }
+            .carousel-item { height: 250px; }
+            .display-3 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <span class="badge bg-brand text-dark mb-3 px-3 py-2 rounded-pill fw-bold">XU HƯỚNG TỰ ĐỘNG HÓA 2026</span>
+                    <h1 class="display-3 fw-800 mb-4">Làm ít hơn, <br><span class="highlight-draw text-dark">Kiếm nhiều hơn</span></h1>
+                    <p class="lead mb-5 text-muted">Team MOMER giúp doanh nghiệp Việt tự động hóa 90% quy trình lặp lại bằng AI. Rảnh tay kinh doanh, tối ưu chi phí vận hành ngay hôm nay.</p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#contact" class="btn btn-main shadow-lg">Nhận Tư Vấn Miễn Phí</a>
+                        <a href="#case-studies" class="btn btn-outline-dark fw-600 px-4 py-3 rounded-3">Xem Case Study</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0 text-center">
+                    <img src="https://img.freepik.com/free-vector/modern-productivity-concept-illustration_114360-2442.jpg" class="img-fluid rounded-5 shadow-sm" alt="MOMER AI">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container py-lg-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-800 h1">Mô Hình 3 Bước <span class="text-brand">Đột Phá</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card-custom p-4 h-100">
+                        <div class="icon-box mb-4 fs-1 text-brand"><i class="bi bi-lightning-charge-fill"></i></div>
+                        <h4 class="fw-bold mb-3">Audit Quy Trình</h4>
+                        <p class="text-muted">Tìm "điểm nghẽn" đang đốt tiền của bạn. Nhận lộ trình tự động hóa miễn phí.</p>
+                        <div class="mt-auto pt-3 border-top">
+                            <span class="fw-bold text-dark"><i class="bi bi-check2-circle me-2"></i>Chi phí: 0đ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-custom p-4 h-100 border border-success border-2">
+                        <div class="icon-box mb-4 fs-1 text-brand"><i class="bi bi-cpu-fill"></i></div>
+                        <h4 class="fw-bold mb-3">Hệ Thống n8n Boss</h4>
+                        <p class="text-muted">Tự vận hành trên VPS riêng. Xóa bỏ hoàn toàn phí thuê bao Zapier/Make hàng tháng.</p>
+                        <div class="mt-auto pt-3 border-top text-brand fw-bold">Sở hữu trọn đời</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-custom p-4 h-100">
+                        <div class="icon-box mb-4 fs-1 text-brand"><i class="bi bi-shield-check"></i></div>
+                        <h4 class="fw-bold mb-3">Cố Vấn Đồng Hành</h4>
+                        <p class="text-muted">Trở thành "Phòng công nghệ AI" của bạn. Cập nhật trend và bảo trì hệ thống 24/7.</p>
+                        <div class="mt-auto pt-3 border-top fw-bold text-dark">Hỗ trợ chiến lược</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="case-studies" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5 align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="fw-800 display-5">Dự Án <span class="highlight-draw">Tiêu Biểu</span></h2>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <p class="text-muted mb-0">Thực chiến cho thị trường US, EU và Việt Nam.</p>
+                </div>
+            </div>
+
+            <div class="card-custom mb-5 overflow-hidden border-0">
+                <div class="row g-0">
+                    <div class="col-lg-5 bg-dark">
+                        <div id="carouseln8n" class="carousel slide h-100" data-bs-ride="carousel">
+                            <div class="carousel-inner h-100">
+                                <div class="carousel-item active">
+                                    <img src="https://via.placeholder.com/600x400/0f172a/92eb52?text=n8n+Workflow+Screenshot" class="object-fit-cover" alt="n8n">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 p-4 p-md-5">
+                        <span class="badge bg-primary mb-3">E-commerce Agency</span>
+                        <h3 class="fw-800 mb-3">Tối ưu chi phí: Make sang n8n</h3>
+                        <p class="text-muted mb-4">Giúp Agency tiết kiệm $1,200/tháng bằng cách chuyển dịch sang hệ thống tự vận hành trên cụm VPS riêng.</p>
+                        
+                        <div class="row g-3 mb-4">
+                            <div class="col-6 col-md-3 text-center p-3 bg-light rounded-3">
+                                <div class="fw-800 text-primary h4 mb-0">-$1,200</div>
+                                <div class="small text-muted">Phí/tháng</div>
+                            </div>
+                            <div class="col-6 col-md-3 text-center p-3 bg-light rounded-3">
+                                <div class="fw-800 text-primary h4 mb-0">Unlimited</div>
+                                <div class="small text-muted">Tasks</div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-3 align-items-center">
+                            <button class="btn btn-outline-dark fw-bold rounded-pill px-4" type="button" data-bs-toggle="collapse" data-bs-target="#detailN8N" aria-expanded="false">
+                                <i class="bi bi-plus-circle me-2"></i>Chi tiết giải pháp
+                            </button>
+                            <a href="LINK_UPWORK_PROJECT_N8N" target="_blank" class="btn btn-link text-dark fw-bold text-decoration-none p-0">
+                                Xem trên Upwork <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="detailN8N">
+                        <div class="p-4 p-md-5 bg-light border-top">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="fw-bold text-primary mb-3"><i class="bi bi-layers-half me-2"></i>Chiến lược di chuyển</h5>
+                                    <ul class="small text-muted ps-3">
+                                        <li class="mb-2">Kiểm toán (Audit) lại 50+ workflow cũ trên Make để tối ưu hóa logic trước khi chuyển đổi.</li>
+                                        <li class="mb-2">Thiết lập môi trường n8n Self-hosted trên VPS (DigitalOcean/Hetzner) để tối ưu độ trễ.</li>
+                                        <li class="mb-2">Tái cấu trúc các Webhook và API call để tận dụng tối đa sức mạnh xử lý của server riêng.</li>
+                                        <li>Bàn giao hệ thống kèm bộ tài liệu hướng dẫn vận hành độc lập.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="fw-bold text-primary mb-3"><i class="bi bi-check-all me-2"></i>Kết quả đạt được</h5>
+                                    <div class="p-3 bg-white rounded-4 shadow-sm mb-3">
+                                        <p class="small mb-1 text-muted">Dòng tiền tiết kiệm hàng năm:</p>
+                                        <h4 class="fw-800 text-success mb-0">$14,400+ USD</h4>
+                                    </div>
+                                    <div class="p-3 bg-white rounded-4 shadow-sm">
+                                        <p class="small mb-1 text-muted">Hiệu suất vận hành:</p>
+                                        <h4 class="fw-800 text-success mb-0">Tăng 2.5 lần</h4>
+                                        <p class="small text-muted mb-0">Nhờ khả năng xử lý song song không giới hạn của n8n.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="card-custom overflow-hidden border-0 mb-4">
+                <div class="row g-0">
+                    <div class="col-lg-5">
+                        <div id="carouselAI" class="carousel slide h-100" data-bs-ride="carousel">
+                            <div class="carousel-inner h-100">
+                                <div class="carousel-item active">
+                                    <img src="https://via.placeholder.com/600x400/0f172a/06b6d4?text=AI+Billing+Audit+Demo" class="object-fit-cover" alt="AI Audit">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7 p-4 p-md-5">
+                        <span class="badge bg-info text-dark mb-3">Logistics & 3PL</span>
+                        <h3 class="fw-800 mb-3">Đối soát hóa đơn bằng AI</h3>
+                        <p class="text-muted mb-4">Tự động trích xuất PDF và đối chiếu dữ liệu hóa đơn vận chuyển.</p>
+                        
+                        <div class="row g-3 mb-4">
+                            <div class="col-6 col-md-4 text-center p-3 border-start border-4 border-info bg-light">
+                                <div class="h3 fw-800 text-info mb-0">95%</div>
+                                <div class="small text-muted">Tự động</div>
+                            </div>
+                            <div class="col-6 col-md-4 text-center p-3 border-start border-4 border-info bg-light">
+                                <div class="h3 fw-800 text-info mb-0">40h/tuần</div>
+                                <div class="small text-muted">Tiết kiệm</div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-3">
+                            <button class="btn btn-outline-dark fw-bold rounded-pill px-4" type="button" data-bs-toggle="collapse" data-bs-target="#detailAI" aria-expanded="false">
+                                <i class="bi bi-plus-circle me-2"></i>Chi tiết giải pháp
+                            </button>
+                            <a href="LINK_UPWORK_CUA_ANH" target="_blank" class="btn btn-link text-dark fw-bold text-decoration-none">
+                                Xem trên Upwork <i class="bi bi-box-arrow-up-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="detailAI">
+                        <div class="p-4 p-md-5 bg-light border-top">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="fw-bold text-primary mb-3"><i class="bi bi-gear-fill me-2"></i>Quy trình thực hiện</h5>
+                                    <ul class="small text-muted ps-3">
+                                        <li class="mb-2">Hệ thống tự động quét Email/Folder để lấy hóa đơn PDF.</li>
+                                        <li class="mb-2">Sử dụng AI Vision (OCR) để trích xuất: Mã vận đơn, Trọng lượng, Phí vận chuyển, Phí phụ thu.</li>
+                                        <li class="mb-2">Đối chiếu tự động với Bảng giá gốc (Master Data) của khách hàng.</li>
+                                        <li>Cảnh báo những dòng hóa đơn sai lệch >5% qua Telegram/Slack.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="fw-bold text-primary mb-3"><i class="bi bi-stack me-2"></i>Công nghệ sử dụng</h5>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-white text-dark border fw-normal">Python (FastAPI)</span>
+                                        <span class="badge bg-white text-dark border fw-normal">OpenAI Document AI</span>
+                                        <span class="badge bg-white text-dark border fw-normal">n8n Workflow</span>
+                                        <span class="badge bg-white text-dark border fw-normal">PostgreSQL</span>
+                                    </div>
+                                    <div class="mt-4 p-3 bg-white rounded-3 border">
+                                        <p class="small mb-0 fw-bold"><i class="bi bi-chat-quote-fill text-info me-2"></i>"Giải pháp này giúp khách hàng giảm 100% sai sót do con người và tối ưu hóa dòng tiền ngay trong tháng đầu tiên."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <section id="mentor" class="py-5 mentor-gradient">
+        <div class="container py-lg-5">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <span class="badge bg-success bg-opacity-10 text-success fw-bold mb-3 px-3 py-2">
+                        <i class="bi bi-award-fill me-2"></i> GIẢNG VIÊN & CỐ VẤN CHUYÊN MÔN
+                    </span>
+                    <h2 class="fw-800 display-5">Đồng Hành Cùng Thế Hệ <span class="text-brand">Solopreneur</span> Mới</h2>
+                    <div class="mx-auto mt-3" style="width: 80px; height: 4px; background: var(--accent-brand); border-radius: 2px;"></div>
+                </div>
+            </div>
+
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5">
+                    <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden border border-white border-4">
+                        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Mentoring" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-center mt-3 fst-italic text-muted small">"Tôi giúp bạn xây dựng một cỗ máy kinh doanh bền vững."</p>
+                </div>
+
+                <div class="col-lg-6 offset-lg-1">
+                    <div class="mentor-content-wrapper">
+                        <p class="text-muted mb-4 lead">Trong quá trình tư vấn giải pháp Website và Automation, tôi nhận ra thử thách lớn nhất không phải là công cụ, mà là cách vận hành chúng để ra đơn hàng.</p>
+                        
+                        <div class="mt-4">
+                            <div class="d-flex mb-4 p-3 rounded-4 bg-white shadow-sm border-start border-4 border-success">
+                                <div class="text-brand h3 me-3"><i class="bi bi-compass"></i></div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">1. Người định hướng (Mentor)</h6>
+                                    <p class="small text-muted mb-0">Chia sẻ tư duy thiết kế Website chuẩn thương mại điện tử từ kinh nghiệm thị trường US/EU.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex mb-4 p-3 rounded-4 bg-white shadow-sm border-start border-4 border-success">
+                                <div class="text-brand h3 me-3"><i class="bi bi-heart-pulse"></i></div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">2. Người gỡ rối (Technical Doctor)</h6>
+                                    <p class="small text-muted mb-0">Trực tiếp hỗ trợ "thăm khám" và sửa lỗi kỹ thuật, đảm bảo vận hành trơn tru.</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex mb-0 p-3 rounded-4 bg-white shadow-sm border-start border-4 border-success">
+                                <div class="text-brand h3 me-3"><i class="bi bi-magic"></i></div>
+                                <div>
+                                    <h6 class="fw-bold mb-1">3. Người tối ưu hóa (Optimizer)</h6>
+                                    <p class="small text-muted mb-0">Hướng dẫn tích hợp AI và Automation để biến Website thành nhân viên bán hàng 24/7.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Thêm style bổ sung để phần nội dung đẹp hơn */
+        .mentor-content-wrapper {
+            padding-left: 20px; /* Thêm padding left cho nội dung text */
+        }
+        @media (max-width: 991px) {
+            .mentor-content-wrapper {
+                padding-left: 0; /* Reset trên mobile để không bị lệch */
+            }
+        }
+        .border-success {
+            border-color: var(--accent-brand) !important;
+        }
+    </style>
+
+    <section id="contact" class="py-5 bg-white">
+        <div class="container">
+            <div class="card-custom bg-dark text-white p-5 overflow-hidden position-relative">
+                <div class="row align-items-center position-relative" style="z-index: 2;">
+                    <div class="col-lg-7 text-center text-lg-start">
+                        <h2 class="display-4 fw-800 mb-3">Sẵn sàng <span class="text-brand">Số hóa</span>?</h2>
+                        <p class="lead opacity-75 mb-4">Kết nối trực tiếp với Thành (PM MOMER) để được hỗ trợ thực chiến.</p>
+                        <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                            <span class="small"><i class="bi bi-patch-check-fill text-brand me-1"></i>Upwork Top Rated</span>
+                            <span class="small"><i class="bi bi-cpu-fill text-brand me-1"></i>50+ Projects</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 mt-5 mt-lg-0">
+                        <div class="d-grid gap-3">
+                            <a href="https://wa.me/84795777607" class="btn btn-main bg-brand text-dark border-0 py-3">
+                                <i class="bi bi-whatsapp me-2"></i>Chat WhatsApp ngay
+                            </a>
+                            <a href="https://zalo.me/YOUR_NUMBER" class="btn btn-outline-light py-3">
+                                <i class="bi bi-chat-dots me-2"></i>Kết nối qua Zalo
+                            </a>
+                        </div>
+                        <p class="text-center mt-3 small opacity-50">Phản hồi trong vòng 5-10 phút</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center text-muted border-top mt-5">
+        <p class="small mb-0">© 2026 MOMER Team. Thiết kế tối ưu cho Solopreneurs.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
