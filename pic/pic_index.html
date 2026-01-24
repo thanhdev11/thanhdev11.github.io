@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Picki - Ứng dụng cộng đồng Pickleball hàng đầu Việt Nam. Tìm trận, quản lý giải đấu, kết nối với người chơi và theo dõi thống kê.">
+    <meta name="keywords" content="pickleball, picki, ứng dụng pickleball, cộng đồng pickleball, tìm trận pickleball">
+    <meta property="og:title" content="Picki - Cộng Đồng Pickleball Việt Nam">
+    <meta property="og:description" content="Kết nối, thi đấu và phát triển kỹ năng Pickleball cùng Picki">
+    <meta property="og:type" content="website">
+    <title>Picki - Cộng Đồng Pickleball Việt Nam | Tìm Trận & Kết Nối</title>
+    
+    <style>
+        /* CSS Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #FF6B35;
+            --secondary: #004E89;
+            --accent: #F7B801;
+            --dark: #1A1A2E;
+            --light: #F5F5F5;
+            --white: #FFFFFF;
+            --shadow: 0 2px 8px rgba(0,0,0,0.1);
+            --radius: 12px;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            z-index: 1000;
+            transition: box-shadow 0.3s ease, padding 0.3s ease;
+            padding: 1rem 0;
+        }
+        
+        .header.scrolled {
+            box-shadow: var(--shadow);
+            padding: 0.5rem 0;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .cta-btn {
+            background: linear-gradient(135deg, var(--primary), #FF8C61);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            font-size: 0.95rem;
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 3rem 1.5rem;
+            background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+            text-align: center;
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2rem;
+            line-height: 1.2;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .hero-image {
+            max-width: 350px;
+            margin: 2rem auto;
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+        }
+        
+        .app-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .app-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.875rem 1.75rem;
+            background: var(--dark);
+            color: var(--white);
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+        
+        .app-btn:hover {
+            background: var(--secondary);
+            transform: scale(1.05);
+        }
+        
+        .app-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--white);
+            border-radius: 4px;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 4rem 1.5rem;
+            background: var(--white);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 700;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--secondary);
+            margin-bottom: 2.5rem;
+            opacity: 0.8;
+        }
+        
+        .features-carousel {
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        
+        .features-carousel::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .features-grid {
+            display: flex;
+            gap: 1.5rem;
+            padding-bottom: 1rem;
+            min-width: min-content;
+        }
+        
+        .feature-card {
+            flex: 0 0 280px;
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem 1.5rem;
+            box-shadow: var(--shadow);
+            scroll-snap-align: start;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid;
+        }
+        
+        .feature-card:nth-child(1) { border-top-color: var(--primary); }
+        .feature-card:nth-child(2) { border-top-color: var(--secondary); }
+        .feature-card:nth-child(3) { border-top-color: var(--accent); }
+        .feature-card:nth-child(4) { border-top-color: #00A896; }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            font-size: 1.75rem;
+        }
+        
+        .feature-card:nth-child(1) .feature-icon { background: rgba(255, 107, 53, 0.1); }
+        .feature-card:nth-child(2) .feature-icon { background: rgba(0, 78, 137, 0.1); }
+        .feature-card:nth-child(3) .feature-icon { background: rgba(247, 184, 1, 0.1); }
+        .feature-card:nth-child(4) .feature-icon { background: rgba(0, 168, 150, 0.1); }
+        
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+        
+        .feature-card p {
+            color: var(--secondary);
+            opacity: 0.85;
+            font-size: 0.95rem;
+        }
+        
+        /* Blog Section */
+        .blog {
+            padding: 4rem 1.5rem;
+            background: var(--light);
+        }
+        
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+        
+        .blog-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        
+        .blog-thumb {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-meta {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            opacity: 0.7;
+            margin-bottom: 0.75rem;
+        }
+        
+        .blog-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+            line-height: 1.4;
+        }
+        
+        .blog-excerpt {
+            color: var(--secondary);
+            opacity: 0.85;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.25rem;
+            }
+            
+            .features-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            
+            .feature-card {
+                flex: none;
+            }
+            
+            .features-carousel {
+                overflow: visible;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .hero {
+                padding: 5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <span>🏓</span>
+                <span>Picki</span>
+            </a>
+            <button class="cta-btn" onclick="window.location.href='#download'">Tải App</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <h1>Cộng Đồng Pickleball Hàng Đầu Việt Nam</h1>
+            <p class="hero-subtitle">Kết nối, thi đấu và phát triển kỹ năng Pickleball cùng hàng nghìn người chơi</p>
+            
+            <div class="hero-image">
+                <img src="data:image/svg+xml,%3Csvg width='300' height='600' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='300' height='600' rx='30' fill='%23004E89'/%3E%3Crect x='20' y='80' width='260' height='500' rx='20' fill='%23F0F9FF'/%3E%3Ctext x='150' y='350' font-family='Arial' font-size='40' fill='%23FF6B35' text-anchor='middle'%3E🏓%3C/text%3E%3Ctext x='150' y='400' font-family='Arial' font-size='24' fill='%23004E89' text-anchor='middle' font-weight='bold'%3EPicki%3C/text%3E%3C/svg%3E" alt="Picki App Mockup - Ứng dụng Pickleball" loading="eager">
+            </div>
+            
+            <div class="app-buttons" id="download">
+                <a href="#" class="app-btn" aria-label="Tải Picki trên App Store">
+                    <span class="app-icon">🍎</span>
+                    <span>App Store</span>
+                </a>
+                <a href="#" class="app-btn" aria-label="Tải Picki trên Google Play">
+                    <span class="app-icon">▶️</span>
+                    <span>Google Play</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="features-container">
+            <h2 class="section-title">Tính Năng Nổi Bật</h2>
+            <p class="section-subtitle">Trải nghiệm hoàn hảo cho người chơi Pickleball</p>
+            
+            <div class="features-carousel">
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Tìm Trận Dễ Dàng</h3>
+                        <p>Kết nối với người chơi cùng trình độ trong khu vực. Tìm đối thủ, lên lịch thi đấu chỉ trong vài giây.</p>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>Quản Lý Giải Đấu</h3>
+                        <p>Tổ chức và theo dõi giải đấu chuyên nghiệp. Bảng xếp hạng tự động, lịch thi đấu thông minh.</p>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3>Kết Nối Cộng Đồng</h3>
+                        <p>Tham gia nhóm, chia sẻ kinh nghiệm và học hỏi từ các cao thủ. Xây dựng mạng lưới người chơi rộng khắp.</p>
+                    </article>
+                    
+                    <article class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Theo Dõi Thống Kê</h3>
+                        <p>Phân tích chi tiết hiệu suất thi đấu. Theo dõi tiến bộ, xem xét điểm mạnh và cải thiện kỹ năng.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="blog-container">
+            <h2 class="section-title">Tin Tức & Hướng Dẫn</h2>
+            <p class="section-subtitle">Cập nhật kiến thức và kỹ thuật Pickleball mới nhất</p>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-thumb">
+                        <img src="data:image/svg+xml,%3Csvg width='400' height='250' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='250' fill='%23FF6B35'/%3E%3Ctext x='200' y='135' font-family='Arial' font-size='60' fill='white' text-anchor='middle'%3E🏓%3C/text%3E%3C/svg%3E" alt="Kỹ thuật Pickleball cho người mới bắt đầu" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-meta">15/01/2026 • 5 phút đọc</p>
+                        <h3>Top 10 Kỹ Thuật Cơ Bản Cho Người Mới Chơi Pickleball</h3>
+                        <p class="blog-excerpt">Khám phá những kỹ thuật nền tảng giúp bạn nhanh chóng làm quen và tiến bộ trong môn thể thao đang hot nhất hiện nay.</p>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-thumb">
+                        <img src="data:image/svg+xml,%3Csvg width='400' height='250' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='250' fill='%23004E89'/%3E%3Ctext x='200' y='135' font-family='Arial' font-size='60' fill='white' text-anchor='middle'%3E⚡%3C/text%3E%3C/svg%3E" alt="Chiến thuật Pickleball nâng cao" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-meta">12/01/2026 • 7 phút đọc</p>
+                        <h3>Chiến Thuật Đôi Hiệu Quả Trong Pickleball Chuyên Nghiệp</h3>
+                        <p class="blog-excerpt">Phân tích sâu về các chiến thuật phối hợp trong thi đấu đôi, từ vị trí đứng đến timing giao bóng hoàn hảo.</p>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-thumb">
+                        <img src="data:image/svg+xml,%3Csvg width='400' height='250' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='250' fill='%23F7B801'/%3E%3Ctext x='200' y='135' font-family='Arial' font-size='60' fill='white' text-anchor='middle'%3E🏅%3C/text%3E%3C/svg%3E" alt="Giải đấu Pickleball Việt Nam" loading="lazy">
+                    </div>
+                    <div class="blog-content">
+                        <p class="blog-meta">08/01/2026 • 4 phút đọc</p>
+                        <h3>Lịch Các Giải Đấu Pickleball Lớn Tại Việt Nam 2026</h3>
+                        <p class="blog-excerpt">Tổng hợp đầy đủ lịch thi đấu, địa điểm và cách đăng ký tham gia các giải đấu Pickleball uy tín trong năm.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Picki - Cộng Đồng Pickleball Việt Nam.<br> All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">Kết nối, Thi đấu, Phát triển</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Sticky Header Effect
+        const header = document.getElementById('header');
+        let lastScroll = 0;
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+        
+        // Smooth Carousel Scroll (Mobile)
+        const carousel = document.querySelector('.features-carousel');
+        if (carousel && window.innerWidth < 768) {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            
+            carousel.addEventListener('mousedown', (e) => {
+                isDown = true;
+                startX = e.pageX - carousel.offsetLeft;
+                scrollLeft = carousel.scrollLeft;
+            });
+            
+            carousel.addEventListener('mouseleave', () => {
+                isDown = false;
+            });
+            
+            carousel.addEventListener('mouseup', () => {
+                isDown = false;
+            });
+            
+            carousel.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - carousel.offsetLeft;
+                const walk = (x - startX) * 2;
+                carousel.scrollLeft = scrollLeft - walk;
+            });
+        }
+        
+        // Performance Optimization
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.src;
+            });
+        }
+    </script>
+</body>
+</html>
