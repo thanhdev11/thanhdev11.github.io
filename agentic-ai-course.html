@@ -137,17 +137,17 @@
                 </div>
                 
                 <div class="relative animate-fade-in-up stagger-2 invisible-init mt-8 lg:mt-0 lg:ml-8">
-                    <!-- Video placeholder with glowing effect -->
-                    <div class="relative rounded-2xl overflow-hidden aspect-video shadow-2xl ring-1 ring-gray-900/5 group border-8 border-white">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2000&auto=format&fit=crop" alt="AI Agent Visual" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                        <!-- Play Button Overlay -->
-                        <div class="absolute inset-0 z-20 flex items-center justify-center">
-                            <div class="w-20 h-20 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center cursor-pointer hover:bg-white/40 transition-all hover:scale-110 hover:shadow-2xl border border-white/50 group-hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]">
-                                <i class="fa-solid fa-play text-2xl text-white ml-1"></i>
-                            </div>
-                        </div>
-
+                    <!-- Video container -->
+                    <div class="relative rounded-2xl overflow-hidden aspect-video shadow-2xl ring-1 ring-gray-900/5 group border-8 border-white bg-black">
+                        <iframe 
+                            class="absolute inset-0 w-full h-full" 
+                            src="https://www.youtube.com/embed/fARikOWtJog" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
                     </div>
                     
                     <!-- Floating stat card -->
