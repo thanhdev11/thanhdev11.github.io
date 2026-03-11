@@ -3,213 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Motorbike Repair Da Nang 24/7 | Fast Rescue</title>
-    <meta name="description" content="Top-Rated English Speaking Motorbike Rescue in Da Nang. Flat tire, battery jump-start, on-site oil change. Arrival in 15-20 min. No Foreigner Pricing. WhatsApp: +84898190266">
+    <title>AI-Powered Motorbike Rescue Da Nang | Fast & Transparent</title>
+    <meta name="description" content="Professional Motorbike Rescue in Da Nang. Fast arrival. Fixed pricing. English-speaking AI assistance 24/7. No foreigner tax.">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Mobile Motorbike Repair Da Nang 24/7">
-    <meta property="og:description" content="Top-Rated English Speaking Motorbike Rescue in Da Nang. Flat tire, battery jump-start, on-site oil change. Arrival in 15-20 min.">
-    <meta property="og:url" content="https://sportaiv.com/motorcycle-rescue-danang.html">
+    <meta property="og:title" content="AI Motorbike Rescue Da Nang 24/7">
+    <meta property="og:description" content="Professional Motorbike Rescue in Da Nang. English-speaking AI assistance 24/7.">
+    <meta property="og:url" content="https://sportaiv.com/en/motorcycle-rescue-danang.html">
     <meta property="og:locale" content="en_US">
     
-    <!-- Fonts: Inter for minimalist tech look -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Mobile Motorbike Repair Da Nang 24/7",
-      "description": "Top-Rated English Speaking Motorbike Rescue in Da Nang. Fast response in 15-20 minutes.",
-      "telephone": "+84898190266",
-      "knowsLanguage": ["English", "Vietnamese"],
-      "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Da Nang",
-          "addressRegion": "Da Nang",
-          "addressCountry": "VN"
-      },
-      "priceRange": "50000-500000 VND",
-      "openingHours": "Mo-Su 00:00-23:59",
-      "areaServed": ["Hai Chau", "Thanh Khe", "Son Tra", "Ngu Hanh Son", "Lien Chieu", "Cam Le"]
-    }
-    </script>
+    <!-- Icons: Phosphor Icons for Tech Look -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <style>
-        /* Design System / Variables */
+        /* Modern Design System */
         :root {
-            /* Colors */
-            --color-deep-blue: #0F172A;
-            --color-accent-blue: #1E3A8A;
-            --color-safety-orange: #F97316;
-            --color-safety-orange-hover: #EA580C;
-            --color-whatsapp: #25D366;
-            --color-whatsapp-hover: #1EBE55;
+            --brand-primary: #0F172A; /* Deep Blue background */
+            --brand-accent: #3B82F6; /* Tech Blue */
+            --brand-warning: #F97316; /* Safety Orange */
+            --brand-success: #10B981; /* WhatsApp/Success Green */
+            --brand-danger: #EF4444; /* End Call Red */
             
-            /* Backgrounds (Light Mode) */
-            --bg-main: #F8FAFC;
-            --bg-card: #FFFFFF;
-            --bg-header: rgba(255, 255, 255, 0.95);
-            
-            /* Typography (Light Mode) */
-            --text-main: #334155;
+            --bg-base: #F8FAFC;
+            --bg-surface: #FFFFFF;
+            --bg-glass: rgba(255, 255, 255, 0.7);
+            --bg-glass-dark: rgba(15, 23, 42, 0.85);
+
             --text-heading: #0F172A;
-            --text-muted: #64748B;
-            --border-color: #E2E8F0;
-            
-            /* Shadows & Transitions */
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            --transition: all 0.3s ease;
+            --text-body: #475569;
+            --text-muted: #94A3B8;
+            --border-light: #E2E8F0;
+
+            --shadow-float: 0 10px 40px -10px rgba(0,0,0,0.1);
+            --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+            --radius-lg: 20px;
+            --radius-full: 9999px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Dark Mode Support */
+        /* Dark Mode variables for OS preference */
         @media (prefers-color-scheme: dark) {
             :root {
-                --bg-main: #0B0F19;
-                --bg-card: #1E293B;
-                --bg-header: rgba(11, 15, 25, 0.95);
-                --text-main: #CBD5E1;
+                --bg-base: #020617;
+                --bg-surface: #0F172A;
+                --bg-glass: rgba(15, 23, 42, 0.7);
+                --bg-glass-dark: rgba(0, 0, 0, 0.85);
                 --text-heading: #F8FAFC;
-                --text-muted: #94A3B8;
-                --border-color: #334155;
+                --text-body: #CBD5E1;
+                --text-muted: #64748B;
+                --border-light: #1E293B;
+                --shadow-float: 0 10px 40px -10px rgba(0,0,0,0.5);
             }
         }
 
-        /* Global Reset & Base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-main);
+            background-color: var(--bg-base);
+            color: var(--text-body);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            padding-bottom: 80px; /* Space for mobile sticky bar */
         }
 
         h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
             color: var(--text-heading);
             font-weight: 700;
             line-height: 1.2;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        button, .btn {
-            font-family: 'Inter', sans-serif;
-            cursor: pointer;
-            border: none;
-            outline: none;
-        }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        button { font-family: 'Inter', sans-serif; cursor: pointer; border: none; background: none; }
 
         .container {
-            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
-        /* Header & Navigation */
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background-color: var(--bg-header);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            padding: 16px 0;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-weight: 800;
-            font-size: 1.25rem;
-            color: var(--text-heading);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .logo i { color: var(--color-accent-blue); }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .lang-toggle {
-            display: flex;
-            background: var(--bg-cart);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            overflow: hidden;
-            font-size: 0.875rem;
-            font-weight: 600;
-        }
-        .lang-toggle a {
-            padding: 6px 12px;
-            color: var(--text-muted);
-            transition: var(--transition);
-        }
-        .lang-toggle a.active {
-            background: var(--text-heading);
-            color: var(--bg-main);
-        }
-        .lang-toggle a:not(.active):hover {
-            color: var(--text-heading);
-            background: var(--border-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 80px 0 100px;
-            text-align: center;
-            background: linear-gradient(180deg, var(--color-deep-blue) 0%, var(--bg-main) 100%);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero h1 {
-            color: white;
-            font-size: 3rem;
-            max-width: 800px;
-            margin: 0 auto 24px;
-            letter-spacing: -0.02em;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: #E2E8F0;
-            max-width: 600px;
-            margin: 0 auto 40px;
-        }
-
-        .cta-group {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
+        /* Utility Classes */
+        .glass-panel {
+            background: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-glass);
         }
 
         .btn {
@@ -217,488 +106,483 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            padding: 16px 32px;
-            border-radius: 8px;
-            font-size: 1.125rem;
+            padding: 14px 28px;
+            border-radius: var(--radius-full);
             font-weight: 600;
+            font-size: 1rem;
             transition: var(--transition);
-            box-shadow: var(--shadow-md);
         }
-
+        
         .btn-primary {
-            background-color: var(--color-safety-orange);
+            background-color: var(--brand-accent);
             color: white;
+            box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
         }
-        .btn-primary:hover {
-            background-color: var(--color-safety-orange-hover);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6); }
 
-        .btn-whatsapp {
-            background-color: var(--color-whatsapp);
+        .btn-danger {
+            background-color: var(--brand-warning);
             color: white;
+            box-shadow: 0 4px 14px rgba(249, 115, 22, 0.4);
         }
-        .btn-whatsapp:hover {
-            background-color: var(--color-whatsapp-hover);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
+        .btn-danger:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(249, 115, 22, 0.6); }
 
-        /* Value Props (Trust Bar) */
-        .trust-bar {
-            background: var(--bg-card);
-            border-radius: 12px;
-            padding: 32px;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 24px;
-            margin-top: -40px;
-            position: relative;
-            z-index: 10;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid var(--border-color);
-        }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .btn-outline {
+            border: 2px solid var(--border-light);
             color: var(--text-heading);
-            font-weight: 600;
         }
-        .trust-item i {
-            font-size: 1.5rem;
-            color: var(--color-whatsapp);
-        }
-
-        /* Common Section Styles */
-        .section {
-            padding: 80px 0;
-        }
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        .section-header h2 {
-            font-size: 2.25rem;
-            margin-bottom: 16px;
-        }
-        .section-header p {
-            color: var(--text-muted);
-            font-size: 1.125rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* 3-Step Process */
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 32px;
-        }
-
-        .process-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 32px;
-            text-align: center;
-            transition: var(--transition);
-            box-shadow: var(--shadow-sm);
-        }
-        .process-card:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-5px);
-            border-color: var(--color-accent-blue);
-        }
-
-        .process-icon {
-            width: 64px;
-            height: 64px;
-            background: rgba(30, 58, 138, 0.1);
-            color: var(--color-accent-blue);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            margin: 0 auto 24px;
-        }
-
-        .process-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 12px;
-        }
-        
-        .process-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Location Sharing Alert */
-        .location-alert {
-            background: rgba(37, 211, 102, 0.1);
-            border: 1px dashed var(--color-whatsapp);
-            border-radius: 8px;
-            padding: 16px;
-            margin-top: 24px;
-            display: inline-block;
-            text-align: left;
-        }
-
-        .btn-location {
-            background: transparent;
-            color: var(--text-heading);
-            border: 1px solid var(--border-color);
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 12px;
-            transition: var(--transition);
-        }
-        .btn-location:hover {
-            background: var(--bg-main);
+        .btn-outline:hover {
             border-color: var(--text-heading);
+            background: rgba(0,0,0,0.05);
         }
 
-        /* Pricing Section */
-        .pricing-section {
-            background-color: var(--bg-card);
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
+        /* App Header */
+        .app-header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 16px 0;
+            background: var(--bg-glass);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-light);
         }
-        
-        .no-foreigner-tax {
-            background: var(--color-accent-blue);
-            color: white;
-            border-radius: 8px;
-            padding: 16px 24px;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 600;
-            margin-bottom: 40px;
-            box-shadow: var(--shadow-md);
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-        }
-
-        .price-card {
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 24px;
+        .header-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: var(--bg-main);
-            transition: var(--transition);
         }
-        .price-card:hover {
-            border-color: var(--color-safety-orange);
-            background: var(--bg-card);
-        }
-
-        .price-info h4 {
-            font-size: 1.125rem;
-            margin-bottom: 4px;
-        }
-        .price-info p {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-        }
-
-        .price-amount {
-            text-align: right;
-        }
-        .price-vnd {
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
             font-size: 1.25rem;
-            font-weight: 700;
             color: var(--text-heading);
-            display: block;
-        }
-        .price-usd {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-        }
-
-        /* Map Section */
-        .map-wrapper {
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            height: 400px;
-            border: 1px solid var(--border-color);
-        }
-        
-        /* Floating WhatsApp Button */
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--color-whatsapp);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
             display: flex;
             align-items: center;
+            gap: 8px;
+        }
+        .logo i { color: var(--brand-accent); font-size: 1.5rem; }
+        
+        .header-actions { display: flex; align-items: center; gap: 16px; }
+        .support-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--brand-accent);
+            background: rgba(59, 130, 246, 0.1);
+            padding: 6px 12px;
+            border-radius: var(--radius-full);
+        }
+        .support-badge i { font-size: 1.2rem; }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.05) 0%, transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(249, 115, 22, 0.05) 0%, transparent 40%);
+        }
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-tag {
+            display: inline-block;
+            background: var(--text-heading);
+            color: var(--bg-surface);
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--brand-accent), #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            color: var(--text-muted);
+        }
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
             justify-content: center;
-            font-size: 32px;
-            box-shadow: var(--shadow-lg);
-            z-index: 1000;
-            transition: var(--transition);
-            animation: pulse-whatsapp 2s infinite;
-        }
-        .floating-whatsapp:hover {
-            transform: scale(1.1);
+            flex-wrap: wrap;
         }
 
-        @keyframes pulse-whatsapp {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        /* AI Interaction Overview */
+        .ai-overview {
+            margin-top: 60px;
+            position: relative;
         }
-
-        /* Footer */
-        .footer {
-            background: var(--bg-card);
-            padding: 60px 0;
-            border-top: 1px solid var(--border-color);
+        .ai-overview img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-float);
+        }
+        .ai-overlay-card {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 500px;
+            padding: 24px;
             text-align: center;
         }
-        .footer p {
-            color: var(--text-muted);
+        .ai-overlay-card i {
+            font-size: 2rem;
+            color: var(--brand-accent);
             margin-bottom: 12px;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.25rem; }
-            .hero { padding: 40px 0 80px; }
-            .trust-bar {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 24px;
-            }
-            .cta-group { flex-direction: column; }
-            .btn { width: 100%; }
+        /* Services Cards / Features */
+        .section { padding: 100px 0; }
+        .section-header { text-align: center; margin-bottom: 60px; max-width: 600px; margin-inline: auto; }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 16px; }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
         }
+        .service-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            transition: var(--transition);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-float);
+            border-color: var(--brand-accent);
+        }
+        .service-icon {
+            width: 56px; height: 56px;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--brand-accent);
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+        .service-card h3 { font-size: 1.25rem; margin-bottom: 8px; }
+        .service-card p { font-size: 0.9rem; color: var(--text-muted); }
+
+        /* Trust & Pricing Signals */
+        .trust-banner {
+            background: var(--brand-primary);
+            color: white;
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        .trust-text h2 { color: white; margin-bottom: 8px; }
+        .trust-text p { color: #94A3B8; }
+        .trust-list { display: flex; gap: 24px; flex-wrap: wrap; }
+        .trust-item { display: flex; align-items: center; gap: 8px; font-weight: 500; }
+        .trust-item i { color: var(--brand-success); font-size: 1.5rem; }
+
+        /* Meet the Team */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: center;
+        }
+        .team-visual {
+            position: relative;
+        }
+        .team-visual img.main-img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-float);
+        }
+        .team-visual img.ai-badge {
+            position: absolute;
+            bottom: 20px; right: -20px;
+            width: 150px; height: 150px;
+            border-radius: 50%;
+            border: 6px solid var(--bg-base);
+            box-shadow: var(--shadow-float);
+            background: var(--bg-surface);
+        }
+        
+        /* Modal: AI Call UI */
+        .modal {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--bg-glass-dark);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            opacity: 0; pointer-events: none;
+            transition: var(--transition);
+        }
+        .modal.active { opacity: 1; pointer-events: all; }
+        
+        .ai-caller-info { text-align: center; color: white; margin-bottom: 60px; }
+        .ai-caller-info h2 { font-size: 2rem; margin-bottom: 8px; color: white; }
+        .ai-caller-info p { color: #94A3B8; font-size: 1.125rem; }
+
+        .waveform {
+            display: flex; align-items: center; gap: 6px; height: 100px; margin-bottom: 60px;
+        }
+        .bar {
+            width: 8px; background: var(--brand-accent); border-radius: 4px;
+            animation: bounce 1s ease-in-out infinite;
+        }
+        .bar:nth-child(1) { height: 20px; animation-delay: 0.0s; }
+        .bar:nth-child(2) { height: 40px; animation-delay: 0.1s; }
+        .bar:nth-child(3) { height: 70px; animation-delay: 0.2s; }
+        .bar:nth-child(4) { height: 40px; animation-delay: 0.3s; }
+        .bar:nth-child(5) { height: 20px; animation-delay: 0.4s; }
+        @keyframes bounce { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(0.4); } }
+
+        .btn-end-call {
+            width: 64px; height: 64px; border-radius: 50%;
+            background: var(--brand-danger); color: white;
+            font-size: 1.5rem; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 10px 25px rgba(239, 68, 68, 0.5);
+        }
+
+        /* Modal: AI Chat UI */
+        .chat-widget {
+            position: fixed; bottom: 100px; right: 24px;
+            width: 350px; height: 500px;
+            background: var(--bg-surface);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-float);
+            display: flex; flex-direction: column;
+            border: 1px solid var(--border-light);
+            z-index: 900;
+            transform: translateY(20px);
+            opacity: 0; pointer-events: none;
+            transition: var(--transition);
+        }
+        .chat-widget.active { transform: translateY(0); opacity: 1; pointer-events: all; }
+        .chat-header {
+            padding: 16px; border-bottom: 1px solid var(--border-light);
+            display: flex; justify-content: space-between; align-items: center;
+            background: var(--brand-primary); color: white;
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+        }
+        .chat-header h3 { color: white; font-size: 1.125rem; display: flex; align-items: center; gap: 8px; }
+        .chat-body { flex: 1; padding: 16px; overflow-y: auto; background: var(--bg-base); }
+        .chat-bubble {
+            background: white; padding: 12px 16px; border-radius: 12px 12px 12px 0;
+            margin-bottom: 16px; max-width: 85%;
+            font-size: 0.9rem; border: 1px solid var(--border-light);
+        }
+        .chat-input {
+            padding: 16px; border-top: 1px solid var(--border-light);
+            display: flex; gap: 8px; align-items: center;
+        }
+        .chat-input input {
+            flex: 1; padding: 10px 16px; border: 1px solid var(--border-light); border-radius: var(--radius-full);
+            background: var(--bg-base); outline: none; font-family: inherit; color: var(--text-heading);
+        }
+        .chat-input button {
+            color: var(--text-muted); font-size: 1.25rem; padding: 8px; transition: var(--transition);
+        }
+        .chat-input button:hover { color: var(--brand-accent); }
+        .chat-floating-btn {
+            position: fixed; bottom: 100px; right: 24px;
+            width: 60px; height: 60px; border-radius: 50%;
+            background: var(--brand-accent); color: white;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; box-shadow: var(--shadow-float);
+            z-index: 899; cursor: pointer; transition: var(--transition);
+        }
+        .chat-floating-btn:hover { transform: scale(1.05); }
+
+        /* Sticky Bottom Bar (Mobile) */
+        .mobile-bottom-bar {
+            display: none;
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: var(--bg-glass); backdrop-filter: blur(16px);
+            padding: 12px 24px;
+            border-top: 1px solid var(--border-light);
+            z-index: 99;
+        }
+        .mobile-bottom-bar .bottom-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+        }
+        .mobile-bottom-bar .btn { padding: 12px; font-size: 0.9rem; width: 100%; border-radius: 12px; }
+
+        @media (max-width: 768px) {
+            .mobile-bottom-bar { display: block; }
+            .header-actions .btn { display: none; }
+            .hero-ctas { display: none; } /* Show in bottom bar instead */
+            .chat-floating-btn { display: none; } /* Handled by bottom bar */
+            .chat-widget { bottom: 80px; width: calc(100% - 32px); right: 16px; height: 400px; z-index: 98; }
+            .team-visual img.ai-badge { width: 100px; height: 100px; right: 0; }
+        }
+
+        /* Footer */
+        .footer { padding: 40px 0; text-align: center; border-top: 1px solid var(--border-light); color: var(--text-muted); }
+
     </style>
 </head>
 <body>
 
+    <!-- IP Redirect Dummy Script (Simulated Backend logic) -->
+    <script>
+        // Dummy logic representing backend IP processing
+        function checkLanguagePreference() {
+            const userLang = navigator.language || navigator.userLanguage;
+            // If user is from VN but accesses this EN page, system allows it.
+            // But if a foreigner accesses the main /.html, they would be redirected here.
+            console.log("AI System: User detected viewing International Hub.");
+        }
+        checkLanguagePreference();
+    </script>
+
     <!-- Header -->
-    <header class="header">
-        <div class="container header-content">
-            <a href="/" class="logo">
-                <i class="fas fa-motorcycle"></i> MotoRescue DaNang
+    <header class="app-header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <i class="ph-bold ph-motorcycle"></i> MotoRescue AI
             </a>
+            <div class="header-actions">
+                <div class="support-badge">
+                    <i class="ph-bold ph-translate"></i> Support: English
+                </div>
+                <!-- Native Phone Call Fallback -->
+                <a href="tel:+84898190266" class="btn btn-danger">
+                    <i class="ph-bold ph-phone-call"></i> Emergency Call
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>Mobile Roadside Assistance in Da Nang</h1>
-            <p>Reliable, Fast, 24/7. Never get stuck on the road. We speak English and provide transparent pricing for expats and tourists.</p>
+        <div class="container hero-content">
+            <span class="hero-tag">Intelligent Roadside Assistance</span>
+            <h1>Mobile Motorbike Rescue <br><span>Powered by AI</span></h1>
+            <p>Stuck in Da Nang? Don't panic. Fast arrival. Fixed pricing. <br>Speak English to our AI operator or chat instantly to analyze your bike's issue.</p>
             
-            <div class="cta-group">
-                <a href="tel:+84898190266" class="btn btn-primary">
-                    <i class="fas fa-phone-alt"></i> Call: 0898 190 266
-                </a>
-                <a href="https://wa.me/84898190266?text=Hi,%20I%20need%20motorbike%20rescue!%20My%20location%20is:" target="_blank" class="btn btn-whatsapp">
-                    <i class="fab fa-whatsapp"></i> WhatsApp Us
-                </a>
+            <div class="hero-ctas">
+                <button class="btn btn-primary" onclick="toggleChat()">
+                    <i class="ph-bold ph-chat-teardrop-dots"></i> Chat with AI Specialist
+                </button>
+                <button class="btn btn-outline" onclick="openAICall()">
+                    <i class="ph-bold ph-microphone-stage"></i> Voice Call AI
+                </button>
+            </div>
+
+            <!-- AI Demo Image Area -->
+            <div class="ai-overview">
+                <!-- Placeholder for a high-end image of technician interacting with app -->
+                <img src="https://placehold.co/1200x600/1E293B/ffffff?text=Technician+Using+Diagnostic+App" alt="Technician working">
+                <div class="glass-panel ai-overlay-card">
+                    <i class="ph-bold ph-robot"></i>
+                    <h3>Tell AI what happened to your bike</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 8px;">We provide an instant, fixed quote before dispatching our technician. No hidden fees.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Trust Bar -->
-    <div class="container">
-        <div class="trust-bar">
-            <div class="trust-item">
-                <i class="fas fa-bolt"></i>
-                <span>Arrival in 15-20 Min</span>
+    <!-- Services (Cards with Icons) -->
+    <section class="section bg-surface">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Mobile Services</h2>
+                <p>We handle all common breakdowns on-site. No need to push your bike.</p>
             </div>
-            <div class="trust-item">
-                <i class="fas fa-hand-holding-usd"></i>
-                <span>No Hidden Fees</span>
-            </div>
-            <div class="trust-item">
-                <i class="fas fa-check-circle"></i>
-                <span>English-Speaking Support</span>
-            </div>
-            <div class="trust-item">
-                <i class="fas fa-cog"></i>
-                <span>Genuine Parts Only</span>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="ph-bold ph-tire"></i></div>
+                    <h3>Tire Repair & Replacement</h3>
+                    <p>Tubeless patches for scooters (SH, Vision, NVX) or inner-tube replacement.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="ph-bold ph-lightning"></i></div>
+                    <h3>Battery Jump-start</h3>
+                    <p>Dead battery recovery or on-the-spot genuine battery replacement.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="ph-bold ph-drop"></i></div>
+                    <h3>On-site Oil & Fluids</h3>
+                    <p>Routine maintenance delivered right to your apartment or hotel.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="ph-bold ph-waves"></i></div>
+                    <h3>Water-logged Engine Fix</h3>
+                    <p>Crucial during the rainy season. Safe drainage and engine recovery.</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Process Section -->
+    <!-- Trust Signals -->
     <section class="section">
         <div class="container">
-            <div class="section-header">
-                <h2>Stuck on the road? Don't panic!</h2>
-                <p>We've optimized our process to be as simple as possible for international visitors in Da Nang.</p>
-            </div>
-
-            <div class="process-grid">
-                <!-- Step 1 -->
-                <div class="process-card">
-                    <div class="process-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <h3>1. Request & Locate</h3>
-                    <p>Contact us via WhatsApp and share your live GPS location. We understand it's hard to explain street names in Vietnamese.</p>
-                    
-                    <div class="location-alert">
-                        <strong><i class="fas fa-map-marker-alt" style="color:var(--color-whatsapp)"></i> Pro Tip:</strong>
-                        <p style="font-size: 0.875rem; margin-top: 4px;">Press the button below to text us directly on WhatsApp with your location attached.</p>
-                        <a href="https://wa.me/84898190266?text=Hi,%20I%20need%20help.%20My%20location%20is:" target="_blank" class="btn-location">
-                            Share My Location <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
+            <div class="trust-banner shadow-float">
+                <div class="trust-text">
+                    <h2>Transparent Pricing. Always.</h2>
+                    <p>Are you an expat or tourist? We guarantee you pay the exact same price as the locals. No "Foreigner Tax".</p>
                 </div>
-
-                <!-- Step 2 -->
-                <div class="process-card">
-                    <div class="process-icon">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                    </div>
-                    <h3>2. Instant Quote</h3>
-                    <p>We'll diagnose the issue over chat and confirm the fixed price before dispatching our mechanic. No surprises.</p>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="process-card">
-                    <div class="process-icon">
-                        <i class="fas fa-coffee"></i>
-                    </div>
-                    <h3>3. Relax & Wait</h3>
-                    <p>Our professional mechanic arrives in 15-20 minutes, completes the fix, and you can pay via Cash or Bank Transfer.</p>
+                <div class="trust-list">
+                    <div class="trust-item"><i class="ph-fill ph-check-circle"></i> Fixed Quotes Upfront</div>
+                    <div class="trust-item"><i class="ph-fill ph-check-circle"></i> Genuine Parts</div>
+                    <div class="trust-item"><i class="ph-fill ph-check-circle"></i> Arrives in 15-20 mins</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="section pricing-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Transparent Pricing</h2>
-                <p>We strongly oppose the "Foreigner Tax". You pay the exact same price as Da Nang locals.</p>
-            </div>
-
-            <div style="text-align: center;">
-                <div class="no-foreigner-tax">
-                    <i class="fas fa-shield-alt"></i> No Foreigner Tax - Same Price for Everyone
-                </div>
-            </div>
-
-            <div class="pricing-grid">
-                <!-- Service -->
-                <div class="price-card">
-                    <div class="price-info">
-                        <h4>Tubeless Tire Patch / Repair</h4>
-                        <p>Common for Scooters (Vision, SH, AirBlade)</p>
-                    </div>
-                    <div class="price-amount">
-                        <span class="price-vnd">49k - 79k</span>
-                        <span class="price-usd">~ $2.00 - $3.25</span>
-                    </div>
-                </div>
-
-                <!-- Service -->
-                <div class="price-card">
-                    <div class="price-info">
-                        <h4>Inner Tube Replacement</h4>
-                        <p>Common for Manual Bikes (Wave, Sirius)</p>
-                    </div>
-                    <div class="price-amount">
-                        <span class="price-vnd">149k - 349k</span>
-                        <span class="price-usd">~ $6.00 - $14.00</span>
-                    </div>
-                </div>
-
-                <!-- Service -->
-                <div class="price-card">
-                    <div class="price-info">
-                        <h4>Battery Jump-start</h4>
-                        <p>When engine won't start</p>
-                    </div>
-                    <div class="price-amount">
-                        <span class="price-vnd">79k - 119k</span>
-                        <span class="price-usd">~ $3.25 - $5.00</span>
-                    </div>
-                </div>
-
-                <!-- Service -->
-                <div class="price-card">
-                    <div class="price-info">
-                        <h4>Battery Replacement</h4>
-                        <p>Complete replacement with genuine parts</p>
-                    </div>
-                    <div class="price-amount">
-                        <span class="price-vnd">Ask for Quote</span>
-                        <span class="price-usd">Varies by model</span>
-                    </div>
-                </div>
-
-                <!-- Service -->
-                <div class="price-card">
-                    <div class="price-info">
-                        <h4>On-site Oil Change</h4>
-                        <p>Maintenance at your place</p>
-                    </div>
-                    <div class="price-amount">
-                        <span class="price-vnd">Ask for Quote</span>
-                        <span class="price-usd">Genuine Oil</span>
-                    </div>
-                </div>
-
-                <!-- Service -->
-                <div class="price-card">
-                    <div class="price-info">
-                        <h4>Water-logged Engine Repair</h4>
-                        <p>Crucial during rainy season</p>
-                    </div>
-                    <div class="price-amount">
-                        <span class="price-vnd">Ask for Quote</span>
-                        <span class="price-usd">Based on condition</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 32px;">
-                <p style="color: var(--text-muted); font-size: 0.875rem;">
-                    * Prices listed do not have hidden moving fees inside Da Nang city limits.<br>
-                    * Exact conversion rates may vary slightly. Payment accepted in VND or local transfer.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map & Coverage -->
+    <!-- Meet the AI & Technician -->
     <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Service Area & Coverage</h2>
-                <p>We serve all major districts in Da Nang, with exceptionally fast response times in An Thuong, Son Tra, and Hai Chau areas where many expats live.</p>
+        <div class="container team-grid">
+            <div class="team-visual">
+                <!-- Human Technician Placeholder -->
+                <img src="https://placehold.co/600x800/e2e8f0/475569?text=Professional+Technician\n(Portrait)" alt="Thong Nguyen Technician" class="main-img">
+                <!-- AI Avatar Placeholder -->
+                <img src="https://placehold.co/300x300/3b82f6/ffffff?text=AI+Avatar" alt="AI Assistant" class="ai-badge">
             </div>
-            
-            <div class="map-wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122759.8268296593!2d107.96177487731858!3d16.047079399999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219c792252a13%3A0x1df0cb4b86727e06!2zxJDDoCBO4bq1bmcsIFZp4buHdCBOYW0!5e0!3m2!1sen!2s!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="team-content">
+                <span class="hero-tag">Human + AI Partnership</span>
+                <h2>AI Diagnoses. <br>Thong Fixes.</h2>
+                <p style="margin-top: 24px; font-size: 1.125rem;">We combine advanced English-speaking AI to accurately assess your situation with the 7-year practical experience of our Master Technician, Thong Nguyen.</p>
+                <ul style="margin-top: 24px; display: flex; flex-direction: column; gap: 16px;">
+                    <li style="display: flex; gap: 12px;">
+                        <i class="ph-bold ph-robot" style="color: var(--brand-accent); font-size: 1.5rem;"></i>
+                        <div>
+                            <strong>Instant Communication</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Chat or Upload photos. Our AI translates and prepares the exact tools needed.</p>
+                        </div>
+                    </li>
+                    <li style="display: flex; gap: 12px;">
+                        <i class="ph-bold ph-wrench" style="color: var(--brand-warning); font-size: 1.5rem;"></i>
+                        <div>
+                            <strong>Precision Execution</strong>
+                            <p style="color: var(--text-muted); font-size: 0.9rem;">Technician Thong arrives fully equipped and resolves the issue quickly.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -706,19 +590,98 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <h3 style="margin-bottom: 16px;">MotoRescue DaNang (Thong Nguyen 24/7)</h3>
-            <p><i class="fas fa-phone-alt"></i> English Hotline / WhatsApp: +84 898 190 266</p>
-            <p><i class="fas fa-envelope"></i> Email: thongnguyen.suaxe@gmail.com</p>
-            <div style="margin-top: 24px; color: var(--text-muted); font-size: 0.875rem;">
-                &copy; 2026 Mobile Motorbike Repair Da Nang. All Rights Reserved.
-            </div>
+            <p>&copy; 2026 SportAIV MotoRescue AI. Operating in Da Nang, Vietnam.</p>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/84898190266?text=Hi,%20I%20need%20motorbike%20rescue!%20My%20location%20is:" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- Mobile Sticky Bar -->
+    <div class="mobile-bottom-bar">
+        <div class="bottom-grid">
+            <button class="btn btn-outline" style="background: var(--bg-surface)" onclick="toggleChat()">
+                <i class="ph-bold ph-chat-teardrop"></i> Chat UI
+            </button>
+            <button class="btn btn-danger" onclick="openAICall()">
+                <i class="ph-bold ph-microphone-stage"></i> Call AI
+            </button>
+        </div>
+    </div>
 
+    <!-- AI Floating Chat Button (Desktop) -->
+    <div class="chat-floating-btn" onclick="toggleChat()">
+        <i class="ph-bold ph-chat-text"></i>
+    </div>
+
+    <!-- AI Chat Panel UI -->
+    <div class="chat-widget" id="aiChat">
+        <div class="chat-header">
+            <h3><i class="ph-bold ph-robot"></i> MotoRescue AI</h3>
+            <button onclick="toggleChat()" style="color: white; font-size: 1.25rem;"><i class="ph-bold ph-x"></i></button>
+        </div>
+        <div class="chat-body">
+            <div class="chat-bubble">
+                Hello! I am your AI Assistant. What happened to your motorbike today? 🏍️
+            </div>
+            <!-- Skeleton Loading state demo -->
+            <div class="chat-bubble" style="opacity: 0.6; display: flex; gap: 4px; align-items: center; width: max-content;">
+                <span style="font-size: 0.8rem; font-style: italic;">AI is typing</span>
+                <i class="ph-bold ph-spinner" style="animation: spin 1s linear infinite;"></i>
+            </div>
+        </div>
+        <div class="chat-input">
+            <button title="Upload Photo"><i class="ph-bold ph-image"></i></button>
+            <button title="Share Location"><i class="ph-bold ph-map-pin"></i></button>
+            <input type="text" placeholder="Type a message...">
+            <button title="Send" style="color: var(--brand-accent)"><i class="ph-bold ph-paper-plane-right"></i></button>
+        </div>
+    </div>
+
+    <!-- AI Voice Call Modal -->
+    <div class="modal" id="aiCallModal">
+        <div class="ai-caller-info">
+            <h2>MotoRescue AI</h2>
+            <p>Connecting...</p>
+        </div>
+        
+        <div class="waveform">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <p style="color: white; margin-bottom: 40px; font-style: italic;">"Hi, please describe your issue..."</p>
+
+        <button class="btn-end-call" onclick="closeAICall()">
+            <i class="ph-bold ph-phone-slash"></i>
+        </button>
+    </div>
+
+    <!-- Scripts for UI toggles -->
+    <script>
+        function toggleChat() {
+            document.getElementById('aiChat').classList.toggle('active');
+        }
+
+        function openAICall() {
+            const modal = document.getElementById('aiCallModal');
+            modal.classList.add('active');
+            // Simulate delay
+            setTimeout(() => {
+                modal.querySelector('.ai-caller-info p').innerText = "00:01 • Real-time AI";
+            }, 1000);
+        }
+
+        function closeAICall() {
+            const modal = document.getElementById('aiCallModal');
+            modal.classList.remove('active');
+            modal.querySelector('.ai-caller-info p').innerText = "Connecting...";
+        }
+
+        // Add CSS keyframes for spinner programmatically
+        const style = document.createElement('style');
+        style.innerHTML = `@keyframes spin { 100% { transform: rotate(360deg); } }`;
+        document.head.appendChild(style);
+    </script>
 </body>
 </html>
