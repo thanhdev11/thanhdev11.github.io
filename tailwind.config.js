@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./agentic-ai-course.html"],
+  content: ["./agentic-ai-course.html", "./motorcycle-rescue-danang.html"],
   theme: {
     extend: {
       colors: {

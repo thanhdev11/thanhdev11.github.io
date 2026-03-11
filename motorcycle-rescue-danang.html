@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorcycle Rescue Da Nang - AI Powered</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007AFF', // Or custom primary if requested, sticking to a tech blue
+                        accent: '#FFAB00',
+                        dark: '#0D0D0D',
+                        surface: '#151515',
+                        card: '#1A1A1A',
+                        border: '#2A2A2A',
+                        neonCyan: '#00f2ff',
+                        neonGreen: '#00ff88'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'glow-orange': 'glowOrange 2s ease-in-out infinite alternate',
+                        'glow-cyan': 'glowCyan 2s ease-in-out infinite alternate',
+                        wave: 'wave 1.2s infinite ease-in-out',
+                        scan: 'scan 2.5s infinite linear'
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        glowOrange: {
+                            '0%': { boxShadow: '0 0 10px rgba(255, 171, 0, 0.3)' },
+                            '100%': { boxShadow: '0 0 30px rgba(255, 171, 0, 0.7)' },
+                        },
+                        glowCyan: {
+                            '0%': { boxShadow: '0 0 10px rgba(0, 242, 255, 0.3)' },
+                            '100%': { boxShadow: '0 0 30px rgba(0, 242, 255, 0.7)' },
+                        },
+                        wave: {
+                            '0%, 100%': { height: '20px', transform: 'scaleY(1)' },
+                            '50%': { height: '50px', transform: 'scaleY(1.5)', opacity: '0.7' }
+                        },
+                        scan: {
+                            '0%': { top: '0%' },
+                            '50%': { top: '100%' },
+                            '100%': { top: '0%' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #0D0D0D;
+            color: #ffffff;
+        }
+        
+        /* Glassmorphism utility */
+        .glass {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .glass-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        /* AI Visualizer Bars Delay */
+        .ai-visualizer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            height: 60px;
+        }
+
+        .bar {
+            width: 6px;
+            height: 20px;
+            background: #00f2ff;
+            border-radius: 10px;
+            animation: wave 1.2s infinite ease-in-out;
+            box-shadow: 0 0 10px #00f2ff;
+        }
+
+        .bar:nth-child(1) { animation-delay: 0.1s; }
+        .bar:nth-child(2) { animation-delay: 0.2s; }
+        .bar:nth-child(3) { animation-delay: 0.3s; }
+        .bar:nth-child(4) { animation-delay: 0.4s; }
+        .bar:nth-child(5) { animation-delay: 0.3s; }
+        .bar:nth-child(6) { animation-delay: 0.2s; }
+        .bar:nth-child(7) { animation-delay: 0.1s; }
+
+        /* Hidden elements utility */
+        .invisible-init {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            visibility: visible;
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Scanner line */
+        .scanner-line {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #00f2ff;
+            box-shadow: 0 0 10px #00f2ff, 0 0 20px #00f2ff;
+            z-index: 10;
+        }
+
+        /* Hide scrollbar for slider */
+        .hide-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scroll {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden relative">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass border-b-0 border-white/10 top-0 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="./assets/imgs/logo.png" alt="SPORTAIV Logo" class="h-10 w-auto rounded-md" onerror="this.src='https://placehold.co/100x40/1A1A1A/FFF?text=LOGO'">
+                    <span class="font-heading font-bold text-xl tracking-wide hidden sm:block">MOTORCYCLE RESCUE</span>
+                </div>
+                <!-- Currency Switcher Desktop -->
+                <div class="hidden md:flex items-center gap-2 text-sm text-gray-400 font-medium">
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                    <span>Approx. Rates: </span>
+                    <span class="text-white bg-white/10 px-2 py-1 rounded">100,000 VND &approx; $4 USD</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/84900000000?text=Hello,%20I%20need%20emergency%20bike%20help" target="_blank" class="fixed bottom-6 left-6 z-40 bg-[#25D366] text-white w-14 h-14 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.5)] hover:bg-[#20bd5a] transition-all hover:scale-110 flex items-center justify-center">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Video Background placeholder -->
+        <div class="absolute inset-0 z-0 bg-dark">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-60">
+                <!-- Replace with actual video -->
+                <source src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/50 to-dark"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto flex flex-col items-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-6 text-neonCyan text-sm font-semibold tracking-wide uppercase border-neonCyan/30">
+                <i class="fa-solid fa-robot"></i> AI-Powered Assistance
+            </div>
+            
+            <h1 class="font-heading font-extrabold text-5xl md:text-7xl mb-6 leading-tight drop-shadow-2xl">
+                PROFESSIONAL MOTORBIKE <br class="hidden md:block"/><span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-500">RESCUE IN DA NANG</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-300 font-light mb-12 max-w-3xl leading-relaxed drop-shadow-md">
+                English-speaking AI Assistant & Expert Technicians.<br/> Fast Arrival in <strong class="text-white font-semibold flex-inline bg-white/10 px-2 py-1 rounded">15-20 Minutes</strong>. 24/7 Support.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-6 w-full max-w-2xl justify-center">
+                <!-- Button A: AI Call -->
+                <button onclick="openCallModal()" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl font-bold text-lg text-white shadow-lg animate-glow-orange hover:scale-105 transition-all flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-phone-volume animate-bounce"></i> EMERGENCY AI CALL
+                </button>
+                
+                <!-- Button B: AI Chat -->
+                <button onclick="openChat()" class="w-full sm:w-auto px-8 py-4 glass border border-neonCyan/50 rounded-xl font-bold text-lg text-neonCyan shadow-lg animate-glow-cyan hover:bg-neonCyan/10 hover:scale-105 transition-all flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-comment-dots"></i> CHAT WITH AI SPECIALIST
+                </button>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <a href="#transparency" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-gray-400 hover:text-white transition-colors flex flex-col items-center gap-2">
+            <span class="text-sm tracking-widest uppercase">Scroll to explore</span>
+            <i class="fa-solid fa-chevron-down animate-bounce text-xl"></i>
+        </a>
+    </section>
+
+    <!-- Transparency Pricing Guarantee -->
+    <section id="transparency" class="py-20 relative bg-dark">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-surface via-dark to-dark opacity-50"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center fade-in-section invisible-init">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6">Transparent Pricing for Everyone</h2>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-12">
+                We believe in fairness. Same price for locals and foreigners. No hidden fees. <span class="text-accent font-semibold">No "Foreigner Tax"</span>.
+            </p>
+            
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex items-center gap-2 text-xl md:text-2xl font-bold"><i class="fa-brands fa-honda text-3xl"></i> HONDA</div>
+                <div class="flex items-center gap-2 text-xl md:text-2xl font-bold tracking-widest text-red-600"><i class="fa-brands fa-yamaha text-3xl"></i> YAMAHA</div>
+                <!-- Placeholder for VinFast / Piaggio if no FA icon -->
+                <div class="text-xl md:text-2xl font-bold italic tracking-tighter">VINFAST</div>
+                <div class="text-xl md:text-2xl font-bold">PIAGGIO</div>
+            </div>
+            
+            <div class="mt-12 inline-flex items-center gap-2 glass px-6 py-3 rounded-full border border-yellow-500/30 text-yellow-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span class="ml-2 font-bold text-white tracking-widest">5.0 GOOGLE REVIEWS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-24 relative bg-dark border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-heading text-3xl md:text-5xl font-bold text-center mb-16">Expert Interventions</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Flat Tire -->
+                <div class="glass glass-card p-6 rounded-2xl flex flex-col items-start fade-in-section invisible-init">
+                    <div class="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center text-primary text-2xl mb-6">
+                        <i class="fa-solid fa-circle-notch"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Flat Tire Repair</h4>
+                    <p class="text-gray-400 text-sm">Tubeless patching or inner tube replacement directly at your location.</p>
+                </div>
+
+                <!-- Battery -->
+                <div class="glass glass-card p-6 rounded-2xl flex flex-col items-start fade-in-section invisible-init" style="animation-delay: 0.2s">
+                    <div class="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center text-accent text-2xl mb-6">
+                        <i class="fa-solid fa-car-battery"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Battery Services</h4>
+                    <p class="text-gray-400 text-sm">Jump-start for dead batteries or brand-new battery delivery & installation.</p>
+                </div>
+
+                <!-- Engine -->
+                <div class="glass glass-card p-6 rounded-2xl flex flex-col items-start fade-in-section invisible-init" style="animation-delay: 0.4s">
+                    <div class="w-14 h-14 rounded-full bg-red-500/20 flex items-center justify-center text-red-500 text-2xl mb-6">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Engine & Mechanical</h4>
+                    <p class="text-gray-400 text-sm">Engine stalling, spark plug issues, or water-logged fixes (flood rescue).</p>
+                </div>
+
+                <!-- Fuel -->
+                <div class="glass glass-card p-6 rounded-2xl flex flex-col items-start fade-in-section invisible-init" style="animation-delay: 0.6s">
+                    <div class="w-14 h-14 rounded-full bg-green-500/20 flex items-center justify-center text-green-500 text-2xl mb-6">
+                        <i class="fa-solid fa-gas-pump"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Fuel & Locksmith</h4>
+                    <p class="text-gray-400 text-sm">Emergency gas delivery or smart-key/lockset opening.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Context AI Zone & Map -->
+    <section class="py-20 bg-surface relative overflow-hidden border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- AI Location Tech -->
+                <div class="w-full lg:w-1/2 fade-in-section invisible-init">
+                    <div class="glass p-8 md:p-12 rounded-3xl border-t border-l border-white/10 shadow-2xl relative">
+                        <div class="absolute -top-5 -right-5 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
+                        <h3 class="font-heading text-3xl font-bold mb-4 flex items-center gap-3">
+                            <i class="fa-solid fa-satellite-dish text-primary"></i> GPS AI Dispatching
+                        </h3>
+                        <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                            Our Agentic AI is analyzing live traffic and technician locations to provide the fastest assistance directly to you.
+                        </p>
+                        
+                        <button id="btnShareLocation" class="w-full py-4 glass border border-primary/50 text-white rounded-xl hover:bg-primary/20 transition-all font-semibold flex justify-center items-center gap-3">
+                            <i class="fa-solid fa-location-crosshairs text-xl text-primary"></i> <span id="locationBtnText">Share My Location</span>
+                        </button>
+                        <p id="locationStatus" class="mt-4 text-center text-sm text-gray-400 hidden bg-dark/50 py-2 rounded-lg"></p>
+                    </div>
+                </div>
+                
+                <!-- Map Dummy Visual -->
+                <div class="w-full lg:w-1/2 fade-in-section invisible-init relative rounded-3xl overflow-hidden border border-white/10 h-80 lg:h-[400px]">
+                    <!-- Google Maps Iframe (Dummy coordinates around Dragon Bridge) -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x3142183c23e8eb51%3A0xe549af4081c7f5bf!2sDragon%20Bridge!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+                    <!-- Overlay Marker -->
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 animate-bounce cursor-pointer">
+                        <div class="bg-primary text-white p-3 rounded-full shadow-[0_0_20px_#007AFF]">
+                            <i class="fa-solid fa-motorcycle text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision AI Section -->
+    <section class="py-20 bg-dark border-b border-white/5 relative overflow-hidden">
+        <div class="absolute -left-20 top-20 w-64 h-64 bg-neonCyan/5 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="glass rounded-3xl p-8 lg:p-16 flex flex-col lg:flex-row items-center gap-12 fade-in-section invisible-init border border-neonCyan/20">
+                <div class="w-full lg:w-1/2">
+                    <div class="inline-flex items-center gap-2 text-neonCyan mb-4 font-semibold uppercase tracking-wider text-sm">
+                        <i class="fa-solid fa-eye"></i> Vision AI Technology
+                    </div>
+                    <h2 class="font-heading text-3xl md:text-5xl font-bold mb-6">Instant Vision AI Diagnosis</h2>
+                    <p class="text-gray-300 text-lg mb-4 leading-relaxed">
+                        Don't know what's wrong? Just snap a photo. Our advanced <strong class="text-white">Vision AI</strong> can analyze tire wear, oil leaks, and engine components instantly.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        By 'seeing' your bike's condition, our AI provides a <strong class="text-white">95% accurate fault identification</strong> before our technician even leaves the shop. This ensures we bring the exact spare parts you need, saving you time and getting you back on your journey faster than ever.
+                    </p>
+                </div>
+                
+                <div class="w-full lg:w-1/2 flex justify-center">
+                    <div class="relative w-72 h-96 rounded-2xl overflow-hidden border border-neonCyan/50 shadow-[0_0_40px_rgba(0,242,255,0.15)] group">
+                        <!-- Placeholder Image of broken bike part -->
+                        <img src="https://placehold.co/400x600/151515/333?text=Broken+Engine+Part" alt="Bike Engine" class="w-full h-full object-cover">
+                        <!-- Scanning Animation Line -->
+                        <div class="scanner-line animate-scan shadow-[0_0_20px_#00f2ff,0_0_40px_#00f2ff]"></div>
+                        <!-- Scanning Overlay -->
+                        <div class="absolute inset-0 bg-neonCyan/10 mix-blend-overlay"></div>
+                        
+                        <!-- AI Readout simulation -->
+                        <div class="absolute bottom-4 left-4 right-4 glass rounded-lg p-4 border border-neonCyan/40 text-sm font-mono text-neonCyan transform group-hover:-translate-y-2 transition-transform">
+                            <div class="flex items-center gap-2 mb-2 font-bold"><i class="fa-solid fa-microchip"></i> DIAGNOSIS COMPLETE</div>
+                            <div class="text-gray-300">> 80% Puncture detected.</div>
+                            <div class="text-gray-300">> 20% Wheel Rim issue.</div>
+                            <div class="mt-2 text-white font-sans">> <span class="text-accent font-semibold">Ready to dispatch (15 mins)</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof of Work (Testimonials) -->
+    <section class="py-24 bg-surface overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 mb-12 text-center fade-in-section invisible-init">
+            <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4">Trusted by 1000+ Expats in Da Nang</h2>
+            <p class="text-gray-400">See what our international community has to say about our fast rescue service.</p>
+        </div>
+        
+        <!-- Slider Container -->
+        <div class="flex overflow-x-auto gap-6 px-4 md:px-20 pb-10 hide-scroll snap-x snap-mandatory fade-in-section invisible-init">
+            <!-- Review 1 -->
+            <div class="min-w-[300px] md:min-w-[350px] glass p-1 rounded-2xl snap-center shrink-0">
+                <div class="relative rounded-xl overflow-hidden aspect-[9/16] bg-dark flex justify-center items-center">
+                    <!-- Placeholder for video -->
+                    <div class="absolute inset-0 bg-dark/50 flex flex-col justify-center items-center z-10 group cursor-pointer hover:bg-dark/30 transition-all">
+                        <i class="fa-solid fa-play text-4xl text-white/80 border-2 border-white/80 w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:bg-white/10 transition-all"></i>
+                    </div>
+                    <img src="https://placehold.co/400x700/222/555?text=Expat+Video+Review" alt="Review" class="w-full h-full object-cover opacity-60">
+                    <div class="absolute bottom-4 left-4 right-4 glass p-4 rounded-lg border border-white/10 z-20">
+                        <p class="text-sm font-bold text-white mb-2">"Lifesavers at 2 AM!"</p>
+                        <div class="text-yellow-500 text-xs">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+             <div class="min-w-[300px] md:min-w-[350px] glass p-1 rounded-2xl snap-center shrink-0">
+                <div class="relative rounded-xl overflow-hidden aspect-[9/16] bg-dark flex justify-center items-center">
+                    <div class="absolute inset-0 bg-dark/50 flex flex-col justify-center items-center z-10 group cursor-pointer hover:bg-dark/30 transition-all">
+                        <i class="fa-solid fa-play text-4xl text-white/80 border-2 border-white/80 w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:bg-white/10 transition-all"></i>
+                    </div>
+                    <img src="https://placehold.co/400x700/2A2A2A/555?text=Expat+Video+Review" alt="Review" class="w-full h-full object-cover opacity-60">
+                    <div class="absolute bottom-4 left-4 right-4 glass p-4 rounded-lg border border-white/10 z-20">
+                        <p class="text-sm font-bold text-white mb-2">"Fastest arrival I've seen in DN."</p>
+                        <div class="text-yellow-500 text-xs">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+             <div class="min-w-[300px] md:min-w-[350px] glass p-1 rounded-2xl snap-center shrink-0">
+                <div class="relative rounded-xl overflow-hidden aspect-[9/16] bg-dark flex justify-center items-center">
+                    <div class="absolute inset-0 bg-dark/50 flex flex-col justify-center items-center z-10 group cursor-pointer hover:bg-dark/30 transition-all">
+                        <i class="fa-solid fa-play text-4xl text-white/80 border-2 border-white/80 w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:bg-white/10 transition-all"></i>
+                    </div>
+                    <img src="https://placehold.co/400x700/333/666?text=Expat+Video+Review" alt="Review" class="w-full h-full object-cover opacity-60">
+                    <div class="absolute bottom-4 left-4 right-4 glass p-4 rounded-lg border border-white/10 z-20">
+                        <p class="text-sm font-bold text-white mb-2">"Fixed my flat tire in 10 mins."</p>
+                        <div class="text-yellow-500 text-xs">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About AI Tech (Deep dive block) -->
+    <section class="py-24 bg-dark relative border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="glass p-8 md:p-12 lg:p-16 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden fade-in-section invisible-init">
+                <!-- Decorative blurred shapes -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
+                
+                <h2 class="font-heading text-3xl md:text-5xl font-bold mb-8 relative z-10">The Intelligence Behind Your Safety</h2>
+                
+                <div class="prose prose-invert max-w-none relative z-10 text-gray-300">
+                    <p class="text-lg md:text-xl leading-relaxed mb-6">
+                        At <strong class="text-white">Motorcycle Rescue Da Nang</strong>, we don't just fix bikes; we redefine roadside assistance through <strong>SPORTAIV's Agentic AI technology</strong>.
+                    </p>
+                    <p class="mb-8 leading-relaxed">
+                        Unlike traditional services, our system utilizes specialized AI Agents to handle your emergency in real-time. From the moment you connect, our AI instantly analyzes your GPS coordinates, diagnoses mechanical symptoms through your descriptions or photos, and dispatches the nearest technician with the exact tools required.
+                    </p>
+                    
+                    <h4 class="text-2xl font-bold text-white mb-6 mt-12 border-b border-white/10 pb-4">Why trust our AI?</h4>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-5">
+                            <div class="w-12 h-12 rounded-full glass shrink-0 flex items-center justify-center border border-primary/30">
+                                <i class="fa-solid fa-language text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white text-lg block mb-1">Zero Language Barrier:</strong>
+                                <span class="text-gray-400">Our AI understands and speaks fluent English, ensuring your problem is never lost in translation.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-5">
+                            <div class="w-12 h-12 rounded-full glass shrink-0 flex items-center justify-center border border-accent/30">
+                                <i class="fa-solid fa-route text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white text-lg block mb-1">Smart Dispatching:</strong>
+                                <span class="text-gray-400">Our algorithms bypass traffic bottlenecks to get Technician Thong Nguyen to your location in record time.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-5">
+                            <div class="w-12 h-12 rounded-full glass shrink-0 flex items-center justify-center border border-green-500/30">
+                                <i class="fa-solid fa-scale-balanced text-green-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white text-lg block mb-1">Transparent Diagnostics:</strong>
+                                <span class="text-gray-400">No more guesswork. Our AI provides an instant, fair price estimate based on market standards, protecting you from 'foreigner pricing.'</span>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-12 p-8 glass border-l-4 border-primary rounded-r-2xl">
+                        <p class="italic text-gray-300 md:text-lg m-0 relative">
+                            <i class="fa-solid fa-quote-left text-primary/30 text-4xl absolute -top-4 -left-2"></i>
+                            <span class="relative z-10 block ml-6">"We combine the precision of Artificial Intelligence with the 7-year expertise of our head technician to get you back on the road safely and swiftly."</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Head Technician Context Image -->
+                <div class="mt-16 flex justify-center">
+                    <div class="relative w-full max-w-4xl group cursor-pointer">
+                        <img src="./assets/imgs/avataAI.jpg" alt="Technician with AI Interface" onerror="this.src='https://placehold.co/800x400/1A1A1A/FFF?text=Tech+with+Headset'" class="rounded-2xl shadow-2xl border border-white/10 w-full object-cover h-[300px] md:h-[450px] opacity-70 group-hover:opacity-100 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent opacity-80 rounded-2xl"></div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <h4 class="text-2xl font-bold text-white mb-1">THONG NGUYEN</h4>
+                            <p class="text-accent text-sm font-semibold tracking-wider">HEAD TECHNICIAN & AI DISPATCHER</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex justify-center items-center gap-3 mb-6">
+                <img src="./assets/imgs/logo.png" alt="SPORTAIV Logo" class="h-8 w-auto grayscale opacity-50" onerror="this.src='https://placehold.co/100x40/1A1A1A/FFF?text=LOGO'">
+                <span class="font-heading font-bold text-gray-500 tracking-wide">MOTORCYCLE RESCUE</span>
+            </div>
+            <p class="text-gray-500 text-sm mb-4">Powered by SPORTAIV's Agentic AI framework.</p>
+            <p class="text-gray-600 text-xs">&copy; 2026 Motorcycle Rescue Da Nang. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ================= MODALS & WIDGETS ================= -->
+
+    <!-- EMERGENCY AI CALL MODAL (FULLSCREEN OVERLAY) -->
+    <div id="aiCallModal" class="fixed inset-0 z-[100] bg-dark/95 backdrop-blur-xl hidden flex flex-col items-center justify-center transition-opacity duration-300 opacity-0">
+        <div class="absolute top-8 right-8 cursor-pointer text-gray-500 hover:text-white transition-colors p-4" onclick="closeCallModal()">
+            <i class="fa-solid fa-xmark text-4xl"></i>
+        </div>
+        
+        <div class="relative w-48 h-48 mb-16 flex items-center justify-center">
+            <div class="absolute inset-0 bg-neonCyan/10 rounded-full animate-ping" style="animation-duration: 3s;"></div>
+            <div class="absolute inset-4 bg-neonCyan/20 rounded-full animate-pulse"></div>
+            <div class="relative z-10 w-32 h-32 bg-dark border-4 border-neonCyan rounded-full flex items-center justify-center shadow-[0_0_80px_rgba(0,242,255,0.4)]">
+                <i class="fa-solid fa-microphone-lines text-5xl text-neonCyan"></i>
+            </div>
+        </div>
+
+        <h3 class="font-heading text-3xl font-bold mb-4 drop-shadow-lg text-center px-4">Connecting to AI Specialist...</h3>
+        <p class="text-gray-400 mb-16 text-lg text-center px-4">Please describe your motorcycle issue clearly.</p>
+
+        <!-- Voice Visualizer Code -->
+        <div class="ai-visualizer">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <button onclick="closeCallModal()" class="mt-20 px-10 py-4 bg-red-600/10 border border-red-600/50 text-red-500 rounded-full hover:bg-red-600 hover:text-white hover:border-red-600 transition-all flex items-center gap-3 text-lg font-bold">
+            <i class="fa-solid fa-phone-slash"></i> END CALL
+        </button>
+    </div>
+
+    <!-- AI CHAT WIDGET -->
+    <div id="aiChatWidget" class="fixed bottom-6 right-4 sm:right-6 md:right-10 z-[90] flex flex-col items-end transition-transform duration-500 translate-y-[120%]">
+        <!-- Chat Window -->
+        <div class="w-[90vw] sm:w-[380px] md:w-[400px] h-[550px] max-h-[85vh] glass rounded-3xl border border-neonCyan/30 flex flex-col shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden">
+            <!-- Header -->
+            <div class="bg-dark p-4 border-b border-white/10 flex justify-between items-center relative overflow-hidden shrink-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-neonCyan/10 to-transparent"></div>
+                <div class="relative z-10 flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-neonCyan/10 flex items-center justify-center text-neonCyan border border-neonCyan/50 shadow-[0_0_15px_rgba(0,242,255,0.2)]">
+                        <i class="fa-solid fa-robot text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-base tracking-wide">RescAI Assistant</h4>
+                        <p class="text-[11px] text-neonCyan flex items-center gap-1.5 uppercase font-semibold mt-0.5">
+                            <span class="w-2 h-2 bg-neonCyan rounded-full inline-block animate-pulse shadow-[0_0_5px_#00f2ff]"></span> Online
+                        </p>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <div class="flex items-center gap-2 relative z-10">
+                    <button class="w-8 h-8 flex items-center justify-center rounded-full bg-white/5 text-gray-400 hover:text-white hover:bg-white/10 transition-colors" onclick="closeChat()">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Body -->
+            <div id="chatBody" class="flex-1 p-5 overflow-y-auto flex flex-col gap-5 text-sm hide-scroll scroll-smooth">
+                <!-- Message from AI -->
+                <div class="flex gap-3">
+                    <div class="w-8 h-8 rounded-full bg-neonCyan/20 flex items-center justify-center text-neonCyan shrink-0 border border-neonCyan/30 mt-1">
+                        <i class="fa-solid fa-robot text-xs"></i>
+                    </div>
+                    <div class="bg-surface border border-white/5 p-4 rounded-2xl rounded-tl-sm max-w-[85%] text-gray-300 leading-relaxed shadow-lg">
+                        Hello! I am your AI Rescue Specialist. Please tell me what's wrong with your motorbike, or send a photo for an instant diagnosis.
+                    </div>
+                </div>
+                
+                <!-- Typing Indicator (Hidden initially) -->
+                 <div id="typingIndicator" class="flex gap-3 hidden">
+                    <div class="w-8 h-8 rounded-full bg-neonCyan/20 flex items-center justify-center text-neonCyan shrink-0 border border-neonCyan/30 mt-1">
+                        <i class="fa-solid fa-robot text-xs"></i>
+                    </div>
+                    <div class="bg-surface border border-white/5 px-4 py-3 rounded-2xl rounded-tl-sm max-w-[85%] flex items-center gap-2 shadow-lg h-10">
+                        <span class="text-xs text-gray-400 italic font-mono">AI is typing</span>
+                        <div class="flex gap-1.5 ml-1">
+                            <div class="w-1.5 h-1.5 bg-neonCyan rounded-full animate-bounce"></div>
+                            <div class="w-1.5 h-1.5 bg-neonCyan rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                            <div class="w-1.5 h-1.5 bg-neonCyan rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="bg-surface/80 border-t border-white/10 p-4 shrink-0">
+                <div class="flex items-end gap-2 glass rounded-2xl border border-white/10 p-1 focus-within:border-neonCyan/50 transition-colors">
+                    <button onclick="triggerFileInput()" class="p-3 text-gray-400 hover:text-neonCyan transition-colors shrink-0 tooltip relative" title="Upload Photo">
+                        <i class="fa-solid fa-camera text-lg"></i>
+                    </button>
+                    <input type="file" id="imageUpload" accept="image/*" class="hidden" onchange="handleImageUpload(event)">
+                    <textarea id="chatInput" rows="1" class="flex-1 bg-transparent border-none p-3 text-sm focus:ring-0 focus:outline-none resize-none text-white placeholder-gray-500 hide-scroll" placeholder="Type a message..." style="min-height: 44px; max-height: 100px;"></textarea>
+                    <button onclick="sendChatMessage()" class="p-3 m-1 bg-neonCyan/20 text-neonCyan rounded-xl border border-neonCyan/30 hover:bg-neonCyan hover:text-dark transition-colors shrink-0">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN SCRIPT -->
+    <script>
+        // --- 1. Animation Observer (Fade In Scroll) ---
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.invisible-init').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Auto resize textarea
+            const tx = document.getElementsByTagName("textarea");
+            for (let i = 0; i < tx.length; i++) {
+              tx[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");
+              tx[i].addEventListener("input", OnInput, false);
+            }
+
+            function OnInput() {
+              this.style.height = 'auto';
+              this.style.height = (this.scrollHeight) + "px";
+            }
+        });
+
+        // --- 2. AI Call Modal Logic ---
+        const callModal = document.getElementById('aiCallModal');
+        
+        function openCallModal() {
+            callModal.classList.remove('hidden');
+            setTimeout(() => {
+                callModal.classList.remove('opacity-0');
+                callModal.classList.add('opacity-100');
+            }, 10);
+            
+            setTimeout(() => {
+                mockApiRequest("call_initiated");
+            }, 2000);
+        }
+
+        function closeCallModal() {
+            callModal.classList.remove('opacity-100');
+            callModal.classList.add('opacity-0');
+            setTimeout(() => {
+                callModal.classList.add('hidden');
+            }, 300);
+        }
+
+        // --- 3. AI Chat Widget Logic ---
+        const chatWidget = document.getElementById('aiChatWidget');
+        const chatBody = document.getElementById('chatBody');
+        const typingIndicator = document.getElementById('typingIndicator');
+        const chatInput = document.getElementById('chatInput');
+        let chatOpen = false;
+
+        function openChat() {
+            chatWidget.classList.remove('translate-y-[120%]');
+            chatOpen = true;
+            setTimeout(() => chatInput.focus(), 500);
+        }
+
+        function closeChat() {
+            chatWidget.classList.add('translate-y-[120%]');
+            chatOpen = false;
+        }
+
+        chatInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendChatMessage();
+            }
+        });
+
+        function scrollToBottom() {
+            chatBody.scrollTo({
+                top: chatBody.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+
+        function appendUserMessage(text) {
+            const msgHtml = `
+                <div class="flex gap-3 justify-end items-end">
+                    <div class="bg-primary/20 border border-primary/30 p-4 rounded-2xl rounded-tr-sm max-w-[85%] text-white shadow-lg leading-relaxed">
+                        ${text.replace(/\\n/g, '<br>')}
+                    </div>
+                </div>
+            `;
+            const div = document.createElement('div');
+            div.innerHTML = msgHtml;
+            chatBody.insertBefore(div.firstElementChild, typingIndicator);
+            scrollToBottom();
+        }
+
+        function appendAIMessage(text) {
+            const msgHtml = `
+                <div class="flex gap-3 items-end">
+                    <div class="w-8 h-8 rounded-full bg-neonCyan/20 flex items-center justify-center text-neonCyan shrink-0 border border-neonCyan/30 mb-2">
+                        <i class="fa-solid fa-robot text-xs"></i>
+                    </div>
+                    <div class="bg-surface border border-white/5 p-4 rounded-2xl rounded-tl-sm max-w-[85%] text-gray-300 leading-relaxed shadow-lg">
+                        ${text}
+                    </div>
+                </div>
+            `;
+            const div = document.createElement('div');
+            div.innerHTML = msgHtml;
+            chatBody.insertBefore(div.firstElementChild, typingIndicator);
+            scrollToBottom();
+        }
+
+        function appendImageUpload(imgSrc) {
+            const msgHtml = `
+                <div class="flex gap-3 justify-end items-end">
+                    <div class="bg-primary/10 border border-primary/30 p-1.5 rounded-2xl rounded-tr-sm max-w-[85%] relative overflow-hidden shadow-lg">
+                        <img src="${imgSrc}" class="rounded-xl w-48 h-auto object-contain">
+                        <div class="scanner-line animate-scan shadow-[0_0_15px_#00f2ff]"></div>
+                        <div class="absolute inset-0 bg-neonCyan/10 mix-blend-overlay"></div>
+                    </div>
+                </div>
+            `;
+            const div = document.createElement('div');
+            div.innerHTML = msgHtml;
+            chatBody.insertBefore(div.firstElementChild, typingIndicator);
+            scrollToBottom();
+        }
+
+        function sendChatMessage() {
+            const text = chatInput.value.trim();
+            if (!text) return;
+            
+            appendUserMessage(text);
+            chatInput.value = '';
+            chatInput.style.height = 'auto'; // reset height
+            
+            showTyping();
+            
+            issueDetails.text_description = text;
+            mockApiRequest("chat_message_sent");
+
+            setTimeout(() => {
+                hideTyping();
+                appendAIMessage("I've received your request. Let me analyze the issue. Could you share your location using the GPS button on the page?");
+            }, 1500);
+        }
+
+        function triggerFileInput() {
+            document.getElementById('imageUpload').click();
+        }
+
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    appendImageUpload(e.target.result);
+                    showTyping();
+                    
+                    if(e.target.result.length > 50) {
+                        issueDetails.vision_data.image_base64 = e.target.result.substring(0, 50) + "...(truncated)";
+                    }
+                    
+                    mockApiRequest("image_uploaded_for_vision");
+
+                    setTimeout(() => {
+                        hideTyping();
+                        const htmlMsg = `
+                            <div class="font-mono text-neonCyan mb-2 border-b border-neonCyan/20 pb-2"><i class="fa-solid fa-microchip"></i> Vision Analysis</div>
+                            <ul class="list-disc pl-4 text-xs space-y-1 mb-3">
+                                <li>80% chance of Puncture</li>
+                                <li>20% Wheel Rim issue</li>
+                            </ul>
+                            <div class="text-white font-semibold mb-3">Estimated fix time: 15 mins.</div>
+                            Shall I dispatch Technician Thong Nguyen?
+                        `;
+                        appendAIMessage(htmlMsg);
+                    }, 3500);
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function showTyping() {
+            typingIndicator.classList.remove('hidden');
+            scrollToBottom();
+        }
+
+        function hideTyping() {
+            typingIndicator.classList.add('hidden');
+        }
+
+        // --- 4. Geolocation & API Payload preparation (Per PRD) ---
+        
+        let globalLocationData = {
+            latitude: null,
+            longitude: null,
+            address_note: "Awaiting GPS..."
+        };
+        
+        let issueDetails = {
+            text_description: "",
+            vision_data: {
+                image_base64: null,
+                image_url: null
+            }
+        };
+
+        const btnShareLocation = document.getElementById('btnShareLocation');
+        const locationStatus = document.getElementById('locationStatus');
+        const locationBtnText = document.getElementById('locationBtnText');
+
+        btnShareLocation.addEventListener('click', () => {
+            if (navigator.geolocation) {
+                locationBtnText.innerText = "Locating via Satellite...";
+                locationStatus.classList.remove('hidden');
+                locationStatus.innerHTML = "<i class='fa-solid fa-spinner fa-spin text-primary'></i> Connecting to GPS...";
+                
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        globalLocationData.latitude = position.coords.latitude;
+                        globalLocationData.longitude = position.coords.longitude;
+                        globalLocationData.address_note = "GPS Coordinates Acquired";
+                        
+                        btnShareLocation.classList.replace('border-primary/50', 'border-green-500');
+                        btnShareLocation.classList.replace('text-white', 'text-green-500');
+                        locationBtnText.innerText = "Location Secured";
+                        locationStatus.innerHTML = `<i class='fa-solid fa-check text-green-500'></i> Lat: ${position.coords.latitude.toFixed(4)}, Lng: ${position.coords.longitude.toFixed(4)}`;
+                        
+                        mockApiRequest("location_shared");
+                    },
+                    (error) => {
+                        btnShareLocation.classList.replace('border-primary/50', 'border-red-500');
+                        btnShareLocation.classList.replace('text-white', 'text-red-500');
+                        locationBtnText.innerText = "Location Failed";
+                        locationStatus.innerText = "Please enable location services or enter manually.";
+                        console.error("Error getting location: ", error.message);
+                    },
+                    { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
+                );
+            } else {
+                locationStatus.classList.remove('hidden');
+                locationStatus.innerText = "Geolocation is not supported by this browser.";
+            }
+        });
+
+        // Mock API Request Function representing the JSON structure
+        function mockApiRequest(actionType) {
+            const apiPayload = {
+                "request_metadata": {
+                    "source_landing_page": "motorcycle-rescue-danang-intl",
+                    "language": "en",
+                    "timestamp": new Date().toISOString()
+                },
+                "customer_info": {
+                    "phone_number": "+8490xxxxxxx",
+                    "whatsapp_id": "8490xxxxxxx",
+                    "name": "Guest (Expat) - Web Client"
+                },
+                "location_data": globalLocationData,
+                "issue_details": issueDetails,
+                "ai_action_required": actionType
+            };
+
+            console.log(`%c[Mock API Payload Sent] Action: ${actionType}`, "background: #1A1A1A; color: #00f2ff; font-weight: bold; padding: 4px; border-radius: 4px; border: 1px solid #00f2ff;");
+            console.log(JSON.stringify(apiPayload, null, 2));
+        }
+
+    </script>
+</body>
+</html>
