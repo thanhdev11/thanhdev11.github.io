@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Motorcycle Rescue Da Nang - AI Powered</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -141,6 +141,83 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+
+        /* Fix Android / mobile horizontal overflow */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Extra bottom padding so fixed buttons don't cover content */
+        body {
+            padding-bottom: 90px;
+        }
+
+        /* Fixed bottom action buttons (WhatsApp style) */
+        .fixed-bottom-btns {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            display: flex;
+            align-items: stretch;
+            box-shadow: 0 -2px 20px rgba(0,0,0,0.6);
+        }
+
+        .fixed-btn-call {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 12px;
+            background: linear-gradient(135deg, #ff6a00, #ee0979);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            transition: filter 0.2s;
+        }
+        .fixed-btn-call:active { filter: brightness(0.85); }
+
+        .fixed-btn-chat {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 12px;
+            background: linear-gradient(135deg, #007AFF, #00c6ff);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            transition: filter 0.2s;
+        }
+        .fixed-btn-chat:active { filter: brightness(0.85); }
+
+        .fixed-btn-divider {
+            width: 1px;
+            background: rgba(255,255,255,0.2);
+            flex-shrink: 0;
+        }
+
+        /* Safe area for iPhone notch/home bar */
+        @supports (padding-bottom: env(safe-area-inset-bottom)) {
+            .fixed-bottom-btns {
+                padding-bottom: env(safe-area-inset-bottom);
+            }
+            body {
+                padding-bottom: calc(90px + env(safe-area-inset-bottom));
+            }
+        }
     </style>
 </head>
 <body class="font-sans antialiased overflow-x-hidden relative">
@@ -163,10 +240,18 @@
         </div>
     </nav>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/84900000000?text=Hello,%20I%20need%20emergency%20bike%20help" target="_blank" class="fixed bottom-6 left-6 z-40 bg-[#25D366] text-white w-14 h-14 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.5)] hover:bg-[#20bd5a] transition-all hover:scale-110 flex items-center justify-center">
-        <i class="fa-brands fa-whatsapp text-3xl"></i>
-    </a>
+    <!-- Fixed Bottom Action Buttons (WhatsApp style) -->
+    <div class="fixed-bottom-btns">
+        <button class="fixed-btn-call" onclick="openCallModal()">
+            <i class="fa-solid fa-phone-volume" style="font-size:1.2rem;"></i>
+            <span>EMERGENCY AI CALL</span>
+        </button>
+        <div class="fixed-btn-divider"></div>
+        <button class="fixed-btn-chat" onclick="openChat()">
+            <i class="fa-brands fa-whatsapp" style="font-size:1.3rem;"></i>
+            <span>CHAT WITH AI</span>
+        </button>
+    </div>
 
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center pt-20 overflow-hidden">
