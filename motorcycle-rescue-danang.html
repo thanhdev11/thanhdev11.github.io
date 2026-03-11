@@ -159,27 +159,58 @@
                     <img src="./assets/imgs/logo.png" alt="SPORTAIV Logo" class="h-10 w-auto rounded-md" onerror="this.src='https://placehold.co/100x40/1A1A1A/FFF?text=LOGO'">
                     <span class="font-heading font-bold text-xl tracking-wide hidden sm:block">MOTORCYCLE RESCUE</span>
                 </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#services" class="text-sm font-semibold text-gray-300 hover:text-white transition-colors">Services</a>
+                    <a href="#ai-tech" class="text-sm font-semibold text-gray-300 hover:text-neonCyan transition-colors">AI Tech</a>
+                    <a href="#transparency" class="text-sm font-semibold text-gray-300 hover:text-white transition-colors">Pricing</a>
+                    <a href="#reviews" class="text-sm font-semibold text-gray-300 hover:text-white transition-colors">Reviews</a>
+                </div>
+
                 <!-- Currency Switcher Desktop -->
-                <div class="hidden md:flex items-center gap-2 text-sm text-gray-400 font-medium">
+                <div class="hidden lg:flex items-center gap-2 text-sm text-gray-400 font-medium">
                     <i class="fa-solid fa-money-bill-transfer"></i>
                     <span>Approx. Rates: </span>
                     <span class="text-white bg-white/10 px-2 py-1 rounded">100,000 VND &approx; $4 USD</span>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobileMenuBtn" class="text-gray-300 hover:text-white focus:outline-none p-2" onclick="toggleMobileMenu()">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay (Hidden by default) -->
+        <div id="mobileMenu" class="md:hidden hidden bg-surface/95 backdrop-blur-xl border-b border-white/10 absolute top-20 left-0 w-full shadow-2xl transition-all origin-top">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#services" class="block px-3 py-4 text-base font-semibold text-white border-b border-white/5" onclick="toggleMobileMenu()">Services</a>
+                <a href="#ai-tech" class="block px-3 py-4 text-base font-semibold text-neonCyan border-b border-white/5" onclick="toggleMobileMenu()">AI Tech Overview</a>
+                <a href="#transparency" class="block px-3 py-4 text-base font-semibold text-white border-b border-white/5" onclick="toggleMobileMenu()">Pricing Cards</a>
+                <a href="#reviews" class="block px-3 py-4 text-base font-semibold text-white border-b border-white/5" onclick="toggleMobileMenu()">Expat Reviews</a>
+                
+                <div class="mt-4 px-3 py-4 bg-dark/50 rounded-lg flex items-center gap-2 text-sm text-gray-400">
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                    <span>Rates: 100K VND &approx; $4 USD</span>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Floating Action Buttons -->
-    <div class="fixed bottom-6 left-4 right-4 md:left-auto md:right-6 md:w-auto z-50 flex flex-col gap-3">
+    <div class="fixed bottom-6 left-4 right-4 md:left-auto md:right-6 md:w-auto z-50 flex flex-col gap-2 md:gap-3">
         <!-- AI Chat Button -->
-        <button onclick="openChat()" class="w-full md:w-auto bg-dark/95 backdrop-blur-md border border-neonCyan text-neonCyan h-14 px-6 rounded-full shadow-[0_0_20px_rgba(0,242,255,0.4)] hover:bg-neonCyan/10 transition-all hover:scale-105 flex items-center justify-center md:justify-start gap-4 font-bold text-[14px] sm:text-base tracking-wide">
-            <i class="fa-solid fa-comment-dots text-xl"></i>
+        <button onclick="openChat()" class="w-full md:w-auto bg-dark/95 backdrop-blur-md border border-neonCyan text-neonCyan h-12 md:h-14 px-5 md:px-6 rounded-full shadow-[0_0_20px_rgba(0,242,255,0.4)] hover:bg-neonCyan/10 transition-all hover:scale-105 flex items-center justify-center md:justify-start gap-3 md:gap-4 font-bold text-[13px] sm:text-[15px] tracking-wide">
+            <i class="fa-solid fa-comment-dots text-lg md:text-xl"></i>
             <span>CHAT WITH AI SPECIALIST</span>
         </button>
 
         <!-- AI Call Button -->
-        <button onclick="openCallModal()" class="w-full md:w-auto bg-gradient-to-r from-orange-500 to-red-600 text-white h-14 px-6 rounded-full shadow-[0_0_20px_rgba(255,100,0,0.5)] transition-all hover:scale-105 flex items-center justify-center md:justify-start gap-4 font-bold text-[14px] sm:text-base tracking-wide border border-orange-400/30">
-            <i class="fa-solid fa-phone-volume text-xl animate-bounce"></i>
+        <button onclick="openCallModal()" class="w-full md:w-auto bg-gradient-to-r from-orange-500 to-red-600 text-white h-12 md:h-14 px-5 md:px-6 rounded-full shadow-[0_0_20px_rgba(255,100,0,0.5)] transition-all hover:scale-105 flex items-center justify-center md:justify-start gap-3 md:gap-4 font-bold text-[13px] sm:text-[15px] tracking-wide border border-orange-400/30">
+            <i class="fa-solid fa-phone-volume text-lg md:text-xl animate-bounce"></i>
             <span>EMERGENCY AI CALL</span>
         </button>
     </div>
@@ -200,11 +231,11 @@
                 <i class="fa-solid fa-robot"></i> AI-Powered Assistance
             </div>
             
-            <h1 class="font-heading font-extrabold text-5xl md:text-7xl mb-6 leading-tight drop-shadow-2xl">
+            <h1 class="font-heading font-extrabold text-[36px] leading-[1.1] md:text-6xl lg:text-7xl mb-5 md:mb-6 drop-shadow-2xl">
                 PROFESSIONAL MOTORBIKE <br class="hidden md:block"/><span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-500">RESCUE IN DA NANG</span>
             </h1>
             
-            <p class="text-xl md:text-2xl text-gray-300 font-light mb-12 max-w-3xl leading-relaxed drop-shadow-md">
+            <p class="text-[17px] md:text-2xl text-gray-300 font-light mb-10 md:mb-12 max-w-3xl leading-relaxed drop-shadow-md px-2">
                 English-speaking AI Assistant & Expert Technicians.<br/> Fast Arrival in <strong class="text-white font-semibold flex-inline bg-white/10 px-2 py-1 rounded">15-20 Minutes</strong>. 24/7 Support.
             </p>
 
@@ -237,8 +268,8 @@
                 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm font-bold tracking-wide uppercase mb-6 shadow-[0_0_15px_rgba(34,197,94,0.2)]">
                     <i class="fa-solid fa-shield-halved"></i> NO FOREIGNER TAX - SAME PRICE FOR ALL
                 </div>
-                <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">Smart & Transparent Pricing</h2>
-                <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4 md:mb-6">Smart & Transparent Pricing</h2>
+                <p class="text-[15px] md:text-lg text-gray-400 max-w-2xl mx-auto">
                     You pay for Expertise, Technology, and Peace of Mind. <br class="hidden sm:block">No hidden fees. Full safety check included.
                 </p>
             </div>
@@ -253,7 +284,7 @@
                         <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center text-accent text-xl">
                             <i class="fa-solid fa-wrench"></i>
                         </div>
-                        <h3 class="font-heading text-2xl font-bold text-white">Quick Fixes</h3>
+                        <h3 class="font-heading text-xl md:text-2xl font-bold text-white">Quick Fixes</h3>
                     </div>
 
                     <div class="space-y-6 relative z-10">
@@ -300,7 +331,7 @@
                         <div class="w-12 h-12 rounded-xl bg-neonCyan/20 flex items-center justify-center text-neonCyan text-xl">
                             <i class="fa-solid fa-car-battery"></i>
                         </div>
-                        <h3 class="font-heading text-2xl font-bold text-white">Power & Battery</h3>
+                        <h3 class="font-heading text-xl md:text-2xl font-bold text-white">Power & Battery</h3>
                     </div>
 
                     <div class="space-y-6 relative z-10">
@@ -333,7 +364,7 @@
                         <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 text-xl">
                             <i class="fa-solid fa-microscope"></i>
                         </div>
-                        <h3 class="font-heading text-2xl font-bold pt-[1px] leading-tight text-white">Diagnostics &<br><span class="text-lg text-gray-400 font-medium">Maintenance</span></h3>
+                        <h3 class="font-heading text-xl md:text-2xl font-bold pt-[1px] leading-tight text-white">Diagnostics &<br><span class="text-base md:text-lg text-gray-400 font-medium">Maintenance</span></h3>
                     </div>
 
                     <div class="space-y-6 relative z-10">
@@ -411,9 +442,9 @@
     </section>
 
     <!-- Services Grid -->
-    <section class="py-24 relative bg-dark border-t border-white/5">
+    <section id="services" class="py-24 relative bg-dark border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="font-heading text-3xl md:text-5xl font-bold text-center mb-16">Expert Interventions</h2>
+            <h2 class="font-heading text-3xl md:text-5xl font-bold text-center mb-10 md:mb-16">Expert Interventions</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Flat Tire -->
@@ -464,7 +495,7 @@
                 <div class="w-full lg:w-1/2 fade-in-section invisible-init">
                     <div class="glass p-8 md:p-12 rounded-3xl border-t border-l border-white/10 shadow-2xl relative">
                         <div class="absolute -top-5 -right-5 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
-                        <h3 class="font-heading text-3xl font-bold mb-4 flex items-center gap-3">
+                        <h3 class="font-heading text-2xl md:text-3xl font-bold mb-4 flex items-center gap-3">
                             <i class="fa-solid fa-satellite-dish text-primary"></i> GPS AI Dispatching
                         </h3>
                         <p class="text-gray-300 text-lg mb-8 leading-relaxed">
@@ -503,7 +534,7 @@
                     <div class="inline-flex items-center gap-2 text-neonCyan mb-4 font-semibold uppercase tracking-wider text-sm">
                         <i class="fa-solid fa-eye"></i> Vision AI Technology
                     </div>
-                    <h2 class="font-heading text-3xl md:text-5xl font-bold mb-6">Instant Vision AI Diagnosis</h2>
+                    <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4 md:mb-6">Instant Vision AI Diagnosis</h2>
                     <p class="text-gray-300 text-lg mb-4 leading-relaxed">
                         Don't know what's wrong? Just snap a photo. Our advanced <strong class="text-white">Vision AI</strong> can analyze tire wear, oil leaks, and engine components instantly.
                     </p>
@@ -535,7 +566,7 @@
     </section>
 
     <!-- Proof of Work (Testimonials) -->
-    <section class="py-24 bg-surface overflow-hidden">
+    <section id="reviews" class="py-24 bg-surface overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 mb-12 text-center fade-in-section invisible-init">
             <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4">Trusted by 1000+ Expats in Da Nang</h2>
             <p class="text-gray-400">See what our international community has to say about our fast rescue service.</p>
@@ -589,14 +620,14 @@
     </section>
 
     <!-- About AI Tech (Deep dive block) -->
-    <section class="py-24 bg-dark relative border-t border-white/5">
+    <section id="ai-tech" class="py-24 bg-dark relative border-t border-white/5">
         <div class="max-w-5xl mx-auto px-4">
             <div class="glass p-8 md:p-12 lg:p-16 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden fade-in-section invisible-init">
                 <!-- Decorative blurred shapes -->
                 <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
                 <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
                 
-                <h2 class="font-heading text-3xl md:text-5xl font-bold mb-8 relative z-10">The Intelligence Behind Your Safety</h2>
+                <h2 class="font-heading text-[28px] md:text-5xl font-bold mb-6 md:mb-8 relative z-10 leading-tight">The Intelligence Behind Your Safety</h2>
                 
                 <div class="prose prose-invert max-w-none relative z-10 text-gray-300">
                     <p class="text-lg md:text-xl leading-relaxed mb-6">
@@ -688,7 +719,7 @@
             </div>
         </div>
 
-        <h3 class="font-heading text-3xl font-bold mb-4 drop-shadow-lg text-center px-4">Connecting to AI Specialist...</h3>
+        <h3 class="font-heading text-2xl md:text-3xl font-bold mb-4 drop-shadow-lg text-center px-4">Connecting to AI Specialist...</h3>
         <p class="text-gray-400 mb-16 text-lg text-center px-4">Please describe your motorcycle issue clearly.</p>
 
         <!-- Voice Visualizer Code -->
@@ -779,7 +810,7 @@
 
     <!-- MAIN SCRIPT -->
     <script>
-        // --- 1. Animation Observer (Fade In Scroll) ---
+        // --- 1. Animation Observer (Fade In Scroll) & Menu Logic ---
         document.addEventListener("DOMContentLoaded", function() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -805,6 +836,25 @@
               this.style.height = (this.scrollHeight) + "px";
             }
         });
+
+        // Mobile Menu Toggle Logic
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const btn = document.getElementById('mobileMenuBtn');
+            const icon = btn.querySelector('i');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('animate-fade-in-up'); // Re-using custom animation
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('animate-fade-in-up');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
 
         // --- 2. AI Call Modal Logic ---
         const callModal = document.getElementById('aiCallModal');
