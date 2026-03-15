@@ -1,1007 +1,540 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="scroll-smooth">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KWF2ZXNQ');</script>
-    <!-- End Google Tag Manager -->
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sửa xe lưu động Đà Nẵng 24/7 Thông Nguyễn - Có mặt sau 15 phút. Vá lốp, thay nhớt, kích bình tận nơi. Báo đúng giá - Tận tâm. Gọi ngay: 0898 190 266">
+    <title>Sửa Xe Lưu Động Đà Nẵng Khẩn Cấp 24/7 | Thông Nguyễn</title>
 
-
-     <!-- 1. Critical CSS inline -->
-    <style>
-        .header{background:#dc3545;padding:10px 0;position:sticky;top:0;z-index:1000}
-        .hero{min-height:400px;background:#000;position:relative}
-        .btn-call{background:#28a745;color:#fff;padding:12px 24px;border-radius:25px;border:0}
-        .trust-badge{text-align:center;padding:20px}
-        /* Chỉ CSS cần thiết cho màn hình đầu */
-        body { padding-bottom: 75px; } /* Phù hợp với Mobile Action Bar */
-        .bottom-nav-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-around; padding: 10px 5px; z-index: 1000; }
-        .bottom-nav-btn { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; font-size: 13px; font-weight: 600; margin: 0 4px; padding: 10px 0; border-radius: 8px; color: #fff; text-align: center; }
-        .bottom-nav-btn:hover { color: #fff; opacity: 0.9; }
-        .btn-nav-call { background: #dc3545; animation: vibrate 1s infinite; }
-        .btn-nav-zalo { background: #0068ff; }
-        .btn-nav-price { background: #ffc107; color: #000; }
-        .btn-nav-price:hover { color: #000; }
-        .bottom-nav-btn i { font-size: 18px; margin-bottom: 4px; }
-        @keyframes vibrate { 0% { transform: translate(0); } 20% { transform: translate(-2px, 2px); } 40% { transform: translate(-2px, -2px); } 60% { transform: translate(2px, 2px); } 80% { transform: translate(2px, -2px); } 100% { transform: translate(0); } }
-    </style>
-    <!-- Preconnect cho performance -->
+    <!-- Google Fonts: Be Vietnam Pro -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- 3. Non-blocking CSS -->
-    <link rel="preload" href="web/css/bootstrap.min.css" as="style" 
-          onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="web/css/all.min.css" as="style" 
-          onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" 
-          as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Preconnect cho performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- DNS Prefetch (phụ) -->
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sửa xe lưu động Đà Nẵng 24/7 - Có mặt 15 phút. Vá lốp, thay nhớt tận nơi tại Hải Châu, Thanh Khê. Giá rẻ, uy tín. Gọi: 0898 190 266">
-    
-    <!-- Open Graph cho Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Thông Nguyễn - Sửa Xe Lưu Động Đà Nẵng 24/7">
-    <meta property="og:description" content="Sửa xe lưu động Đà Nẵng 24/7 - Có mặt sau 15 phút, phục vụ tận nơi. Chuyên vá lốp, thay nhớt, sửa chữa xe máy. Giá rẻ, uy tín. Gọi ngay: 0898 190 266">
-    <meta property="og:image" content="https://suaxeluudongthongnguyen.momer.my/logo-small.webp">
-    <meta property="og:url" content="https://suaxeluudongthongnguyen.momer.my">
-    <meta property="og:locale" content="vi_VN">
-    <meta property="og:site_name" content="Thông Nguyễn - Sửa Xe Lưu Động">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Thông Nguyễn - Sửa Xe Lưu Động Đà Nẵng 24/7">
-    <meta name="twitter:description" content="Sửa xe lưu động Đà Nẵng 24/7 - Có mặt sau 15 phút. Gọi ngay: 0898 190 266">
-    <meta name="twitter:image" content="https://suaxeluudongthongnguyen.momer.my/logo-small.webp">
-    
-    <title>Thông Nguyễn - Sửa Xe Lưu Động Đà Nẵng 24/7</title>
-    <link href="web/css/bootstrap.min.css" rel="stylesheet">
-    <link href="web/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="web/css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/logo.png">
-
-    <link rel="sitemap" type="application/xml" href="web/sitemap.xml">
-
-    
-
-    <link rel="canonical" href="https://suaxeluudongthongnguyen.momer.my/">
-
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Thông Nguyễn - Sửa Xe Lưu Động Đà Nẵng 24/7",
-    "image": "https://suaxeluudongthongnguyen.momer.my/images/logo-small.webp",
-    "description": "Sửa xe lưu động Đà Nẵng 24/7 Thông Nguyễn - Có mặt sau 15 phút. Dịch vụ sửa chữa xe máy tận nơi, chuyên nghiệp, uy tín",
-    "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Đà Nẵng",
-        "addressRegion": "Đà Nẵng",
-        "addressCountry": "VN"
-    },
-    "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 16.047079,
-        "longitude": 108.20626
-    },
-    "telephone": "+84898190266",
-    "priceRange": "69000-500000 VND",
-    "openingHours": "Mo-Su 00:00-23:59",
-    "url": "https://suaxeluudongthongnguyen.momer.my",
-    "areaServed": ["Hải Châu", "Thanh Khê", "Liên Chiểu", "Sơn Trà", "Ngũ Hành Sơn", "Cẩm Lệ", "Hòa Khánh"],
-    "sameAs": [
-        "https://www.facebook.com/suaxeluudongdanang247tainha",
-        "https://tiktok.com/@suaxeluudongdanang247"
-    ]
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Trang chủ",
-        "item": "https://suaxeluudongthongnguyen.momer.my/"
-    },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Sửa xe lưu động Đà Nẵng 24/7"
-    }]
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-        "@type": "Question",
-        "name": "Sửa xe lưu động có mất phí di chuyển không?",
-        "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Không phụ thu phí di chuyển trong nội thành Đà Nẵng (Hải Châu, Thanh Khê, Liên Chiểu). Giá đã bao gồm công thợ và di chuyển."
-        }
-    },{
-        "@type": "Question",
-        "name": "Có phục vụ ban đêm không?",
-        "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Có, chúng tôi phục vụ 24/7 cả ngày lẫn đêm, kể cả ngày lễ Tết. Không phụ thu ban đêm."
-        }
-    },{
-        "@type": "Question",
-        "name": "Bao lâu thì có mặt tại chỗ?",
-        "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Chúng tôi cam kết có mặt sau 15 phút đối với khu vực nội thành. Khu vực xa hơn từ 20-30 phút."
-        }
-    },{
-        "@type": "Question",
-        "name": "Thanh toán như thế nào?",
-        "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Chúng tôi báo giá trước, khách đồng ý mới sửa. Thanh toán tiền mặt hoặc chuyển khoản sau khi hoàn thành công việc."
-        }
-    }]
-    }
-    </script>
-    
-
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17277567646">
-    </script>
+    <!-- Tailwind CSS (CDN for simple file setup) -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'AW-17277567646');
-    </script>
-
-    <!-- Event snippet for Người liên hệ conversion page -->
-    <script>
-        gtag('event', 'conversion', {'send_to': 'AW-17277567646/7ef3CP3ypKAbEJ6Fy65A'});
-    </script>
-
-
-    <!-- Event snippet for Người liên hệ conversion page
-    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-    <!-- Script của Google Ads -->
-    <script>
-        function gtag_report_conversion(url, newTab = false) {
-            var callback = function () {
-                if (typeof(url) != 'undefined') {
-                    if (newTab) {
-                        window.open(url, '_blank');
-                    } else {
-                        window.location.href = url;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rescue: '#ffc107', /* Vàng Chanh */
+                        trust: '#1e3a8a',  /* Xanh Dương Đậm */
+                        action: '#dc2626', /* Đỏ Action */
+                        light: '#f8f9fa',
+                    },
+                    fontFamily: {
+                        sans: ['"Be Vietnam Pro"', 'sans-serif'],
                     }
                 }
-            };
-            
-            // Đảm bảo nút vẫn hoạt động kể cả khi Gtag bị block (bởi Adblock/Trình duyệt riêng tư)
-            var fallbackTriggered = false;
-            var fallback = function() {
-                if (!fallbackTriggered) {
-                    fallbackTriggered = true;
-                    callback();
-                }
-            };
-            
-            // Timeout dự phòng
-            var fallbackTimer = setTimeout(fallback, 300);
-
-            if (typeof gtag === 'function') {
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-17277567646/7ef3CP3ypKAbEJ6Fy65A',
-                    'event_callback': function() {
-                        clearTimeout(fallbackTimer);
-                        fallback();
-                    }
-                });
             }
-            return false;
         }
     </script>
 
+    <!-- Custom CSS -->
+    <style>
+        html, body {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            /* padding-bottom for sticky action bar on mobile */
+            padding-bottom: 70px;
+        }
+        @media (min-width: 768px) {
+            body {
+                padding-bottom: 0;
+            }
+            .mobile-sticky-bar {
+                display: none !important;
+            }
+        }
+        
+        .animate-vibrate {
+            animation: vibrate 1.5s linear infinite;
+        }
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17277567646">
-    </script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        @keyframes vibrate {
+            0% { transform: translate(0); }
+            10% { transform: translate(-2px, 2px); }
+            20% { transform: translate(-2px, -2px); }
+            30% { transform: translate(2px, 2px); }
+            40% { transform: translate(2px, -2px); }
+            50% { transform: translate(0); }
+            100% { transform: translate(0); }
+        }
 
-        gtag('config', 'AW-17277567646');
+        /* Glassmorphism for header/cards */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .tab-btn.active {
+            background-color: #1e3a8a;
+            color: white;
+            border-bottom: 2px solid #ffc107;
+        }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+    <!-- Local SEO Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Thông Nguyễn - Sửa Xe Lưu Động Đà Nẵng 24/7",
+        "image": "https://suaxeluudongthongnguyen.momer.my/thong/images/logoNew.png",
+        "description": "Sửa xe lưu động Đà Nẵng 24/7 Thông Nguyễn - Có mặt sau 15 phút. Dịch vụ sửa chữa xe máy tận nơi, chuyên nghiệp, uy tín.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Đà Nẵng",
+            "addressRegion": "Đà Nẵng",
+            "addressCountry": "VN"
+        },
+        "telephone": "+84898190266",
+        "priceRange": "49000-500000 VND",
+        "openingHours": "Mo-Su 00:00-23:59",
+        "areaServed": ["Hải Châu", "Thanh Khê", "Liên Chiểu", "Sơn Trà", "Ngũ Hành Sơn", "Cẩm Lệ"]
+    }
     </script>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 antialiased overflow-x-hidden w-full max-w-[100vw]">
 
-
-     <!-- Sidebar -->
-    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
-    <div class="sidebar" id="sidebar">
-        <button class="sidebar-close" onclick="toggleSidebar()">
-            <i class="fas fa-times"></i>
-        </button>
-        <ul class="sidebar-menu">
-            <li><a href="#home" onclick="toggleSidebar()"><i class="fas fa-home"></i> Trang chủ</a></li>
-            <li><a href="#sua-xe-luu-dong" onclick="toggleSidebar()"><i class="fas fa-wrench"></i> Dịch vụ</a></li>
-            <li><a href="#danh-gia-khach-hang" onclick="toggleSidebar()"><i class="fas fa-star"></i> Đánh giá khách hàng</a></li>
-            <li><a href="#dat-lich-sua-xe" onclick="toggleSidebar()"><i class="fas fa-calendar-check"></i> Đặt lịch</a></li>
-        </ul>
-    </div>
-    
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-6">
-                    <div class="logo-container">
-                        <div class="logo">
-                            <!-- Thay thế logo.jpg bằng file nhỏ hơn -->
-                            <img src="web/logo-small.webp" 
-                                srcset="web/logo-small.webp 50w"
-                                sizes="50px"
-                                width="50" height="50"
-                                alt="Logo Sửa Xe Lưu Động Đà Nẵng 24/7 Thông Nguyễn"
-                                loading="eager"> <!-- eager vì là LCP -->
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="col-6 text-end">
-                    <div class="d-flex align-items-center justify-content-end gap-2">
-                        <button class="btn-call d-sm-block" onclick="return gtag_report_conversion('tel:0898190266')">
-                            <i class="fas fa-phone-alt"></i> Gọi ngay 24/7
-                        </button>
-                        
-                        <button class="menu-toggle" onclick="toggleSidebar()">
-                            <i class="fas fa-bars"></i>
-                        </button>
-                    </div>
+    <header class="fixed top-0 left-0 right-0 w-full max-w-[100vw] z-50 glass-panel shadow-sm box-border">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="thong/images/logoNew.png" alt="Sửa xe lưu động Đà Nẵng Thông Nguyễn logo" class="w-10 h-10 object-cover rounded-full shadow" onerror="this.src='https://ui-avatars.com/api/?name=TN&background=1e3a8a&color=fff'">
+                <div class="font-bold text-trust leading-tight">
+                    <div class="text-[14px] md:text-base">SỬA XE LƯU ĐỘNG</div>
+                    <div class="text-[12px] md:text-sm text-gray-500">THÔNG NGUYỄN 24/7</div>
                 </div>
             </div>
+            <a href="tel:0898190266" class="hidden md:flex items-center gap-2 bg-action text-white px-5 py-2.5 rounded-full font-bold hover:bg-red-700 transition animate-vibrate shadow-lg">
+                <i class="fa-solid fa-phone"></i> 0898.190.266
+            </a>
         </div>
     </header>
 
-    <!-- Breadcrumb -->
-    <nav aria-label="breadcrumb" style="background:#f8f9fa;padding:10px 0;">
-        <div class="container">
-            <ol class="breadcrumb" style="margin:0;background:transparent;padding:0;">
-                <li class="breadcrumb-item"><a href="/" style="color:#0d6efd;text-decoration:none;">Trang chủ</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Sửa xe lưu động Đà Nẵng 24/7</li>
-            </ol>
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-16 md:pt-32 md:pb-24 min-h-[90vh] flex items-center bg-gray-900">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <!-- Dùng ảnh thợ sửa xe hoặc placeholder -->
+            <img src="web/image/a3.png" alt="sua-xe-luu-dong-da-nang-thong-nguyen-hien-truong" class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent"></div>
         </div>
-    </nav>
 
-
-    <!-- Hero Section -->
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
-            
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="6"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="7"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="8"></button>
-                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="9"></button>
-            </div>
-
-            <div class="carousel-inner">
-
-                <!-- Slide 5 -->
-                <div class="carousel-item active">
-                    <div class="hero-slide" style="background-image: url('web/image/a3.png');">
-                    </div>
-                </div>
-
-
-                 <!-- Slide 5 -->
-                <div class="carousel-item">
-                    <div class="hero-slide" style="background-image: url('web/image/a6.png');">
-                    </div>
-                </div>
-
-                 <!-- Slide 5 -->
-                <div class="carousel-item">
-                    <div class="hero-slide" style="background-image: url('web/image/a5.png');">
-                    </div>
-                </div>
-
-
-                <!-- Slide 1 -->
-                <div class="carousel-item">
-                    <div class="hero-slide">
-                        <div class="hero-overlay"></div>
-                        <div class="container hero-content">
-                            <h1>Sửa Xe Lưu Động Đà Nẵng Thông Nguyễn – Có mặt sau 15 phút, 24/7</h1>
-                            <p>Dịch vụ sửa chữa xe máy tận nơi, chuyên nghiệp và uy tín</p>
-                            <div class="cta-buttons justify-content-center mt-4">
-                                <button class="btn-call" onclick="return gtag_report_conversion('tel:0898190266')">
-                                    <i class="fas fa-phone-alt"></i> Gọi ngay 24/7
-                                </button>
-                                <button class="btn-book" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'})">
-                                    <i class="fas fa-calendar-check"></i> Đặt lịch sửa xe
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               
-                <!-- Slide 3 -->
-                <div class="carousel-item">
-                    <div class="hero-slide" style="background-image: url('web/image/a8.png');">
-                    </div>
-                </div>
-
-                 
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <div class="hero-slide" style="background-image: url('web/image/a10.png');">
-                    </div>
-                </div>
-
-
-                <!-- Slide 4 -->
-                <div class="carousel-item">
-                    <div class="hero-slide" style="background-image: url('web/image/a2.png');">
-                    </div>
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="carousel-item">
-                    <div class="hero-slide" style="background-image: url('web/image/a1.png');">
-                    </div>
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="carousel-item">
-                    <div class="hero-slide" style="background-image: url('web/image/a9.png');">
-                    </div>
-                </div>
-
-
-                <!-- Slide 6 -->
-                <div class="carousel-item">
-                    <div class="hero-slide" style="background-image: url('web/image/a4.png');">
-                    </div>
-                </div>
+        <div class="container mx-auto px-4 relative z-10" data-aos="fade-up">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 drop-shadow-lg">
+                    SỬA XE LƯU ĐỘNG <BR> ĐÀ NẴNG <br/>
+                    <span class="text-rescue">CỨU HỘ KHẨN CẤP <br> 24/7</span>
+                </h1>
                 
-            </div>
-        </div>
-    </section>
+                <p class="text-lg md:text-xl text-gray-100 mb-8 font-medium drop-shadow-md">
+                    Đang dắt bộ? Xe chết máy? Đừng lo, <strong class="text-rescue">Thông Nguyễn có mặt sau 15 phút.</strong><br class="hidden md:block" /> 
+                    Sửa đúng bệnh - Báo đúng giá - Tận tâm như người nhà.
+                </p>
 
-    
-
-     <!-- Giới thiệu dịch vụ -->
-    <section class="intro-section" style="padding:50px 15px;background:#fff;">
-        <div class="container">
-            <h2 style="text-align:center;color:#dc3545;font-size:28px;margin-bottom:30px;font-weight:700;">
-                Dịch Vụ Sửa Xe Lưu Động Đà Nẵng Uy Tín - Chuyên Nghiệp
-            </h2>
-            <div style="max-width:900px;margin:0 auto;line-height:1.8;font-size:16px;color:#333;">
-                <p style="margin-bottom:20px;">
-                    <strong>Sửa xe lưu động Đà Nẵng Thông Nguyễn</strong> là dịch vụ sửa chữa xe máy tận nơi hàng đầu tại Đà Nẵng với hơn 7 năm kinh nghiệm. Chúng tôi cam kết có mặt sau 15 phút khi bạn gọi, phục vụ 24/7 không ngừng nghỉ, kể cả ngày lễ Tết.
-                </p>
-                <p style="margin-bottom:20px;">
-                    Đội ngũ thợ chuyên nghiệp của chúng tôi được trang bị đầy đủ dụng cụ và phụ tùng chính hãng, sẵn sàng xử lý mọi sự cố xe máy ngay tại vị trí của bạn. Từ <strong>vá lốp xe, thay nhớt, sửa chữa điện, thay bình ắc quy</strong> đến các hạng mục bảo dưỡng định kỳ - tất cả đều được thực hiện nhanh chóng và chuyên nghiệp.
-                </p>
-                <p style="margin-bottom:20px;">
-                    Chúng tôi phục vụ đầy đủ các quận huyện tại Đà Nẵng bao gồm <strong>Hải Châu, Thanh Khê, Liên Chiểu, Sơn Trà, Ngũ Hành Sơn, Cẩm Lệ</strong>. Với phương châm "khách hàng là thượng đế", chúng tôi luôn báo giá minh bạch trước khi sửa, không phát sinh chi phí và không phụ thu phí di chuyển trong nội thành.
-                </p>
-                <p style="margin-bottom:20px;">
-                    Dù bạn gặp sự cố xe máy lúc nửa đêm, sáng sớm hay giờ cao điểm, chỉ cần một cuộc gọi đến <strong style="color:#dc3545;">0898 190 266</strong>, chúng tôi sẽ đến ngay để hỗ trợ bạn. Sửa xe lưu động không chỉ tiết kiệm thời gian mà còn giúp bạn yên tâm khi xe hư tại nhà, công ty hay bất kỳ đâu trong thành phố.
-                </p>
-                <p style="text-align:center;margin-top:30px;">
-                    <a href="tel:0898190266" style="display:inline-block;background:#dc3545;color:#fff;padding:15px 40px;border-radius:25px;text-decoration:none;font-weight:700;font-size:18px;">
-                        <i class="fas fa-phone-alt"></i> Gọi ngay: 0898 190 266
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="tel:0898190266" class="bg-action text-white text-lg md:text-xl font-bold py-4 px-8 rounded-full shadow-[0_0_20px_rgba(220,38,38,0.5)] hover:bg-red-700 transition transform hover:scale-105 animate-vibrate flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        GỌI CỨU HỘ NGAY: 0898.190.266
                     </a>
-                </p>
-            </div>
-        </div>
-    </section>
+                    
+                    <a href="https://zalo.me/0898190266" target="_blank" class="bg-blue-600 text-white text-lg font-bold py-4 px-8 rounded-full shadow-lg hover:bg-blue-700 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-comment-dots text-2xl"></i>
+                        Gửi định vị qua Zalo
+                    </a>
+                </div>
 
-    <!-- Trust Badges Section -->
-    <section class="trust-badges-section">
-        <div class="container">
-            <div class="row g-3">
-                <div class="col-6 col-md-3">
-                    <div class="trust-badge">
-                        <div class="trust-icon">
-                            <i class="fas fa-shipping-fast"></i>
+                <!-- Trust signals -->
+                <div class="mt-10 grid grid-cols-3 gap-2 md:gap-6 text-white text-sm md:text-base font-medium">
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-2">
+                            <i class="fa-solid fa-clock text-rescue text-xl"></i>
                         </div>
-                        <h5>Có mặt 15 phút</h5>
-                        <p>Phản hồi nhanh chóng</p>
+                        Có mặt 15 phút
                     </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="trust-badge">
-                        <div class="trust-icon">
-                            <i class="fas fa-hand-holding-usd"></i>
+                    <div class="flex flex-col items-center border-x border-white/20">
+                        <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-2">
+                            <i class="fa-solid fa-money-bill-wave text-rescue text-xl"></i>
                         </div>
-                        <h5>Không phát sinh</h5>
-                        <p>Minh bạch chi phí</p>
+                        Giá từ 49K
                     </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <a href="#sua-xe-luu-dong" style="text-decoration:none;color:inherit;"></a>
-                    <div class="trust-badge">
-                        <div class="trust-icon">
-                            <i class="fas fa-file-invoice-dollar"></i>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-2">
+                            <i class="fa-solid fa-user-shield text-rescue text-xl"></i>
                         </div>
-                        <h5>Báo giá trước</h5>
-                        <p>Khách đồng ý mới làm</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="trust-badge">
-                        <div class="trust-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h5>Phụ tùng chính hãng</h5>
-                        <p>Đảm bảo chất lượng</p>
+                        Báo giá trước
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    
+    <!-- Service Cards -->
+    <section class="py-16 md:py-24 bg-white" id="dichvu">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span class="text-trust font-bold tracking-wider uppercase text-sm">Dịch vụ của chúng tôi</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold mt-2 text-gray-900">CỨU HỘ <br> MỌI LÚC - MỌI NƠI</h2>
+                <div class="w-24 h-1 bg-action mx-auto mt-4 rounded"></div>
+            </div>
 
-    <!-- Pricing Table Section -->
-    <section class="pricing-section" id="sua-xe-luu-dong" data-service="sua-xe">
-        <div class="container">
-            <h2 class="section-title">Bảng giá - Công khai minh bạch</h2>
-            <div class="pricing-table-wrapper">
-                <table class="pricing-table">
-                    <thead>
-                        <tr>
-                            <th>Dịch vụ</th>
-                            <th>Giá từ</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th colspan="2" style="background: #f1f1f1; text-align: left; padding: 10px;">🔴 Xe Số (Wave, Sirius, Dream...)</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fas fa-tools"></i>
-                                <span>Vá lốp (châm vá / vá trong)</span>
-                            </td>
-                            <td class="price">50K - 80K</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fas fa-circle"></i>
-                                <span>Thay săm/ruột</span>
-                            </td>
-                            <td class="price">120K - 150K</td>
-                        </tr>
-                        <tr>
-                            <th colspan="2" style="background: #f1f1f1; text-align: left; padding: 10px;">🔵 Xe Ga (Vision, AirBlade, SH, Lead...)</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fas fa-tools"></i>
-                                <span>Vá lốp không săm</span>
-                            </td>
-                            <td class="price">60K - 90K</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fas fa-circle"></i>
-                                <span>Thay lốp</span>
-                            </td>
-                            <td class="price">Từ 350K</td>
-                        </tr>
-                        <tr>
-                            <th colspan="2" style="background: #f1f1f1; text-align: left; padding: 10px;">⚡ Dịch Vụ Khác</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fas fa-car-battery"></i>
-                                <span>Kích bình / Thay bình ắc quy</span>
-                            </td>
-                            <td class="price">80K - 350K</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <i class="fas fa-moon"></i>
-                                <span>Cứu hộ đêm (sau 22h)</span>
-                            </td>
-                            <td class="price" style="color:#dc3545; font-weight:bold;">Đồng giá - Không phụ phí</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <div class="pricing-note">
-                    <i class="fas fa-check-circle"></i>
-                    <p><strong>Giá đã bao gồm di chuyển trong nội thành</strong> – Không phụ thu ban đêm</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-trust group-hover:text-white transition">
+                        <i class="fa-solid fa-toolbox text-2xl text-trust group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Vá lốp lưu động</h3>
+                    <p class="text-gray-600 mb-4 h-24">Vá lốp xe ga, xe số, ô tô tận nơi. Xử lý nhanh, vá chuẩn, không hư vành xe.</p>
+                    <div class="font-bold text-action text-lg">Chỉ từ 49k</div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-rescue group-hover:text-white transition">
+                        <i class="fa-solid fa-car-battery text-2xl text-rescue group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Kích bình - Thay ắc quy</h3>
+                    <p class="text-gray-600 mb-4 h-24">Xe không đề được? Kích bình siêu tốc hoặc thay mới ắc quy chính hãng (GS, Globe) bảo hành dài hạn.</p>
+                    <div class="font-bold text-action text-lg">Chỉ từ 79k</div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-trust group-hover:text-white transition">
+                        <i class="fa-solid fa-water text-2xl text-trust group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Sửa xe chết máy/ngập nước</h3>
+                    <p class="text-gray-600 mb-4 h-24">Cấp cứu xe ngập nước mùa mưa Đà Nẵng. Xử lý bugi, thay nhớt, vệ sinh máy giúp xe nổ máy ngay tại chỗ.</p>
+                    <div class="font-bold text-action text-lg">Báo giá theo tình trạng</div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-green-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-gas-pump text-2xl text-green-600 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Ship xăng - Thay nhớt</h3>
+                    <p class="text-gray-600 mb-4 h-24">Hết xăng giữa đường hoặc muốn bảo dưỡng xe tại nhà/văn phòng? Gọi em, xăng nhớt có mặt sau 10 phút.</p>
+                    <div class="font-bold text-action text-lg">Hỗ trợ khẩn cấp</div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-green-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-gas-pump text-2xl text-green-600 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Làm côn xe tay ga</h3>
+                    <p class="text-gray-600 mb-4 h-24">Đi bị giật, ga yếu, lên dốc ì máy? Làm côn xe tay ga tại chỗ, giá tốt, bảo hành dài hạn.</p>
+                    <div class="font-bold text-action text-lg">Thay bi, chuông, dây curoa</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-16 bg-light" id="quy-trinh">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-3xl font-extrabold text-center mb-10 text-gray-900" data-aos="fade-up">QUY TRÌNH 3 BƯỚC NHANH GỌN LẸ</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative max-w-5xl mx-auto">
+                <!-- Connector Line for Desktop -->
+                <div class="hidden md:block absolute top-[25%] left-[15%] right-[15%] h-1 bg-gray-200 z-0 border-dashed border-t-2 border-gray-300"></div>
+
+                <div class="text-center relative z-10" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-trust text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto mb-4 border-4 border-white shadow-lg">1</div>
+                    <h3 class="font-bold text-lg mb-2"><i class="fa-solid fa-phone-volume text-action mr-2"></i> Gọi điện báo lỗi</h3>
+                    <p class="text-gray-600">Nhấc máy gọi <strong class="text-action text-lg">0898.190.266</strong>, báo tình trạng và vị trí xe.</p>
                 </div>
                 
-                <button class="btn-call-pricing" onclick="return gtag_report_conversion('tel:0898190266')">
-                    <i class="fas fa-phone-alt"></i> Gọi ngay để được tư vấn chi tiết
-                </button>
+                <div class="text-center relative z-10" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-action text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto mb-4 border-4 border-white shadow-lg">2</div>
+                    <h3 class="font-bold text-lg mb-2"><i class="fa-solid fa-person-biking text-trust mr-2"></i> Thợ xuất phát ngay</h3>
+                    <p class="text-gray-600">Sau <strong class="text-trust">15 - 20 phút</strong>, thợ Thông Nguyễn có mặt tại chỗ với đầy đủ đồ nghề.</p>
+                </div>
+
+                <div class="text-center relative z-10" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-green-600 text-white text-2xl font-bold rounded-full flex items-center justify-center mx-auto mb-4 border-4 border-white shadow-lg">3</div>
+                    <h3 class="font-bold text-lg mb-2"><i class="fa-solid fa-check-circle text-green-500 mr-2"></i> Sửa xong & Kiểm tra</h3>
+                    <p class="text-gray-600">Sửa xong, thợ hỗ trợ kiểm tra tổng quát phanh, lốp, đèn <strong class="text-green-600">miễn phí</strong> cho anh em.</p>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <!-- Mechanic Info Section -->
-    <section class="mechanic-info-section">
-        <div class="container">
-            <div class="mechanic-card">
-                <div class="mechanic-avatar">
-                    <i class="fas fa-user-cog"></i>
+    <!-- Transparent Pricing Section -->
+    <section class="py-16 md:py-24 bg-white" id="bang-gia">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-10" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-gray-900 border-b-4 border-rescue inline-block pb-2">BẢNG GIÁ DỊCH VỤ CÔNG KHAI</h2>
+                <div class="bg-yellow-50 text-yellow-800 border border-yellow-200 text-sm md:text-base p-4 rounded-lg font-semibold inline-block shadow-sm">
+                    <i class="fa-solid fa-shield-halved text-rescue mr-2"></i>
+                    <span class="text-action">BÁO GIÁ TRƯỚC - KHÔNG CHẶT CHÉM - KHÔNG PHÍ DI CHUYỂN NỘI THÀNH</span> <br/>
+                    *Giá đã bao gồm phí di chuyển nội thành Đà Nẵng. Khách đồng ý mới làm.*
                 </div>
-                <div class="mechanic-content">
-                    <div class="mechanic-header">
-                        <h3>👨‍🔧 Thợ: Nguyễn Hữu Thông</h3>
-                        <span class="experience-badge">7 năm kinh nghiệm</span>
+            </div>
+
+            <!-- Tabs -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100" data-aos="fade-up">
+                <div class="flex flex-wrap border-b border-gray-200 bg-gray-50">
+                    <button class="flex-1 tab-btn active font-bold py-4 text-gray-600 hover:text-trust transition" onclick="switchTab(event, 'xeso')">
+                        <i class="fa-solid fa-motorcycle mr-2"></i> XE SỐ
+                    </button>
+                    <button class="flex-1 tab-btn font-bold py-4 text-gray-600 hover:text-trust transition" onclick="switchTab(event, 'xega')">
+                        <i class="fa-solid fa-moped mr-2"></i> XE GA
+                    </button>
+                    <button class="flex-1 tab-btn font-bold py-4 text-gray-600 hover:text-trust transition" onclick="switchTab(event, 'oto')">
+                        <i class="fa-solid fa-car mr-2"></i> Ô TÔ
+                    </button>
+                </div>
+
+                <div class="p-6 md:p-8">
+                    <!-- Tab: Xe Số -->
+                    <div id="xeso" class="tab-content active">
+                        <ul class="divide-y divide-gray-100">
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-screwdriver-wrench text-gray-400 mr-3"></i> Vá xe máy (lốp có săm)</span>
+                                <span class="font-bold text-trust">49K - 69K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-circle-notch text-gray-400 mr-3"></i> Thay ruột/săm xe máy</span>
+                                <span class="font-bold text-trust">149K - 249K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-car-battery text-gray-400 mr-3"></i> Kích bình / Sạc bình</span>
+                                <span class="font-bold text-trust">79K</span>
+                            </li>
+                            <!-- <li class="py-4 flex justify-between items-center text-action">
+                                <span class="font-bold"><i class="fa-solid fa-moon mr-3"></i> Công sửa chữa / Cứu hộ đêm</span>
+                                <span class="font-bold text-right text-sm">Báo giá trực tiếp theo tình trạng</span>
+                            </li> -->
+                        </ul>
                     </div>
-                    <p class="mechanic-specialty">
-                        <i class="fas fa-wrench"></i>
-                        Chuyên sửa chữa xe máy: Honda, Yamaha, Vision, SH, Lead, Winner, Exciter...
-                    </p>
-                    <p class="mechanic-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <strong>Khu vực phục vụ:</strong> Hải Châu, Thanh Khê, Liên Chiểu, Sơn Trà, Ngũ Hành Sơn, Cẩm Lệ
-                    </p>
-                    <p style="margin-top:10px;">
-                        <a href="#dat-lich-sua-xe" style="color:#0d6efd;font-weight:600;">📅 Đặt lịch sửa xe ngay</a> | 
-                        <a href="#sua-xe-luu-dong" style="color:#0d6efd;font-weight:600;">💰 Xem bảng giá</a>
-                    </p>
-                    <div class="mechanic-contact">
-                        <button class="btn-contact-mechanic" onclick="return gtag_report_conversion('tel:0898190266')">
-                            <i class="fas fa-phone-alt"></i> Liên hệ ngay: 0898 190 266
-                        </button>
+
+                    <!-- Tab: Xe Ga -->
+                    <div id="xega" class="tab-content">
+                        <ul class="divide-y divide-gray-100">
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-screwdriver-wrench text-gray-400 mr-3"></i> Vá xe ga (lốp không săm)</span>
+                                <span class="font-bold text-trust">59K - 79K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-circle-notch text-gray-400 mr-3"></i> Thay lốp xe ga chính hãng</span>
+                                <span class="font-bold text-trust">Báo theo size vỏ</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-car-battery text-gray-400 mr-3"></i> Kích bình xe tay ga</span>
+                                <span class="font-bold text-trust">79K - 119K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-oil-can text-gray-400 mr-3"></i> Thay nhớt máy / nhớt láp</span>
+                                <span class="font-bold text-trust">Từ 135K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-oil-can text-gray-400 mr-3"></i> Làm côn xe tay ga Thay bi, chuông, dây curoa</span>
+                                <span class="font-bold text-trust">Từ 135K</span>
+                            </li>
+
+                            
+                        </ul>
                     </div>
+
+                    <!-- Tab: Ô Tô -->
+                    <div id="oto" class="tab-content">
+                        <ul class="divide-y divide-gray-100">
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-car text-gray-400 mr-3"></i> Vá lốp ô tô (vá nấm/vá tạm)</span>
+                                <span class="font-bold text-trust">99K - 129K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-car-battery text-gray-400 mr-3"></i> Kích bình ắc quy ô tô</span>
+                                <span class="font-bold text-trust">119K - 150K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-bolt text-gray-400 mr-3"></i> Thay ắc quy mới tận nơi</span>
+                                <span class="font-bold text-trust">Báo giá theo loại bình</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- CTA within pricing -->
+                <div class="bg-gray-100 p-4 text-center border-t border-gray-200">
+                    <p class="text-sm text-gray-600 mb-3">Với 7 năm kinh nghiệm, chúng tôi cam kết giá tốt nhất thị trường!</p>
+                    <a href="tel:0898190266" class="inline-flex items-center justify-center bg-trust text-white px-6 py-2 rounded-full font-bold hover:bg-blue-800 transition">
+                        <i class="fa-solid fa-phone-volume mr-2"></i> TƯ VẤN CỤ THỂ
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Social Proof Section -->
-    <section class="social-proof-section" style="padding: 40px 15px; background: #fff;">
-        <div class="container">
-            <h2 class="section-title">Video Thực Tế & Hoạt Động</h2>
-            <div class="row align-items-center">
-                <div class="col-md-6 mb-4">
-                    <h4 class="text-center mb-3" style="font-size: 1.2rem; font-weight: 600;">Sửa xe thực tế (TikTok)</h4>
-                    <div class="text-center mx-auto" style="max-width: 288px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 12px;">
-                        <div class="tiktok-mockup" style="background: #000; border-radius: 12px; overflow: hidden; position: relative; aspect-ratio: 9/16; display: flex; align-items: center; justify-content: center;">
-                            <img src="web/image/a3.png" alt="Sửa xe thực tế" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.5;">
-                            <a href="https://www.tiktok.com/@suaxeluudongdanang247" target="_blank" style="position: absolute; text-decoration: none; color: white; display: flex; flex-direction: column; align-items: center; width: 100%; height: 100%; justify-content: center; z-index: 2;">
-                                <div style="background: rgba(255,255,255,0.2); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; backdrop-filter: blur(5px);">
-                                    <i class="fas fa-play" style="font-size: 24px; color: #fff; margin-left: 5px;"></i>
-                                </div>
-                                <span style="font-weight: 600; font-size: 16px; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">@suaxeluudongdanang247</span>
-                                <span style="font-size: 14px; margin-top: 10px; background: #fe2c55; color: #fff; padding: 8px 20px; border-radius: 20px; font-weight: 500; box-shadow: 0 4px 6px rgba(254,44,85,0.3);">
-                                    <i class="fab fa-tiktok me-1"></i> Xem Video Thực Tế
-                                </span>
+    <section class="py-16 bg-gray-50 border-t border-gray-200" id="nguoithat-viecthat">
+        <div class="container mx-auto px-4 max-w-5xl text-center">
+            <h2 class="text-3xl font-extrabold mb-3 text-gray-900" data-aos="fade-up">NGƯỜI THẬT - VIỆC THẬT TẠI HIỆN TRƯỜNG</h2>
+            <p class="text-gray-600 mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Theo dõi hành trình cứu hộ mỗi ngày của Thông Nguyễn qua TikTok và Fanpage. Hơn 5.000 khách hàng Đà Nẵng đã tin tưởng và hài lòng.  
+                <span class="block mt-2 font-bold text-trust">Anh em yên tâm, giá bình dân, thợ ruột!</span>
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <!-- TikTok Embed Lazy Load -->
+                <div class="bg-white p-4 rounded-xl shadow-md border border-gray-100" data-aos="fade-right">
+                    <h3 class="font-bold mb-4 flex items-center justify-center gap-2 text-lg">
+                        <i class="fa-brands fa-tiktok text-2xl text-black"></i> Kênh TikTok @suaxeluudongdanang247
+                    </h3>
+                    <div class="aspect-[9/16] bg-gray-100 rounded-lg overflow-hidden relative flex items-center justify-center">
+                        <img src="thong/images/nenTikTok.png" alt="sua-xe-luu-dong-da-nang-thong-nguyen-tiktok" loading="lazy" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center flex-col z-10 transition hover:bg-black/20">
+                            <a href="https://www.tiktok.com/@suaxeluudongdanang247" target="_blank" class="bg-[#fe2c55] text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transform hover:scale-105 transition">
+                                <i class="fa-solid fa-play"></i> Xem Video Cứu Hộ
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <h4 class="text-center mb-3" style="font-size: 1.2rem; font-weight: 600;">Khách hàng mới nhất (Facebook)</h4>
-                    <div class="text-center text-md-start mx-auto" style="padding: 20px; background: #f8f9fa; border-radius: 10px; max-width: 400px;">
-                        <p class="mb-3">
-                            <i class="fab fa-facebook text-primary fs-3"></i> Hàng trăm khách hàng tại Đà Nẵng đã tin tưởng sử dụng dịch vụ của Thông Nguyễn mỗi tháng.
-                        </p>
-                        <a href="https://www.facebook.com/suaxeluudongdanang247tainha" target="_blank" class="btn btn-primary btn-sm px-4 py-2 mt-2 w-100" style="border-radius: 20px;">
-                            Xem ảnh sửa xe trên Facebook <i class="fas fa-angle-right ms-1"></i>
+
+                <!-- Fanpage Mock -->
+                <div class="bg-white p-4 rounded-xl shadow-md border border-gray-100" data-aos="fade-left">
+                    <h3 class="font-bold mb-4 flex items-center justify-center gap-2 text-lg text-blue-600">
+                        <i class="fa-brands fa-facebook text-2xl"></i> Fanpage Live Cập Nhật
+                    </h3>
+                    <div class="border border-gray-200 rounded-lg overflow-hidden h-[450px] bg-gray-50 flex flex-col items-center justify-center p-6 text-center">
+                        <img src="thong/images/logoNew.png" class="w-20 h-20 object-cover rounded-full mb-4 shadow" loading="lazy" alt="Avatar FB">
+                        <h4 class="font-bold text-xl mb-2">Thông Nguyễn - Sửa Xe 24/7</h4>
+                        <p class="text-sm text-gray-500 mb-6">4.9/5 Sao đánh giá - Thợ sửa rất có tâm!</p>
+                        
+                        <a href="https://www.facebook.com/suaxeluudongdanang247tainha" target="_blank" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">
+                            <i class="fa-brands fa-facebook-f mr-2"></i> Ghé Thăm Fanpage Ngay
+                        </a>
+                        <p class="text-xs text-gray-400 mt-4">Hàng trăm cuốc xe sửa thành công giữa đêm khuya.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area & Footer -->
+    <footer class="bg-trust text-white relative pt-16 pb-24 md:pb-12 border-t-4 border-rescue">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="thong/images/logoNew.png" alt="Sửa xe lưu động Đà Nẵng Thông Nguyễn logo footer" class="w-12 h-12 object-cover rounded-full" onerror="this.src='https://ui-avatars.com/api/?name=TN&background=fff&color=1e3a8a'">
+                        <h3 class="text-2xl font-extrabold text-white">SỬA XE LƯU ĐỘNG <span class="text-rescue">THÔNG NGUYỄN</span></h3>
+                    </div>
+                    <p class="text-gray-300 mb-6 font-light leading-relaxed">
+                        Với hơn 7 năm kinh nghiệm sửa chữa xe máy các dòng Honda, Yamaha, Piaggio, VinFast... Thông Nguyễn cam kết mang đến dịch vụ cứu hộ nhanh nhất, uy tín nhất Đà Nẵng. <br/>
+                        <strong class="text-white">"Hư đâu sửa đó, khó mấy cũng xong!"</strong>
+                    </p>
+                    <div class="flex flex-col gap-3">
+                        <a href="tel:0898190266" class="flex items-center gap-3 text-white hover:text-rescue transition w-max">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center"><i class="fa-solid fa-phone"></i></div>
+                            <span class="font-bold text-xl">0898.190.266</span>
+                        </a>
+                        <a href="https://zalo.me/0898190266" target="_blank" class="flex items-center gap-3 text-white hover:text-blue-400 transition w-max">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center font-bold">Z</div>
+                            <span class="font-bold text-lg">Zalo: Thông Nguyễn</span>
                         </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Reviews Section -->
-    <section class="reviews-section" id="danh-gia-khach-hang" data-service="danh-gia-khach-hang">
-        <div class="container">
-            <h2 class="section-title">Khách hàng nói gì về chúng tôi</h2>
-            <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="review-avatar">A</div>
-                                <div class="review-info">
-                                    <h5>Anh Tuấn - Hải Châu</h5>
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="review-text">"Xe hư giữa đường lúc 2h sáng, gọi anh Thông có mặt sau 10 phút. Sửa nhanh, giá hợp lý, thái độ rất tốt. Rất hài lòng với dịch vụ!"</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="review-avatar">H</div>
-                                <div class="review-info">
-                                    <h5>Chị Hương - Thanh Khê</h5>
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="review-text">"Dịch vụ tuyệt vời! Xe SH của tôi được thay nhớt và bảo dưỡng ngay tại nhà, tiện lợi và chuyên nghiệp. Chắc chắn sẽ quay lại!"</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="review-avatar">M</div>
-                                <div class="review-info">
-                                    <h5>Anh Minh - Liên Chiểu</h5>
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="review-text">"Bình ắc quy hết lúc đi làm về, gọi anh Thông đến thay bình mới rất nhanh. Giá cả hợp lý, không chặt chém. Rất uy tín!"</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="review-avatar">L</div>
-                                <div class="review-info">
-                                    <h5>Chị Lan - Sơn Trà</h5>
-                                    <div class="stars">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="review-text">"Thợ sửa xe tận tâm và nhiệt tình, giải thích rõ ràng từng hạng mục. Xe Lead của tôi giờ chạy êm ru. Cảm ơn anh Thông!"</p>
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-rescue border-b border-white/20 pb-4 inline-block">KHU VỰC PHỤC VỤ (15 PHÚT TỚI)</h4>
+                    <ul class="grid grid-cols-2 gap-3 text-gray-200">
+                        <li><i class="fa-solid fa-location-dot text-action mr-2"></i> Quận Hải Châu</li>
+                        <li><i class="fa-solid fa-location-dot text-action mr-2"></i> Quận Thanh Khê</li>
+                        <li><i class="fa-solid fa-location-dot text-action mr-2"></i> Quận Liên Chiểu</li>
+                        <li><i class="fa-solid fa-location-dot text-action mr-2"></i> Quận Sơn Trà</li>
+                        <li><i class="fa-solid fa-location-dot text-action mr-2"></i> Quận Ngũ Hành Sơn</li>
+                        <li><i class="fa-solid fa-location-dot text-action mr-2"></i> Quận Cẩm Lệ</li>
+                    </ul>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-3">Kết nối với chúng tôi</h4>
+                        <div class="flex gap-4">
+                            <a href="https://www.facebook.com/suaxeluudongdanang247tainha" target="_blank" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-white hover:text-blue-600 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.tiktok.com/@suaxeluudongdanang247" target="_blank" class="w-10 h-10 bg-black rounded-full flex items-center justify-center hover:bg-white hover:text-black transition"><i class="fa-brands fa-tiktok"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <button class="btn-all-reviews" onclick="window.open('https://www.facebook.com/suaxeluudongdanang247tainha', '_blank')">
-            <i class="fab fa-facebook"></i> Xem tất cả đánh giá
-        </button>
-    </section>
-
-
-    <!-- FAQ Section -->
-    <section class="faq-section" style="padding:40px 15px;background:#f8f9fa;">
-        <div class="container">
-            <h2 class="section-title">Câu hỏi thường gặp</h2>
-            <div class="accordion" id="faqAccordion">
-                
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                            Sửa xe lưu động có mất phí di chuyển không?
-                        </button>
-                    </h3>
-                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Không phụ thu phí di chuyển trong nội thành Đà Nẵng (Hải Châu, Thanh Khê, Liên Chiểu). Giá đã bao gồm công thợ và di chuyển.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                            Có phục vụ ban đêm không?
-                        </button>
-                    </h3>
-                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Có, chúng tôi phục vụ 24/7 cả ngày lẫn đêm, kể cả ngày lễ Tết. Không phụ thu ban đêm.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                            Bao lâu thì có mặt tại chỗ?
-                        </button>
-                    </h3>
-                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Chúng tôi cam kết có mặt sau 15 phút đối với khu vực nội thành. Khu vực xa hơn từ 20-30 phút.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                            Thanh toán như thế nào?
-                        </button>
-                    </h3>
-                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Chúng tôi báo giá trước, khách đồng ý mới sửa. Thanh toán tiền mặt hoặc chuyển khoản sau khi hoàn thành công việc.
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    
-    <!-- Booking Form -->
-    <section class="booking-section" id="dat-lich-sua-xe" data-service="dat-lich-sua-xe">
-        <div class="container">
-            <h2 class="section-title text-danger">Yêu cầu cứu hộ khẩn cấp</h2>
-            <p class="text-center mb-4" style="font-size: 1.1rem; font-weight: 600; color: #dc3545;">
-                <i class="fas fa-stopwatch" style="animation: vibrate 1s infinite; display: inline-block;"></i> Thông Nguyễn sẽ gọi lại trong vòng 30 giây!
-            </p>
-            <form class="booking-form" onsubmit="submitBooking(event)">
-                
-                <div class="mb-3">
-                    <label class="form-label">Số điện thoại <span class="text-danger">*</span></label>
-                    <input type="tel" class="form-control" placeholder="Nhập số điện thoại" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Địa điểm <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" placeholder="Nhập địa chỉ cụ thể" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Ghi chú</label>
-                    <textarea class="form-control" rows="3" placeholder="Mô tả vấn đề của xe (vd: xe không nổ, hư phanh,...)"></textarea>
-                </div>
-                <button type="submit" class="btn-submit">
-                    <i class="fas fa-paper-plane"></i> Gửi yêu cầu
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="map-section">
-        <div class="container">
-            <h2 class="section-title">Khu vực phục vụ</h2>
-            <p class="text-center mb-4 text-muted px-2">Đội ngũ thợ túc trực tại các quận/phường, đảm bảo có mặt cứu hộ tận nơi nhanh chóng, không tính thêm phụ phí ban đêm.</p>
-            <div class="row text-center mb-4 mx-auto" style="font-size: 0.95rem; max-width: 800px;">
-                <div class="col-md-4 col-6 mb-2"><strong>📍 Cứu hộ xe máy Hải Châu</strong></div>
-                <div class="col-md-4 col-6 mb-2"><strong>📍 Sửa xe tận nơi Thanh Khê</strong></div>
-                <div class="col-md-4 col-6 mb-2"><strong>📍 Vá lốp lưu động Cẩm Lệ</strong></div>
-                <div class="col-md-4 col-6 mb-2"><strong>📍 Sửa xe máy Liên Chiểu</strong></div>
-                <div class="col-md-4 col-6 mb-2"><strong>📍 Cứu hộ xe máy Sơn Trà</strong></div>
-                <div class="col-md-4 col-6 mb-2"><strong>📍 Sửa xe lưu động Ngũ Hành Sơn</strong></div>
-                <div class="col-12 mt-2"><strong>📍 Cứu hộ xe máy Hòa Khánh</strong></div>
-            </div>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122759.8268296593!2d107.96177487731858!3d16.047079399999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219c792252a13%3A0x1df0cb4b86727e06!2zxJDDoCBO4bq1bmcsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
-
-
-    
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <h4>Thông Nguyễn – Sửa Xe Lưu Động Đà Nẵng 24/7</h4>
-            <div class="footer-info">
-                <i class="fas fa-phone-alt"></i>
-                <a href="tel:0898190266">Hotline: 0898 190 266</a>
-            </div>
-            <div class="footer-info">
-                <i class="fas fa-comment-dots"></i>
-                <a href="https://zalo.me/0338996274" target="_blank">Zalo: 0338 996 274</a>
-            </div>
-            <div class="footer-info">
-                <i class="fas fa-envelope"></i>
-                <a href="mailto:thongnguyen.suaxe@gmail.com">Email: thongnguyen.suaxe@gmail.com</a>
-            </div>
-            <div class="footer-info">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Khu vực phục vụ: Hải Châu, Thanh Khê, Liên Chiểu, Sơn Trà, Ngũ Hành Sơn, Cẩm Lệ</span>
-            </div>
-            <div class="footer-info" style="border-top:1px solid #495057;padding-top:15px;margin-top:15px;">
-                <i class="fas fa-link"></i>
-                <a href="#sua-xe-luu-dong">Bảng giá dịch vụ</a> • 
-                <a href="#danh-gia-khach-hang">Đánh giá</a> • 
-                <a href="#dat-lich-sua-xe">Đặt lịch</a>
-            </div>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/suaxeluudongdanang247tainha" target="_blank">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://tiktok.com/@suaxeluudongdanang247" target="_blank">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="https://zalo.me/0338996274" target="_blank">
-                    <i class="fas fa-comment-dots"></i>
-                </a>
-            </div>
-            <div class="footer-bottom">
-                © 2025 Thông Nguyễn - Sửa Xe Lưu Động. All rights reserved.
+            
+            <div class="text-center text-sm text-gray-400 mt-12 pt-6 border-t border-white/10">
+                &copy; 2024 Sửa Xe Lưu Động Thông Nguyễn Đà Nẵng. All rights reserved.<br>
+                <span class="text-xs">Thiết kế bởi Team Tối Ưu Chuyển Đổi.</span>
             </div>
         </div>
     </footer>
 
-    <!-- Floating Action Buttons -->
-    <!-- <div class="fab-container">
-        
-        <button class="fab-button fab-call" onclick="return gtag_report_conversion('tel:0898190266')" title="Gọi ngay">
-            <i class="fas fa-phone-alt"></i>
-        </button>
-    </div> -->
-
-
-    <!-- Mobile Fixed Bottom Action Bar -->
-    <div class="bottom-nav-bar d-md-none">
-        <a href="tel:0898190266" class="bottom-nav-btn btn-nav-call" onclick="return gtag_report_conversion('tel:0898190266')">
-            <i class="fas fa-phone-alt"></i>
-            Gọi cứu hộ ngay
+    <!-- STICKY ACTION BAR (MOBILE FIRST) -->
+    <div class="mobile-sticky-bar fixed bottom-0 left-0 w-screen max-w-full bg-white shadow-[0_-4px_15px_rgba(0,0,0,0.1)] z-[100] flex md:hidden p-2 gap-2 border-t border-gray-100" style="padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px)); box-sizing: border-box;">
+        <a href="tel:0898190266" class="flex-1 bg-action text-white rounded-lg flex flex-col items-center justify-center py-2 animate-vibrate font-bold shadow-md active:bg-red-800">
+            <i class="fa-solid fa-phone text-xl mb-1"></i>
+            <span class="text-[13px]">GỌI NGAY</span>
         </a>
-        <a href="javascript:void(0)" onclick="openZaloApp('0338996274')" class="bottom-nav-btn btn-nav-zalo">
-            <i class="fas fa-comment-dots"></i>
-            Gửi vị trí Zalo
-        </a>
-        <a href="#sua-xe-luu-dong" class="bottom-nav-btn btn-nav-price">
-            <i class="fas fa-file-invoice-dollar"></i>
-            Bảng giá
+        <a href="https://zalo.me/0898190266" target="_blank" class="flex-1 bg-blue-600 text-white rounded-lg flex flex-col items-center justify-center py-2 font-bold shadow-md active:bg-blue-800">
+            <i class="fa-solid fa-comment-dots text-xl mb-1"></i>
+            <span class="text-[13px]">GỬI ĐỊNH VỊ ZALO</span>
         </a>
     </div>
 
-    <!-- Floating Call Button for Desktop -->
-    <div class="floating-call-bar d-none d-md-block">
-        <button class="floating-call-button" onclick="return gtag_report_conversion('tel:0898190266')">
-            <div class="call-icon-wrapper">
-                <i class="fas fa-phone-alt"></i>
-            </div>
-            <div class="call-text">
-                <span class="call-name">Gọi Thông Nguyễn</span>
-                <span class="call-subtitle">Có mặt 15 phút</span>
-            </div>
-        </button>
-    </div>
-
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js" defer></script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Toggle Sidebar
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('sidebarOverlay');
-            sidebar.classList.toggle('active');
-            overlay.classList.toggle('active');
-        }
+        // Init AOS Animation
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+        });
 
-        // Scroll to Top
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-
-        // Show/Hide Scroll to Top Button
-        window.addEventListener('scroll', function() {
-            const scrollTop = document.getElementById('scrollTop');
-            if (window.pageYOffset > 300) {
-                scrollTop.classList.add('show');
-            } else {
-                scrollTop.classList.remove('show');
+        // Tabs Logic for Pricing
+        function switchTab(evt, tabName) {
+            // Hide all tab content
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
             }
-        });
 
-        // Submit Booking Form
-        function submitBooking(event) {
-            event.preventDefault();
-            alert('Yêu cầu đã được gửi đến Telegram hệ thống! Thông Nguyễn sẽ gọi lại cho bạn trong vòng 30 giây.');
-            event.target.reset();
+            // Remove active class from all tabs
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Show current tab, add active class to button
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
         }
-
-        // Open Zalo App directly on Mobile
-        function openZaloApp(phone) {
-            // Sử dụng zalo.me để Zalo tự động xử lý mượt mà trên cả Web lẫn Mobile
-            // Không nên dùng zalo:// vì dễ bị trình duyệt chặn (Security Policies)
-            var url = 'https://zalo.me/' + phone;
-            window.open(url, '_blank');
-        }
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
     </script>
-
-
-    <script src="web/anti-fraud-tracker.js"></script>
-
-    <script>
-        // Lazy load carousel images khi slide active
-        document.addEventListener('DOMContentLoaded', function() {
-            const carousel = document.getElementById('heroCarousel');
-            
-            // Load ảnh khi carousel slide
-            carousel.addEventListener('slide.bs.carousel', function (e) {
-                const nextSlide = e.relatedTarget;
-                const img = nextSlide.querySelector('.carousel-lazy');
-                
-                if (img && img.dataset.src) {
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                }
-            });
-            
-            // Preload 2 ảnh tiếp theo
-            setTimeout(() => {
-                const lazyImages = document.querySelectorAll('.carousel-lazy');
-                lazyImages.forEach((img, index) => {
-                    if (index < 2) {
-                        img.src = img.dataset.src;
-                        img.removeAttribute('data-src');
-                    }
-                });
-            }, 1500);
-        });
-    </script>
-
 </body>
 </html>
