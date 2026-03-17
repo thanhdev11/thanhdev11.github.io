@@ -78,13 +78,13 @@ a   { text-decoration: none; }
   flex-shrink: 0;
 }
 .xd-logo-text h1 {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   font-weight: 800;
   color: #fff;
   line-height: 1.2;
 }
 .xd-logo-text span {
-  font-size: 0.65rem;
+  font-size: 0.4rem;
   font-weight: 600;
   color: var(--xd-amber);
   letter-spacing: 0.12em;
