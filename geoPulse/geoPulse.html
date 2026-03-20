@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoPulse | AI Search Optimization (ASO) Command Center</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        cyber: {
+                            black: '#0a0a0a',
+                            dark: '#111111',
+                            blue: '#007AFF',
+                            orange: '#FF9500'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0a0a0a; color: #ffffff; }
+        .glass-panel { background: rgba(17, 17, 17, 0.6); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .text-gradient { background: linear-gradient(135deg, #007AFF, #00e5ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .text-gradient-orange { background: linear-gradient(135deg, #FF9500, #ffc107); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-in-up.appear { opacity: 1; transform: translateY(0); }
+        .feature-card { transition: all 0.3s ease; }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(0, 122, 255, 0.3); border-color: rgba(0, 122, 255, 0.5); }
+        .feature-card:hover .icon-wrapper { background-color: #007AFF; color: white; box-shadow: 0 0 15px rgba(0, 122, 255, 0.6); }
+        .bg-grid { background-size: 40px 40px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px); }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-cyber-blue selection:text-white">
+
+    <!-- Sticky Header -->
+    <header class="fixed top-0 w-full z-50 glass-panel border-b-0 py-4 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 max-w-7xl flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-8 h-8 rounded bg-gradient-to-br from-cyber-blue to-cyan-400 flex items-center justify-center text-white font-bold text-xl shadow-[0_0_10px_rgba(0,122,255,0.5)] group-hover:shadow-[0_0_15px_rgba(0,122,255,0.8)] transition-all">G</div>
+                <span class="font-display font-bold text-xl tracking-tight">Geo<span class="text-cyber-blue">Pulse</span></span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                <a href="#problem" class="hover:text-white transition-colors">The Risk</a>
+                <a href="#solution" class="hover:text-white transition-colors">5 Pillars</a>
+                <a href="#proof" class="hover:text-white transition-colors">Dashboard Demo</a>
+            </div>
+            <a href="#audit" class="bg-white text-cyber-black hover:bg-gray-200 px-5 py-2 rounded-full font-semibold text-sm transition-all shadow-lg transform hover:scale-105">
+                Book a Demo
+            </a>
+        </div>
+    </header>
+
+    <!-- 1. THE HERO - THE HOOK -->
+    <section class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-cyber-black opacity-80 z-10"></div>
+            <img src="assets/hero_bg.png" alt="AI Network" class="w-full h-full object-cover opacity-50 mix-blend-screen" />
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-cyber-black/70 to-cyber-black z-20"></div>
+        </div>
+
+        <div class="container mx-auto px-6 max-w-7xl relative z-30">
+            <div class="max-w-4xl mx-auto text-center mt-12 md:mt-20">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyber-blue/30 bg-cyber-blue/10 text-cyber-blue text-xs font-semibold uppercase tracking-wider mb-6 animate-pulse">
+                    <span class="w-2 h-2 rounded-full bg-cyber-blue"></span> AI Search Optimization (ASO)
+                </div>
+                <!-- Headline -->
+                <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight mb-6 fade-in-up">
+                    Stop Being a Ghost in the <span class="text-gradient">AI Era.</span>
+                </h1>
+                <!-- Sub-headline -->
+                <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto font-light leading-relaxed fade-in-up" style="transition-delay: 100ms;">
+                    70% of buyers now ask ChatGPT, Perplexity, or Gemini before making a purchase. If they aren't citing your brand, you're losing revenue to competitors who "speak" AI. 
+                    <strong class="text-white font-semibold">GeoPulse</strong> is your command center for <strong class="text-cyber-orange">AI Search Optimization.</strong>
+                </p>
+                <!-- Primary CTA -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-in-up" style="transition-delay: 200ms;">
+                    <a href="#audit" class="w-full sm:w-auto px-8 py-4 bg-cyber-blue hover:bg-blue-600 text-white rounded-lg font-bold text-lg transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(0,122,255,0.4)] hover:shadow-[0_0_30px_rgba(0,122,255,0.6)]">
+                        Get My Free AI Visibility Audit
+                    </a>
+                </div>
+                <!-- Trust Signal -->
+                <p class="mt-4 text-sm text-gray-500 font-medium fade-in-up" style="transition-delay: 300ms;">
+                    <i class="fa-solid fa-bolt mr-1 text-cyber-orange"></i> No credit card required. 2-minute setup.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. THE PROBLEM - THE INVISIBLE RISK -->
+    <section id="problem" class="py-24 bg-grid border-t border-gray-800 relative z-10">
+        <div class="absolute inset-0 bg-gradient-to-b from-cyber-black via-cyber-dark/80 to-cyber-black pointer-events-none"></div>
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">
+                    SEO is Dead. <br class="md:hidden"/> <span class="text-gradient-orange">ASO is the New Battlefield.</span>
+                </h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                    Traditional SEO optimized for <span class="text-white font-medium">links</span>. ASO optimizes for <span class="text-cyber-blue font-bold">Knowledge & Citations</span>.
+                </p>
+            </div>
+
+            <!-- Split View -->
+            <div class="grid md:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto fade-in-up">
+                <!-- Old SEO -->
+                <div class="glass-panel rounded-2xl p-8 border border-gray-800 opacity-60 flex flex-col items-center justify-center min-h-[300px] text-center filter grayscale hover:grayscale-0 transition-all duration-500">
+                    <div class="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center mb-6 text-2xl text-gray-400">
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3 text-white">The Old Way: Blue Links</h3>
+                    <p class="text-gray-500 text-sm mb-4">Users dig through 10 pages of SEO spam and ads just to find an answer.</p>
+                    <div class="w-full bg-gray-900 rounded-lg p-3 text-left space-y-2">
+                        <div class="h-3 bg-blue-900/50 rounded w-1/4"></div>
+                        <div class="h-2 bg-gray-800 rounded w-3/4"></div>
+                        <div class="h-2 bg-gray-800 rounded w-2/3"></div>
+                    </div>
+                </div>
+
+                <!-- New ASO -->
+                <div class="glass-panel rounded-2xl p-8 border border-cyber-blue border-opacity-30 flex flex-col items-center justify-center min-h-[300px] text-center shadow-[0_0_30px_rgba(0,122,255,0.1)] relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-cyber-blue rounded-full blur-[60px] opacity-30"></div>
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-tr from-cyber-blue to-cyan-400 flex items-center justify-center mb-6 text-2xl text-white shadow-lg">
+                        <i class="fa-solid fa-sparkles"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-3 text-white">The New Way: Direct Answers</h3>
+                    <p class="text-gray-300 text-sm mb-4 line-clamp-3">Users ask ChatGPT, Claude, or Perplexity. They get <span class="text-white font-bold">one synthesized answer</span>.</p>
+                    <div class="w-full bg-cyber-dark/90 rounded-lg border border-gray-700 p-4 text-left">
+                        <p class="text-xs text-cyber-blue font-semibold mb-2"><i class="fa-solid fa-robot mr-1"></i> AI Summarizing:</p>
+                        <p class="text-sm text-gray-300">"The best solution right now is <span class="bg-cyber-orange text-black px-1 rounded font-bold">[Competitor Name]</span>. I recommend them because..."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center fade-in-up">
+                <p class="text-red-400 font-medium flex flex-col md:flex-row items-center justify-center gap-2 bg-red-900/10 py-4 px-6 rounded-2xl border border-red-900/50 max-w-3xl mx-auto shadow-[0_0_20px_rgba(255,0,0,0.05)]">
+                    <span><i class="fa-solid fa-triangle-exclamation text-xl"></i></span>
+                    <span class="text-sm md:text-base"><strong>The Risk:</strong> AI models hallucinate, use outdated data, or—worse—recommend your competitors because their data footprint is "cleaner" than yours.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. THE SOLUTION - 5 PILLARS OF GEOPULSE -->
+    <section id="solution" class="py-24 relative bg-cyber-black">
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">
+                    The 5 Pillars of <span class="text-gradient">GeoPulse</span>
+                </h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+                    The ultimate command center to dominate the AI landscape.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Share of Model -->
+                <div class="feature-card glass-panel rounded-2xl p-8 border border-gray-800 fade-in-up">
+                    <div class="icon-wrapper w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center text-cyber-blue text-xl mb-6 transition-all">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-2">1. Share of Model (SoM)</h3>
+                    <p class="text-cyber-blue text-xs font-bold uppercase tracking-wide mb-3">"Who owns the AI's mind?"</p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">Track your brand’s "Market Share" in the AI world. We measure exactly how often GPT-4, Claude, and Gemini mention you versus your rivals.</p>
+                    <p class="text-white text-sm font-medium border-t border-gray-800 pt-4 mt-4"><i class="fa-solid fa-crosshairs text-cyber-blue mr-2"></i> Stop guessing. Start measuring.</p>
+                </div>
+
+                <!-- Citation Traceability -->
+                <div class="feature-card glass-panel rounded-2xl p-8 border border-gray-800 fade-in-up" style="transition-delay: 100ms;">
+                    <div class="icon-wrapper w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center text-cyber-blue text-xl mb-6 transition-all">
+                        <i class="fa-solid fa-magnifying-glass-location"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-2">2. Citation Traceability</h3>
+                    <p class="text-cyber-blue text-xs font-bold uppercase tracking-wide mb-3">"Trust but Verify."</p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">Where does AI get its "facts" about you? We trace every AI response back to its exact source—blogs, forums, or news sites.</p>
+                    <p class="text-white text-sm font-medium border-t border-gray-800 pt-4 mt-4"><i class="fa-solid fa-wrench text-cyber-blue mr-2"></i> Fix "poisoned" data sources.</p>
+                </div>
+
+                <!-- Sentiment & Bias -->
+                <div class="feature-card glass-panel rounded-2xl p-8 border border-gray-800 fade-in-up" style="transition-delay: 200ms;">
+                    <div class="icon-wrapper w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center text-cyber-blue text-xl mb-6 transition-all">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-2">3. Sentiment & Bias</h3>
+                    <p class="text-cyber-blue text-xs font-bold uppercase tracking-wide mb-3">"AI Mindreading."</p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">Is the AI "ghosting" your premium features? We analyze if AI models have a hidden bias against your brand or prefer your competitors.</p>
+                    <p class="text-white text-sm font-medium border-t border-gray-800 pt-4 mt-4"><i class="fa-solid fa-shield-halved text-cyber-blue mr-2"></i> Neutralize negative bias.</p>
+                </div>
+
+                <!-- Competitor Gap -->
+                <div class="feature-card glass-panel rounded-2xl p-8 border border-gray-800 fade-in-up md:col-span-2 lg:col-span-1" style="transition-delay: 300ms;">
+                    <div class="icon-wrapper w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center text-cyber-orange text-xl mb-6 transition-all">
+                        <i class="fa-solid fa-chess-knight"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-2">4. Competitor Gap</h3>
+                    <p class="text-cyber-orange text-xs font-bold uppercase tracking-wide mb-3">"Intelligence Warfare."</p>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">See the "Invisible Strategy" of your competitors. We pinpoint exactly why AI models cite them as "The Best" and what data gaps you need to fill.</p>
+                    <p class="text-white text-sm font-medium border-t border-gray-800 pt-4 mt-4"><i class="fa-solid fa-lightbulb text-cyber-orange mr-2"></i> Reverse-engineer success.</p>
+                </div>
+
+                <!-- AI Injection -->
+                <div class="feature-card glass-panel rounded-2xl p-8 border border-cyber-blue border-opacity-40 fade-in-up md:col-span-2 shadow-[0_0_20px_rgba(0,122,255,0.1)] relative overflow-hidden" style="transition-delay: 400ms;">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyber-blue/10 to-transparent pointer-events-none"></div>
+                    <div class="flex flex-col md:flex-row gap-6 relative z-10 w-full h-full">
+                        <div class="flex-shrink-0">
+                            <div class="icon-wrapper w-16 h-16 rounded-xl bg-cyber-blue text-white flex items-center justify-center text-2xl shadow-[0_0_15px_rgba(0,122,255,0.5)]">
+                                <i class="fa-solid fa-satellite-dish"></i>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="font-display text-2xl font-bold mb-1">5. AI Injection <span class="bg-gradient-to-r from-cyber-blue to-cyan-400 text-white text-[10px] px-2 py-1 rounded-full uppercase tracking-wider font-sans align-middle ml-2 shadow-sm font-bold">The Ultimate</span></h3>
+                            <p class="text-cyber-blue text-xs font-bold uppercase tracking-wide mb-3">"The Narrative Control."</p>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-4 flex-grow">Don't just watch the news—BE the news. We help you enrich and "inject" high-authority data into the ecosystem so AI models cite YOU as the definitive source.</p>
+                            <p class="text-white font-medium text-sm pt-2"><i class="fa-solid fa-circle-check text-green-400 mr-2"></i> Ensure every AI query leads back to your brand.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SOCIAL PROOF & DASHBOARD -->
+    <section id="proof" class="py-24 relative overflow-hidden bg-cyber-dark">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-cyber-blue rounded-full blur-[150px] opacity-10 pointer-events-none"></div>
+        
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="font-display text-4xl font-bold mb-4">Data-Driven. <span class="text-cyber-blue">Result-Oriented.</span></h2>
+            </div>
+            
+            <div class="max-w-5xl mx-auto rounded-xl border border-gray-700 bg-black/50 p-2 shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform hover:scale-[1.01] transition-transform duration-500 fade-in-up">
+                <div class="rounded-lg overflow-hidden relative">
+                    <img src="assets/dashboard_demo.png" alt="GeoPulse Dashboard" class="w-full h-auto border border-gray-800/50 rounded-lg" />
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto mt-16 glass-panel rounded-xl p-8 border-l-4 border-l-cyber-blue fade-in-up">
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <div class="text-4xl text-cyber-blue/50"><i class="fa-solid fa-quote-left"></i></div>
+                    <div>
+                        <p class="text-xl text-white font-medium leading-relaxed mb-4 italic">
+                            "Stop guessing. Start measuring. Our dashboard gives you the same visibility into AI that Google Analytics gave you for the web. In the age of AI, visibility is the only currency."
+                        </p>
+                        <p class="text-gray-400 font-semibold">— GeoPulse Engine Promise</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. THE CLOSER -->
+    <section id="audit" class="py-24 bg-gradient-to-b from-cyber-black to-gray-900 border-t border-gray-800 relative">
+        <div class="container mx-auto px-6 max-w-2xl relative z-10">
+            <div class="glass-panel border-cyber-blue/30 rounded-3xl p-8 md:p-12 text-center shadow-[0_0_40px_rgba(0,122,255,0.15)] fade-in-up relative overflow-hidden">
+                <div class="absolute top-[-50%] right-[-50%] w-full h-full bg-cyber-orange blur-[100px] opacity-10 rounded-full"></div>
+                <div class="absolute bottom-[-50%] left-[-50%] w-full h-full bg-cyber-blue blur-[100px] opacity-10 rounded-full"></div>
+                
+                <h2 class="font-display text-3xl md:text-4xl font-bold mb-4 relative z-10">
+                    Your Competitors Are Optimizing Today. <br/><span class="text-gradient">Are You?</span>
+                </h2>
+                <p class="text-gray-400 mb-8 relative z-10 text-sm md:text-base">
+                    Get a personalized AI Visibility Audit. Enter your details below and our engine will analyze your brand's presence across ChatGPT, Claude, and Gemini. 
+                </p>
+                
+                <form id="leadForm" class="space-y-4 text-left relative z-10">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-1">Work Email</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-4 flex items-center text-gray-500"><i class="fa-regular fa-envelope"></i></span>
+                            <input type="email" required placeholder="name@company.com" class="w-full bg-black/60 border border-gray-700 rounded-lg py-3 pl-10 pr-4 text-white focus:outline-none focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue transition-colors">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-1">Company Website</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-4 flex items-center text-gray-500"><i class="fa-solid fa-globe"></i></span>
+                            <input type="url" required placeholder="https://yourcompany.com" class="w-full bg-black/60 border border-gray-700 rounded-lg py-3 pl-10 pr-4 text-white focus:outline-none focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue transition-colors">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-gradient-to-r from-cyber-blue to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white font-bold text-lg py-4 rounded-lg shadow-[0_10px_20px_-10px_rgba(0,122,255,0.6)] hover:shadow-[0_15px_30px_-5px_rgba(0,122,255,0.8)] transition-all transform hover:-translate-y-0.5 mt-6">
+                        Claim Your Brand's AI Future Today
+                    </button>
+                    <p class="text-center text-xs text-cyber-blue mt-4 font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-lock mr-1"></i> Secure Analysis Engine
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#050505] py-10 border-t border-gray-900">
+        <div class="container mx-auto px-6 max-w-7xl flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+            <div class="flex items-center gap-2 mb-4 md:mb-0">
+                <div class="w-6 h-6 rounded bg-gradient-to-br from-cyber-blue to-cyan-400 flex items-center justify-center text-white font-bold text-[10px]">G</div>
+                <span class="font-display font-medium text-gray-400 tracking-wide">GeoPulse Command Center © 2026</span>
+            </div>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Form Submission visual change
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Generating Audit...';
+            btn.classList.add('opacity-80', 'cursor-not-allowed');
+            setTimeout(() => {
+                alert('We received your request! The AI Visibility Audit will be sent to your email.');
+                btn.innerHTML = originalText;
+                btn.classList.remove('opacity-80', 'cursor-not-allowed');
+                this.reset();
+            }, 1500);
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Sticky Header effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md', 'bg-cyber-black/90');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('shadow-md', 'bg-cyber-black/90');
+                navbar.classList.remove('py-2');
+                navbar.classList.add('py-4');
+            }
+        });
+    </script>
+</body>
+</html>
