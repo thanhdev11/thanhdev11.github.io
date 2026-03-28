@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chào Mào AI - Chuyên Gia Dinh Dưỡng & Mua Sắm</title>
+    
+    <!-- Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Vector Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D5A27', /* Deep forest green / Xanh lá rừng sâu */
+                        accent: '#D4AF37',  /* Bronze Gold / Vàng đồng */
+                        base: '#F9F9F7'     /* Off-white paper / Trắng kem giấy cũ */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { 
+            background-color: #F9F9F7; 
+            font-family: 'Inter', sans-serif; 
+            overflow-x: hidden; 
+        }
+        
+        /* Typing cursor animation */
+        .typing-effect::after { 
+            content: '|'; 
+            animation: blink 1s step-end infinite; 
+            color: #D4AF37;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+        
+        /* Glassmorphism Panel */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        /* Skeleton Loading Animation */
+        .skeleton {
+            background: linear-gradient(90deg, #e2e8f0 25%, #cbd5e1 50%, #e2e8f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Dot Typing for AI */
+        .dot-typing {
+            position: relative;
+            width: 6px;
+            height: 6px;
+            border-radius: 5px;
+            background-color: #2D5A27;
+            color: #2D5A27;
+            animation: dot-typing 1s infinite linear alternate;
+            animation-delay: 0.5s;
+        }
+        .dot-typing::before, .dot-typing::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            width: 6px;
+            height: 6px;
+            border-radius: 5px;
+            background-color: #2D5A27;
+            color: #2D5A27;
+        }
+        .dot-typing::before { left: -10px; animation: dot-typing-before 1s infinite linear alternate; animation-delay: 0s; }
+        .dot-typing::after { left: 10px; animation: dot-typing-after 1s infinite linear alternate; animation-delay: 1s; }
+
+        @keyframes dot-typing { 0% { box-shadow: 0 0 0 0; } 100% { box-shadow: 0 -5px 0 0; } }
+        @keyframes dot-typing-before { 0% { box-shadow: 0 0 0 0; } 100% { box-shadow: 0 -5px 0 0; } }
+        @keyframes dot-typing-after { 0% { box-shadow: 0 0 0 0; } 100% { box-shadow: 0 -5px 0 0; } }
+
+        /* Padding for Mobile Bottom Nav Safe Area */
+        .pb-nav { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+        
+        /* Hide scrollbar for inline elements */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="text-gray-800 pb-nav md:pb-0 relative min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 w-full z-50 glass-panel border-b border-primary/10 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-feather text-accent text-2xl"></i>
+                <h1 class="text-xl font-bold tracking-tight text-primary">Chào Mào <span class="text-accent">AI</span></h1>
+            </div>
+            <nav class="hidden md:flex gap-8 font-medium text-sm text-gray-700">
+                <a href="#hero" class="hover:text-primary transition">Trang Chủ</a>
+                <a href="#chat-section" class="hover:text-primary transition">Chuyên Gia AI</a>
+                <a href="#products-section" class="hover:text-primary transition">Gợi Ý Sản Phẩm</a>
+            </nav>
+            <div class="hidden md:block">
+                <a href="#chat-section" class="bg-primary text-white px-5 py-2 rounded-full font-medium shadow hover:bg-opacity-90 transition">Hỏi AI Ngay</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-primary pt-24 pb-20 md:pt-32 md:pb-40 px-4 overflow-hidden mt-14 shadow-inner">
+        <!-- AI Generated Bird Image Placeholder (Using beautiful Unsplash Nature as placeholder) -->
+        <div class="absolute inset-0 z-0 opacity-20">
+             <img src="https://images.unsplash.com/photo-1552728089-571ebd51b006?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover" alt="Beautiful bird generated by AI" loading="lazy">
+        </div>
+        
+        <!-- Decoration Elements -->
+        <div class="absolute top-10 left-10 w-24 h-24 bg-accent rounded-full blur-3xl opacity-20"></div>
+        <div class="absolute bottom-10 right-10 w-32 h-32 bg-white rounded-full blur-3xl opacity-10"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center text-white">
+            <span class="px-4 py-1.5 bg-white/10 rounded-full text-xs md:text-sm font-semibold tracking-wide border border-white/20 mb-6 inline-flex items-center gap-2 shadow-sm">
+                <i class="fa-solid fa-microchip text-accent"></i> Hỗ trợ bởi Trí Tuệ Nhân Tạo
+            </span>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
+                <span class="font-light">Đỉnh cao chăm sóc</span> <br/>
+                <span id="hero-typing" class="text-accent typing-effect block mt-2"></span>
+            </h2>
+            <p class="text-base md:text-lg text-white/90 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Hỏi đáp triệu chứng, thiết lập chế độ dinh dưỡng, 
+                và tìm kiếm linh kiện lồng chuẩn mực với siêu AI Chào Mào.
+            </p>
+            <a href="#chat-section" class="inline-flex items-center gap-3 bg-accent text-primary px-8 py-4 rounded-full font-bold shadow-xl hover:shadow-accent/50 hover:bg-yellow-400 hover:-translate-y-1 transition transform duration-300">
+                <i class="fa-solid fa-comments"></i> Trò Chuyện Cùng Chuyên Gia
+            </a>
+        </div>
+        
+        <!-- Custom curved bottom divider -->
+        <svg class="absolute bottom-0 left-0 w-full h-8 md:h-16 text-base fill-current mb-[-1px]" viewBox="0 0 1440 60" preserveAspectRatio="none">
+            <path d="M0,60 L1440,60 L1440,0 C1100,50 340,50 0,0 L0,60 Z"></path>
+        </svg>
+    </section>
+
+    <!-- AI Chat Window Section -->
+    <section id="chat-section" class="max-w-3xl mx-auto px-4 -mt-10 md:-mt-20 relative z-20">
+        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100 flex flex-col h-[550px] md:h-[600px]">
+            <!-- Chat Header -->
+            <div class="bg-gradient-to-r from-primary to-[#1f421b] border-b border-primary/20 p-4 pb-5 flex items-center justify-between text-white shadow-sm z-10">
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-primary shadow-inner">
+                            <i class="fa-solid fa-leaf text-xl text-accent"></i>
+                        </div>
+                        <span class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-400 border-2 border-primary rounded-full animate-pulse"></span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg leading-tight">Chuyên gia AI</h3>
+                        <p class="text-xs text-white/80 font-medium mt-0.5">Sẵn sàng tư vấn</p>
+                    </div>
+                </div>
+                <button class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition" onclick="clearChat()" title="Xoá lịch sử hội thoại">
+                    <i class="fa-solid fa-rotate-right text-xs"></i>
+                </button>
+            </div>
+            
+            <!-- Chat Body -->
+            <div id="chat-box" class="flex-1 p-4 md:p-6 overflow-y-auto bg-base/50 space-y-6">
+                <!-- Chat messages will be dynamically injected here -->
+            </div>
+
+            <!-- Chat Footer Container -->
+            <div class="relative bg-white border-t border-gray-100 p-3 md:p-4 z-10 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.03)]">
+                <!-- Typying Indicator overlay -->
+                <div id="typing-indicator" class="hidden absolute -top-12 left-6 bg-white px-5 py-2.5 rounded-2xl rounded-bl-sm shadow-md border border-gray-100 text-xs font-semibold text-gray-500 flex items-center gap-3">
+                    Chuyên gia đang nhập <div class="ml-1"><div class="dot-typing"></div></div>
+                </div>
+
+                <form id="chat-form" class="flex gap-2 relative items-center">
+                    <button type="button" class="text-gray-400 hover:text-primary p-2 transition hidden md:block" title="Đính kèm ảnh">
+                        <i class="fa-solid fa-camera"></i>
+                    </button>
+                    <input type="text" id="chat-input" placeholder="Ví dụ: Dạ, chim bị sình bụng thì ăn cám gì ạ?" autocomplete="off"
+                        class="flex-1 bg-gray-50 border border-gray-200 text-sm md:text-base rounded-full py-3 md:py-3.5 px-5 md:px-6 focus:outline-none focus:ring-2 focus:ring-accent focus:bg-white transition shadow-inner">
+                    <button type="submit" class="bg-primary text-white w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center hover:bg-[#1a3816] transition shadow-lg shrink-0 transform hover:scale-105">
+                        <i class="fa-solid fa-paper-plane text-sm md:text-base ml-[-2px] mt-[1px]"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Affiliate Recommendations Section -->
+    <section id="products-section" class="max-w-7xl mx-auto px-4 py-20">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4 border-b border-gray-200 pb-4">
+            <div>
+                <span class="text-accent font-bold text-sm tracking-wider uppercase mb-1 block"><i class="fa-solid fa-bolt mr-1"></i> Ưu Đãi Độc Quyền</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Sản Phẩm <span class="text-primary">Khuyên Dùng</span></h2>
+            </div>
+            <a href="#" class="text-sm font-semibold text-primary hover:text-accent transition flex items-center gap-1 group">
+                Xem toàn bộ cửa hàng <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition"></i>
+            </a>
+        </div>
+        
+        <div id="product-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <!-- Skeleton/Products loaded via JS -->
+        </div>
+    </section>
+
+    <!-- Mobile Bottom Navigation (Visible only on mobile) -->
+    <nav class="md:hidden fixed bottom-0 left-0 w-full bg-white glass-panel border-t border-gray-100 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] z-50 flex justify-around items-center" style="padding-bottom: env(safe-area-inset-bottom);">
+        <a href="#chat-section" class="flex flex-col items-center pt-3 pb-2 px-6 text-primary hover:text-accent transition">
+            <i class="fa-solid fa-robot text-xl mb-1.5"></i>
+            <span class="text-[10px] font-bold">Tư vấn AI</span>
+        </a>
+        <a href="#products-section" class="flex flex-col items-center pt-3 pb-2 px-6 text-gray-400 hover:text-primary transition relative group">
+            <div class="absolute -top-6 w-14 h-14 bg-accent text-primary rounded-full flex items-center justify-center shadow-lg border-4 border-[#F9F9F7] group-hover:bg-yellow-400 transition transform group-hover:rotate-12">
+                <i class="fa-solid fa-store text-xl"></i>
+            </div>
+            <span class="text-[10px] font-bold mt-7">Cửa hàng</span>
+        </a>
+        <a href="#" class="flex flex-col items-center pt-3 pb-2 px-6 text-gray-400 hover:text-primary transition">
+            <i class="fa-solid fa-book-open text-xl mb-1.5"></i>
+            <span class="text-[10px] font-bold">Kiến thức</span>
+        </a>
+    </nav>
+
+    <!-- Footer Space for Desktop -->
+    <footer class="bg-gray-900 text-white py-12 text-center mt-10">
+        <div class="max-w-4xl mx-auto px-4 opacity-70">
+            <i class="fa-solid fa-feather text-3xl mb-4 text-accent"></i>
+            <p class="font-light text-sm">Bản quyền 2026 &copy; Chào Mào AI. Được phát triển để hỗ trợ cộng đồng nghệ nhân chim cảnh.</p>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript Logic -->
+    <script>
+        // 1. Hero Title Typing Effect
+        const typingText = "Chiến Binh Của Bạn";
+        const typingEl = document.getElementById('hero-typing');
+        let typeIndex = 0;
+        
+        function typeWriter() {
+            if (typeIndex < typingText.length) {
+                typingEl.innerHTML += typingText.charAt(typeIndex);
+                typeIndex++;
+                setTimeout(typeWriter, 120);
+            }
+        }
+        // Start typing effect slightly after load
+        setTimeout(typeWriter, 800);
+
+        // 2. State & DOM Elements
+        const LS_KEY = 'chaomao_ai_chat_history';
+        let chatHistory = JSON.parse(localStorage.getItem(LS_KEY)) || [];
+        
+        const chatBox = document.getElementById('chat-box');
+        const chatForm = document.getElementById('chat-form');
+        const chatInput = document.getElementById('chat-input');
+        const typingIndicator = document.getElementById('typing-indicator');
+        const productGrid = document.getElementById('product-grid');
+
+        // Initializer
+        function initApp() {
+            renderChatHistory();
+            fetchProductsSkeleton();
+        }
+
+        // --- AI CHAT FUNCTIONS ---
+
+        function renderChatHistory() {
+            chatBox.innerHTML = '';
+            // If new user, show greeting
+            if (chatHistory.length === 0) {
+                const welcomeMsg = "Dạ chào anh, em là AI chuyên gia về chim Chào Mào. Anh cần tư vấn thay lông, trị sình bụng, hay chọn cám/lồng đấu thì cứ hỏi em nhé ạ!";
+                appendMessage('Ai', welcomeMsg);
+            } else {
+                chatHistory.forEach(msg => appendMessage(msg.role, msg.content, msg.products));
+            }
+            scrollToBottom();
+        }
+
+        function appendMessage(role, content, products = null) {
+            const isUser = role === 'User';
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `flex gap-3 md:gap-4 max-w-[90%] md:max-w-[85%] ${isUser ? 'ml-auto flex-row-reverse' : ''}`;
+            
+            // Avatars
+            const avatarHtml = isUser ? 
+                `<div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gray-200 border border-gray-300 flex items-center justify-center text-gray-500 flex-shrink-0 shadow-sm"><i class="fa-solid fa-user text-[10px] md:text-sm"></i></div>` :
+                `<div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary border-2 border-accent flex items-center justify-center text-accent flex-shrink-0 shadow-sm"><i class="fa-solid fa-robot text-[10px] md:text-sm"></i></div>`;
+            
+            // Product Cards in Chat (Horizontal Scroll)
+            let productHtml = '';
+            if (products && products.length > 0) {
+                productHtml = `<div class="mt-4 flex gap-3 overflow-x-auto hide-scrollbar pb-3 min-w-0 snap-x">`;
+                products.forEach(p => {
+                    productHtml += `
+                        <div class="bg-white border border-gray-200 rounded-xl p-2.5 min-w-[180px] max-w-[200px] flex-shrink-0 shadow-sm relative group snap-start">
+                            <span class="absolute top-0 right-0 bg-accent text-primary text-[9px] font-bold px-1.5 py-0.5 rounded-bl-xl rounded-tr-xl z-10 shadow-sm flex items-center gap-1"><i class="fa-solid fa-bolt text-[8px]"></i> AI Recommend</span>
+                            <div class="h-24 bg-gray-50 rounded-lg mb-2 overflow-hidden relative border border-gray-100">
+                                <img src="${p.image_url}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy">
+                            </div>
+                            <h4 class="text-xs font-semibold text-gray-800 line-clamp-2 leading-snug mb-1" title="${p.name}">${p.name}</h4>
+                            <p class="text-primary font-bold text-sm mb-2">${p.price}</p>
+                            <a href="${p.affiliate_url}" target="_blank" class="block w-full text-center bg-gray-50 hover:bg-accent hover:text-primary text-gray-700 font-semibold border border-gray-200 text-xs py-1.5 rounded-md transition shadow-sm">Mua trên Shopee</a>
+                        </div>
+                    `;
+                });
+                productHtml += `</div>`;
+            }
+
+            // Message Bubble
+            msgDiv.innerHTML = `
+                ${avatarHtml}
+                <div class="${isUser ? 'bg-primary text-white shadow-md' : 'bg-white border border-gray-100 text-gray-800 shadow-sm'} p-3 md:p-4 rounded-2xl ${isUser ? 'rounded-tr-sm' : 'rounded-tl-sm'} text-sm md:text-[15px] leading-relaxed whitespace-pre-line break-words w-full">
+                    ${content}
+                    ${productHtml}
+                </div>
+            `;
+            chatBox.appendChild(msgDiv);
+        }
+
+        function scrollToBottom() {
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function clearChat() {
+            chatBox.style.opacity = '0.5';
+            setTimeout(() => {
+                chatHistory = [];
+                localStorage.removeItem(LS_KEY);
+                renderChatHistory();
+                chatBox.style.opacity = '1';
+            }, 300);
+        }
+
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const text = chatInput.value.trim();
+            if (!text) return;
+
+            // 1. Add User Msg
+            chatHistory.push({ role: 'User', content: text });
+            appendMessage('User', text);
+            chatInput.value = '';
+            scrollToBottom();
+            
+            // Save state
+            localStorage.setItem(LS_KEY, JSON.stringify(chatHistory));
+
+            // 2. Show UI Thinking
+            typingIndicator.classList.remove('hidden');
+
+            // 3. Mock API Fetch (timeout 2s)
+            setTimeout(() => fetchMockChatApi(text), 2000);
+        });
+
+        // Mock `POST /api/chat`
+        function fetchMockChatApi(query) {
+            typingIndicator.classList.add('hidden');
+            
+            const q = query.toLowerCase();
+            let mockResponse = {
+                status: "success",
+                data: {
+                    answer: "Chào anh, để chim căng lửa và bền nước đấu, yếu tố cám và mồi tươi rất quan trọng. Anh hãy thử đổi sang dòng cám đấu năng lượng cao này để chim hấp thụ tốt hơn ạ.",
+                    suggested_products: []
+                }
+            };
+
+            // Keyword based responses (Skeleton structure match)
+            if (q.includes('sình bụng') || q.includes('đi ngoài') || q.includes('bệnh')) {
+                mockResponse.data.answer = "Chào anh, chim chào mào bị sình bụng thường do cám quá nóng hoặc nước uống không sạch. Anh nên cho ăn thêm chuối sứ và đổi sang loại cám mát này nhé.";
+                mockResponse.data.suggested_products = [
+                    {
+                        id: "p1",
+                        name: "Cám Chào Mào Hiển Bảo Khánh (Loại 1 - Cám Mát)",
+                        price: "55.000đ",
+                        image_url: "https://images.unsplash.com/photo-1590059343336-f3f8d381b1ed?auto=format&fit=crop&q=80&w=200", 
+                        affiliate_url: "https://shopee.vn"
+                    }
+                ];
+            } else if (q.includes('lồng')) {
+                mockResponse.data.answer = "Dạ đối với loại lồng thi đấu thì lồng Thái form vuông hoặc lồng chạm đang được anh em ưa chuộng vì rộng rãi dẽ chuyền cầu. Em gợi ý anh mẫu lồng cao cấp này ạ:";
+                mockResponse.data.suggested_products = [
+                    {
+                        id: "p2",
+                        name: "Lồng Thái Đấu Chạm Tay Gỗ Trắc Nguyên Khối",
+                        price: "1.250.000đ",
+                        image_url: "https://images.unsplash.com/photo-1544078751-5afdde3b5909?auto=format&fit=crop&q=80&w=200", 
+                        affiliate_url: "https://shopee.vn"
+                    }
+                ];
+            }
+
+            // Append response
+            chatHistory.push({ 
+                role: 'Ai', 
+                content: mockResponse.data.answer,
+                products: mockResponse.data.suggested_products 
+            });
+            appendMessage('Ai', mockResponse.data.answer, mockResponse.data.suggested_products);
+            localStorage.setItem(LS_KEY, JSON.stringify(chatHistory));
+            scrollToBottom();
+        }
+
+        // --- PRODUCT LIST FUNCTIONS ---
+        
+        function renderProductSkeleton() {
+            productGrid.innerHTML = '';
+            for(let i=0; i<4; i++) {
+                productGrid.innerHTML += `
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden transform transition hover:-translate-y-1 hover:shadow-md">
+                        <div class="h-36 md:h-48 skeleton w-full"></div>
+                        <div class="p-3 md:p-5">
+                            <div class="skeleton h-3.5 w-1/3 mb-2.5 rounded"></div>
+                            <div class="skeleton h-4 w-full mb-1.5 rounded"></div>
+                            <div class="skeleton h-4 w-2/3 mb-4 rounded"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="skeleton h-3 w-1/4 rounded"></div>
+                                <div class="skeleton h-4 w-1/3 rounded"></div>
+                            </div>
+                            <div class="skeleton h-9 w-full rounded-md mt-1"></div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Mock `GET /api/products`
+        function fetchProductsSkeleton() {
+            renderProductSkeleton();
+            
+            setTimeout(() => {
+                const mockProducts = {
+                    category: "Lồng chim & Phụ kiện",
+                    products: [
+                        {
+                            id: "l1",
+                            name: "Lồng Thái Đấu Chạm Tay Đẳng Cấp",
+                            price: "1.500.000đ",
+                            rating: 5,
+                            tags: ["Bán chạy", "Cao cấp"],
+                            image: "https://images.unsplash.com/photo-1544078751-5afdde3b5909?auto=format&fit=crop&q=80&w=300",
+                            affiliate_url: "#"
+                        },
+                        {
+                            id: "l2",
+                            name: "Cóng Sứ Giang Tây Vẽ Tay Thủ Công",
+                            price: "240.000đ",
+                            rating: 4.9,
+                            tags: ["Độc lạ", "Mỹ nghệ"],
+                            image: "https://images.unsplash.com/photo-1610448769348-18ff3f8b8a78?auto=format&fit=crop&q=80&w=300",
+                            affiliate_url: "#"
+                        },
+                        {
+                            id: "l3",
+                            name: "Áo Lồng Vải Thun Lạnh 3D Họa Tiết",
+                            price: "85.000đ",
+                            rating: 4.8,
+                            tags: ["Phụ kiện", "Giá tốt"],
+                            image: "https://images.unsplash.com/photo-1629813291884-6d9b43ed5b1f?auto=format&fit=crop&q=80&w=300",
+                            affiliate_url: "#"
+                        },
+                        {
+                            id: "l4",
+                            name: "Combo 5 Gói Cám Hiển Bảo Khánh 2",
+                            price: "290.000đ",
+                            rating: 5,
+                            tags: ["Dinh dưỡng", "Combo"],
+                            image: "https://images.unsplash.com/photo-1590059343336-f3f8d381b1ed?auto=format&fit=crop&q=80&w=300",
+                            affiliate_url: "#"
+                        }
+                    ]
+                };
+                renderProducts(mockProducts.products);
+            }, 1800);
+        }
+
+        function renderProducts(products) {
+            productGrid.innerHTML = '';
+            products.forEach(p => {
+                // Formatting tags HTML
+                let tagsHtml = p.tags.map(t => `<span class="bg-gray-100 text-gray-500 font-medium text-[9px] px-2 py-0.5 rounded-sm tracking-wide uppercase">${t}</span>`).join('');
+                
+                // Formatting stars HTML
+                let starsHtml = '';
+                for(let i=1; i<=5; i++) {
+                    starsHtml += `<i class="fa-${i <= Math.floor(p.rating) ? 'solid' : (i - p.rating === 0.5 ? 'solid fa-star-half-stroke' : 'regular')} fa-star text-accent text-[9px]"></i>`;
+                }
+
+                productGrid.innerHTML += `
+                    <div class="bg-white rounded-xl shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] border border-gray-100 overflow-hidden transform transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] group flex flex-col">
+                        <div class="h-36 md:h-48 overflow-hidden relative bg-gray-50">
+                            <!-- Overlay nhãn Recommend -->
+                            <span class="absolute top-2 left-2 bg-white/95 backdrop-blur-sm text-primary text-[10px] font-bold px-2 py-1 rounded shadow-sm flex items-center gap-1.5 z-10 border border-white">
+                                <i class="fa-solid fa-bolt text-accent"></i> AI Recommend
+                            </span>
+                            <!-- Lazy Loaded Image -->
+                            <img src="${p.image}" alt="${p.name}" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-1 transition duration-700 ease-out">
+                        </div>
+                        <div class="p-3 md:p-5 flex flex-col flex-1 bg-white">
+                            <div class="flex gap-1.5 mb-2.5 flex-wrap">
+                                ${tagsHtml}
+                            </div>
+                            <h3 class="font-bold text-gray-800 text-sm md:text-[15px] mb-1.5 line-clamp-2 leading-snug group-hover:text-primary transition" title="${p.name}">${p.name}</h3>
+                            <div class="flex items-center gap-1 mb-3 bg-gray-50 rounded px-2 py-1 w-fit">
+                                ${starsHtml} <span class="text-[10px] text-gray-400 ml-1 font-medium">(${p.rating})</span>
+                            </div>
+                            <div class="mt-auto pt-2 flex items-center justify-between border-t border-gray-100 mb-3">
+                                <span class="font-bold text-primary text-base">${p.price}</span>
+                                <span class="text-xs text-gray-400 line-through">1.800.000đ</span>
+                            </div>
+                            <!-- CTA -->
+                            <a href="${p.affiliate_url}" target="_blank" class="block text-center bg-primary hover:bg-[#1a3816] text-white text-xs md:text-sm font-semibold py-2.5 rounded-lg transition-all w-full shadow-sm">
+                                <i class="fa-solid fa-cart-shopping mb-0 mr-1.5"></i> Mua ngay Shopee
+                            </a>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Initialize when ready
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
