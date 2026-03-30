@@ -374,11 +374,11 @@
             <!-- Tabs -->
             <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100" data-aos="fade-up">
                 <div class="flex flex-wrap border-b border-gray-200 bg-gray-50">
-                    <button class="flex-1 tab-btn active font-bold py-4 text-gray-600 hover:text-trust transition" onclick="switchTab(event, 'xeso')">
-                        <i class="fa-solid fa-motorcycle mr-2"></i> XE SỐ
-                    </button>
-                    <button class="flex-1 tab-btn font-bold py-4 text-gray-600 hover:text-trust transition" onclick="switchTab(event, 'xega')">
+                    <button class="flex-1 tab-btn active font-bold py-4 text-gray-600 hover:text-trust transition" onclick="switchTab(event, 'xega')">
                         <i class="fa-solid fa-moped mr-2"></i> XE GA
+                    </button>
+                    <button class="flex-1 tab-btn  font-bold py-4 text-gray-600 hover:text-trust transition" onclick="switchTab(event, 'xeso')">
+                        <i class="fa-solid fa-motorcycle mr-2"></i> XE SỐ
                     </button>
                     <button class="flex-1 tab-btn font-bold py-4 text-gray-600 hover:text-trust transition" onclick="switchTab(event, 'oto')">
                         <i class="fa-solid fa-car mr-2"></i> Ô TÔ
@@ -386,30 +386,10 @@
                 </div>
 
                 <div class="p-6 md:p-8">
-                    <!-- Tab: Xe Số -->
-                    <div id="xeso" class="tab-content active">
-                        <ul class="divide-y divide-gray-100">
-                            <li class="py-4 flex justify-between items-center">
-                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-screwdriver-wrench text-gray-400 mr-3"></i> Vá xe máy (lốp có săm)</span>
-                                <span class="font-bold text-trust">39K - 59K</span>
-                            </li>
-                            <li class="py-4 flex justify-between items-center">
-                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-circle-notch text-gray-400 mr-3"></i> Thay ruột/săm xe máy</span>
-                                <span class="font-bold text-trust">59K - 79K</span>
-                            </li>
-                            <li class="py-4 flex justify-between items-center">
-                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-car-battery text-gray-400 mr-3"></i> Kích bình / Sạc bình</span>
-                                <span class="font-bold text-trust">79K</span>
-                            </li>
-                            <li class="py-4 flex justify-between items-center text-action">
-                                <span class="font-bold"><i class="fa-solid fa-moon mr-3"></i> Xe chết máy</span>
-                                <span class="font-bold text-right text-sm"> Từ 59k - Báo giá trực tiếp theo tình trạng</span>
-                            </li>
-                        </ul>
-                    </div>
+                    
 
                     <!-- Tab: Xe Ga -->
-                    <div id="xega" class="tab-content">
+                    <div id="xega" class="tab-content active">
                         <ul class="divide-y divide-gray-100">
                             <li class="py-4 flex justify-between items-center">
                                 <span class="font-semibold text-gray-800"><i class="fa-solid fa-screwdriver-wrench text-gray-400 mr-3"></i> Vá xe ga (lốp không săm)</span>
@@ -433,6 +413,28 @@
                             </li>
 
                             
+                        </ul>
+                    </div>
+
+                    <!-- Tab: Xe Số -->
+                    <div id="xeso" class="tab-content">
+                        <ul class="divide-y divide-gray-100">
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-screwdriver-wrench text-gray-400 mr-3"></i> Vá xe máy (lốp có săm)</span>
+                                <span class="font-bold text-trust">39K - 59K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-circle-notch text-gray-400 mr-3"></i> Thay ruột/săm xe máy</span>
+                                <span class="font-bold text-trust">59K - 79K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-car-battery text-gray-400 mr-3"></i> Kích bình / Sạc bình</span>
+                                <span class="font-bold text-trust">79K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center text-action">
+                                <span class="font-bold"><i class="fa-solid fa-moon mr-3"></i> Xe chết máy</span>
+                                <span class="font-bold text-right text-sm"> Từ 59k - Báo giá trực tiếp theo tình trạng</span>
+                            </li>
                         </ul>
                     </div>
 
