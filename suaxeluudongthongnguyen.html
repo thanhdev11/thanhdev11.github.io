@@ -208,6 +208,115 @@
         </div>
     </header>
 
+    <!-- Transparent Pricing Section -->
+    <section class="py-16 md:py-24 bg-white" id="bang-gia">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-10" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-gray-900 border-b-4 border-rescue inline-block pb-2">BẢNG GIÁ DỊCH VỤ CÔNG KHAI</h2>
+                <div class="bg-yellow-50 text-yellow-800 border border-yellow-200 text-sm md:text-base p-4 rounded-lg font-semibold inline-block shadow-sm">
+                    <i class="fa-solid fa-shield-halved text-rescue mr-2"></i>
+                    <span class="text-action">BÁO GIÁ TRƯỚC - KHÔNG CHẶT CHÉM</span> <br/>
+                    <span class="text-action">49k - 99k là phí di chuyển nội thành Đà Nẵng. <br> Khách đồng ý mới làm.</span>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100" data-aos="fade-up">
+                <div class="flex flex-wrap border-b border-gray-200 bg-gray-50">
+                    <button class="flex-1 tab-btn active font-bold py-4 text-gray-600 hover:text-trust transition" onclick="switchTab(event, 'xega')">
+                        <i class="fa-solid fa-moped mr-2"></i> XE GA
+                    </button>
+                    <button class="flex-1 tab-btn  font-bold py-4 text-gray-600 hover:text-trust transition" onclick="switchTab(event, 'xeso')">
+                        <i class="fa-solid fa-motorcycle mr-2"></i> XE SỐ
+                    </button>
+                    <button class="flex-1 tab-btn font-bold py-4 text-gray-600 hover:text-trust transition" onclick="switchTab(event, 'oto')">
+                        <i class="fa-solid fa-car mr-2"></i> Ô TÔ
+                    </button>
+                </div>
+
+                <div class="p-6 md:p-8">
+                    
+
+                    <!-- Tab: Xe Ga -->
+                    <div id="xega" class="tab-content active">
+                        <ul class="divide-y divide-gray-100">
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-screwdriver-wrench text-gray-400 mr-3"></i> Vá xe ga (lốp không săm)</span>
+                                <span class="font-bold text-trust">39K - 59K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-circle-notch text-gray-400 mr-3"></i> Thay lốp xe ga chính hãng</span>
+                                <span class="font-bold text-trust">59K - 79K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-car-battery text-gray-400 mr-3"></i> Kích bình xe tay ga</span>
+                                <span class="font-bold text-trust">79K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-oil-can text-gray-400 mr-3"></i> Làm côn xe tay ga Thay bi, chuông, dây curoa</span>
+                                <span class="font-bold text-trust">Từ 135K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-oil-can text-gray-400 mr-3"></i> Thay pin smartkey</span>
+                                <span class="font-bold text-trust">Từ 49K</span>
+                            </li>
+
+                            
+                        </ul>
+                    </div>
+
+                    <!-- Tab: Xe Số -->
+                    <div id="xeso" class="tab-content">
+                        <ul class="divide-y divide-gray-100">
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-screwdriver-wrench text-gray-400 mr-3"></i> Vá xe máy (lốp có săm)</span>
+                                <span class="font-bold text-trust">39K - 59K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-circle-notch text-gray-400 mr-3"></i> Thay ruột/săm xe máy</span>
+                                <span class="font-bold text-trust">59K - 79K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-car-battery text-gray-400 mr-3"></i> Kích bình / Sạc bình</span>
+                                <span class="font-bold text-trust">79K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center text-action">
+                                <span class="font-bold"><i class="fa-solid fa-moon mr-3"></i> Xe chết máy</span>
+                                <span class="font-bold text-right text-sm"> Từ 59k - Báo giá trực tiếp theo tình trạng</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tab: Ô Tô -->
+                    <div id="oto" class="tab-content">
+                        <ul class="divide-y divide-gray-100">
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-car text-gray-400 mr-3"></i> Vá lốp ô tô (vá nấm/vá tạm)</span>
+                                <span class="font-bold text-trust">99K - 129K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-car-battery text-gray-400 mr-3"></i> Kích bình ắc quy ô tô</span>
+                                <span class="font-bold text-trust">119K - 150K</span>
+                            </li>
+                            <li class="py-4 flex justify-between items-center">
+                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-bolt text-gray-400 mr-3"></i> Thay ắc quy mới tận nơi</span>
+                                <span class="font-bold text-trust">Báo giá theo loại bình</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- CTA within pricing -->
+                <div class="bg-gray-100 p-4 text-center border-t border-gray-200">
+                    <p class="text-sm text-gray-600 mb-3">Với 7 năm kinh nghiệm, chúng tôi cam kết giá tốt nhất thị trường!</p>
+                    <a href="tel:0898190266" class="inline-flex items-center justify-center bg-trust text-white px-6 py-2 rounded-full font-bold hover:bg-blue-800 transition">
+                        <i class="fa-solid fa-phone-volume mr-2"></i> TƯ VẤN CỤ THỂ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Hero Section -->
     <section class="relative pt-24 pb-16 md:pt-32 md:pb-24 min-h-[90vh] flex items-center bg-gray-900">
         <!-- Background Image with Overlay -->
@@ -359,114 +468,7 @@
         </div>
     </section>
 
-    <!-- Transparent Pricing Section -->
-    <section class="py-16 md:py-24 bg-white" id="bang-gia">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="text-center mb-10" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-gray-900 border-b-4 border-rescue inline-block pb-2">BẢNG GIÁ DỊCH VỤ CÔNG KHAI</h2>
-                <div class="bg-yellow-50 text-yellow-800 border border-yellow-200 text-sm md:text-base p-4 rounded-lg font-semibold inline-block shadow-sm">
-                    <i class="fa-solid fa-shield-halved text-rescue mr-2"></i>
-                    <span class="text-action">BÁO GIÁ TRƯỚC - KHÔNG CHẶT CHÉM</span> <br/>
-                    <span class="text-action">49k - 99k là phí di chuyển nội thành Đà Nẵng. <br> Khách đồng ý mới làm.</span>
-                </div>
-            </div>
-
-            <!-- Tabs -->
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100" data-aos="fade-up">
-                <div class="flex flex-wrap border-b border-gray-200 bg-gray-50">
-                    <button class="flex-1 tab-btn active font-bold py-4 text-gray-600 hover:text-trust transition" onclick="switchTab(event, 'xega')">
-                        <i class="fa-solid fa-moped mr-2"></i> XE GA
-                    </button>
-                    <button class="flex-1 tab-btn  font-bold py-4 text-gray-600 hover:text-trust transition" onclick="switchTab(event, 'xeso')">
-                        <i class="fa-solid fa-motorcycle mr-2"></i> XE SỐ
-                    </button>
-                    <button class="flex-1 tab-btn font-bold py-4 text-gray-600 hover:text-trust transition" onclick="switchTab(event, 'oto')">
-                        <i class="fa-solid fa-car mr-2"></i> Ô TÔ
-                    </button>
-                </div>
-
-                <div class="p-6 md:p-8">
-                    
-
-                    <!-- Tab: Xe Ga -->
-                    <div id="xega" class="tab-content active">
-                        <ul class="divide-y divide-gray-100">
-                            <li class="py-4 flex justify-between items-center">
-                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-screwdriver-wrench text-gray-400 mr-3"></i> Vá xe ga (lốp không săm)</span>
-                                <span class="font-bold text-trust">39K - 59K</span>
-                            </li>
-                            <li class="py-4 flex justify-between items-center">
-                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-circle-notch text-gray-400 mr-3"></i> Thay lốp xe ga chính hãng</span>
-                                <span class="font-bold text-trust">59K - 79K</span>
-                            </li>
-                            <li class="py-4 flex justify-between items-center">
-                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-car-battery text-gray-400 mr-3"></i> Kích bình xe tay ga</span>
-                                <span class="font-bold text-trust">79K</span>
-                            </li>
-                            <li class="py-4 flex justify-between items-center">
-                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-oil-can text-gray-400 mr-3"></i> Làm côn xe tay ga Thay bi, chuông, dây curoa</span>
-                                <span class="font-bold text-trust">Từ 135K</span>
-                            </li>
-                            <li class="py-4 flex justify-between items-center">
-                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-oil-can text-gray-400 mr-3"></i> Thay pin smartkey</span>
-                                <span class="font-bold text-trust">Từ 49K</span>
-                            </li>
-
-                            
-                        </ul>
-                    </div>
-
-                    <!-- Tab: Xe Số -->
-                    <div id="xeso" class="tab-content">
-                        <ul class="divide-y divide-gray-100">
-                            <li class="py-4 flex justify-between items-center">
-                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-screwdriver-wrench text-gray-400 mr-3"></i> Vá xe máy (lốp có săm)</span>
-                                <span class="font-bold text-trust">39K - 59K</span>
-                            </li>
-                            <li class="py-4 flex justify-between items-center">
-                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-circle-notch text-gray-400 mr-3"></i> Thay ruột/săm xe máy</span>
-                                <span class="font-bold text-trust">59K - 79K</span>
-                            </li>
-                            <li class="py-4 flex justify-between items-center">
-                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-car-battery text-gray-400 mr-3"></i> Kích bình / Sạc bình</span>
-                                <span class="font-bold text-trust">79K</span>
-                            </li>
-                            <li class="py-4 flex justify-between items-center text-action">
-                                <span class="font-bold"><i class="fa-solid fa-moon mr-3"></i> Xe chết máy</span>
-                                <span class="font-bold text-right text-sm"> Từ 59k - Báo giá trực tiếp theo tình trạng</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Tab: Ô Tô -->
-                    <div id="oto" class="tab-content">
-                        <ul class="divide-y divide-gray-100">
-                            <li class="py-4 flex justify-between items-center">
-                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-car text-gray-400 mr-3"></i> Vá lốp ô tô (vá nấm/vá tạm)</span>
-                                <span class="font-bold text-trust">99K - 129K</span>
-                            </li>
-                            <li class="py-4 flex justify-between items-center">
-                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-car-battery text-gray-400 mr-3"></i> Kích bình ắc quy ô tô</span>
-                                <span class="font-bold text-trust">119K - 150K</span>
-                            </li>
-                            <li class="py-4 flex justify-between items-center">
-                                <span class="font-semibold text-gray-800"><i class="fa-solid fa-bolt text-gray-400 mr-3"></i> Thay ắc quy mới tận nơi</span>
-                                <span class="font-bold text-trust">Báo giá theo loại bình</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- CTA within pricing -->
-                <div class="bg-gray-100 p-4 text-center border-t border-gray-200">
-                    <p class="text-sm text-gray-600 mb-3">Với 7 năm kinh nghiệm, chúng tôi cam kết giá tốt nhất thị trường!</p>
-                    <a href="tel:0898190266" class="inline-flex items-center justify-center bg-trust text-white px-6 py-2 rounded-full font-bold hover:bg-blue-800 transition">
-                        <i class="fa-solid fa-phone-volume mr-2"></i> TƯ VẤN CỤ THỂ
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Social Proof Section -->
     <section class="py-16 bg-gray-50 border-t border-gray-200" id="nguoithat-viecthat">
