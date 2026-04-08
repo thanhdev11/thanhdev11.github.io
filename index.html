@@ -21,6 +21,13 @@
     <title>AI Agent Automation Solutions | Enterprise-Grade Automation for US & EU</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Calendly widgets (popup + inline) -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <!-- Google Fonts: Inter + Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -42,11 +49,11 @@
                             Products
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
-                            <li><a class="dropdown-item" href="chaomao.html">Chào Mào AI</a></li>
+                            <li><a class="dropdown-item" href="https://chaomao.sportaiv.com/">Chào Mào AI</a></li>
                             <li><a class="dropdown-item" href="giatuibauthinh.html">Giặt Ủi Bầu Thịnh</a></li>
-                            <li><a class="dropdown-item" href="suaxeluudongthongnguyen.html">Sửa Xe LĐ Thông Nguyễn</a></li>
+                            <li><a class="dropdown-item" href="https://suaxeluudongdanang247thongnguyen.sportaiv.com/">Sửa Xe LĐ Thông Nguyễn</a></li>
                             <li><a class="dropdown-item" href="motorcycle-rescue-danang.html">Motorcycle Rescue Đà Nẵng</a></li>
-                            <li><a class="dropdown-item" href="xaydung.html">Đội Cốp Pha Bác Dưu</a></li>
+                            <li><a class="dropdown-item" href="https://sportaiv.com/xaydung.html">Đội Cốp Pha Bác Dưu</a></li>
                             <li><a class="dropdown-item" href="tuvan.html">MOMER AI</a></li>
                         </ul>
                     </li>
@@ -54,12 +61,42 @@
                     <li class="nav-item"><a class="nav-link" href="case_studies.html">Case Studies</a></li>
                     <li class="nav-item"><a class="nav-link" href="about_us.html">About</a></li>
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-cta-nav" href="book_a_call.html">Book a Call</a>
+                        <a class="btn btn-cta-nav" href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/momervn/30min'});return false;">Book a Call</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- ============================================================
+         REFERENCING BANNER — Học hỏi & tham khảo từ đầu ngành
+         Inspired by: Relevance AI, MindStudio, Ada, Cognigy, Botpress
+         ============================================================ -->
+    <div class="referencing-banner" style="margin-top: 70px;">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+                <span class="referencing-label">📌 Inspired by Industry Leaders</span>
+                <div class="ref-agencies-row">
+                    <a href="https://relevanceai.com" target="_blank" rel="noopener" class="ref-agency-link">
+                        <span class="ref-dot"></span> Relevance AI
+                    </a>
+                    <a href="https://mindstudio.ai" target="_blank" rel="noopener" class="ref-agency-link">
+                        <span class="ref-dot"></span> MindStudio
+                    </a>
+                    <a href="https://www.ada.cx" target="_blank" rel="noopener" class="ref-agency-link">
+                        <span class="ref-dot"></span> Ada
+                    </a>
+                    <a href="https://www.cognigy.com" target="_blank" rel="noopener" class="ref-agency-link">
+                        <span class="ref-dot"></span> Cognigy
+                    </a>
+                    <a href="https://botpress.com" target="_blank" rel="noopener" class="ref-agency-link">
+                        <span class="ref-dot"></span> Botpress
+                    </a>
+                </div>
+                <span class="referencing-label" style="opacity:0.4;">Studying the best. Building better.</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -67,26 +104,30 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 order-lg-1">
                     <div class="hero-badge mb-4">
-                        <i class="fas fa-bolt me-2"></i>Enterprise AI Automation
+                        <i class="fas fa-bolt me-2"></i>The Next-Gen Agentic Workforce
                     </div>
-                    <h1 class="hero-title mb-4">Automate 80% of Operations With Custom AI Agents</h1>
-                    <p class="hero-subtitle mb-5">Build intelligent automation directly into your workflow. We deliver production-ready AI agents integrated with your existing tools—Python, FastAPI, and seamless third-party connections.</p>
+                    <h1 class="hero-title mb-4">Scale Your Business with Autonomous AI Agents.</h1>
+                    <p class="hero-subtitle mb-5">Sport-level speed meets enterprise intelligence. Build an autonomous digital workforce integrated with your existing tools—Python, FastAPI, and seamless third-party connections.</p>
                     <div class="d-flex flex-column flex-sm-row gap-3 mb-5">
-                        <a href="book_a_call.html" class="btn btn-primary-gradient btn-lg">
-                            <i class="fas fa-calendar me-2"></i>Book Free ROI Call
+                        <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/momervn/30min'});return false;" class="btn btn-primary-gradient btn-lg px-4">
+                            <i class="fas fa-calendar me-2"></i>Book a Strategy Call
                         </a>
-                        <a href="case_studies.html" class="btn btn-outline-light btn-lg">
-                            <i class="fas fa-arrow-right me-2"></i>See Success Stories
+                        <a href="#solutions" class="btn btn-outline-light btn-lg px-4">
+                            <i class="fas fa-arrow-right me-2"></i>See Solutions
                         </a>
                     </div>
                     <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Automation Projects</span>
+                        <div class="stat-item position-relative">
+                            <span class="stat-number" style="color: var(--accent-color);">10x</span>
+                            <span class="stat-label">Speed</span>
+                        </div>
+                        <div class="stat-item position-relative">
+                            <span class="stat-number" style="color: var(--accent-color);">24/7</span>
+                            <span class="stat-label">Autonomy</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">35%</span>
-                            <span class="stat-label">Avg Cost Reduction</span>
+                            <span class="stat-number" style="color: var(--accent-color);">Zero</span>
+                            <span class="stat-label">Latency</span>
                         </div>
                     </div>
                 </div>
@@ -127,63 +168,93 @@
         <div class="hero-divider"></div>
     </section>
 
+    <!-- ============================================================
+         PERFORMANCE COUNTER — "Sport" = Performance at its Peak
+         Giải thích tên SPORTAIV = Hiệu suất đỉnh cao, không phải thể thao
+         ============================================================ -->
+    <section class="performance-counter" id="performance">
+        <div class="container">
+            <div class="counter-grid">
+                <div class="counter-item">
+                    <div class="counter-number" data-target="10" data-suffix="x">0x</div>
+                    <div class="counter-label">Speed</div>
+                    <div class="counter-desc">Faster than manual ops</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" data-target="24" data-suffix="/7">0/7</div>
+                    <div class="counter-label">Autonomy</div>
+                    <div class="counter-desc">Zero downtime agents</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" data-target="90" data-suffix="%">0%</div>
+                    <div class="counter-label">Response Cut</div>
+                    <div class="counter-desc">Lead follow-up time saved</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" data-target="0" data-suffix=" ms" data-label="Zero">Zero</div>
+                    <div class="counter-label">Latency</div>
+                    <div class="counter-desc">Real-time decision engine</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Trust Signals Section -->
     <section class="trust-section">
-        <div class="container">
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <div class="marquee-item"><i class="fas fa-brain me-2"></i> OpenAI</div>
+                <div class="marquee-item"><i class="fas fa-robot me-2"></i> Anthropic</div>
+                <div class="marquee-item"><i class="fas fa-sitemap me-2"></i> n8n</div>
+                <div class="marquee-item"><i class="fas fa-link me-2"></i> LangChain</div>
+                <div class="marquee-item"><i class="fab fa-python me-2"></i> Python</div>
+                <!-- Duplicate for seamless scroll -->
+                <div class="marquee-item"><i class="fas fa-brain me-2"></i> OpenAI</div>
+                <div class="marquee-item"><i class="fas fa-robot me-2"></i> Anthropic</div>
+                <div class="marquee-item"><i class="fas fa-sitemap me-2"></i> n8n</div>
+                <div class="marquee-item"><i class="fas fa-link me-2"></i> LangChain</div>
+                <div class="marquee-item"><i class="fab fa-python me-2"></i> Python</div>
+            </div>
+        </div>
+        
+        <div class="container mt-5 pt-5">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
-                    <h3 class="section-label mb-3">Trusted by Industry Leaders</h3>
-                    <p class="text-muted mb-4 lh-lg">We partner with enterprise clients across US and EU to deliver measurable results through intelligent automation.</p>
-                    <div class="trust-logos">
-                        <div class="trust-logo-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
+                    <h3 class="section-label mb-3" style="color: var(--text-main);">Enterprise-Grade Reliability</h3>
+                    <p class="text-muted mb-4 lh-lg">We build solutions designed for security-first organizations. Data protection and compliance are built into every agent's architecture.</p>
+                    
+                    <div class="d-flex align-items-center gap-4 mt-4">
+                        <div class="compliance-badge d-flex align-items-center rounded p-3 glass-card">
+                            <i class="fas fa-shield-alt fs-2 me-3" style="color: var(--primary-color);"></i>
+                            <div>
+                                <h6 class="mb-0 fw-bold">SOC2 Ready</h6>
+                                <small class="text-muted">Built for Enterprise Audits</small>
+                            </div>
                         </div>
-                        <div class="trust-logo-item">
-                            <i class="fas fa-rocket"></i>
-                            <span>FastAPI</span>
-                        </div>
-                        <div class="trust-logo-item">
-                            <i class="fas fa-cube"></i>
-                            <span>OpenCV</span>
-                        </div>
-                        <div class="trust-logo-item">
-                            <i class="fas fa-link"></i>
-                            <span>Zapier</span>
-                        </div>
-                        <div class="trust-logo-item">
-                            <i class="fas fa-cogs"></i>
-                            <span>Make</span>
-                        </div>
-                        <div class="trust-logo-item">
-                            <i class="fas fa-sitemap"></i>
-                            <span>n8n</span>
+                        <div class="compliance-badge d-flex align-items-center rounded p-3 glass-card">
+                            <i class="fas fa-lock fs-2 me-3" style="color: var(--primary-color);"></i>
+                            <div>
+                                <h6 class="mb-0 fw-bold">GDPR Compliant</h6>
+                                <small class="text-muted">Zero Data Leakage</small>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="testimonial-card">
-                        <div class="testimonial-icon">
+                    <div class="testimonial-card glass-card border-0" style="border-left: 4px solid var(--accent-color) !important;">
+                        <div class="testimonial-icon" style="color: var(--accent-color); opacity: 0.15;">
                             <i class="fas fa-quote-left"></i>
                         </div>
-                        <p class="testimonial-text">"Within Q1, we reduced operational costs by 35% and cut manual work hours by 65%. Their team delivered a production-grade solution that scaled effortlessly with our growth."</p>
+                        <p class="testimonial-text" style="color: var(--text-main); font-style: italic;">"Within Q1, we converted leads 24/7 and reduced response time by 90%. Their team delivered a production-grade solution that scaled effortlessly while meeting strict data privacy laws."</p>
                         <div class="testimonial-author">
-                            <strong>Sarah Chen</strong>
-                            <span>CEO, E-commerce Platform (US)</span>
-                        </div>
-                        <div class="testimonial-meta">
-                            <span class="meta-badge">
-                                <i class="fas fa-check-circle me-1"></i>Verified Client
-                            </span>
-                            <span class="meta-badge">
-                                <i class="fas fa-lock me-1"></i>Enterprise
-                            </span>
+                            <strong style="color: var(--text-main);">Sarah Chen</strong>
+                            <span style="color: var(--text-muted);">CEO, Enterprise Platform (US)</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section-divider"></div>
+        <div class="section-divider mt-5"></div>
     </section>
 
     <!-- Why Choose Us Section -->
@@ -265,78 +336,72 @@
             <div class="row g-4">
                 <!-- Sales Automation -->
                 <div class="col-lg-4">
-                    <div class="solution-card">
+                    <div class="solution-card glass-card">
                         <div class="solution-icon">
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <h4 class="mb-3">Sales Agent Automation</h4>
                         <div class="problem-solution">
-                            <div class="problem-box">
+                            <div class="problem-box" style="background: rgba(239, 68, 68, 0.1); padding: 15px; border-left: 4px solid #ef4444; border-radius: 8px;">
                                 <strong class="text-danger">Problem:</strong>
-                                <p class="mb-0">Fragmented sales data, slow lead follow-ups, manual CRM updates creating bottlenecks.</p>
+                                <p class="mb-0 mt-1" style="color: var(--text-muted); font-size: 14px;">Fragmented sales data and slow lead follow-ups causing lost revenue.</p>
                             </div>
-                            <div class="solution-box mt-3">
-                                <strong class="text-success">Solution:</strong>
-                                <p class="mb-0">AI-powered lead scoring, automatic CRM updates (GHL/Airtable), and triggered email/SMS sequences. Reduce follow-up time by 80%.</p>
+                            <div class="solution-box mt-3" style="background: rgba(34, 197, 94, 0.1); padding: 15px; border-left: 4px solid #22c55e; border-radius: 8px;">
+                                <strong class="text-success">Our AI Agent Solution:</strong>
+                                <p class="mb-0 mt-1" style="color: var(--text-main); font-size: 14px;">Autonomous lead scoring and instant omnichannel CRM engagement.</p>
                             </div>
-                        </div>
-                        <div class="tech-stack mt-4">
-                            <span class="tech-badge">Zapier</span>
-                            <span class="tech-badge">Make</span>
-                            <span class="tech-badge">GHL</span>
-                            <span class="tech-badge">Airtable</span>
+                            <div class="roi-box mt-3" style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-left: 4px solid var(--accent-color); border-radius: 8px;">
+                                <strong style="color: var(--accent-color);">ROI / Outcome:</strong>
+                                <p class="mb-0 mt-1 fw-bold" style="color: var(--text-main); font-size: 14px;">Convert leads 24/7. Reduce response time by 90%.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Document Processing -->
                 <div class="col-lg-4">
-                    <div class="solution-card">
+                    <div class="solution-card glass-card">
                         <div class="solution-icon">
                             <i class="fas fa-file-invoice"></i>
                         </div>
                         <h4 class="mb-3">Intelligent Document Processing</h4>
                         <div class="problem-solution">
-                            <div class="problem-box">
+                            <div class="problem-box" style="background: rgba(239, 68, 68, 0.1); padding: 15px; border-left: 4px solid #ef4444; border-radius: 8px;">
                                 <strong class="text-danger">Problem:</strong>
-                                <p class="mb-0">Manual data extraction from invoices, forms, and images takes hours and introduces errors.</p>
+                                <p class="mb-0 mt-1" style="color: var(--text-muted); font-size: 14px;">Manual data extraction from invoices and forms takes hours and introduces errors.</p>
                             </div>
-                            <div class="solution-box mt-3">
-                                <strong class="text-success">Solution:</strong>
-                                <p class="mb-0">Computer vision (OpenCV) extracts data, validates automatically, and integrates with your backend. Process 1000s of documents per day.</p>
+                            <div class="solution-box mt-3" style="background: rgba(34, 197, 94, 0.1); padding: 15px; border-left: 4px solid #22c55e; border-radius: 8px;">
+                                <strong class="text-success">Our AI Agent Solution:</strong>
+                                <p class="mb-0 mt-1" style="color: var(--text-main); font-size: 14px;">Computer vision extracts and validates data directly into your backend.</p>
                             </div>
-                        </div>
-                        <div class="tech-stack mt-4">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">OpenCV</span>
-                            <span class="tech-badge">FastAPI</span>
-                            <span class="tech-badge">ML</span>
+                            <div class="roi-box mt-3" style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-left: 4px solid var(--accent-color); border-radius: 8px;">
+                                <strong style="color: var(--accent-color);">ROI / Outcome:</strong>
+                                <p class="mb-0 mt-1 fw-bold" style="color: var(--text-main); font-size: 14px;">Process 10,000+ docs/day with 99.9% accuracy. Save $40k/yr.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Knowledge Agent -->
                 <div class="col-lg-4">
-                    <div class="solution-card">
+                    <div class="solution-card glass-card">
                         <div class="solution-icon">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <h4 class="mb-3">Internal AI Knowledge Agent</h4>
+                        <h4 class="mb-3">Internal Knowledge Agent</h4>
                         <div class="problem-solution">
-                            <div class="problem-box">
+                            <div class="problem-box" style="background: rgba(239, 68, 68, 0.1); padding: 15px; border-left: 4px solid #ef4444; border-radius: 8px;">
                                 <strong class="text-danger">Problem:</strong>
-                                <p class="mb-0">Employees waste time searching for procedures, policies, and documentation across scattered systems.</p>
+                                <p class="mb-0 mt-1" style="color: var(--text-muted); font-size: 14px;">Employees waste hours searching for procedures across scattered internal systems.</p>
                             </div>
-                            <div class="solution-box mt-3">
-                                <strong class="text-success">Solution:</strong>
-                                <p class="mb-0">Query your Notion/internal docs in plain English. Get instant, accurate answers. Reduce training time by 60%.</p>
+                            <div class="solution-box mt-3" style="background: rgba(34, 197, 94, 0.1); padding: 15px; border-left: 4px solid #22c55e; border-radius: 8px;">
+                                <strong class="text-success">Our AI Agent Solution:</strong>
+                                <p class="mb-0 mt-1" style="color: var(--text-main); font-size: 14px;">Query all your Notion/Drive docs in plain English with instant source citations.</p>
                             </div>
-                        </div>
-                        <div class="tech-stack mt-4">
-                            <span class="tech-badge">Notion API</span>
-                            <span class="tech-badge">Custom API</span>
-                            <span class="tech-badge">LLM</span>
-                            <span class="tech-badge">Python</span>
+                            <div class="roi-box mt-3" style="background: rgba(59, 130, 246, 0.1); padding: 15px; border-left: 4px solid var(--accent-color); border-radius: 8px;">
+                                <strong style="color: var(--accent-color);">ROI / Outcome:</strong>
+                                <p class="mb-0 mt-1 fw-bold" style="color: var(--text-main); font-size: 14px;">Cut onboarding time by 60%. Instantly resolve internal queries.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -513,20 +578,79 @@
         <div class="section-divider"></div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="cta-title mb-4">Ready to Automate Your Operations?</h2>
-                    <p class="cta-subtitle mb-5">Get a free ROI assessment. Learn how much you could save and how we'd build your custom AI agent.</p>
-                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-                        <a href="book_a_call.html" class="btn btn-cta-primary btn-lg">
-                            <i class="fas fa-calendar me-2"></i>Schedule Free Call
-                        </a>
-                        <a href="case_studies.html" class="btn btn-cta-secondary btn-lg">
-                            <i class="fas fa-file-alt me-2"></i>View Case Studies
-                        </a>
+    <!-- ============================================================
+         CALENDLY INLINE SECTION — Khách Tây đặt lịch không cần nhảy tab
+         Thay thế hoàn toàn CTA section cũ bằng Calendly Inline Embed
+         ============================================================ -->
+    <section class="calendly-inline-section" id="book-a-call">
+        <div class="container" style="position:relative; z-index:1;">
+            <!-- Section Header -->
+            <div class="text-center mb-5">
+                <div class="urgency-strip">
+                    <i class="fas fa-fire"></i>
+                    <span>Limited slots this month — We take max 3 new clients per month</span>
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h2 class="section-title">Book Your Free Strategy Call</h2>
+                <p class="section-subtitle">No forms. No fluff. Pick a time that works for you — right here, right now.</p>
+            </div>
+
+            <div class="row g-4 align-items-start">
+                <!-- Calendly Inline Widget -->
+                <div class="col-lg-8">
+                    <div class="calendly-container">
+                        <div class="calendly-inline-widget"
+                             data-url="https://calendly.com/momervn/30min?hide_gdpr_banner=1&primary_color=3b82f6"
+                             style="min-width:320px;height:700px;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar: What you get -->
+                <div class="col-lg-4">
+                    <div class="book-sidebar-card">
+                        <h5 class="mb-1" style="color:#f8fafc; font-size:20px;">What Happens on the Call</h5>
+                        <p style="color:#64748b; font-size:13px; margin-bottom:28px;">A focused 30-min session with our AI strategy team.</p>
+
+                        <div class="book-sidebar-stat">
+                            <div class="book-sidebar-icon"><i class="fas fa-search"></i></div>
+                            <div class="book-sidebar-text">
+                                <h6>Workflow Audit</h6>
+                                <p>We map your current ops and identify the top 3 automation wins.</p>
+                            </div>
+                        </div>
+
+                        <div class="book-sidebar-stat">
+                            <div class="book-sidebar-icon"><i class="fas fa-dollar-sign"></i></div>
+                            <div class="book-sidebar-text">
+                                <h6>Live ROI Projection</h6>
+                                <p>You leave with real numbers: cost savings, time saved, payback period.</p>
+                            </div>
+                        </div>
+
+                        <div class="book-sidebar-stat">
+                            <div class="book-sidebar-icon"><i class="fas fa-blueprint" style="font-family:FontAwesome;"></i><i class="fas fa-drafting-compass"></i></div>
+                            <div class="book-sidebar-text">
+                                <h6>Custom Blueprint</h6>
+                                <p>A tailored AI agent architecture sent to your inbox within 24h.</p>
+                            </div>
+                        </div>
+
+                        <div class="book-sidebar-stat">
+                            <div class="book-sidebar-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="book-sidebar-text">
+                                <h6>Zero Pressure</h6>
+                                <p>No sales pitch. If we're not a fit, we'll tell you honestly and point you in the right direction.</p>
+                            </div>
+                        </div>
+
+                        <!-- Trust strip -->
+                        <div class="trust-strip mt-4">
+                            <span class="trust-strip-label">Secure</span>
+                            <div class="trust-badge-item"><i class="fas fa-lock"></i> GDPR</div>
+                            <div class="trust-badge-item"><i class="fas fa-shield-alt"></i> SOC2</div>
+                            <div class="trust-badge-item"><i class="fab fa-linkedin"></i> Verified</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -609,17 +733,20 @@
 
 
     <!-- Social Media Floating Buttons - Always Visible -->
-    <div class="social-float-simple">
+    <div class="social-float-simple" id="social-float">
+        <!-- Book a Call (primary CTA float) -->
+        <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/momervn/30min'});return false;"
+           class="social-float-btn" 
+           style="background: linear-gradient(135deg, #60a5fa, #3b82f6); border-color: rgba(96,165,250,0.3);"
+           aria-label="Book a Strategy Call" id="float-book-call">
+            <i class="fas fa-calendar-check"></i>
+            <span class="social-tooltip">Book a Strategy Call</span>
+        </a>
+
         <!-- WhatsApp -->
         <a href="https://wa.me/84795777607" class="social-float-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
             <i class="fab fa-whatsapp"></i>
             <span class="social-tooltip">Chat on WhatsApp</span>
-        </a>
-        
-        <!-- Upwork -->
-        <a href="https://www.upwork.com/freelancers/~010a44b10aee062327" class="social-float-btn upwork-btn" target="_blank" rel="noopener noreferrer" aria-label="View Upwork Profile">
-            <i class="fab fa-upwork"></i>
-            <span class="social-tooltip">View Upwork Profile</span>
         </a>
         
         <!-- LinkedIn -->
@@ -629,21 +756,106 @@
         </a>
     </div>
 
+    <!-- Mobile Sticky CTA Bar — Always visible on mobile -->
+    <div class="mobile-sticky-cta" id="mobile-sticky-cta">
+        <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/momervn/30min'});return false;" class="btn-mob-primary">
+            <i class="fas fa-calendar-check"></i>
+            Book Your Free Strategy Call
+        </a>
+        <p class="mobile-cta-sub">30 min · No obligation · Response in 24h</p>
+    </div>
+
+    <!-- Scroll to Top -->
+    <a href="#" class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
     <script>
-    // Active menu highlighting
     document.addEventListener('DOMContentLoaded', function() {
+
+        // ── Active nav highlight ──
         const currentPage = window.location.pathname.split('/').pop();
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        navLinks.forEach(link => {
+        document.querySelectorAll('.nav-link').forEach(link => {
             const linkPage = link.getAttribute('href');
-            if (linkPage === currentPage || 
-                (currentPage === '' && linkPage === 'index.html')) {
+            if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
                 link.classList.add('active');
             }
         });
+
+        // ── Navbar scroll effect ──
+        const navbar = document.querySelector('.navbar-premium');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ── Scroll to Top button ──
+        const scrollBtn = document.getElementById('scrollToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+        scrollBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ── Animated Counter (count-up on scroll into view) ──
+        const counters = document.querySelectorAll('.counter-number[data-target]');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.dataset.done) {
+                    entry.target.dataset.done = 'true';
+                    const el = entry.target;
+                    const target = parseInt(el.dataset.target);
+                    const suffix = el.dataset.suffix || '';
+                    const isLabel = el.dataset.label; // e.g. "Zero"
+                    if (isLabel) { el.textContent = isLabel; return; }
+                    let current = 0;
+                    const step = Math.max(1, Math.ceil(target / 40));
+                    const timer = setInterval(() => {
+                        current = Math.min(current + step, target);
+                        el.textContent = current + suffix;
+                        if (current >= target) clearInterval(timer);
+                    }, 40);
+                }
+            });
+        }, { threshold: 0.3 });
+        counters.forEach(c => counterObserver.observe(c));
+
+        // ── Calendly inline widget init ──
+        if (typeof Calendly !== 'undefined') {
+            Calendly.initInlineWidgets();
+        } else {
+            // Fallback: wait for Calendly to load
+            window.addEventListener('load', () => {
+                if (typeof Calendly !== 'undefined') {
+                    Calendly.initInlineWidgets();
+                }
+            });
+        }
+
+        // ── Hide mobile sticky CTA when on #book-a-call section ──
+        const bookSection = document.getElementById('book-a-call');
+        const mobileCta = document.getElementById('mobile-sticky-cta');
+        if (bookSection && mobileCta) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    mobileCta.style.opacity = entry.isIntersecting ? '0' : '1';
+                    mobileCta.style.pointerEvents = entry.isIntersecting ? 'none' : 'auto';
+                });
+            }, { threshold: 0.2 });
+            observer.observe(bookSection);
+        }
+
     });
     </script>
 </body>
