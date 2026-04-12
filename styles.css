@@ -2554,3 +2554,189 @@ body { /* Defaulting generic case-study-card if dark mode is active everywhere *
     color: white;
     border-color: var(--primary-color);
 }
+
+/* =====================================================================
+   DARK MODE — COMPREHENSIVE FIX BLOCK
+   Fix invisible / low-contrast text across all 5 pages
+   Applied last so these rules win via source order.
+   ===================================================================== */
+
+/* 1 ─ Section backgrounds that were left as white */
+.tech-section,
+.booking-section,
+.info-section {
+    background: var(--dark-bg) !important;
+}
+
+/* 2 ─ Process content: heading color was var(--dark-bg) → invisible on dark card */
+.process-content h4 {
+    color: var(--text-main) !important;
+}
+
+/* 3 ─ Case study: heading color was var(--dark-bg) → invisible */
+.case-section h5 {
+    color: var(--text-main) !important;
+}
+
+/* 4 ─ Case study card: was white background */
+.case-study-card {
+    background: var(--light-bg) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: var(--text-main) !important;
+}
+
+.case-body {
+    background: var(--light-bg) !important;
+}
+
+/* 5 ─ Booking card: was white background */
+.booking-card {
+    background: var(--light-bg) !important;
+    border: 1px solid rgba(255, 255, 255, 0.07) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+.booking-card h3,
+.booking-card h4,
+.booking-card h5,
+.booking-card p,
+.booking-card li {
+    color: var(--text-main) !important;
+}
+
+/* 6 ─ Info cards (book_a_call): was white hover */
+.info-card {
+    background: var(--light-bg) !important;
+    border: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+
+.info-card:hover {
+    background: rgba(59, 130, 246, 0.1) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+}
+
+.info-card h5,
+.info-card p {
+    color: var(--text-main) !important;
+}
+
+/* 7 ─ Contact form labels and expect list: dark colors on dark bg */
+.contact-form label {
+    color: var(--text-main) !important;
+}
+
+.expect-list li {
+    color: var(--text-muted) !important;
+}
+
+/* 8 ─ Result items (case studies): was light blue background */
+.result-item {
+    background: rgba(30, 41, 59, 0.8) !important;
+}
+
+.result-item p {
+    color: var(--text-muted) !important;
+}
+
+/* 9 ─ stat-box (case studies) */
+.stat-box {
+    background: rgba(30, 41, 59, 0.8) !important;
+}
+
+.stat-label {
+    color: var(--text-muted) !important;
+}
+
+/* 10 ─ Problem/solution boxes (case studies): light backgrounds */
+.problem-box {
+    background: rgba(239, 68, 68, 0.1) !important;
+    border-left-color: #ef4444 !important;
+}
+
+.problem-box strong {
+    color: #fca5a5 !important;
+}
+
+.problem-box p {
+    color: #fca5a5 !important;
+}
+
+.solution-box {
+    background: rgba(34, 197, 94, 0.1) !important;
+    border-left-color: #22c55e !important;
+}
+
+.solution-box strong {
+    color: #86efac !important;
+}
+
+.solution-box p {
+    color: #86efac !important;
+}
+
+/* 11 ─ Section label: was dark color */
+.section-label {
+    color: var(--text-main) !important;
+}
+
+/* 12 ─ Trust logo items */
+.trust-logo-item {
+    background: var(--light-bg) !important;
+}
+
+.trust-logo-item span {
+    color: var(--text-muted) !important;
+}
+
+.trust-logo-item:hover {
+    background: rgba(59, 130, 246, 0.1) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 13 ─ Testimonial author: was dark color */
+.testimonial-author strong {
+    color: var(--text-main) !important;
+}
+
+.testimonial-author span {
+    color: var(--text-muted) !important;
+}
+
+/* 14 ─ Benefit item hover: was white background */
+.benefit-item:hover {
+    background: rgba(59, 130, 246, 0.1) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 15 ─ Tech badge pill (case studies) */
+.tech-badge-pill {
+    background: rgba(59, 130, 246, 0.15) !important;
+    color: var(--accent-color) !important;
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+    box-shadow: none !important;
+}
+
+/* 16 ─ Pillar card text (services page) */
+.pillar-card h4,
+.pillar-card p {
+    color: var(--text-main) !important;
+}
+
+/* 17 ─ Solution card text */
+.solution-card h4,
+.solution-card p {
+    color: var(--text-main) !important;
+}
+
+/* 18 ─ Process step text */
+.process-step h4,
+.process-step p,
+.process-step strong {
+    color: var(--text-main) !important;
+}
+
+/* 19 ─ meta-badge color adjust */
+.meta-badge {
+    background: rgba(59, 130, 246, 0.12) !important;
+    color: var(--accent-color) !important;
+}
