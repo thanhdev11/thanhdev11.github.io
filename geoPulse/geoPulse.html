@@ -36,8 +36,8 @@
     <style>
         body { background-color: #0a0a0a; color: #ffffff; }
         .glass-panel { background: rgba(17, 17, 17, 0.6); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .text-gradient { background: linear-gradient(135deg, #007AFF, #00e5ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .text-gradient-orange { background: linear-gradient(135deg, #FF9500, #ffc107); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .text-gradient { background: linear-gradient(135deg, #007AFF, #00e5ff); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .text-gradient-orange { background: linear-gradient(135deg, #FF9500, #ffc107); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
         .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
         .fade-in-up.appear { opacity: 1; transform: translateY(0); }
         .feature-card { transition: all 0.3s ease; }
