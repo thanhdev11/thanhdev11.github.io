@@ -4,19 +4,195 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/imgs/logo.png">
-    <title>Case Studies - AI Agent Automation Solutions</title>
+    <title>Success Stories | SPORTAIV Agentic AI</title>
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=4">
+    
+    <!-- Calendly -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=5">
+
+    <style>
+        :root {
+            --bg-color: #000000;
+            --bg-alt: #0a0a0a;
+            --border-color: #1a1a1a;
+            --text-main: #ffffff;
+            --text-muted: #a1a1aa;
+            --accent-purple: #c084fc;
+            --accent-blue: #818cf8;
+            --accent-green: #34d399;
+            --btn-bg: #4f46e5;
+        }
+        body {
+            font-family: 'Inter', sans-serif !important;
+            background-color: var(--bg-color) !important;
+            color: var(--text-main) !important;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Sora', sans-serif !important;
+        }
+        .navbar-premium {
+            background: rgba(0, 0, 0, 0.8) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .navbar-premium .nav-link, .navbar-premium .navbar-brand {
+            color: #fff !important;
+        }
+        .btn-primary-glow {
+            background: var(--btn-bg);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            padding: 14px 32px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);
+            color: #fff;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-primary-glow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px 0 rgba(79, 70, 229, 0.5);
+            color: #fff;
+        }
+        .btn-outline-glow {
+            background: transparent;
+            border: 1px solid #333;
+            border-radius: 8px;
+            font-weight: 600;
+            padding: 14px 32px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            color: #fff;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-outline-glow:hover {
+            border-color: #555;
+            background: rgba(255,255,255,0.05);
+            color: #fff;
+        }
+
+        /* Case Study Specifics */
+        .case-card {
+            background: var(--bg-alt);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 4rem;
+            margin-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .case-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            opacity: 0.5;
+        }
+        .tech-tag {
+            background: #111;
+            border: 1px solid #222;
+            color: var(--accent-blue);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .section-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .impact-metric {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--accent-green);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 20px rgba(52, 211, 153, 0.2);
+        }
+        .impact-text {
+            font-size: 1.25rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+        .client-quote {
+            background: rgba(255,255,255,0.03);
+            border-left: 3px solid var(--accent-purple);
+            padding: 2rem;
+            border-radius: 0 16px 16px 0;
+            margin-top: 2rem;
+        }
+        .visual-box {
+            background: #050505;
+            border: 1px solid #1a1a1a;
+            border-radius: 16px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Chart visual simulation */
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            gap: 20px;
+            height: 150px;
+        }
+        .bar-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .bar {
+            width: 60px;
+            border-radius: 6px 6px 0 0;
+            transition: height 1s ease;
+        }
+        .bar-before { background: #333; height: 140px; }
+        .bar-after { background: var(--accent-green); height: 20px; box-shadow: 0 0 15px rgba(52, 211, 153, 0.4); }
+
+        @media (max-width: 991px) {
+            .case-card { padding: 2rem; }
+            .impact-metric { font-size: 2.5rem; }
+        }
+    </style>
 </head>
 <body>
+
     <!-- Premium Navigation -->
     <nav class="navbar navbar-expand-lg navbar-premium fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <i class="fas fa-sparkles me-2"></i><strong>AI Agent Solutions</strong>
+                <i class="fas fa-sparkles me-2"></i><strong>SPORTAIV</strong>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -24,10 +200,10 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="academy.html">Academy <span class="badge bg-warning text-dark" style="font-size: 0.6rem; vertical-align: top; margin-left:2px;">Soon</span></a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProducts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProducts" role="button" data-bs-toggle="dropdown">
                             Products
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
+                        <ul class="dropdown-menu dropdown-menu-dark" style="background:#111; border: 1px solid #333;">
                             <li><a class="dropdown-item" href="tuvan.html">MOMER AI</a></li>
                             <li><a class="dropdown-item" href="https://chaomao.sportaiv.com/">Chao Mao AI</a></li>
                             <li><a class="dropdown-item" href="geoPulse/geoPulse.html">GeoPulse AI</a></li>
@@ -35,419 +211,267 @@
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="case_studies.html">Case Studies</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="case_studies.html">Case Studies</a></li>
                     <li class="nav-item"><a class="nav-link" href="about_us.html">About</a></li>
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-cta-nav" href="book_a_call.html">Book Your ROI Blueprint</a>
+                        <a class="btn-primary-glow py-2 px-3" style="font-size: 0.9rem;" href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/momervn/30min'});return false;">Book Your ROI Blueprint</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="case-hero-section">
-        <div class="container hero-content">
-            <div class="text-center">
-                <h1 class="display-4 fw-bold mb-4">Proven ROI: Data-Backed Results from Custom AI Agent Deployments</h1>
-                <p class="lead mb-0">We don't just automate tasks; we deliver measurable improvements in efficiency, capacity, and bottom-line revenue for our clients in the US and Europe.</p>
+    <!-- Header Section -->
+    <section class="case-hero" style="padding: 160px 0 80px; position: relative;">
+        <div style="position: absolute; top: -30%; left: 10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(192, 132, 252, 0.1) 0%, transparent 60%); border-radius: 50%; pointer-events: none;"></div>
+        <div class="container text-center" style="position: relative; z-index: 2;">
+            <div class="badge mb-4" style="background: rgba(192, 132, 252, 0.1); border: 1px solid rgba(192, 132, 252, 0.3); color: var(--accent-purple); padding: 8px 16px; font-weight: 500; border-radius: 20px;">
+                Proven ROI
             </div>
+            <h1 class="display-4 fw-bold mb-4" style="letter-spacing: -1.5px;">Success Stories: <span style="background: linear-gradient(to right, #818cf8, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Quantifiable Impact</span></h1>
+            <p class="lead" style="color: var(--text-muted); max-width: 700px; margin: 0 auto;">
+                We don't build software; we architect solutions. Explore how our Agentic AI deployments have eliminated operational friction and driven massive ROI for enterprise clients.
+            </p>
         </div>
     </section>
 
-    
-    <!-- Case Studies -->
-    <section class="solutions-section" id="case-studies-container">
+    <!-- Case Studies Container -->
+    <section class="case-studies" style="padding: 40px 0 100px;">
         <div class="container">
-            
-            <!-- Category Filters -->
-            <div class="d-flex justify-content-center flex-wrap gap-2 mb-5">
-                <button class="btn btn-outline-light active filter-btn" onclick="filterCases('all')">All</button>
-                <button class="btn btn-outline-light filter-btn" onclick="filterCases('ecommerce')">E-commerce</button>
-                <button class="btn btn-outline-light filter-btn" onclick="filterCases('logistics')">Logistics</button>
-                <button class="btn btn-outline-light filter-btn" onclick="filterCases('tech')">Tech/Consulting</button>
-            </div>
 
-            <!-- Case Study 1 -->
-            <div class="case-study-card category-ecommerce glass-card" style="padding: 0;">
-                <div class="row g-0 align-items-stretch">
-                    <div class="col-lg-5 order-lg-1">
-                        <div class="case-media-placeholder">
-                            <div class="text-center text-muted">
-                                <i class="fas fa-robot fa-4x mb-3" style="color: var(--accent-color); opacity: 0.8;"></i>
-                                <p>Lead Routing Simulation</p>
-                            </div>
+            <!-- CASE STUDY 1 -->
+            <div class="case-card">
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    <span class="tech-tag">#AgenticAI</span>
+                    <span class="tech-tag">#LLM-Orchestration</span>
+                    <span class="tech-tag">#MarketIntelligence</span>
+                </div>
+                <h2 class="fw-bold mb-5" style="font-size: 2.2rem;">Global Market Intelligence via Autonomous Scout Agents</h2>
+                
+                <div class="row g-5">
+                    <div class="col-lg-7">
+                        <div class="mb-5">
+                            <span class="section-label"><i class="fas fa-exclamation-circle text-danger me-2"></i> The Situation (The Friction)</span>
+                            <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.1rem;">
+                                High-growth startups require real-time data on global tech trends. However, manual tracking of competitors, market signals, and news was slow, inconsistent, and highly resource-intensive. The resulting reports were often outdated by the time they reached leadership, delaying critical strategic pivots.
+                            </p>
+                        </div>
+                        <div class="mb-5">
+                            <span class="section-label"><i class="fas fa-network-wired text-warning me-2"></i> The Agentic Architecture (The Solution)</span>
+                            <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.1rem;">
+                                We engineered an autonomous "Scout" system powered by LLM orchestration. Operating 24/7, the agents dynamically scrape target domains, filter noise via semantic search, and synthesize raw market signals into highly structured, actionable intelligence reports, delivered directly to executive dashboards.
+                            </p>
+                        </div>
+                        <div>
+                            <span class="section-label"><i class="fas fa-chart-line text-success me-2"></i> The Result (The Impact)</span>
+                            <div class="impact-metric">10x</div>
+                            <div class="impact-text">Faster Intelligence Gathering with 0% Manual Oversight</div>
                         </div>
                     </div>
-                    <div class="col-lg-7 p-4 p-lg-5 order-lg-2">
-                        <div class="case-header mb-4" style="border: none; padding: 0; background: transparent;">
-                            <h3 style="color: var(--text-main);">Sales Intelligence Agent for E-commerce</h3>
-                            <p class="text-muted">Major E-commerce Retailer, Germany</p>
-                            <div class="case-meta mt-3">
-                                <div class="case-meta-item d-inline-block me-3"><i class="fas fa-clock text-accent me-1" style="color: var(--accent-color);"></i> <span style="color: var(--text-muted);"><strong>Go-live in just 8 Weeks</strong></span></div>
-                                <div class="case-meta-item d-inline-block"><i class="fas fa-layer-group text-accent me-1" style="color: var(--accent-color);"></i> <span style="color: var(--text-muted);">Phase: Development & Launch</span></div>
-                            </div>
+                    <div class="col-lg-5">
+                        <div class="visual-box mb-4">
+                            <!-- Simple node flow visualization -->
+                            <div style="position: absolute; width: 50px; height: 50px; background: #111; border: 1px solid #333; border-radius: 8px; left: 10%; display: flex; align-items: center; justify-content: center;"><i class="fas fa-globe text-muted"></i></div>
+                            <div style="position: absolute; width: 70px; height: 70px; background: rgba(79, 70, 229, 0.1); border: 1px solid var(--accent-blue); border-radius: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(79,70,229,0.3);"><i class="fas fa-robot fa-lg text-white"></i></div>
+                            <div style="position: absolute; width: 50px; height: 50px; background: #111; border: 1px solid #333; border-radius: 8px; right: 10%; display: flex; align-items: center; justify-content: center;"><i class="fas fa-chart-pie text-muted"></i></div>
+                            
+                            <div style="position: absolute; width: 60px; height: 2px; background: #333; left: 25%;"></div>
+                            <div style="position: absolute; width: 60px; height: 2px; background: #333; right: 25%;"></div>
+                            
+                            <div style="position: absolute; bottom: 15px; font-family: monospace; font-size: 0.75rem; color: #666;">[Scraping -> LLM Filter -> Dashboard]</div>
                         </div>
-
-                        <!-- Data Viz -->
-                        <div class="row g-4 mb-5">
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="progress-ring">95%</div>
-                                    <div><small class="text-muted text-uppercase fw-bold">Manual Entry Drop</small></div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div style="font-size: 1.5rem; font-weight: 900; color: var(--accent-color);">48h<i class="fas fa-angle-right mx-2 text-muted" style="font-size: 1rem;"></i>4h</div>
-                                    <div><small class="text-muted text-uppercase fw-bold">Follow-up Speed</small></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- The Challenge -->
-                        <div class="case-section mb-4">
-                            <h5 style="color: var(--text-main);"><i class="fas fa-exclamation-circle text-danger me-2"></i> The Challenge</h5>
-                            <p class="text-muted">High-ticket leads were going cold. The sales team was drowning in repetitive administrative work—spending 15 hours a week just validating and cleaning data across GHL and Airtable instead of building relationships. Morale was dropping, and management was frustrated seeing premium leads slip away simply because the team couldn't physically respond fast enough.</p>
-                        </div>
-
-                        <!-- The Scalability & Solution -->
-                        <div class="case-section mb-4">
-                            <h5 style="color: var(--text-main);"><i class="fas fa-lightbulb text-warning me-2"></i> Solution & Scalability</h5>
-                            <p class="text-muted">We engineered an autonomous orchestrator that intercepts incoming leads instantly. It cleans, scores, and triggers an exact sequence of follow-ups—all before a human ever touches the record. <br><strong style="color:var(--text-main);">Enterprise Scalability:</strong> The system is designed to automatically scale from 1,000 to 100,000+ lead events per day without requiring structural changes.</p>
-                        </div>
-                        
-                        <!-- ROI Box -->
-                        <div class="roi-box p-4 rounded mb-4">
-                            <h5 class="mb-3 text-success"><i class="fas fa-chart-line me-2"></i> The ROI Story</h5>
-                            <div class="row" style="color: var(--text-subtle); display:flex; gap:10px;">
-                                <div class="col-sm-5 mb-2"><strong style="color:var(--text-main);">Before AI:</strong> ~$8,000/mo <small>(Manual Labor)</small></div>
-                                <div class="col-sm-5 mb-2"><strong style="color:var(--text-main);">After AI:</strong> ~$300/mo <small>(Infra cost)</small></div>
-                                <div class="col-12 mt-2">
-                                    <h4 class="text-success mb-0 d-inline-block w-100">Saved: $7,700/month</h4>
-                                    <small class="text-muted">Full ROI achieved in under 3 months.</small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial -->
-                        <div class="testimonial-card glass-card border-0 mb-4 p-3" style="border-left: 3px solid var(--accent-color) !important; background: rgba(255,255,255,0.03);">
-                            <p class="mb-2 text-muted" style="font-style: italic;">"It used to take us days to categorize and respond to our international leads. Now it happens while we sleep. The financial impact was immediate."</p>
-                            <small class="fw-bold" style="color:#f8fafc">— CEO of a Leading E-commerce Firm in Germany</small>
-                        </div>
-
-                        <!-- Tech Stack matching Home -->
-                        <div class="tech-stack-row d-flex gap-3 mt-4 flex-wrap">
-                            <div class="tech-badge-pill"><i class="fab fa-python me-1"></i> Python</div>
-                            <div class="tech-badge-pill"><i class="fas fa-rocket me-1"></i> FastAPI</div>
-                            <div class="tech-badge-pill"><i class="fas fa-cogs me-1"></i> Make</div>
-                            <div class="tech-badge-pill"><i class="fas fa-table me-1"></i> Airtable</div>
-                        </div>
-
-                        <!-- Actions -->
-                        <div class="d-flex align-items-center gap-3 mt-5 border-top pt-4" style="border-color: rgba(255,255,255,0.1) !important;">
-                            <a href="book_a_call.html" class="btn btn-outline-light btn-sm px-4 py-2" style="border-color: var(--accent-color); color: var(--accent-color);"><i class="fas fa-bolt me-1"></i> Get a similar solution</a>
-                            <a href="#" class="btn btn-link btn-sm text-decoration-none" style="color: var(--text-muted);"><i class="fas fa-file-pdf me-1"></i> Download PDF</a>
+                        <div class="client-quote">
+                            <p class="mb-3 text-white fw-medium" style="font-style: italic;">"What used to take an entire analyst team weeks to compile is now waiting in my inbox every morning. It's a massive competitive advantage."</p>
+                            <span class="text-muted text-uppercase" style="font-size: 0.8rem; font-weight: 700;">— VP of Strategy, US Tech Firm</span>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Case Study 2 -->
-            <div class="case-study-card category-logistics glass-card" style="padding: 0;">
-                <div class="row g-0 align-items-stretch">
-                    <!-- F-Pattern / Z-pattern: Content Left, Image Right -->
-                    <div class="col-lg-7 p-4 p-lg-5 order-lg-1">
-                        <div class="case-header mb-4" style="border: none; padding: 0; background: transparent;">
-                            <h3 style="color: var(--text-main);">Intelligent Document Processing (OCR)</h3>
-                            <p class="text-muted">International Logistics Provider, United States</p>
-                            <div class="case-meta mt-3">
-                                <div class="case-meta-item d-inline-block me-3"><i class="fas fa-clock text-accent me-1" style="color: var(--accent-color);"></i> <span style="color: var(--text-muted);"><strong>Go-live in just 10 Weeks</strong></span></div>
-                                <div class="case-meta-item d-inline-block"><i class="fas fa-layer-group text-accent me-1" style="color: var(--accent-color);"></i> <span style="color: var(--text-muted);">Phase: Discovery to Support</span></div>
-                            </div>
-                        </div>
-
-                        <!-- Data Viz -->
-                        <div class="row g-4 mb-5">
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="progress-ring">98%</div>
-                                    <div><small class="text-muted text-uppercase fw-bold">Extraction Accuracy</small></div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div style="font-size: 1.5rem; font-weight: 900; color: var(--accent-color);">15m<i class="fas fa-angle-right mx-2 text-muted" style="font-size: 1rem;"></i>3m</div>
-                                    <div><small class="text-muted text-uppercase fw-bold">Processing Time</small></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- The Challenge -->
-                        <div class="case-section mb-4">
-                            <h5 style="color: var(--text-main);"><i class="fas fa-exclamation-circle text-danger me-2"></i> The Challenge</h5>
-                            <p class="text-muted">Processing 5,000+ shipping documents manually was a nightmare. 12% error rates caused massive delays and compliance fines. Operational fatigue meant invoices often took 48 hours to process, causing a massive backlog that heavily impacted cash flow and strained customer relationships daily.</p>
-                        </div>
-
-                        <!-- The Solution -->
-                        <div class="case-section mb-4">
-                            <h5 style="color: var(--text-main);"><i class="fas fa-lightbulb text-warning me-2"></i> Solution & Scalability</h5>
-                            <p class="text-muted">We integrated a Custom Vision OCR model parsing every document in real-time. Unstructured PDFs turned into structured database entries in seconds. <br><strong style="color:var(--text-main);">Enterprise Scalability:</strong> Our Python microservices architecture expanded their processing ceiling from 5k to 12k+ documents per month effortlessly with zero additional headcount.</p>
-                        </div>
-                        
-                        <!-- ROI Box -->
-                        <div class="roi-box p-4 rounded mb-4">
-                            <h5 class="mb-3 text-success"><i class="fas fa-chart-line me-2"></i> The ROI Story</h5>
-                            <div class="row" style="color: var(--text-subtle);">
-                                <div class="col-sm-5 mb-2"><strong style="color:var(--text-main);">Annual Errors:</strong> -$50k <small>(Fines & Corrections)</small></div>
-                                <div class="col-sm-5 mb-2"><strong style="color:var(--text-main);">Annual Saved:</strong> $45k <small>(Labor)</small></div>
-                                <div class="col-12 mt-2">
-                                    <h4 class="text-success mb-0">Total Recouped: $95,000/year</h4>
-                                    <small class="text-muted">A fully automated verification engine running 24/7.</small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial -->
-                        <div class="testimonial-card glass-card border-0 mb-4 p-3" style="border-left: 3px solid var(--accent-color) !important; background: rgba(255,255,255,0.03);">
-                            <p class="mb-2 text-muted" style="font-style: italic;">"Data precision in logistics is non-negotiable. This Vision Agent essentially eliminated human errors entirely, transforming our financial operations overhead."</p>
-                            <small class="fw-bold" style="color:#f8fafc">— VP of Operations, US Logistics</small>
-                        </div>
-
-                        <!-- Tech Stack matching Home -->
-                        <div class="tech-stack-row d-flex gap-3 mt-4 flex-wrap">
-                            <div class="tech-badge-pill"><i class="fas fa-eye me-1"></i> OpenCV</div>
-                            <div class="tech-badge-pill"><i class="fab fa-python me-1"></i> Python</div>
-                            <div class="tech-badge-pill"><i class="fas fa-bolt me-1"></i> Zapier</div>
-                        </div>
-
-                        <!-- Actions -->
-                        <div class="d-flex align-items-center gap-3 mt-5 border-top pt-4" style="border-color: rgba(255,255,255,0.1) !important;">
-                            <a href="book_a_call.html" class="btn btn-outline-light btn-sm px-4 py-2" style="border-color: var(--accent-color); color: var(--accent-color);"><i class="fas fa-bolt me-1"></i> Get a similar solution</a>
-                            <a href="#" class="btn btn-link btn-sm text-decoration-none" style="color: var(--text-muted);"><i class="fas fa-file-pdf me-1"></i> Download PDF</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 order-lg-2">
-                        <div class="case-media-placeholder" style="border-right: none; border-left: 1px solid var(--glass-border);">
-                            <div class="text-center text-muted">
-                                <i class="fas fa-file-invoice fa-4x mb-3" style="color: var(--accent-color); opacity: 0.8;"></i>
-                                <p>OCR Architecture Graphic</p>
-                            </div>
-                        </div>
-                    </div>
+                
+                <div class="mt-5 pt-4 border-top" style="border-color: #1a1a1a !important;">
+                    <a href="#" class="btn-outline-glow" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/momervn/30min'});return false;">Deep dive into this architecture <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
 
-            <!-- Case Study 3 -->
-            <div class="case-study-card category-tech glass-card" style="padding: 0;">
-                <div class="row g-0 align-items-stretch">
-                    <div class="col-lg-5 order-lg-1">
-                        <div class="case-media-placeholder">
-                            <div class="text-center text-muted">
-                                <i class="fas fa-brain fa-4x mb-3" style="color: var(--accent-color); opacity: 0.8;"></i>
-                                <p>RAG Knowledge Graphic</p>
-                            </div>
+            <!-- CASE STUDY 2 -->
+            <div class="case-card">
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    <span class="tech-tag">#n8n</span>
+                    <span class="tech-tag">#SupplyChain</span>
+                    <span class="tech-tag">#E-Commerce</span>
+                </div>
+                <h2 class="fw-bold mb-5" style="font-size: 2.2rem;">Cross-Border E-commerce Orchestration (Canada-Global)</h2>
+                
+                <div class="row g-5">
+                    <div class="col-lg-7">
+                        <div class="mb-5">
+                            <span class="section-label"><i class="fas fa-exclamation-circle text-danger me-2"></i> The Situation (The Friction)</span>
+                            <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.1rem;">
+                                A major Shopify merchant faced fragmented data silos across inventory management, logistics providers, and customer support. Cross-border fulfillment logic was handled manually, leading to human entry errors, delayed shipping, and frustrated international customers.
+                            </p>
+                        </div>
+                        <div class="mb-5">
+                            <span class="section-label"><i class="fas fa-network-wired text-warning me-2"></i> The Agentic Architecture (The Solution)</span>
+                            <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.1rem;">
+                                We implemented a multi-agent n8n workflow designed to act as the central nervous system for their e-commerce stack. The agents synchronize real-time inventory from global warehouses and execute dynamic, cross-border fulfillment logic based on complex regional shipping rules.
+                            </p>
+                        </div>
+                        <div>
+                            <span class="section-label"><i class="fas fa-chart-line text-success me-2"></i> The Result (The Impact)</span>
+                            <div class="impact-metric">85%</div>
+                            <div class="impact-text">Reduction in Order Processing Time & Zero Human Entry Errors</div>
                         </div>
                     </div>
-                    <div class="col-lg-7 p-4 p-lg-5 order-lg-2">
-                        <div class="case-header mb-4" style="border: none; padding: 0; background: transparent;">
-                            <h3 style="color: var(--text-main);">Internal Knowledge Agent</h3>
-                            <p class="text-muted">Tech Consulting Firm, United States</p>
-                            <div class="case-meta mt-3">
-                                <div class="case-meta-item d-inline-block me-3"><i class="fas fa-clock text-accent me-1" style="color: var(--accent-color);"></i> <span style="color: var(--text-muted);"><strong>Go-live in just 6 Weeks</strong></span></div>
-                                <div class="case-meta-item d-inline-block"><i class="fas fa-layer-group text-accent me-1" style="color: var(--accent-color);"></i> <span style="color: var(--text-muted);">Phase: Development</span></div>
-                            </div>
-                        </div>
-
-                        <!-- Data Viz -->
-                        <div class="row g-4 mb-5">
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="progress-ring">70%</div>
-                                    <div><small class="text-muted text-uppercase fw-bold">Faster Retrieval</small></div>
+                    <div class="col-lg-5">
+                        <div class="visual-box mb-4">
+                            <div class="bar-chart">
+                                <div class="bar-col">
+                                    <div class="bar bar-before"></div>
+                                    <span style="color: #666; font-size: 0.8rem; font-weight: 600;">Manual</span>
+                                </div>
+                                <div class="bar-col">
+                                    <div class="bar bar-after"></div>
+                                    <span style="color: #fff; font-size: 0.8rem; font-weight: 600;">Agentic</span>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div style="font-size: 1.5rem; font-weight: 900; color: var(--accent-color);">3.5k+</div>
-                                    <div><small class="text-muted text-uppercase fw-bold">Queries Monthly</small></div>
-                                </div>
-                            </div>
+                            <div style="position: absolute; top: 20px; left: 20px; font-family: monospace; font-size: 0.85rem; color: #888;">Order Processing Time</div>
                         </div>
-
-                        <!-- The Challenge -->
-                        <div class="case-section mb-4">
-                            <h5 style="color: var(--text-main);"><i class="fas fa-exclamation-circle text-danger me-2"></i> The Challenge</h5>
-                            <p class="text-muted">Growing fast meant procedures became messy. Information was scattered randomly across Notion, Drive, and Slack. Senior staff spent hours daily just answering basic protocol questions from juniors. This massive inefficiency bled into project delays and directly cost an estimated $40,000 annually in lost productivity.</p>
-                        </div>
-
-                        <!-- The Solution -->
-                        <div class="case-section mb-4">
-                            <h5 style="color: var(--text-main);"><i class="fas fa-lightbulb text-warning me-2"></i> Solution & Scalability</h5>
-                            <p class="text-muted">We connected their entire scattered wiki to an LLM semantic search Agent living right inside Slack. <br><strong style="color:var(--text-main);">Enterprise Scalability:</strong> The Vector-based architecture natively scales to millions of documents, easily accommodating their rapid future growth trajectory alongside multi-source aggregations.</p>
-                        </div>
-                        
-                        <!-- ROI Box -->
-                        <div class="roi-box p-4 rounded mb-4">
-                            <h5 class="mb-3 text-success"><i class="fas fa-chart-line me-2"></i> The ROI Story</h5>
-                            <div class="row" style="color: var(--text-subtle);">
-                                <div class="col-sm-5 mb-2"><strong style="color:var(--text-main);">Lost Hours:</strong> -$40k/yr <small>(Productivity drain)</small></div>
-                                <div class="col-sm-5 mb-2"><strong style="color:var(--text-main);">Onboarding:</strong> Cut by 50%</div>
-                                <div class="col-12 mt-2">
-                                    <h4 class="text-success mb-0 d-inline-block w-100">Annual Return: ~$30,000+</h4>
-                                    <small class="text-muted">Full investment returned in less than 5 months.</small>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial -->
-                        <div class="testimonial-card glass-card border-0 mb-4 p-3" style="border-left: 3px solid var(--accent-color) !important; background: rgba(255,255,255,0.03);">
-                            <p class="mb-2 text-muted" style="font-style: italic;">"Our seniors can finally focus entirely on consulting instead of constantly acting as a human search engine for the juniors. Best internal tool we've added."</p>
-                            <small class="fw-bold" style="color:#f8fafc">— Managing Director, US Consulting</small>
-                        </div>
-
-                        <!-- Tech Stack matching Home -->
-                        <div class="tech-stack-row d-flex gap-3 mt-4 flex-wrap">
-                            <div class="tech-badge-pill"><i class="fas fa-brain me-1"></i> LLM/RAG</div>
-                            <div class="tech-badge-pill"><i class="fab fa-python me-1"></i> Python</div>
-                            <div class="tech-badge-pill"><i class="fas fa-book me-1"></i> Notion API</div>
-                            <div class="tech-badge-pill"><i class="fab fa-slack me-1"></i> Slack Bot</div>
-                        </div>
-
-                        <!-- Actions -->
-                        <div class="d-flex align-items-center gap-3 mt-5 border-top pt-4" style="border-color: rgba(255,255,255,0.1) !important;">
-                            <a href="book_a_call.html" class="btn btn-outline-light btn-sm px-4 py-2" style="border-color: var(--accent-color); color: var(--accent-color);"><i class="fas fa-bolt me-1"></i> Get a similar solution</a>
-                            <a href="#" class="btn btn-link btn-sm text-decoration-none" style="color: var(--text-muted);"><i class="fas fa-file-pdf me-1"></i> Download PDF</a>
+                        <div class="client-quote">
+                            <p class="mb-3 text-white fw-medium" style="font-style: italic;">"The n8n architecture they built completely removed our logistics bottleneck. We scaled our Canadian operations instantly without hiring extra ops staff."</p>
+                            <span class="text-muted text-uppercase" style="font-size: 0.8rem; font-weight: 700;">— Operations Director, Global E-commerce</span>
                         </div>
                     </div>
+                </div>
+                
+                <div class="mt-5 pt-4 border-top" style="border-color: #1a1a1a !important;">
+                    <a href="#" class="btn-outline-glow" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/momervn/30min'});return false;">Request a similar solution <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+
+            <!-- CASE STUDY 3 -->
+            <div class="case-card">
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    <span class="tech-tag">#SalesAI</span>
+                    <span class="tech-tag">#B2B</span>
+                    <span class="tech-tag">#Automation</span>
+                </div>
+                <h2 class="fw-bold mb-5" style="font-size: 2.2rem;">Multi-Channel Lead Generation for B2B Agencies</h2>
+                
+                <div class="row g-5">
+                    <div class="col-lg-7">
+                        <div class="mb-5">
+                            <span class="section-label"><i class="fas fa-exclamation-circle text-danger me-2"></i> The Situation (The Friction)</span>
+                            <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.1rem;">
+                                A B2B agency was experiencing plummeting conversion rates. Their generic cold outreach campaigns were being ignored by C-level executives. Meanwhile, the manual process of deeply researching individual leads and qualifying them was too expensive and unscalable for their SDR team.
+                            </p>
+                        </div>
+                        <div class="mb-5">
+                            <span class="section-label"><i class="fas fa-network-wired text-warning me-2"></i> The Agentic Architecture (The Solution)</span>
+                            <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.1rem;">
+                                We deployed a Sales Intelligence Agent that autonomously researches targeted prospects by analyzing their company news, recent funding, and LinkedIn activity. It then drafts hyper-personalized sequence touchpoints and orchestrates them across both LinkedIn and Email with human-like latency.
+                            </p>
+                        </div>
+                        <div>
+                            <span class="section-label"><i class="fas fa-chart-line text-success me-2"></i> The Result (The Impact)</span>
+                            <div class="impact-metric">400%</div>
+                            <div class="impact-text">Increase in Qualified Meeting Booking Rates</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="visual-box mb-4">
+                            <div style="position: absolute; width: 60px; height: 60px; background: #111; border: 1px solid #333; border-radius: 50%; top: 20%; display: flex; align-items: center; justify-content: center;"><i class="fab fa-linkedin-in text-muted fa-lg"></i></div>
+                            <div style="position: absolute; width: 60px; height: 60px; background: #111; border: 1px solid #333; border-radius: 50%; bottom: 20%; display: flex; align-items: center; justify-content: center;"><i class="fas fa-envelope text-muted fa-lg"></i></div>
+                            
+                            <div style="position: absolute; width: 80px; height: 80px; background: rgba(52, 211, 153, 0.1); border: 1px solid var(--accent-green); border-radius: 20px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 30px rgba(52,211,153,0.2);"><i class="fas fa-calendar-check fa-2x text-white"></i></div>
+                            
+                            <!-- Connecting arcs (simplified) -->
+                            <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;" pointer-events="none">
+                                <path d="M 150 100 Q 200 150 250 150" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+                                <path d="M 150 200 Q 200 150 250 150" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+                            </svg>
+                        </div>
+                        <div class="client-quote">
+                            <p class="mb-3 text-white fw-medium" style="font-style: italic;">"Our calendars are completely booked with high-quality prospects. The personalization is so good that prospects compliment us on our 'research' before the call even begins."</p>
+                            <span class="text-muted text-uppercase" style="font-size: 0.8rem; font-weight: 700;">— Co-Founder, US B2B Growth Agency</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-5 pt-4 border-top" style="border-color: #1a1a1a !important;">
+                    <a href="#" class="btn-outline-glow" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/momervn/30min'});return false;">Deep dive into this architecture <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
 
         </div>
-
     </section>
 
-    <!-- Filter Script -->
-    <script>
-        function filterCases(category) {
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            const caseCards = document.querySelectorAll('.case-study-card');
-            caseCards.forEach(card => {
-                if (category === 'all') {
-                    card.style.display = 'block';
-                } else if (card.classList.contains('category-' + category)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-    </script>
-
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container cta-content">
-            <h2 class="display-5 fw-bold mb-4">Ready to Achieve Results Like These?</h2>
-            <p class="lead mb-5">Stop patching inefficient workflows. Let's build an AI Agent solution guaranteed to provide a measurable return on investment for your business.</p>
-            <button class="btn btn-primary-custom btn-lg">Book Your ROI Blueprint</button>
-            <p class="mt-4 mb-0 opacity-75">Free 30-minute consultation · No obligation · Tailored to your business</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Final CTA Section -->
+    <section class="final-cta" style="padding: 100px 0; background-color: #000; border-top: 1px solid var(--border-color); text-align: center;">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h5 class="mb-3"><i class="fas fa-robot me-2"></i>AI Agent Solutions</h5>
-                    <p class="text-muted">Building robust, data-driven AI solutions that automate operations and drive measurable business results.</p>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <h6 class="mb-3">Company</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#about">About Us</a></li>
-                        <li class="mb-2"><a href="#services">Services</a></li>
-                        <li class="mb-2"><a href="case-studies.html">Case Studies</a></li>
-                        <li class="mb-2"><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 mb-4">
-                    <h6 class="mb-3">Solutions</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#sales">Sales Automation</a></li>
-                        <li class="mb-2"><a href="#document">Document Processing</a></li>
-                        <li class="mb-2"><a href="#knowledge">Knowledge Management</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 mb-4">
-                    <h6 class="mb-3">Legal</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#privacy">Privacy Policy</a></li>
-                        <li class="mb-2"><a href="#terms">Terms of Service</a></li>
-                    </ul>
-                    <div class="mt-5">
-                        <h6 class="mb-3" style="color: var(--accent-color);">Local Ecosystem</h6>
-                        <ul class="list-unstyled footer-links">
-                            <li class="mb-2"><a href="giatuibauthinh.html">Giặt Ủi Bầu Thịnh</a></li>
-                            <li class="mb-2"><a href="suaxeluudongthongnguyen.html">Sửa Xe LĐ Thông Nguyễn</a></li>
-                            <li class="mb-2"><a href="motorcycle-rescue-danang.html">Motorcycle Rescue Đà Nẵng</a></li>
-                            <li class="mb-2"><a href="xaydung.html">Đội Cốp Pha Bác Dưu</a></li>
-                        </ul>
-                    </div>
+            <div style="max-width: 700px; margin: 0 auto;">
+                <h2 class="display-5 fw-bold mb-4" style="letter-spacing: -1px;">Ready to Write Your Own Success Story?</h2>
+                <p class="lead mb-5" style="color: var(--text-muted);">Let's analyze your bottlenecks and design an architecture that delivers quantifiable ROI.</p>
+                <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/momervn/30min'});return false;" class="btn-primary-glow btn-lg px-5 py-3">Book Your Strategy Audit</a>
+            </div>
+        </div>
+    </section>
 
+    <!-- E. Global Footer -->
+    <footer class="footer" style="padding: 80px 0 40px; background-color: var(--bg-alt); border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.95rem;">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-4 text-white fw-bold" style="font-family: 'Sora', sans-serif;"><i class="fas fa-sparkles me-2"></i>SPORTAIV</h5>
+                    <p style="max-width: 300px; line-height: 1.6;">Strategic Agentic AI Studio.<br>Architecting autonomous workflows for modern enterprises.</p>
+                    <p class="mt-3 text-white fw-medium">Da Nang, Vietnam | Global Operations.</p>
+                </div>
+                <div class="col-lg-2 mb-4 mb-lg-0 offset-lg-2">
+                    <h6 class="mb-4 text-white fw-bold">Company</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="about_us.html" style="color: var(--text-muted); text-decoration: none; transition: color 0.2s;">About</a></li>
+                        <li class="mb-3"><a href="services.html" style="color: var(--text-muted); text-decoration: none; transition: color 0.2s;">Services</a></li>
+                        <li class="mb-3"><a href="case_studies.html" style="color: #fff; text-decoration: none; transition: color 0.2s;">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 mb-4 mb-lg-0">
+                    <h6 class="mb-4 text-white fw-bold">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="#" style="color: var(--text-muted); text-decoration: none; transition: color 0.2s;">Privacy Policy</a></li>
+                        <li class="mb-3"><a href="#" style="color: var(--text-muted); text-decoration: none; transition: color 0.2s;">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="mb-4 text-white fw-bold">Social</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="#" style="color: var(--text-muted); text-decoration: none; transition: color 0.2s;"><i class="fab fa-linkedin me-2"></i>LinkedIn</a></li>
+                        <li class="mb-3"><a href="#" style="color: var(--text-muted); text-decoration: none; transition: color 0.2s;"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
+                    </ul>
                 </div>
             </div>
-            <hr class="my-4" style="border-color: #334155;">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="text-muted mb-0">&copy; 2025 AI Agent Solutions. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <a href="#" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
-                    <a href="#" class="me-3"><i class="fab fa-twitter fa-lg"></i></a>
-                    <a href="#"><i class="fab fa-github fa-lg"></i></a>
+            <hr style="border-color: var(--border-color); margin-bottom: 2rem;">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2026 SPORTAIV. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Social Media Floating Buttons - Always Visible -->
-    <div class="social-float-simple">
-        <!-- WhatsApp -->
-        <a href="https://wa.me/84795777607" class="social-float-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-            <span class="social-tooltip">Chat on WhatsApp</span>
-        </a>
-        
-        <!-- Upwork -->
-        <a href="https://www.upwork.com/freelancers/~010a44b10aee062327" class="social-float-btn upwork-btn" target="_blank" rel="noopener noreferrer" aria-label="View Upwork Profile">
-            <i class="fab fa-upwork"></i>
-            <span class="social-tooltip">View Upwork Profile</span>
-        </a>
-        
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/huu-thanh-nguyen-16170a329" class="social-float-btn linkedin-btn" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-            <span class="social-tooltip">Connect on LinkedIn</span>
+    <!-- Floating Buttons -->
+    <div style="position: fixed; bottom: 30px; right: 30px; z-index: 1000;">
+        <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/momervn/30min'});return false;" style="width: 50px; height: 50px; background: var(--btn-bg); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4); text-decoration: none; transition: transform 0.3s;" title="Book a Strategy Call" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+            <i class="fas fa-calendar-check"></i>
         </a>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-
     <script>
-    // Active menu highlighting
     document.addEventListener('DOMContentLoaded', function() {
-        const currentPage = window.location.pathname.split('/').pop();
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        navLinks.forEach(link => {
-            const linkPage = link.getAttribute('href');
-            if (linkPage === currentPage || 
-                (currentPage === '' && linkPage === 'index.html')) {
-                link.classList.add('active');
+        const navbar = document.querySelector('.navbar-premium');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                navbar.style.background = 'rgba(0, 0, 0, 0.9)';
+            } else {
+                navbar.style.background = 'rgba(0, 0, 0, 0.8)';
             }
         });
     });
