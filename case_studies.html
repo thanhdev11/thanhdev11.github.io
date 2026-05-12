@@ -198,9 +198,15 @@
             <a class="navbar-brand" href="index.html">
                 <i class="fas fa-sparkles me-2"></i><strong>SPORTAIV</strong>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="d-flex align-items-center order-lg-last gap-2">
+                <div class="btn-group bg-dark border border-secondary rounded-pill p-1 shadow-sm d-lg-none" role="group">
+                    <a href="#" onclick="localStorage.setItem('lang', 'en'); location.reload();" class="btn btn-sm btn-primary text-white rounded-pill fw-bold px-2 border-0" style="font-size:0.75rem;">EN</a>
+                    <a href="vi/case_studies.html" onclick="localStorage.setItem('lang', 'vi');" class="btn btn-sm btn-dark text-muted rounded-pill fw-bold px-2 border-0" style="font-size:0.75rem;">VN</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -219,7 +225,7 @@
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link active" href="case_studies.html">Case Studies</a></li>
                     <li class="nav-item"><a class="nav-link" href="about_us.html">About</a></li>
-                    <li class="nav-item ms-lg-2 my-2 my-lg-0 d-flex align-items-center">
+                    <li class="nav-item ms-lg-2 my-2 my-lg-0 d-none d-lg-flex align-items-center">
                         <div class="btn-group bg-dark border border-secondary rounded-pill p-1 shadow-sm" role="group">
                             <a href="#" onclick="localStorage.setItem('lang', 'en'); location.reload();" class="btn btn-sm btn-primary text-white rounded-pill fw-bold px-3 border-0" style="font-size:0.8rem;">EN</a>
                             <a href="vi/case_studies.html" onclick="localStorage.setItem('lang', 'vi');" class="btn btn-sm btn-dark text-muted rounded-pill fw-bold px-3 border-0" style="font-size:0.8rem;">VN</a>

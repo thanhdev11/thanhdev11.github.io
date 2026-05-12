@@ -267,8 +267,13 @@
                         Nhận Ưu Đãi Early Bird <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                     </a>
                 </div>
-                <button id="mobileMenuBtn" class="md:hidden text-white text-xl"><i
-                        class="fa-solid fa-bars"></i></button>
+                <div class="flex items-center gap-3 md:hidden">
+                    <div class="flex items-center p-1 rounded-full bg-[#1A1A1A] border border-gray-800 shadow-inner">
+                        <a href="../academy.html" onclick="localStorage.setItem('lang', 'en');" class="px-3 py-1 text-xs font-bold rounded-full text-gray-400 hover:text-white transition-colors">EN</a>
+                        <a href="#" onclick="localStorage.setItem('lang', 'vi'); location.reload();" class="px-3 py-1 text-xs font-bold rounded-full bg-primary text-white shadow-md shadow-primary/20">VN</a>
+                    </div>
+                    <button id="mobileMenuBtn" class="text-white text-xl"><i class="fa-solid fa-bars"></i></button>
+                </div>
             </div>
         </div>
     </nav>
