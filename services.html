@@ -44,373 +44,420 @@
         </div>
     </nav>
 
+    <!-- Global Dark Mode & Typography Override -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif !important;
+            background-color: #000 !important;
+            color: #fff !important;
+        }
+        .navbar-premium {
+            background: rgba(0, 0, 0, 0.8) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #222;
+        }
+        .navbar-premium .nav-link, .navbar-premium .navbar-brand {
+            color: #fff !important;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
+    </style>
+
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container hero-content">
-            <div class="row align-items-center">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h1 class="display-3 fw-bold mb-4" style="background: linear-gradient(135deg, var(--accent-color), #fff); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Beyond Automation: Deploying Intelligent AI Agents for Peak Business Efficiency</h1>
-                    <p class="lead mb-5" style="font-size: 22px;">Our solutions bridge the gap between custom Python development and commercial workflow tools, ensuring maximum reliability and minimal friction.</p>
-                    
-                    <div class="row mt-5">
-                        <div class="col-md-4 mb-4 mb-md-0">
-                            <div class="stats-box floating">
-                                <div class="stats-number">80%</div>
-                                <div>Operations Automated</div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4 mb-md-0">
-                            <div class="stats-box floating" style="animation-delay: 0.2s;">
-                                <div class="stats-number">35%</div>
-                                <div>Cost Reduction</div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="stats-box floating" style="animation-delay: 0.4s;">
-                                <div class="stats-number">10x</div>
-                                <div>Processing Speed</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="hero-section" style="padding: 140px 0 100px; background-color: #000; border-bottom: 1px solid #1a1a1a; position: relative; overflow: hidden;">
+        <!-- Background Glow -->
+        <div style="position: absolute; top: -30%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(79, 70, 229, 0.1) 0%, transparent 60%); border-radius: 50%; pointer-events: none;"></div>
 
-    <!-- Pillar 1: Custom AI Agent Development -->
-    <!-- FLAGSHIP HIGHLIGHT FLAG -->
-    <section class="pillar-section" id="custom-agents">
-        <div class="container">
+        <div class="container hero-content" style="position: relative; z-index: 2;">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="pillar-icon floating">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h2 class="section-title mb-4">High-Performance Custom Agents (Python & FastAPI)</h2>
-                    <p class="lead mb-4">When off-the-shelf tools fail to meet scaling needs or complex logic, we custom-develop robust AI Agents. Built on Python and optimized with FastAPI, our agents guarantee rapid execution, high concurrency, and complete ownership of your data flow.</p>
-                    
-                    <div class="mb-4">
-                        <span class="tech-badge"><i class="fab fa-python me-2"></i>Python</span>
-                        <span class="tech-badge"><i class="fas fa-rocket me-2"></i>FastAPI</span>
-                        <span class="tech-badge"><i class="fas fa-project-diagram me-2"></i>Microservices</span>
-                    </div>
+                    <h1 class="display-4 fw-bold mb-4" style="letter-spacing: -1.5px; line-height: 1.1; color: #fff;">Architecting <span style="background: linear-gradient(to right, #818cf8, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Autonomous Workflows</span> for Modern Enterprises.</h1>
+                    <p class="lead mb-5" style="font-size: 1.15rem; color: #a1a1aa; line-height: 1.6;">We don't just build chatbots. We design multi-agent systems that execute complex logic, integrate seamlessly with your stack, and scale your operations 24/7.</p>
+                    <a href="book_a_call.html" class="btn btn-primary btn-lg" style="background: #4f46e5; border: none; border-radius: 8px; font-weight: 600; padding: 14px 32px; font-size: 1rem; transition: all 0.3s; box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39); color: #fff; text-decoration: none;">Schedule a System Architecture Audit</a>
                 </div>
                 <div class="col-lg-6">
-                    <div class="pillar-card">
-                        <h4 class="mb-4">Key Benefits</h4>
+                    <div style="background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 16px; padding: 2rem; position: relative; overflow: hidden; height: 420px; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+                        <!-- Abstract Node-based workflow illustration -->
+                        <div style="position: absolute; width: 300px; height: 300px; background: radial-gradient(circle, rgba(79, 70, 229, 0.05) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
                         
-                        <div class="benefit-item">
-                            <i class="fas fa-bolt"></i>
-                            <strong>Unmatched Speed:</strong><br>
-                            <span class="text-muted">FastAPI ensures API response times meet enterprise demands.</span>
-                        </div>
+                        <div style="position: absolute; width: 80px; height: 80px; background: #0a0a0a; border: 1px solid #333; border-radius: 16px; top: 15%; left: 15%; display: flex; align-items: center; justify-content: center; z-index: 2; transition: all 0.3s;"><i class="fas fa-brain fa-2x" style="color: #818cf8;"></i></div>
                         
-                        <div class="benefit-item">
-                            <i class="fas fa-chart-line"></i>
-                            <strong>Scalability:</strong><br>
-                            <span class="text-muted">Architected for rapid growth without performance degradation.</span>
-                        </div>
+                        <div style="position: absolute; width: 90px; height: 90px; background: rgba(79, 70, 229, 0.1); border: 1px solid #4f46e5; border-radius: 20px; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; z-index: 2; box-shadow: 0 0 30px rgba(79, 70, 229, 0.3);"><i class="fas fa-project-diagram fa-2x" style="color: #fff;"></i></div>
                         
-                        <div class="benefit-item">
-                            <i class="fas fa-cogs"></i>
-                            <strong>Custom Logic:</strong><br>
-                            <span class="text-muted">Agents handle unique, proprietary business rules that standard tools cannot address.</span>
-                        </div>
-                        <div class="mt-4"><a href="case_studies.html" style="color: var(--accent-color); font-weight: bold; text-decoration: none;"><i class="fas fa-arrow-right me-2"></i>See how we applied this for an E-commerce Retailer</a></div>
+                        <div style="position: absolute; width: 80px; height: 80px; background: #0a0a0a; border: 1px solid #333; border-radius: 16px; bottom: 15%; right: 15%; display: flex; align-items: center; justify-content: center; z-index: 2;"><i class="fas fa-database fa-2x" style="color: #818cf8;"></i></div>
+
+                        <!-- Connections -->
+                        <!-- Glowing Lines -->
+                        <div style="position: absolute; width: 140px; height: 2px; background: linear-gradient(90deg, #333, #4f46e5); top: 35%; left: 25%; transform: rotate(35deg); z-index: 1;"></div>
+                        <div style="position: absolute; width: 140px; height: 2px; background: linear-gradient(90deg, #4f46e5, #333); bottom: 35%; right: 25%; transform: rotate(35deg); z-index: 1;"></div>
+                        
+                        <!-- Floating Data Particles -->
+                        <div style="position: absolute; width: 6px; height: 6px; background: #fff; border-radius: 50%; top: 35%; left: 35%; box-shadow: 0 0 10px #fff; z-index: 3;"></div>
+                        <div style="position: absolute; width: 6px; height: 6px; background: #fff; border-radius: 50%; bottom: 35%; right: 35%; box-shadow: 0 0 10px #fff; z-index: 3;"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pillar 2: Enterprise Workflow Integration -->
-    <section class="pillar-section" id="integration">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 order-lg-2 mb-5 mb-lg-0">
-                    <div class="pillar-icon floating">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h2 class="section-title mb-4">Seamless Workflow Orchestration & Integration</h2>
-                    <p class="lead mb-4">Automation is only effective when integrated. We specialize in connecting your AI Agents to your core business platforms (CRM, internal tools, project management) using robust integration platforms. We ensure data hygiene and flow across all systems.</p>
-                    
-                    <div class="mb-4">
-                        <span class="tech-badge"><i class="fas fa-bolt me-2"></i>Make.com</span>
-                        <span class="tech-badge"><i class="fas fa-bolt me-2"></i>Zapier</span>
-                        <span class="tech-badge"><i class="fas fa-database me-2"></i>n8n</span>
-                        <span class="tech-badge"><i class="fas fa-file-alt me-2"></i>Notion API</span>
-                        <span class="tech-badge"><i class="fas fa-users me-2"></i>GHL API</span>
-                        <span class="tech-badge"><i class="fas fa-table me-2"></i>Airtable API</span>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="pillar-card">
-                        <h4 class="mb-4">Key Benefits</h4>
-                        
-                        <div class="benefit-item">
-                            <i class="fas fa-stream"></i>
-                            <strong>Unified Data Flow:</strong><br>
-                            <span class="text-muted">Eliminate data silos between platforms like GHL, Airtable, and Notion.</span>
-                        </div>
-                        
-                        <div class="benefit-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <strong>Reduced Human Error:</strong><br>
-                            <span class="text-muted">Automated data synchronization eliminates manual entry and reconciliation.</span>
-                        </div>
-                        
-                        <div class="benefit-item">
-                            <i class="fas fa-tachometer-alt"></i>
-                            <strong>Rapid Deployment:</strong><br>
-                            <span class="text-muted">Utilizing Make/Zapier/n8n for quick, reliable workflow creation and testing.</span>
-                        </div>
-                        <div class="mt-4"><a href="case_studies.html" style="color: var(--accent-color); font-weight: bold; text-decoration: none;"><i class="fas fa-arrow-right me-2"></i>See how we applied this for a Consulting Firm</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pillar 3: Vision & Intelligent Data Processing -->
-    <section class="pillar-section" id="vision">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="pillar-icon floating">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h2 class="section-title mb-4">Intelligent Data Extraction and Vision Automation</h2>
-                    <p class="lead mb-4">Automate tasks that require "seeing" and "understanding" unstructured data. From validating quality control images (OpenCV) to extracting key information from PDFs or documents, our AI models turn complex, visual data into structured, actionable inputs for your Agents.</p>
-                    
-                    <div class="mb-4">
-                        <span class="tech-badge"><i class="fas fa-camera me-2"></i>OpenCV</span>
-                        <span class="tech-badge"><i class="fas fa-brain me-2"></i>Custom AI/ML Models</span>
-                        <span class="tech-badge"><i class="fas fa-file-invoice me-2"></i>Data Parsing</span>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="pillar-card">
-                        <h4 class="mb-4">Key Benefits</h4>
-                        
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <strong>Automated QC:</strong><br>
-                            <span class="text-muted">Use computer vision (OpenCV) to instantly verify product quality or safety standards.</span>
-                        </div>
-                        
-                        <div class="benefit-item">
-                            <i class="fas fa-file-alt"></i>
-                            <strong>Cost-Effective OCR:</strong><br>
-                            <span class="text-muted">Extract data from documents, invoices, and forms with high accuracy.</span>
-                        </div>
-                        
-                        <div class="benefit-item">
-                            <i class="fas fa-lightbulb"></i>
-                            <strong>Actionable Insights:</strong><br>
-                            <span class="text-muted">Convert raw images or text documents into structured database entries automatically.</span>
-                        </div>
-                        <div class="mt-4"><a href="case_studies.html" style="color: var(--accent-color); font-weight: bold; text-decoration: none;"><i class="fas fa-arrow-right me-2"></i>See how we applied this for a Logistics Provider</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-
-<!-- Tech Stack Section -->
-    <section class="tech-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Our Tech Stack</h2>
-                <p class="section-subtitle">Enterprise-Grade Tools & Frameworks</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="tech-stack-grid">
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <p class="tech-name">Python</p>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                            <p class="tech-name">FastAPI</p>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fas fa-cube"></i>
-                            </div>
-                            <p class="tech-name">OpenCV</p>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fas fa-link"></i>
-                            </div>
-                            <p class="tech-name">Zapier</p>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fas fa-cogs"></i>
-                            </div>
-                            <p class="tech-name">Make</p>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fas fa-sitemap"></i>
-                            </div>
-                            <p class="tech-name">n8n</p>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fas fa-book"></i>
-                            </div>
-                            <p class="tech-name">Notion</p>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fas fa-table"></i>
-                            </div>
-                            <p class="tech-name">Airtable</p>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <p class="tech-name">GHL</p>
-                        
-                        <div class="tech-item">
-                            <div class="tech-icon"><i class="fab fa-aws"></i></div>
-                            <p class="tech-name">AWS</p>
-                        </div>
-                        <div class="tech-item">
-                            <div class="tech-icon"><i class="fab fa-docker"></i></div>
-                            <p class="tech-name">Docker</p>
-                        </div>
+    <!-- Our Core Services (Bento Box) -->
+    <section class="services-section" style="padding: 120px 0; background-color: #050505; position: relative; overflow: hidden;">
+        <!-- Background Glow -->
+        <div style="position: absolute; top: -20%; right: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
         
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="text-center mb-5 pb-3">
+                <h2 class="fw-bold text-white" style="font-size: 2.5rem; letter-spacing: -1px;">Our Core Services</h2>
+                <p style="color: #a1a1aa; font-size: 1.15rem; max-width: 600px; margin: 0 auto;">Architecting intelligence into every layer of your business.</p>
+            </div>
+            
+            <style>
+                .bento-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1.5rem;
+                }
+                .bento-card {
+                    background: #0a0a0a;
+                    border: 1px solid #1a1a1a;
+                    border-radius: 20px;
+                    padding: 3rem;
+                    height: 100%;
+                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                    position: relative;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    text-decoration: none;
+                }
+                .bento-card:hover {
+                    border-color: #4f46e5;
+                    transform: translateY(-5px);
+                    box-shadow: 0 10px 40px -10px rgba(79, 70, 229, 0.3);
+                }
+                .bento-card.full-width {
+                    grid-column: span 2;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 3rem;
+                }
+                @media (max-width: 991px) {
+                    .bento-grid { grid-template-columns: 1fr; }
+                    .bento-card.full-width { grid-column: span 1; flex-direction: column; align-items: flex-start; }
+                }
+                .bento-icon {
+                    width: 64px; height: 64px;
+                    background: rgba(79, 70, 229, 0.1);
+                    border: 1px solid rgba(79, 70, 229, 0.3);
+                    border-radius: 16px;
+                    display: flex; align-items: center; justify-content: center;
+                    font-size: 1.8rem;
+                    margin-bottom: 1.5rem;
+                    color: #818cf8;
+                    flex-shrink: 0;
+                }
+                .tech-tag {
+                    background: #111;
+                    border: 1px solid #222;
+                    color: #888;
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                    padding: 6px 14px;
+                    border-radius: 20px;
+                    margin-right: 8px;
+                    margin-bottom: 8px;
+                    display: inline-block;
+                    transition: all 0.2s;
+                }
+                .bento-card:hover .tech-tag {
+                    border-color: #333;
+                    color: #ccc;
+                }
+                .roi-highlight {
+                    background: rgba(16, 185, 129, 0.1);
+                    border: 1px solid rgba(16, 185, 129, 0.2);
+                    color: #34d399;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    padding: 8px 16px;
+                    border-radius: 8px;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    margin-top: 1.5rem;
+                }
+            </style>
+
+            <div class="bento-grid">
+                <!-- Service 1 (Full Width) -->
+                <div class="bento-card full-width">
+                    <div style="flex: 1;">
+                        <div class="bento-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h3 class="fw-bold mb-3 text-white">Autonomous Workflow Orchestration</h3>
+                        <p style="color: #a1a1aa; margin-bottom: 1.5rem; line-height: 1.6; font-size: 1.1rem;">We design custom multi-agent systems using LangGraph and n8n to automate complex, decision-based operational pipelines.</p>
+                        <div class="mt-auto">
+                            <span class="tech-tag">n8n</span>
+                            <span class="tech-tag">LangGraph</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Supabase</span>
+                        </div>
+                        <div class="roi-highlight">
+                            <i class="fas fa-chart-line"></i> Reduce manual operational hours by 70%.
+                        </div>
+                    </div>
+                    <div style="flex: 1; min-width: 300px; display: flex; justify-content: center; width: 100%;">
+                        <!-- Node Mockup -->
+                        <div style="width: 100%; max-width: 400px; height: 250px; background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 12px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 0 20px rgba(0,0,0,0.5);">
+                            <div style="position: absolute; width: 60px; height: 60px; background: #111; border: 1px solid #333; border-radius: 12px; left: 10%; display: flex; align-items: center; justify-content: center; z-index: 2;"><i class="fas fa-envelope text-muted"></i></div>
+                            <div style="position: absolute; width: 70px; height: 70px; background: rgba(79, 70, 229, 0.1); border: 1px solid #4f46e5; border-radius: 16px; left: 40%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(79,70,229,0.3); z-index: 2;"><i class="fas fa-brain fa-lg" style="color: #818cf8;"></i></div>
+                            <div style="position: absolute; width: 60px; height: 60px; background: #111; border: 1px solid #333; border-radius: 12px; right: 10%; top: 20%; display: flex; align-items: center; justify-content: center; z-index: 2;"><i class="fas fa-database text-muted"></i></div>
+                            <div style="position: absolute; width: 60px; height: 60px; background: #111; border: 1px solid #333; border-radius: 12px; right: 10%; bottom: 20%; display: flex; align-items: center; justify-content: center; z-index: 2;"><i class="fas fa-check-circle text-muted"></i></div>
+                            <!-- Lines -->
+                            <div style="position: absolute; width: 80px; height: 2px; background: linear-gradient(90deg, #333, #4f46e5); left: 20%; top: 50%; z-index: 1;"></div>
+                            <div style="position: absolute; width: 80px; height: 2px; background: linear-gradient(90deg, #4f46e5, #333); right: 20%; top: 35%; transform: rotate(-25deg); z-index: 1;"></div>
+                            <div style="position: absolute; width: 80px; height: 2px; background: linear-gradient(90deg, #4f46e5, #333); right: 20%; bottom: 35%; transform: rotate(25deg); z-index: 1;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bento-card">
+                    <div class="bento-icon"><i class="fas fa-search-dollar"></i></div>
+                    <h4 class="fw-bold mb-3 text-white">Market Intelligence with GEO-Pulse</h4>
+                    <p style="color: #a1a1aa; margin-bottom: 2rem; line-height: 1.6; flex-grow: 1;">Deploying intelligent scout agents to analyze real-time market trends, scrape actionable data, and optimize your global search footprint.</p>
+                    <div class="mb-4">
+                        <span class="tech-tag">LLMs</span>
+                        <span class="tech-tag">Web Scraping</span>
+                        <span class="tech-tag">Vector Databases</span>
+                    </div>
+                    <div class="roi-highlight mt-auto" style="color: #60a5fa; background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.2);">
+                        <i class="fas fa-globe-americas"></i> Data-driven decisions mapped in real-time.
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bento-card">
+                    <div class="bento-icon"><i class="fas fa-comments"></i></div>
+                    <h4 class="fw-bold mb-3 text-white">Advanced RAG & Internal AI Assistants</h4>
+                    <p style="color: #a1a1aa; margin-bottom: 2rem; line-height: 1.6; flex-grow: 1;">Not just a chatbot. We build secure, context-aware internal knowledge assistants connected directly to your Google Drive, Notion, and internal databases.</p>
+                    <div class="mb-4">
+                        <span class="tech-tag">OpenAI</span>
+                        <span class="tech-tag">RAG</span>
+                        <span class="tech-tag">Vector Search</span>
+                        <span class="tech-tag">Vercel</span>
+                    </div>
+                    <div class="roi-highlight mt-auto" style="color: #a78bfa; background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.2);">
+                        <i class="fas fa-lock"></i> Secure, context-aware knowledge.
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section-divider"></div>
     </section>
 
-
-    <!-- Compliance & Social Proof -->
-    <section class="trust-section text-center" style="background: var(--light-bg); border-bottom: 1px solid rgba(255,255,255,0.1);">
-        <div class="container">
-            <h5 class="text-muted mb-4 text-uppercase fw-bold" style="letter-spacing: 2px;">Enterprise Grade Compliance</h5>
-            <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap mb-5">
-                <div class="px-4 py-2" style="border: 1px solid rgba(255,255,255,0.2); border-radius: 8px;"><i class="fas fa-shield-alt text-success me-2"></i> GDPR Compliant</div>
-                <div class="px-4 py-2" style="border: 1px solid rgba(255,255,255,0.2); border-radius: 8px;"><i class="fas fa-lock text-success me-2"></i> SOC 2 Standards</div>
-                <div class="px-4 py-2" style="border: 1px solid rgba(255,255,255,0.2); border-radius: 8px;"><i class="fas fa-server text-success me-2"></i> EU & US Data Sovereignty</div>
+    <!-- The Architecture Stack -->
+    <section class="stack-section" style="padding: 100px 0; background-color: #000; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a;">
+        <div class="container text-center">
+            <h6 class="text-uppercase mb-5 fw-bold" style="letter-spacing: 2px; color: #555; font-size: 0.85rem;">Built on Enterprise-Grade Frameworks</h6>
+            
+            <style>
+                .logo-grid {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 4rem;
+                    align-items: center;
+                    opacity: 0.7;
+                }
+                .logo-item {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: #666;
+                    transition: all 0.3s ease;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    filter: grayscale(100%);
+                }
+                .logo-item:hover {
+                    color: #fff;
+                    filter: grayscale(0%);
+                    transform: translateY(-2px);
+                }
+                @media (max-width: 768px) {
+                    .logo-grid { gap: 2rem; }
+                    .logo-item { font-size: 1.2rem; width: 40%; justify-content: center; }
+                }
+            </style>
+            
+            <div class="logo-grid">
+                <div class="logo-item"><i class="fas fa-project-diagram"></i> n8n</div>
+                <div class="logo-item"><i class="fas fa-network-wired"></i> LangGraph</div>
+                <div class="logo-item"><i class="fas fa-database"></i> Supabase</div>
+                <div class="logo-item"><i class="fas fa-caret-up"></i> Vercel</div>
+                <div class="logo-item"><i class="fas fa-robot"></i> OpenAI</div>
+                <div class="logo-item"><i class="fas fa-brain"></i> Anthropic</div>
+                <div class="logo-item"><i class="fab fa-docker"></i> Docker</div>
             </div>
         </div>
     </section>
 
-
-<!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container cta-content">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="display-4 fw-bold mb-4">Ready to Calculate Your ROI?</h2>
-                    <p class="lead mb-5" style="font-size: 22px;">Every successful AI deployment starts with a clear understanding of its financial return. Let's analyze your current process and build a blueprint with a guaranteed ROI projection.</p>
-                    <button class="btn btn-primary-custom btn-lg">
-                        <i class="fas fa-calendar-alt me-2"></i>Book Your ROI Blueprint
-                    </button>
-                    <p class="mt-4 mb-0" style="opacity: 0.9;">
-                        <i class="fas fa-check-circle me-2"></i>Free consultation
-                        <span class="mx-3">|</span>
-                        <i class="fas fa-chart-line me-2"></i>Custom ROI analysis
-                        <span class="mx-3">|</span>
-                        <i class="fas fa-handshake me-2"></i>No commitment required
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- The Delivery Process -->
+    <section class="process-section" style="padding: 120px 0; background-color: #050505;">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h5 class="mb-3"><i class="fas fa-robot me-2"></i>AI Agent Solutions</h5>
-                    <p class="text-muted">Building robust, data-driven AI solutions that automate operations and drive measurable business results.</p>
-                </div>
-                <div class="col-lg-2 mb-4">
-                    <h6 class="mb-3">Company</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#about">About Us</a></li>
-                        <li class="mb-2"><a href="#services">Services</a></li>
-                        <li class="mb-2"><a href="#cases">Case Studies</a></li>
-                        <li class="mb-2"><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 mb-4">
-                    <h6 class="mb-3">Solutions</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#custom-agents">Custom AI Agents</a></li>
-                        <li class="mb-2"><a href="#integration">Workflow Integration</a></li>
-                        <li class="mb-2"><a href="#vision">Vision Automation</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 mb-4">
-                    <h6 class="mb-3">Legal</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#privacy">Privacy Policy</a></li>
-                        <li class="mb-2"><a href="#terms">Terms of Service</a></li>
-                    </ul>
-                    <div class="mt-5">
-                        <h6 class="mb-3" style="color: var(--accent-color);">Local Ecosystem</h6>
-                        <ul class="list-unstyled footer-links">
-                            <li class="mb-2"><a href="giatuibauthinh.html">Giặt Ủi Bầu Thịnh</a></li>
-                            <li class="mb-2"><a href="suaxeluudongthongnguyen.html">Sửa Xe LĐ Thông Nguyễn</a></li>
-                            <li class="mb-2"><a href="motorcycle-rescue-danang.html">Motorcycle Rescue Đà Nẵng</a></li>
-                            <li class="mb-2"><a href="xaydung.html">Đội Cốp Pha Bác Dưu</a></li>
-                        </ul>
+            <div class="text-center mb-5 pb-4">
+                <h2 class="fw-bold text-white" style="font-size: 2.5rem; letter-spacing: -1px;">The Delivery Process</h2>
+                <p style="color: #a1a1aa; font-size: 1.15rem;">Strategic architecture before single lines of code.</p>
+            </div>
+            
+            <style>
+                .timeline {
+                    position: relative;
+                    max-width: 900px;
+                    margin: 0 auto;
+                }
+                .timeline::after {
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    background: #222;
+                    top: 0; bottom: 0; left: 50%;
+                }
+                .timeline-item {
+                    padding: 10px 50px;
+                    position: relative;
+                    width: 50%;
+                    margin-bottom: 2rem;
+                }
+                .timeline-item::after {
+                    content: '';
+                    position: absolute;
+                    width: 12px; height: 12px;
+                    right: -6px; background: #050505;
+                    border: 2px solid #fff;
+                    top: 24px; border-radius: 50%;
+                    z-index: 1;
+                }
+                .left { left: 0; text-align: right; }
+                .right { left: 50%; }
+                .right::after { left: -6px; }
+                .timeline-content {
+                    padding: 2rem;
+                    background: #0a0a0a;
+                    border-radius: 16px;
+                    border: 1px solid #1a1a1a;
+                    transition: transform 0.3s ease;
+                }
+                .timeline-item:hover .timeline-content {
+                    border-color: #333;
+                }
+                .phase-badge {
+                    display: inline-block;
+                    padding: 4px 10px;
+                    background: #111;
+                    border: 1px solid #222;
+                    border-radius: 6px;
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    color: #fff;
+                    margin-bottom: 1rem;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+                @media screen and (max-width: 768px) {
+                    .timeline::after { left: 24px; }
+                    .timeline-item { width: 100%; padding-left: 60px; padding-right: 15px; text-align: left; }
+                    .timeline-item::after { left: 18px; }
+                    .right { left: 0%; }
+                }
+            </style>
+
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="phase-badge">Phase 1</span>
+                        <h4 class="fw-bold text-white mb-3">Architecture Audit</h4>
+                        <p class="text-muted mb-0" style="line-height: 1.6;">Analyze bottlenecks and map operational flows (Workflow mapping).</p>
                     </div>
-
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="phase-badge">Phase 2</span>
+                        <h4 class="fw-bold text-white mb-3">Agent Design & Prompt Engineering</h4>
+                        <p class="text-muted mb-0" style="line-height: 1.6;">Designing the logic and intelligence for each individual agent.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="phase-badge">Phase 3</span>
+                        <h4 class="fw-bold text-white mb-3">Integration & Deployment</h4>
+                        <p class="text-muted mb-0" style="line-height: 1.6;">Seamless integration with your existing systems via API/Webhooks.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="phase-badge">Phase 4</span>
+                        <h4 class="fw-bold text-white mb-3">Optimization & Scaling</h4>
+                        <p class="text-muted mb-0" style="line-height: 1.6;">Ongoing optimization of latency and API cost management.</p>
+                    </div>
                 </div>
             </div>
-            <hr class="my-4" style="border-color: #334155;">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="text-muted mb-0">&copy; 2025 AI Agent Solutions. All rights reserved.</p>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta" style="padding: 120px 0; background-color: #000; border-top: 1px solid #1a1a1a; text-align: center;">
+        <div class="container">
+            <div style="max-width: 700px; margin: 0 auto; background: linear-gradient(180deg, #0a0a0a 0%, #000 100%); border: 1px solid #222; border-radius: 24px; padding: 4rem 2rem;">
+                <h2 class="display-5 fw-bold mb-4 text-white" style="letter-spacing: -1px;">Ready to upgrade your infrastructure?</h2>
+                <p class="lead mb-5" style="color: #a1a1aa;">Let's map out your automation architecture.</p>
+                <a href="book_a_call.html" class="btn btn-light btn-lg" style="border-radius: 8px; font-weight: 600; padding: 16px 36px; transition: transform 0.2s;">Schedule a Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clean Footer -->
+    <footer class="footer" style="padding: 80px 0 40px; background-color: #000; color: #a1a1aa; font-size: 0.95rem; border-top: 1px solid #111;">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-4 text-white fw-bold"><i class="fas fa-sparkles me-2"></i>SPORTAIV</h5>
+                    <p style="max-width: 300px; line-height: 1.6;">Enterprise Agentic AI and Autonomous Workflows.</p>
                 </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <a href="#" class="me-3"><i class="fab fa-linkedin fa-lg"></i></a>
-                    <a href="#" class="me-3"><i class="fab fa-twitter fa-lg"></i></a>
-                    <a href="#"><i class="fab fa-github fa-lg"></i></a>
+                <div class="col-lg-2 mb-4 mb-lg-0 offset-lg-2">
+                    <h6 class="mb-4 text-white fw-bold">Company</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="about_us.html" style="color: #a1a1aa; text-decoration: none; transition: color 0.2s;">About</a></li>
+                        <li class="mb-3"><a href="services.html" style="color: #fff; text-decoration: none; transition: color 0.2s;">Services</a></li>
+                        <li class="mb-3"><a href="case_studies.html" style="color: #a1a1aa; text-decoration: none; transition: color 0.2s;">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 mb-4 mb-lg-0">
+                    <h6 class="mb-4 text-white fw-bold">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="#" style="color: #a1a1aa; text-decoration: none; transition: color 0.2s;">Privacy Policy</a></li>
+                        <li class="mb-3"><a href="#" style="color: #a1a1aa; text-decoration: none; transition: color 0.2s;">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="mb-4 text-white fw-bold">Social</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="#" style="color: #a1a1aa; text-decoration: none; transition: color 0.2s;"><i class="fab fa-linkedin me-2"></i>LinkedIn</a></li>
+                        <li class="mb-3"><a href="#" style="color: #a1a1aa; text-decoration: none; transition: color 0.2s;"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border-color: #1a1a1a; margin-bottom: 2rem;">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2026 SPORTAIV. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
-
-    <!-- Social Media Floating Buttons - Always Visible -->
-    <div class="social-float-simple">
-        <!-- WhatsApp -->
-        <a href="https://wa.me/84795777607" class="social-float-btn whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-            <span class="social-tooltip">Chat on WhatsApp</span>
-        </a>
-        
-        <!-- Upwork -->
-        <a href="https://www.upwork.com/freelancers/~010a44b10aee062327" class="social-float-btn upwork-btn" target="_blank" rel="noopener noreferrer" aria-label="View Upwork Profile">
-            <i class="fab fa-upwork"></i>
-            <span class="social-tooltip">View Upwork Profile</span>
-        </a>
-        
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/huu-thanh-nguyen-16170a329" class="social-float-btn linkedin-btn" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-            <span class="social-tooltip">Connect on LinkedIn</span>
-        </a>
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
