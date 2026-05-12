@@ -1,20 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="alternate" hreflang="vi" href="https://sportaiv.com/vi/academy.html" />
-    <script>
-        if (localStorage.getItem('lang') === 'vi' && !window.location.href.includes('/vi/')) {
-            window.location.href = 'vi/academy.html';
-        }
-    </script>
-    <link rel="icon" type="image/png" href="assets/imgs/logo.png">
-    <title>The Agentic AI Academy for Business Leaders | SPORTAIV</title>
+    <link rel="alternate" hreflang="en" href="https://sportaiv.com/academy.html" />
+    <link rel="icon" type="image/png" href="../assets/imgs/logo.png">
+    <title>Học Viện Agentic AI Dành Cho Nhà Lãnh Đạo Doanh Nghiệp | SPORTAIV</title>
     <meta name="description"
-        content="From using AI to Architecting AI Workforces. Master n8n, LangGraph, and Local AI for your business.">
-    <meta name="keywords" content="Agentic AI, AI Masterclass for Business, SPORTAIV, Local AI, Multi-Agent, n8n">
+        content="Từ sử dụng AI đến Kiến trúc đội ngũ nhân sự AI. Làm chủ n8n, LangGraph và Local AI cho doanh nghiệp của bạn.">
+    <meta name="keywords" content="Agentic AI, Khóa học AI cho Doanh nghiệp, SPORTAIV, Local AI, Multi-Agent, n8n">
     <script>
         // Chặn cảnh báo "cdn.tailwindcss.com should not be used in production" trong Console
         const originalWarn = console.warn;
@@ -238,7 +233,6 @@
 
         .social-float-btn:hover {
             transform: scale(1.15) translateY(-5px);
-            filter: brightness(1.2)
         }
     </style>
 </head>
@@ -250,7 +244,7 @@
         style="background:rgba(13,13,13,0.8);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.05)">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 md:h-20">
-                <a href="https://sportaiv.com" class="flex items-center gap-2">
+                <a href="../index.html" class="flex items-center gap-2">
                     <div
                         class="w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-white font-black text-lg shadow-lg shadow-primary/30">
                         S</div>
@@ -258,20 +252,20 @@
                             class="text-primary">.</span></span>
                 </a>
                 <div class="hidden md:flex items-center gap-6">
-                    <a href="#pain" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Why
-                        Choose Us</a>
+                    <a href="#pain" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Vì Sao
+                        Chọn Chúng Tôi</a>
                     <a href="#syllabus"
-                        class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Syllabus</a>
+                        class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Chương Trình Học</a>
                     <a href="#instructor"
-                        class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Instructor</a>
+                        class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Giảng Viên</a>
                     <div class="flex items-center gap-2 text-sm font-bold border-r border-gray-800 pr-4 mr-1">
-                        <a href="#" onclick="localStorage.setItem('lang', 'en'); location.reload();" class="text-white">EN</a>
+                        <a href="../academy.html" onclick="localStorage.setItem('lang', 'en');" class="text-gray-500 hover:text-white transition-colors">EN</a>
                         <span class="text-gray-600">|</span>
-                        <a href="vi/academy.html" onclick="localStorage.setItem('lang', 'vi');" class="text-gray-500 hover:text-white transition-colors">VI</a>
+                        <a href="#" onclick="localStorage.setItem('lang', 'vi'); location.reload();" class="text-white">VI</a>
                     </div>
                     <a href="#survey"
                         class="inline-flex items-center px-5 py-2.5 text-sm font-bold rounded-full text-dark bg-accent hover:bg-yellow-400 shadow-lg shadow-accent/20 transition-all hover:scale-105">
-                        Claim Early Bird Offer <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        Nhận Ưu Đãi Early Bird <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
                     </a>
                 </div>
                 <button id="mobileMenuBtn" class="md:hidden text-white text-xl"><i
@@ -285,7 +279,7 @@
         class="fixed inset-0 z-[60] bg-dark/95 backdrop-blur-xl translate-x-full transition-transform duration-300 md:hidden">
         <div class="flex flex-col h-full p-8">
             <div class="flex justify-between items-center mb-12">
-                <a href="https://sportaiv.com" class="flex items-center gap-2">
+                <a href="../index.html" class="flex items-center gap-2">
                     <div
                         class="w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-blue-600 flex items-center justify-center text-white font-black text-lg shadow-lg shadow-primary/30">
                         S</div>
@@ -296,20 +290,20 @@
             </div>
             <div class="flex flex-col gap-8">
                 <a href="#pain"
-                    class="mobile-nav-link text-2xl font-bold text-gray-400 hover:text-white transition-colors">Why
-                    Choose Us</a>
+                    class="mobile-nav-link text-2xl font-bold text-gray-400 hover:text-white transition-colors">Vì Sao
+                    Chọn Chúng Tôi</a>
                 <a href="#syllabus"
-                    class="mobile-nav-link text-2xl font-bold text-gray-400 hover:text-white transition-colors">Syllabus</a>
+                    class="mobile-nav-link text-2xl font-bold text-gray-400 hover:text-white transition-colors">Chương Trình Học</a>
                 <a href="#instructor"
-                    class="mobile-nav-link text-2xl font-bold text-gray-400 hover:text-white transition-colors">Instructor</a>
+                    class="mobile-nav-link text-2xl font-bold text-gray-400 hover:text-white transition-colors">Giảng Viên</a>
                 <div class="flex items-center gap-4 text-2xl font-bold border-t border-gray-800 pt-4 mt-2">
-                    <a href="#" onclick="localStorage.setItem('lang', 'en'); location.reload();" class="text-white">EN</a>
+                    <a href="../academy.html" onclick="localStorage.setItem('lang', 'en');" class="text-gray-500 hover:text-white transition-colors">EN</a>
                     <span class="text-gray-600">|</span>
-                    <a href="vi/academy.html" onclick="localStorage.setItem('lang', 'vi');" class="text-gray-500 hover:text-white transition-colors">VI</a>
+                    <a href="#" onclick="localStorage.setItem('lang', 'vi'); location.reload();" class="text-white">VI</a>
                 </div>
                 <a href="#survey"
-                    class="mobile-nav-link inline-flex items-center justify-center p-4 rounded-2xl bg-accent text-dark font-black text-xl shadow-xl shadow-accent/20">Claim
-                    Early Bird Offer</a>
+                    class="mobile-nav-link inline-flex items-center justify-center p-4 rounded-2xl bg-accent text-dark font-black text-xl shadow-xl shadow-accent/20">Nhận
+                    Ưu Đãi Early Bird</a>
             </div>
         </div>
     </div>
@@ -328,40 +322,40 @@
                         <span class="relative flex h-2 w-2"><span
                                 class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span
                                 class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span>
-                        2026 Cohort Registration Open
+                        Mở Đăng Ký Khóa Học Năm 2026
                     </div>
                     <h1
                         class="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white tracking-tight mb-6 leading-[1.1]">
-                        From Using AI to <br>
+                        Từ Sử Dụng AI Đến <br>
                         <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400 text-glow">Architecting
-                            AI Workforces.</span>
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400 text-glow">Kiến Trúc
+                            Đội Ngũ Nhân Sự AI.</span>
                     </h1>
                     <p class="text-lg text-gray-400 mb-8 leading-relaxed">
-                        The premier <span class="font-semibold text-white">Agentic AI Masterclass</span> for US/EU
-                        Solopreneurs, SMB Owners, and Operations Managers. Build a digital workforce that works while
-                        you sleep.
+                        Khóa học chuyên sâu <span class="font-semibold text-white">Agentic AI Masterclass</span> hàng đầu dành cho
+                        Solopreneurs, Chủ doanh nghiệp SMB và Giám đốc vận hành. Xây dựng một lực lượng lao động số làm việc ngay cả khi
+                        bạn ngủ.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <a href="#survey"
                             class="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-full text-dark bg-accent hover:bg-yellow-400 shadow-xl shadow-accent/20 transition-all hover:-translate-y-1 neon-amber">
-                            <i class="fa-solid fa-lock mr-2"></i> Secure Your Seat for the Next Cohort
+                            <i class="fa-solid fa-lock mr-2"></i> Giữ Chỗ Cho Khóa Tiếp Theo
                         </a>
                         <div
                             class="flex items-center justify-center lg:justify-start gap-2 text-sm font-medium text-gray-500 px-4 py-4">
-                            <i class="fa-solid fa-shield-halved text-green-400"></i> Efficiency-First
+                            <i class="fa-solid fa-shield-halved text-green-400"></i> Ưu Tiên Hiệu Quả
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-3 mt-6 justify-center lg:justify-start">
                         <span
                             class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-semibold text-gray-400"><i
-                                class="fa-solid fa-check-circle text-accent"></i> n8n Architect Logic</span>
+                                class="fa-solid fa-check-circle text-accent"></i> Logic Kiến Trúc n8n</span>
                         <span
                             class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-semibold text-gray-400"><i
-                                class="fa-solid fa-shield text-blue-400"></i> Enterprise-Grade Security</span>
+                                class="fa-solid fa-shield text-blue-400"></i> Bảo Mật Cấp Doanh Nghiệp</span>
                         <span
                             class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/5 border border-white/10 text-xs font-semibold text-gray-400"><i
-                                class="fa-solid fa-chart-line text-green-400"></i> ROI-Focused Curriculum</span>
+                                class="fa-solid fa-chart-line text-green-400"></i> Chương Trình Tập Trung Vào ROI</span>
                     </div>
                 </div>
                 <div class="animate-fade-in-up stagger-2 invisible-init">
@@ -379,7 +373,7 @@
                             class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 text-lg">
                             <i class="fa-solid fa-chart-line"></i></div>
                         <div>
-                            <div class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Optimize Output
+                            <div class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Tối Ưu Đầu Ra
                             </div>
                             <div class="text-xl font-black text-white">+300%</div>
                         </div>
@@ -395,10 +389,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-16 animate-fade-in-up invisible-init">
                 <span class="text-red-400 font-bold tracking-wider uppercase text-sm mb-3 block"><i
-                        class="fa-solid fa-triangle-exclamation mr-1"></i> Warning</span>
-                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">Why other AI courses <span
-                        class="text-red-400">fail to help</span> your business?</h2>
-                <p class="text-gray-400 text-lg">5 "fatal flaws" nobody tells you about.</p>
+                        class="fa-solid fa-triangle-exclamation mr-1"></i> Cảnh Báo</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">Vì sao các khóa học AI khác <span
+                        class="text-red-400">thất bại trong việc giúp</span> doanh nghiệp bạn?</h2>
+                <p class="text-gray-400 text-lg">5 "sai lầm chí mạng" không ai tiết lộ cho bạn.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div
@@ -406,55 +400,45 @@
                     <div
                         class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-5 text-red-400 text-xl group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-unlock"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-3">"Handing Over the Keys"</h3>
-                    <p class="text-gray-400 leading-relaxed">Most teach pushing data to the Cloud. Customer data and
-                        financial reports are exposed to third parties.</p>
-                    <p class="text-primary font-semibold mt-3 text-sm"><i class="fa-solid fa-check mr-1"></i> We teach
-                        Local AI — Your enterprise data never leaves your servers.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">"Giao Trứng Cho Ác"</h3>
+                    <p class="text-gray-400 leading-relaxed">Hầu hết dạy đẩy dữ liệu lên Cloud. Dữ liệu khách hàng và báo cáo tài chính bị phơi bày cho bên thứ ba.</p>
+                    <p class="text-primary font-semibold mt-3 text-sm"><i class="fa-solid fa-check mr-1"></i> Chúng tôi dạy Local AI — Dữ liệu doanh nghiệp không bao giờ rời khỏi máy chủ của bạn.</p>
                 </div>
                 <div
                     class="glass-bright rounded-2xl p-8 hover:border-red-500/30 transition-all group animate-fade-in-up stagger-1 invisible-init">
                     <div
                         class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-5 text-red-400 text-xl group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-ghost"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-3">AI "Hallucinations"</h3>
-                    <p class="text-gray-400 leading-relaxed">Chatbots invent information (hallucinate). This damages
-                        brand reputation and loses customers.</p>
-                    <p class="text-primary font-semibold mt-3 text-sm"><i class="fa-solid fa-check mr-1"></i> We teach
-                        Multi-Agent systems that cross-check themselves.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">AI "Ảo Giác"</h3>
+                    <p class="text-gray-400 leading-relaxed">Chatbot tự bịa đặt thông tin (ảo giác). Điều này làm tổn hại danh tiếng thương hiệu và mất khách hàng.</p>
+                    <p class="text-primary font-semibold mt-3 text-sm"><i class="fa-solid fa-check mr-1"></i> Chúng tôi dạy các hệ thống Đa Agent tự kiểm tra chéo lẫn nhau.</p>
                 </div>
                 <div
                     class="glass-bright rounded-2xl p-8 hover:border-red-500/30 transition-all group animate-fade-in-up stagger-2 invisible-init">
                     <div
                         class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-5 text-red-400 text-xl group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-money-bill-trend-up"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-3">"The API Cost Trap"</h3>
-                    <p class="text-gray-400 leading-relaxed">Sky-high monthly API bills. Operating costs become a heavy
-                        burden.</p>
-                    <p class="text-primary font-semibold mt-3 text-sm"><i class="fa-solid fa-check mr-1"></i> Optimized
-                        using SLMs running on existing infrastructure.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">"Cái Bẫy Chi Phí API"</h3>
+                    <p class="text-gray-400 leading-relaxed">Hóa đơn API hàng tháng cao ngất ngưởng. Chi phí vận hành trở thành gánh nặng.</p>
+                    <p class="text-primary font-semibold mt-3 text-sm"><i class="fa-solid fa-check mr-1"></i> Được tối ưu hóa bằng các SLM chạy trên cơ sở hạ tầng hiện có.</p>
                 </div>
                 <div
                     class="glass-bright rounded-2xl p-8 hover:border-red-500/30 transition-all group animate-fade-in-up stagger-3 invisible-init">
                     <div
                         class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-5 text-red-400 text-xl group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-puzzle-piece"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-3">Unusable After Learning</h3>
-                    <p class="text-gray-400 leading-relaxed">Creating "soulless" bots that can't connect to CRM,
-                        messaging apps, accounting, or real systems.</p>
-                    <p class="text-primary font-semibold mt-3 text-sm"><i class="fa-solid fa-check mr-1"></i> Focus on
-                        real-world Workflow Automation.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Học Xong Không Dùng Được</h3>
+                    <p class="text-gray-400 leading-relaxed">Tạo ra các bot "vô hồn" không thể kết nối với CRM, ứng dụng tin nhắn, kế toán hoặc các hệ thống thực tế.</p>
+                    <p class="text-primary font-semibold mt-3 text-sm"><i class="fa-solid fa-check mr-1"></i> Tập trung vào Tự động hóa Quy trình làm việc thực tế.</p>
                 </div>
                 <div
                     class="glass-bright rounded-2xl p-8 hover:border-red-500/30 transition-all group animate-fade-in-up stagger-4 invisible-init">
                     <div
                         class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mb-5 text-red-400 text-xl group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-clock-rotate-left"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-3">"Obsolete Overnight"</h3>
-                    <p class="text-gray-400 leading-relaxed">AI technology changes weekly. Systems break and you don't
-                        know who to call.</p>
-                    <p class="text-primary font-semibold mt-3 text-sm"><i class="fa-solid fa-check mr-1"></i> Long-term
-                        support & maintenance with SPORTAIV.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">"Lạc Hậu Sau Một Đêm"</h3>
+                    <p class="text-gray-400 leading-relaxed">Công nghệ AI thay đổi hàng tuần. Hệ thống bị lỗi và bạn không biết gọi cho ai.</p>
+                    <p class="text-primary font-semibold mt-3 text-sm"><i class="fa-solid fa-check mr-1"></i> Hỗ trợ & bảo trì dài hạn cùng SPORTAIV.</p>
                 </div>
             </div>
         </div>
@@ -470,11 +454,9 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 animate-fade-in-up invisible-init">
                 <span class="text-accent font-bold tracking-wider uppercase text-sm mb-3 block"><i
-                        class="fa-solid fa-chart-column mr-1"></i> Economic Equation</span>
-                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">Traditional Staff vs. Agent
-                    System</h2>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">"If you hire a Marketing staff, you spend
-                    ~$8,500/year. They quit → you lose the entire process."</p>
+                        class="fa-solid fa-chart-column mr-1"></i> Bài Toán Kinh Tế</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">Nhân Sự Truyền Thống vs. Hệ Thống Agent</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">"Nếu bạn thuê một nhân viên Marketing, bạn tốn ~$8,500/năm. Họ nghỉ việc → bạn mất toàn bộ quy trình."</p>
             </div>
             <div
                 class="overflow-x-auto overflow-y-hidden animate-fade-in-up stagger-1 invisible-init container-width-fix">
@@ -486,50 +468,48 @@
                 <table class="w-full text-left border-collapse">
                     <thead>
                         <tr>
-                            <th class="py-4 px-6 text-sm font-bold text-gray-500 uppercase tracking-wider">Criteria</th>
-                            <th class="py-4 px-6 text-sm font-bold text-gray-500 uppercase tracking-wider">Traditional
-                                Staff</th>
+                            <th class="py-4 px-6 text-sm font-bold text-gray-500 uppercase tracking-wider">Tiêu Chí</th>
+                            <th class="py-4 px-6 text-sm font-bold text-gray-500 uppercase tracking-wider">Nhân Sự Truyền Thống</th>
                             <th
                                 class="py-4 px-6 text-sm font-bold text-primary uppercase tracking-wider highlight-col rounded-t-xl">
-                                Agent System (SPORTAIV) <i class="fa-solid fa-crown text-accent ml-1"></i></th>
+                                Hệ Thống Agent (SPORTAIV) <i class="fa-solid fa-crown text-accent ml-1"></i></th>
                         </tr>
                     </thead>
                     <tbody class="text-sm md:text-base">
                         <tr class="border-t border-border">
-                            <td class="py-4 px-6 text-gray-400 font-medium">Cost</td>
-                            <td class="py-4 px-6 text-gray-300">$400-$800/month</td>
-                            <td class="py-4 px-6 text-green-400 font-bold highlight-col">~$15-$40/month</td>
+                            <td class="py-4 px-6 text-gray-400 font-medium">Chi Phí</td>
+                            <td class="py-4 px-6 text-gray-300">$400-$800/tháng</td>
+                            <td class="py-4 px-6 text-green-400 font-bold highlight-col">~$15-$40/tháng</td>
                         </tr>
                         <tr class="border-t border-border">
-                            <td class="py-4 px-6 text-gray-400 font-medium">Availability</td>
-                            <td class="py-4 px-6 text-gray-300">8h/day, off holidays</td>
+                            <td class="py-4 px-6 text-gray-400 font-medium">Thời Gian Làm Việc</td>
+                            <td class="py-4 px-6 text-gray-300">8h/ngày, nghỉ lễ</td>
                             <td class="py-4 px-6 text-green-400 font-bold highlight-col">24/7/365</td>
                         </tr>
                         <tr class="border-t border-border">
-                            <td class="py-4 px-6 text-gray-400 font-medium">Accuracy</td>
-                            <td class="py-4 px-6 text-gray-300">Depends on emotions</td>
-                            <td class="py-4 px-6 text-green-400 font-bold highlight-col">Logical cross-checking</td>
+                            <td class="py-4 px-6 text-gray-400 font-medium">Độ Chính Xác</td>
+                            <td class="py-4 px-6 text-gray-300">Phụ thuộc cảm xúc</td>
+                            <td class="py-4 px-6 text-green-400 font-bold highlight-col">Kiểm tra chéo logic</td>
                         </tr>
                         <tr class="border-t border-border">
-                            <td class="py-4 px-6 text-gray-400 font-medium">Speed</td>
-                            <td class="py-4 px-6 text-gray-300">Queuing, meetings</td>
-                            <td class="py-4 px-6 text-green-400 font-bold highlight-col">Real-time, thousands of
-                                data/sec</td>
+                            <td class="py-4 px-6 text-gray-400 font-medium">Tốc Độ</td>
+                            <td class="py-4 px-6 text-gray-300">Chờ đợi, họp hành</td>
+                            <td class="py-4 px-6 text-green-400 font-bold highlight-col">Thời gian thực, hàng ngàn dữ liệu/giây</td>
                         </tr>
                         <tr class="border-t border-border">
-                            <td class="py-4 px-6 text-gray-400 font-medium">Scalability</td>
-                            <td class="py-4 px-6 text-gray-300">Hire more people</td>
-                            <td class="py-4 px-6 text-green-400 font-bold highlight-col">1-click cloning</td>
+                            <td class="py-4 px-6 text-gray-400 font-medium">Khả Năng Mở Rộng</td>
+                            <td class="py-4 px-6 text-gray-300">Thuê thêm người</td>
+                            <td class="py-4 px-6 text-green-400 font-bold highlight-col">Nhân bản trong 1 cú click</td>
                         </tr>
                         <tr class="border-t border-border">
-                            <td class="py-4 px-6 text-gray-400 font-medium">Security</td>
-                            <td class="py-4 px-6 text-gray-300">Risk upon resignation</td>
-                            <td class="py-4 px-6 text-green-400 font-bold highlight-col">Local — 100% internal data</td>
+                            <td class="py-4 px-6 text-gray-400 font-medium">Bảo Mật</td>
+                            <td class="py-4 px-6 text-gray-300">Rủi ro khi nghỉ việc</td>
+                            <td class="py-4 px-6 text-green-400 font-bold highlight-col">Local — 100% dữ liệu nội bộ</td>
                         </tr>
                         <tr class="border-t border-border">
-                            <td class="py-4 px-6 text-gray-400 font-medium">Management</td>
-                            <td class="py-4 px-6 text-gray-300">Requires leader oversight</td>
-                            <td class="py-4 px-6 text-green-400 font-bold highlight-col rounded-b-xl">Autonomous</td>
+                            <td class="py-4 px-6 text-gray-400 font-medium">Quản Lý</td>
+                            <td class="py-4 px-6 text-gray-300">Cần quản lý giám sát</td>
+                            <td class="py-4 px-6 text-green-400 font-bold highlight-col rounded-b-xl">Tự trị hoàn toàn</td>
                         </tr>
                     </tbody>
                 </table>
@@ -542,9 +522,9 @@
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 animate-fade-in-up invisible-init">
                 <span class="text-accent font-bold tracking-wider uppercase text-sm mb-3 block"><i
-                        class="fa-solid fa-clipboard-check mr-1"></i> 30-Second Assessment</span>
-                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">Stop Wasting Operating Costs on
-                    <span class="text-accent">Repetitive Tasks</span></h2>
+                        class="fa-solid fa-clipboard-check mr-1"></i> Đánh Giá Trong 30 Giây</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">Ngừng Lãng Phí Chi Phí Vận Hành Vào
+                    <span class="text-accent">Các Tác Vụ Lặp Lại</span></h2>
             </div>
             <div class="space-y-6">
                 <div
@@ -554,13 +534,10 @@
                             class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold shrink-0 mt-1">
                             1</div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Is your process "Creative" or "Robotic
-                                Repetition"?</h3>
-                            <p class="text-gray-400 leading-relaxed mb-3">Are staff spending 80% of their time answering
-                                repetitive questions, summarizing Excel reports, or scraping raw data?</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Quy trình của bạn là "Sáng tạo" hay "Lặp lại như Robot"?</h3>
+                            <p class="text-gray-400 leading-relaxed mb-3">Nhân viên có đang dành 80% thời gian trả lời các câu hỏi lặp đi lặp lại, tóm tắt báo cáo Excel hoặc thu thập dữ liệu thô?</p>
                             <p class="text-primary text-sm font-semibold"><i
-                                    class="fa-solid fa-lightbulb mr-1 text-accent"></i> If a process is repetitive but
-                                requires high accuracy — that is a job for an Agent, not a human.</p>
+                                    class="fa-solid fa-lightbulb mr-1 text-accent"></i> Nếu một quy trình có tính lặp lại nhưng đòi hỏi độ chính xác cao — đó là công việc của Agent, không phải con người.</p>
                         </div>
                     </div>
                 </div>
@@ -571,13 +548,11 @@
                             class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold shrink-0 mt-1">
                             2</div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Do you "Own" the process or "Depend" on staff?
+                            <h3 class="text-xl font-bold text-white mb-2">Bạn "Làm chủ" quy trình hay "Phụ thuộc" vào nhân viên?
                             </h3>
-                            <p class="text-gray-400 leading-relaxed mb-3">When key personnel quit → do all operational
-                                secrets and data "disappear" with them?</p>
+                            <p class="text-gray-400 leading-relaxed mb-3">Khi nhân sự cốt lõi nghỉ việc → toàn bộ bí mật vận hành và dữ liệu có "biến mất" theo họ?</p>
                             <p class="text-primary text-sm font-semibold"><i
-                                    class="fa-solid fa-lightbulb mr-1 text-accent"></i> Local Agents package enterprise
-                                intelligence. Staff leave, but operational logic stays forever.</p>
+                                    class="fa-solid fa-lightbulb mr-1 text-accent"></i> Local Agent đóng gói tri thức doanh nghiệp. Nhân viên rời đi, nhưng logic vận hành ở lại mãi mãi.</p>
                         </div>
                     </div>
                 </div>
@@ -588,25 +563,21 @@
                             class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold shrink-0 mt-1">
                             3</div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Tired of "Fixing Bugs" or want a
-                                "Self-Reflecting" system?</h3>
-                            <p class="text-gray-400 leading-relaxed mb-3">Wasting time reviewing articles and checking
-                                reports because human work lacks logic?</p>
+                            <h3 class="text-xl font-bold text-white mb-2">Mệt mỏi vì "Sửa lỗi" hay muốn một hệ thống "Tự phản tỉnh"?</h3>
+                            <p class="text-gray-400 leading-relaxed mb-3">Lãng phí thời gian duyệt bài và kiểm tra báo cáo vì công việc của con người thiếu logic?</p>
                             <p class="text-primary text-sm font-semibold"><i
-                                    class="fa-solid fa-lightbulb mr-1 text-accent"></i> Multi-Agent: An AI team that
-                                "audits" each other and debates to produce perfect results.</p>
+                                    class="fa-solid fa-lightbulb mr-1 text-accent"></i> Đa Agent: Một đội ngũ AI tự "kiểm toán" lẫn nhau và tranh luận để đưa ra kết quả hoàn hảo.</p>
                         </div>
                     </div>
                 </div>
                 <div
                     class="text-center mt-10 glass rounded-2xl p-8 animate-fade-in-up stagger-3 invisible-init neon-blue">
-                    <p class="text-white font-bold text-lg mb-2">With just <span class="text-accent">1 "YES"</span>:
-                        Your business is wasting 30-50% of its operating costs.</p>
-                    <p class="text-gray-400">If you have <strong class="text-accent">3 "YESes"</strong> — you are the
-                        ideal partner SPORTAIV is looking for.</p>
+                    <p class="text-white font-bold text-lg mb-2">Chỉ với <span class="text-accent">1 câu trả lời "CÓ"</span>:
+                        Doanh nghiệp bạn đang lãng phí 30-50% chi phí vận hành.</p>
+                    <p class="text-gray-400">Nếu bạn có <strong class="text-accent">3 câu "CÓ"</strong> — bạn là đối tác lý tưởng mà SPORTAIV đang tìm kiếm.</p>
                     <a href="#survey"
                         class="inline-flex items-center mt-6 px-6 py-3 rounded-full bg-accent text-dark font-bold hover:bg-yellow-400 transition-all hover:-translate-y-1">
-                        <i class="fa-solid fa-arrow-down mr-2"></i> Claim Early Bird Offer Now
+                        <i class="fa-solid fa-arrow-down mr-2"></i> Nhận Ưu Đãi Early Bird Ngay
                     </a>
                 </div>
             </div>
@@ -618,9 +589,8 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 animate-fade-in-up invisible-init">
                 <span class="text-accent font-bold tracking-wider uppercase text-sm mb-3 block"><i
-                        class="fa-solid fa-video mr-1"></i> "SEE IT TO BELIEVE IT"</span>
-                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">What can SPORTAIV's Agent
-                    System do?</h2>
+                        class="fa-solid fa-video mr-1"></i> "TRĂM NGHE KHÔNG BẰNG MỘT THẤY"</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">Hệ Thống Agent Của SPORTAIV Có Thể Làm Gì?</h2>
             </div>
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Video 1 -->
@@ -629,16 +599,11 @@
                     <div class="relative rounded-xl overflow-hidden aspect-video shadow-lg mb-4 border border-border">
                         <div class="absolute inset-0 bg-dark/80 flex items-center justify-center text-gray-500">
                             <i class="fa-solid fa-play text-4xl opacity-50"></i>
-                            <span class="absolute bottom-2 text-xs opacity-70">Video 1: Research Agent (60s)</span>
+                            <span class="absolute bottom-2 text-xs opacity-70">Video 1: Agent Nghiên Cứu (60s)</span>
                         </div>
-                        <!-- <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
-<source src="..." type="video/mp4">
-</video> -->
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2 text-center">Research Agent</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed text-center">Watch how AI automatically scans
-                        thousands of data points on the Internet, filters potential customers, and pushes them directly
-                        into Google Sheets in 60 seconds.</p>
+                    <h3 class="text-xl font-bold text-white mb-2 text-center">Agent Nghiên Cứu</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed text-center">Xem cách AI tự động quét hàng ngàn điểm dữ liệu trên Internet, lọc khách hàng tiềm năng và đẩy trực tiếp vào Google Sheets trong 60 giây.</p>
                 </div>
                 <!-- Video 2 -->
                 <div
@@ -646,15 +611,11 @@
                     <div class="relative rounded-xl overflow-hidden aspect-video shadow-lg mb-4 border border-border">
                         <div class="absolute inset-0 bg-dark/80 flex items-center justify-center text-gray-500">
                             <i class="fa-solid fa-play text-4xl opacity-50"></i>
-                            <span class="absolute bottom-2 text-xs opacity-70">Video 2: Multi-Agent Debate (60s)</span>
+                            <span class="absolute bottom-2 text-xs opacity-70">Video 2: Tranh Luận Đa Agent (60s)</span>
                         </div>
-                        <!-- <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
-<source src="..." type="video/mp4">
-</video> -->
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2 text-center">Multi-Agent Debate System</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed text-center">Watch how 2 Agents (Creator & Auditor)
-                        debate to produce a flawless business plan without a single error.</p>
+                    <h3 class="text-xl font-bold text-white mb-2 text-center">Hệ Thống Tranh Luận Đa Agent</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed text-center">Xem cách 2 Agent (Người tạo & Người kiểm duyệt) tranh luận để tạo ra một kế hoạch kinh doanh hoàn hảo không một tì vết.</p>
                 </div>
             </div>
         </div>
@@ -664,11 +625,9 @@
     <section id="syllabus" class="py-20 md:py-28 relative overflow-x-clip">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 animate-fade-in-up invisible-init">
-                <span class="text-primary font-bold tracking-wider uppercase text-sm mb-3 block">100% English
-                    Curriculum</span>
-                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">The Implementation Roadmap</h2>
-                <p class="text-gray-400 text-lg">A highly actionable 4-module framework to transition your business to
-                    autonomous operations.</p>
+                <span class="text-primary font-bold tracking-wider uppercase text-sm mb-3 block">Chương Trình Giảng Dạy 100% Tiếng Anh</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">Lộ Trình Triển Khai</h2>
+                <p class="text-gray-400 text-lg">Một framework 4 học phần mang tính thực chiến cao nhằm chuyển đổi doanh nghiệp bạn sang vận hành tự trị.</p>
             </div>
             <div class="space-y-4 animate-fade-in-up stagger-1 invisible-init">
                 <div
@@ -677,9 +636,8 @@
                         <div class="flex items-center gap-4"><span
                                 class="w-10 h-10 rounded-lg bg-primary/20 text-primary font-bold flex items-center justify-center text-sm">01</span>
                             <div>
-                                <h3 class="text-lg font-bold text-white">The Agentic Shift (Foundations)</h3><span
-                                    class="text-xs text-gray-500">Focus: Moving from simple Chatbots to Autonomous
-                                    Agents.</span>
+                                <h3 class="text-lg font-bold text-white">Bước Chuyển Dịch Agentic (Nền Tảng)</h3><span
+                                    class="text-xs text-gray-500">Trọng tâm: Chuyển từ Chatbot đơn giản sang các Agent tự trị.</span>
                             </div>
                         </div>
                         <i
@@ -687,10 +645,8 @@
                     </div>
                     <div class="accordion-content px-6 md:px-8">
                         <div class="pb-6 pt-2 pl-14 text-gray-400 leading-relaxed border-t border-border">
-                            <p class="mb-2"><strong>Topics:</strong> Understanding Agentic Workflows, identifying
-                                operational bottlenecks, and the "Human-in-the-loop" (HITL) architecture.</p>
-                            <p class="text-primary font-semibold"><i class="fa-solid fa-bullseye mr-2"></i>Outcome: A
-                                strategic blueprint of your AI workforce.</p>
+                            <p class="mb-2"><strong>Chủ đề:</strong> Hiểu về các quy trình Agentic, xác định các điểm nghẽn vận hành và kiến trúc "Con người trong vòng lặp" (HITL).</p>
+                            <p class="text-primary font-semibold"><i class="fa-solid fa-bullseye mr-2"></i>Kết quả: Bản thiết kế chiến lược cho lực lượng lao động AI của bạn.</p>
                         </div>
                     </div>
                 </div>
@@ -700,9 +656,8 @@
                         <div class="flex items-center gap-4"><span
                                 class="w-10 h-10 rounded-lg bg-primary/20 text-primary font-bold flex items-center justify-center text-sm">02</span>
                             <div>
-                                <h3 class="text-lg font-bold text-white">The Modern AI Stack (Tools of the Trade)</h3>
-                                <span class="text-xs text-gray-500">Focus: Low-code/No-code orchestration for business
-                                    owners.</span>
+                                <h3 class="text-lg font-bold text-white">Bộ Công Cụ AI Hiện Đại</h3>
+                                <span class="text-xs text-gray-500">Trọng tâm: Điều phối Low-code/No-code cho chủ doanh nghiệp.</span>
                             </div>
                         </div>
                         <i
@@ -710,11 +665,9 @@
                     </div>
                     <div class="accordion-content px-6 md:px-8">
                         <div class="pb-6 pt-2 pl-14 text-gray-400 leading-relaxed border-t border-border">
-                            <p class="mb-2"><strong>Topics:</strong> Mastering <strong>n8n</strong> for logic,
-                                <strong>Supabase</strong> for memory, and <strong>LangGraph</strong> for complex
-                                decision-making.</p>
-                            <p class="text-primary font-semibold"><i class="fa-solid fa-bullseye mr-2"></i>Outcome: Your
-                                first functioning multi-agent environment.</p>
+                            <p class="mb-2"><strong>Chủ đề:</strong> Làm chủ <strong>n8n</strong> để xây dựng logic,
+                                <strong>Supabase</strong> cho bộ nhớ và <strong>LangGraph</strong> cho việc ra quyết định phức tạp.</p>
+                            <p class="text-primary font-semibold"><i class="fa-solid fa-bullseye mr-2"></i>Kết quả: Môi trường đa Agent hoạt động đầu tiên của bạn.</p>
                         </div>
                     </div>
                 </div>
@@ -724,8 +677,8 @@
                         <div class="flex items-center gap-4"><span
                                 class="w-10 h-10 rounded-lg bg-primary/20 text-primary font-bold flex items-center justify-center text-sm">03</span>
                             <div>
-                                <h3 class="text-lg font-bold text-white">Deploying Your Department Agents (Case-Based)
-                                </h3><span class="text-xs text-gray-500">Focus: Real-world execution.</span>
+                                <h3 class="text-lg font-bold text-white">Triển Khai Các Agent Phòng Ban (Dựa Trên Thực Tế)
+                                </h3><span class="text-xs text-gray-500">Trọng tâm: Thực thi thực tế.</span>
                             </div>
                         </div>
                         <i
@@ -733,13 +686,12 @@
                     </div>
                     <div class="accordion-content px-6 md:px-8">
                         <div class="pb-6 pt-2 pl-14 text-gray-400 leading-relaxed border-t border-border">
-                            <p class="mb-2"><strong>Topics:</strong><br>
-                                - <em>The Sales Agent:</em> Lead research & hyper-personalized outreach.<br>
-                                - <em>The Market Scout:</em> Competitor tracking & SEO Intelligence (GEO-Pulse
-                                logic).<br>
-                                - <em>The Ops Manager:</em> Invoice processing & data synchronization.</p>
-                            <p class="text-primary font-semibold"><i class="fa-solid fa-bullseye mr-2"></i>Outcome: 3
-                                active agents running in your business.</p>
+                            <p class="mb-2"><strong>Chủ đề:</strong><br>
+                                - <em>Agent Bán Hàng:</em> Nghiên cứu lead & tiếp cận cá nhân hóa sâu.<br>
+                                - <em>Agent Trinh Sát:</em> Theo dõi đối thủ & Trí tuệ SEO (logic GEO-Pulse).<br>
+                                - <em>Quản Lý Vận Hành:</em> Xử lý hóa đơn & đồng bộ hóa dữ liệu.</p>
+                            <p class="text-primary font-semibold"><i class="fa-solid fa-bullseye mr-2"></i>Kết quả: 3
+                                Agent hoạt động tích cực trong doanh nghiệp bạn.</p>
                         </div>
                     </div>
                 </div>
@@ -749,8 +701,8 @@
                         <div class="flex items-center gap-4"><span
                                 class="w-10 h-10 rounded-lg bg-accent/20 text-accent font-bold flex items-center justify-center text-sm">04</span>
                             <div>
-                                <h3 class="text-lg font-bold text-white">Governance, Security & Scaling</h3><span
-                                    class="text-xs text-gray-500">Focus: Protecting your business.</span>
+                                <h3 class="text-lg font-bold text-white">Quản Trị, Bảo Mật & Mở Rộng</h3><span
+                                    class="text-xs text-gray-500">Trọng tâm: Bảo vệ doanh nghiệp bạn.</span>
                             </div>
                         </div>
                         <i
@@ -758,10 +710,8 @@
                     </div>
                     <div class="accordion-content px-6 md:px-8">
                         <div class="pb-6 pt-2 pl-14 text-gray-400 leading-relaxed border-t border-border">
-                            <p class="mb-2"><strong>Topics:</strong> GDPR/SOC2 compliance for AI, data sovereignty, and
-                                scaling from 1 to 100 agents without breaking the bank.</p>
-                            <p class="text-accent font-semibold"><i class="fa-solid fa-bullseye mr-2"></i>Outcome: A
-                                secure, scalable, and future-proof AI ecosystem.</p>
+                            <p class="mb-2"><strong>Chủ đề:</strong> Tuân thủ GDPR/SOC2 cho AI, chủ quyền dữ liệu và mở rộng từ 1 lên 100 Agent với chi phí tối ưu.</p>
+                            <p class="text-accent font-semibold"><i class="fa-solid fa-bullseye mr-2"></i>Kết quả: Một hệ sinh thái AI bảo mật, có khả năng mở rộng và bền vững.</p>
                         </div>
                     </div>
                 </div>
@@ -779,13 +729,11 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 animate-fade-in-up invisible-init">
                 <span class="text-primary font-bold tracking-wider uppercase text-sm mb-3 block"><i
-                        class="fa-solid fa-bolt mr-1"></i> The Agentic Advantage</span>
-                <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">Stop Prompting.
+                        class="fa-solid fa-bolt mr-1"></i> Lợi Thế Agentic</span>
+                <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">Ngừng Viết Prompt.
                     <br /><span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400 text-glow">Start
-                        Orchestrating.</span></h2>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Most courses teach you how to talk to a chatbot. We
-                    teach you how to build a digital workforce that works while you sleep.</p>
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400 text-glow">Bắt Đầu Điều Phối.</span></h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Hầu hết các khóa học dạy bạn cách nói chuyện với chatbot. Chúng tôi dạy bạn xây dựng một lực lượng lao động số làm việc ngay cả khi bạn ngủ.</p>
             </div>
 
             <!-- Comparison Infographic Header -->
@@ -793,8 +741,8 @@
                 class="flex flex-col md:flex-row justify-between items-center mb-10 gap-8 animate-fade-in-up stagger-1 invisible-init">
                 <div class="w-full md:w-5/12 glass-bright rounded-2xl p-6 text-center border-t-4 border-t-gray-600">
                     <i class="fa-regular fa-keyboard text-4xl text-gray-500 mb-4"></i>
-                    <h3 class="text-xl font-bold text-gray-300">The Old Way - 2023</h3>
-                    <p class="text-gray-500 text-sm mt-2">Typing into a chat window</p>
+                    <h3 class="text-xl font-bold text-gray-300">Cách Cũ - 2023</h3>
+                    <p class="text-gray-500 text-sm mt-2">Gõ vào cửa sổ chat</p>
                 </div>
                 <div class="hidden md:flex w-2/12 justify-center">
                     <i class="fa-solid fa-arrow-right-arrow-left text-3xl text-gray-600"></i>
@@ -802,8 +750,8 @@
                 <div class="w-full md:w-5/12 rounded-2xl p-6 text-center border-t-4 border-t-primary"
                     style="background: rgba(0, 122, 255, 0.1); border: 1px solid rgba(0, 122, 255, 0.2);">
                     <i class="fa-solid fa-network-wired text-4xl text-primary mb-4 neon-blue"></i>
-                    <h3 class="text-xl font-bold text-white">The Agentic Way - 2026</h3>
-                    <p class="text-blue-300 text-sm mt-2">Automated connected nodes</p>
+                    <h3 class="text-xl font-bold text-white">Cách Lập Trình Agent - 2026</h3>
+                    <p class="text-blue-300 text-sm mt-2">Các node kết nối tự động</p>
                 </div>
             </div>
 
@@ -815,10 +763,10 @@
                         <tr>
                             <th
                                 class="py-5 px-6 text-sm font-bold text-gray-500 uppercase tracking-wider bg-dark border-b border-border w-1/3">
-                                Feature</th>
+                                Tính Năng</th>
                             <th
                                 class="py-5 px-6 text-sm font-bold text-gray-400 uppercase tracking-wider bg-dark border-b border-border w-1/3">
-                                Standard "AI Prompting" Course</th>
+                                Khóa Học "Viết Prompt AI" Thông Thường</th>
                             <th
                                 class="py-5 px-6 text-sm font-bold text-white uppercase tracking-wider bg-blue-900/30 border-b border-blue-500/30 w-1/3">
                                 <span class="flex items-center gap-2"><i class="fa-solid fa-crown text-primary"></i>
@@ -827,44 +775,39 @@
                     </thead>
                     <tbody class="text-sm md:text-base">
                         <tr class="border-b border-border hover:bg-white/5 transition-colors">
-                            <td class="py-5 px-6 text-gray-300 font-bold">Operational Mode</td>
+                            <td class="py-5 px-6 text-gray-300 font-bold">Chế Độ Hoạt Động</td>
                             <td class="py-5 px-6 text-gray-500"><i class="fa-solid fa-xmark text-red-500/50 mr-2"></i>
-                                <strong>Reactive:</strong> You must ask every time.</td>
+                                <strong>Thụ động:</strong> Bạn phải hỏi mỗi lần.</td>
                             <td class="py-5 px-6 text-blue-100 bg-blue-900/10"><i
-                                    class="fa-solid fa-check text-primary mr-2"></i> <strong>Autonomous:</strong> Agents
-                                trigger themselves.</td>
+                                    class="fa-solid fa-check text-primary mr-2"></i> <strong>Tự trị:</strong> Các Agent tự kích hoạt.</td>
                         </tr>
                         <tr class="border-b border-border hover:bg-white/5 transition-colors">
-                            <td class="py-5 px-6 text-gray-300 font-bold">Execution</td>
+                            <td class="py-5 px-6 text-gray-300 font-bold">Thực Thi</td>
                             <td class="py-5 px-6 text-gray-500"><i class="fa-solid fa-xmark text-red-500/50 mr-2"></i>
-                                <strong>Manual:</strong> Copy-pasting between tabs.</td>
+                                <strong>Thủ công:</strong> Sao chép-dán giữa các tab.</td>
                             <td class="py-5 px-6 text-blue-100 bg-blue-900/10"><i
-                                    class="fa-solid fa-check text-primary mr-2"></i> <strong>Seamless:</strong> Direct
-                                API & Tool integration.</td>
+                                    class="fa-solid fa-check text-primary mr-2"></i> <strong>Liền mạch:</strong> Tích hợp trực tiếp API & Công cụ.</td>
                         </tr>
                         <tr class="border-b border-border hover:bg-white/5 transition-colors">
                             <td class="py-5 px-6 text-gray-300 font-bold">Logic</td>
                             <td class="py-5 px-6 text-gray-500"><i class="fa-solid fa-xmark text-red-500/50 mr-2"></i>
-                                <strong>Linear:</strong> Simple Q&A.</td>
+                                <strong>Tuyến tính:</strong> Hỏi đáp đơn giản.</td>
                             <td class="py-5 px-6 text-blue-100 bg-blue-900/10"><i
-                                    class="fa-solid fa-check text-primary mr-2"></i> <strong>Branching:</strong> Complex
-                                decision-making.</td>
+                                    class="fa-solid fa-check text-primary mr-2"></i> <strong>Phân nhánh:</strong> Ra quyết định phức tạp.</td>
                         </tr>
                         <tr class="border-b border-border hover:bg-white/5 transition-colors">
-                            <td class="py-5 px-6 text-gray-300 font-bold">Security</td>
+                            <td class="py-5 px-6 text-gray-300 font-bold">Bảo Mật</td>
                             <td class="py-5 px-6 text-gray-500"><i class="fa-solid fa-xmark text-red-500/50 mr-2"></i>
-                                <strong>Public:</strong> Data fed to cloud models.</td>
+                                <strong>Công khai:</strong> Dữ liệu nạp vào các model đám mây.</td>
                             <td class="py-5 px-6 text-blue-100 bg-blue-900/10"><i
-                                    class="fa-solid fa-shield-halved text-primary mr-2"></i> <strong>Sovereign:</strong>
-                                Self-hosted & Private data.</td>
+                                    class="fa-solid fa-shield-halved text-primary mr-2"></i> <strong>Chủ quyền:</strong> Tự lưu trữ & Dữ liệu riêng tư.</td>
                         </tr>
                         <tr class="hover:bg-white/5 transition-colors">
-                            <td class="py-5 px-6 text-gray-300 font-bold">Scalability</td>
+                            <td class="py-5 px-6 text-gray-300 font-bold">Khả Năng Mở Rộng</td>
                             <td class="py-5 px-6 text-gray-500"><i class="fa-solid fa-xmark text-red-500/50 mr-2"></i>
-                                <strong>Limited:</strong> One chat at a time.</td>
+                                <strong>Giới hạn:</strong> Một đoạn chat mỗi lần.</td>
                             <td class="py-5 px-6 text-blue-100 bg-blue-900/10"><i
-                                    class="fa-solid fa-check text-primary mr-2"></i> <strong>Unlimited:</strong> Deploy
-                                100+ agents at once.</td>
+                                    class="fa-solid fa-check text-primary mr-2"></i> <strong>Không giới hạn:</strong> Triển khai hơn 100 Agent cùng lúc.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -873,7 +816,7 @@
             <div class="text-center mb-20 animate-fade-in-up stagger-3 invisible-init">
                 <a href="#pricing"
                     class="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-full text-white bg-primary hover:bg-blue-600 shadow-xl shadow-primary/20 transition-all hover:-translate-y-1">
-                    I’m ready for the Agentic Shift <i class="fa-solid fa-arrow-right ml-2"></i>
+                    Tôi đã sẵn sàng cho Bước Chuyển Dịch Agentic <i class="fa-solid fa-arrow-right ml-2"></i>
                 </a>
             </div>
 
@@ -883,30 +826,22 @@
                     <div
                         class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary text-xl mb-6 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-code-branch"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-3">Pillar 1: Beyond the Chat Window</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">Forget the ChatGPT interface. We teach you to use
-                        <strong>n8n</strong> and <strong>LangGraph</strong> to create logic trees. Your AI won't just
-                        "suggest" an email; it will research the lead, verify their LinkedIn, check your CRM for
-                        history, and <em>then</em> send the personalized draft at the optimal time.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Trụ Cột 1: Vượt Ra Ngoài Cửa Sổ Chat</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Quên giao diện ChatGPT đi. Chúng tôi dạy bạn sử dụng <strong>n8n</strong> và <strong>LangGraph</strong> để tạo các cây logic. AI của bạn sẽ không chỉ "gợi ý" một email; nó sẽ nghiên cứu khách hàng tiềm năng, xác minh LinkedIn của họ, kiểm tra lịch sử CRM và sau đó gửi bản thảo được cá nhân hóa vào thời điểm tối ưu.</p>
                 </div>
                 <div class="glass-bright p-8 rounded-2xl hover:border-primary/30 transition-all group">
                     <div
                         class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary text-xl mb-6 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-server"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-3">Pillar 2: Data Sovereignty & Security</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">For EU/US businesses, data privacy is
-                        non-negotiable. Our academy focuses on <strong>Self-hosted Architectures</strong>. Learn how to
-                        build RAG (Retrieval-Augmented Generation) systems where your proprietary data stays in your
-                        private cloud, not on OpenAI’s training servers.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Trụ Cột 2: Chủ Quyền & Bảo Mật Dữ liệu</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Đối với các doanh nghiệp EU/US, quyền riêng tư dữ liệu là không thể thương lượng. Học viện của chúng tôi tập trung vào các Kiến trúc Tự lưu trữ. Học cách xây dựng các hệ thống RAG nơi dữ liệu độc quyền của bạn nằm trong đám mây riêng của bạn, không phải trên máy chủ đào tạo của OpenAI.</p>
                 </div>
                 <div class="glass-bright p-8 rounded-2xl hover:border-primary/30 transition-all group">
                     <div
                         class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary text-xl mb-6 group-hover:scale-110 transition-transform">
                         <i class="fa-solid fa-users-gear"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-3">Pillar 3: Multi-Agent Collaboration</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">One AI is a tool. Ten AIs working together is a
-                        department. We show you how to orchestrate a "Manager Agent" that delegates tasks to specialized
-                        "Worker Agents," creating a scalable ecosystem that grows with your business revenue.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Trụ Cột 3: Hợp Tác Đa Agent</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Một AI là một công cụ. Mười AI làm việc cùng nhau là một phòng ban. Chúng tôi hướng dẫn bạn cách điều phối một "Manager Agent" để giao việc cho các "Worker Agent" chuyên trách, tạo ra một hệ sinh thái có thể mở rộng cùng với doanh thu của doanh nghiệp.</p>
                 </div>
             </div>
         </div>
@@ -922,8 +857,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 animate-fade-in-up invisible-init">
                 <span class="text-primary font-bold tracking-wider uppercase text-sm mb-3 block"><i
-                        class="fa-solid fa-people-group mr-1"></i> THE ARCHITECTURE SUPPORT ECOSYSTEM</span>
-                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">Beyond the Masterclass</h2>
+                        class="fa-solid fa-people-group mr-1"></i> HỆ SINH THÁI HỖ TRỢ KIẾN TRÚC</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">Hơn Cả Một Khóa Học</h2>
             </div>
             <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
                 <!-- Card 1 -->
@@ -935,15 +870,11 @@
                     <div
                         class="w-14 h-14 rounded-2xl bg-[#00F0FF]/20 flex items-center justify-center text-[#00F0FF] text-2xl mb-6 shadow-[0_0_15px_rgba(0,240,255,0.3)]">
                         <i class="fa-solid fa-robot"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-4">1. 24/7 AI Support Assistant <br><span
-                            class="text-sm text-[#00F0FF] font-medium">(Trained by Lead Architects)</span></h3>
+                    <h3 class="text-xl font-bold text-white mb-4">1. Trợ Lý AI Hỗ Trợ 24/7 <br><span
+                            class="text-sm text-[#00F0FF] font-medium">(Được đào tạo bởi các Kiến trúc sư trưởng)</span></h3>
                     <div class="space-y-3">
-                        <p class="text-gray-400 text-sm leading-relaxed"><strong class="text-white">Capacity:</strong>
-                            Instantly answers all technical and architectural thinking questions. This AI is "loaded"
-                            with all the intelligence, practical experience, and exclusive prompts directly from our
-                            senior team.</p>
-                        <p class="text-gray-400 text-sm leading-relaxed"><strong class="text-white">Value:</strong> Zero
-                            downtime. Bugs are fixed and logic reviewed instantly 24/7.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed"><strong class="text-white">Năng lực:</strong> Trả lời ngay lập tức mọi câu hỏi về kỹ thuật và tư duy kiến trúc. AI này được "nạp" toàn bộ tri thức, kinh nghiệm thực chiến và các prompt độc quyền trực tiếp từ đội ngũ chuyên gia của chúng tôi.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed"><strong class="text-white">Giá trị:</strong> Không có thời gian chết. Sửa lỗi và duyệt logic tức thì 24/7.</p>
                     </div>
                 </div>
                 <!-- Card 2 -->
@@ -955,15 +886,11 @@
                     <div
                         class="w-14 h-14 rounded-2xl bg-[#FFBF00]/20 flex items-center justify-center text-[#FFBF00] text-2xl mb-6 shadow-[0_0_15px_rgba(255,191,0,0.3)]">
                         <i class="fa-solid fa-user-tie"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-4">2. Strategic Architects Team <br><span
-                            class="text-sm text-[#FFBF00] font-medium">(Dev Engineers + Operations Experts)</span></h3>
+                    <h3 class="text-xl font-bold text-white mb-4">2. Đội Ngũ Kiến Trúc Sư Chiến Lược <br><span
+                            class="text-sm text-[#FFBF00] font-medium">(Kỹ sư Dev + Chuyên gia Vận hành)</span></h3>
                     <div class="space-y-3">
-                        <p class="text-gray-400 text-sm leading-relaxed"><strong class="text-white">Capacity:</strong>
-                            When your logic meets "unique" bottlenecks in your business, our human experts step in. We
-                            help refactor workflows, optimize complex integrations, and turn your bespoke needs into
-                            reliable automated environments.</p>
-                        <p class="text-gray-400 text-sm leading-relaxed"><strong class="text-white">Value:</strong>
-                            Elite human oversight ensuring successful deployment.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed"><strong class="text-white">Năng lực:</strong> Khi logic của bạn gặp phải các điểm nghẽn "đặc thù" trong doanh nghiệp, các chuyên gia con người của chúng tôi sẽ tham gia. Chúng tôi giúp tái cấu trúc quy trình, tối ưu hóa các tích hợp phức tạp và biến các nhu cầu riêng biệt của bạn thành các môi trường tự động hóa đáng tin cậy.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed"><strong class="text-white">Giá trị:</strong> Sự giám sát của các chuyên gia hàng đầu đảm bảo triển khai thành công.</p>
                     </div>
                 </div>
                 <!-- Card 3 -->
@@ -975,14 +902,11 @@
                     <div
                         class="w-14 h-14 rounded-2xl bg-[#10B981]/20 flex items-center justify-center text-[#10B981] text-2xl mb-6 shadow-[0_0_15px_rgba(16,185,129,0.3)]">
                         <i class="fa-solid fa-layer-group"></i></div>
-                    <h3 class="text-xl font-bold text-white mb-4">3. Premium Blueprint Library<br><span
-                            class="text-sm text-[#10B981] font-medium">(Continuous Updates)</span></h3>
+                    <h3 class="text-xl font-bold text-white mb-4">3. Thư Viện Blueprint Cao Cấp<br><span
+                            class="text-sm text-[#10B981] font-medium">(Cập nhật liên tục)</span></h3>
                     <div class="space-y-3">
-                        <p class="text-gray-400 text-sm leading-relaxed"><strong class="text-white">Capacity:</strong>
-                            Access our exclusive repository of n8n template diagrams (Blueprints) strictly optimized for
-                            standard operations (Lead Gen, CRM Sync, Invoice Audits). Just "Import" and configure.</p>
-                        <p class="text-gray-400 text-sm leading-relaxed"><strong class="text-white">Value:</strong>
-                            Shaves off 90% of development time. Never build from scratch.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed"><strong class="text-white">Năng lực:</strong> Truy cập kho lưu trữ độc quyền các sơ đồ mẫu n8n (Blueprint) được tối ưu hóa nghiêm ngặt cho các hoạt động tiêu chuẩn (Tạo Lead, Đồng bộ CRM, Kiểm toán Hóa đơn). Chỉ cần "Import" và cấu hình.</p>
+                        <p class="text-gray-400 text-sm leading-relaxed"><strong class="text-white">Giá trị:</strong> Tiết kiệm 90% thời gian phát triển. Không bao giờ phải xây dựng từ đầu.</p>
                     </div>
                 </div>
             </div>
@@ -994,8 +918,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 animate-fade-in-up invisible-init">
                 <span class="text-green-400 font-bold tracking-wider uppercase text-sm mb-3 block"><i
-                        class="fa-solid fa-star mr-1"></i> Proven ROI</span>
-                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">Results from the Real World
+                        class="fa-solid fa-star mr-1"></i> ROI Thực Tế</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">Kết Quả Thực Tế Từ Doanh Nghiệp
                 </h2>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
@@ -1006,17 +930,15 @@
                             class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                             class="fa-solid fa-star"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4">"Saved 20 hours/week"</h3>
-                    <p class="text-gray-400 leading-relaxed mb-6">"Before this masterclass, I was manually checking data
-                        across 5 different platforms. Now, my n8n agent cluster does it while I sleep. The architecture
-                        reviews are worth 10x the course price."</p>
+                    <h3 class="text-xl font-bold text-white mb-4">"Tiết kiệm 20 giờ/tuần"</h3>
+                    <p class="text-gray-400 leading-relaxed mb-6">"Trước khóa học này, tôi phải kiểm tra dữ liệu thủ công trên 5 nền tảng khác nhau. Giờ đây, cụm Agent n8n của tôi tự làm việc đó khi tôi ngủ. Các buổi đánh giá kiến trúc có giá trị gấp 10 lần học phí."</p>
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 rounded-full bg-gray-600 overflow-hidden"><img
                                 src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="Client"
                                 class="w-full h-full object-cover"></div>
                         <div>
                             <p class="text-white font-bold text-sm">Marcus V.</p>
-                            <p class="text-gray-500 text-xs">Operations Manager, Berlin</p>
+                            <p class="text-gray-500 text-xs">Giám Đốc Vận Hành, Berlin</p>
                         </div>
                     </div>
                 </div>
@@ -1027,10 +949,8 @@
                             class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                             class="fa-solid fa-star"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4">"Doubled lead velocity"</h3>
-                    <p class="text-gray-400 leading-relaxed mb-6">"The Sales Agent blueprint completely transformed our
-                        outbound. We don't use simple ChatGPT prompts anymore; we have an autonomous system researching
-                        and personalizing pitches perfectly."</p>
+                    <h3 class="text-xl font-bold text-white mb-4">"Tăng gấp đôi tốc độ xử lý lead"</h3>
+                    <p class="text-gray-400 leading-relaxed mb-6">"Blueprint Agent Bán Hàng đã thay đổi hoàn toàn chiến dịch tiếp cận của chúng tôi. Chúng tôi không còn dùng các prompt ChatGPT đơn giản nữa; chúng tôi có một hệ thống tự trị nghiên cứu và cá nhân hóa lời chào hàng một cách hoàn hảo."</p>
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 rounded-full bg-gray-600 overflow-hidden"><img
                                 src="https://i.pravatar.cc/150?u=a042581f4e29026024d" alt="Client"
@@ -1048,17 +968,15 @@
                             class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                             class="fa-solid fa-star"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4">"Finally, secure AI"</h3>
-                    <p class="text-gray-400 leading-relaxed mb-6">"As a European company, data sovereignty is our #1
-                        issue. This is the only course that actually taught us how to build a Local AI environment
-                        without sending our customer data to external servers."</p>
+                    <h3 class="text-xl font-bold text-white mb-4">"Cuối cùng, một giải pháp AI bảo mật"</h3>
+                    <p class="text-gray-400 leading-relaxed mb-6">"Là một công ty châu Âu, chủ quyền dữ liệu là vấn đề số 1 của chúng tôi. Đây là khóa học duy nhất thực sự hướng dẫn chúng tôi cách xây dựng môi trường Local AI mà không gửi dữ liệu khách hàng đến các máy chủ bên ngoài."</p>
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 rounded-full bg-gray-600 overflow-hidden"><img
                                 src="https://i.pravatar.cc/150?u=a042581f4e29026704a" alt="Client"
                                 class="w-full h-full object-cover"></div>
                         <div>
                             <p class="text-white font-bold text-sm">Johannes K.</p>
-                            <p class="text-gray-500 text-xs">Tech Director, Munich</p>
+                            <p class="text-gray-500 text-xs">Giám Đốc Kỹ Thuật, Munich</p>
                         </div>
                     </div>
                 </div>
@@ -1076,19 +994,18 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16 animate-fade-in-up invisible-init">
                 <span class="text-accent font-bold tracking-wider uppercase text-sm mb-3 block"><i
-                        class="fa-solid fa-tag mr-1"></i> STRATEGIC INVESTMENTS</span>
-                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">CHOOSE YOUR PATH TO MASTER
+                        class="fa-solid fa-tag mr-1"></i> ĐẦU TƯ CHIẾN LƯỢC</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">CHỌN LỘ TRÌNH LÀM CHỦ
                     <span class="text-accent">AGENTIC AI</span></h2>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">The program is designed to fit the needs and
-                    resources from Solopreneurs to Enterprise Teams.</p>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">Chương trình được thiết kế phù hợp với nhu cầu và nguồn lực từ Solopreneurs đến các Đội ngũ Doanh nghiệp.</p>
             </div>
             <div class="grid lg:grid-cols-3 gap-6 lg:gap-8 items-stretch max-w-7xl mx-auto">
                 <!-- Tier 1 -->
                 <div
                     class="glass-bright rounded-3xl p-8 flex flex-col relative overflow-hidden hover:border-gray-500/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-gray-500/10 transition-all duration-300 animate-fade-in-up invisible-init">
                     <div class="mb-6">
-                        <h3 class="text-2xl font-bold text-white mb-2">SELF-PACED LIBRARY</h3>
-                        <p class="text-gray-400 text-sm">For individuals starting their journey.</p>
+                        <h3 class="text-2xl font-bold text-white mb-2">THƯ VIỆN TỰ HỌC</h3>
+                        <p class="text-gray-400 text-sm">Dành cho cá nhân bắt đầu hành trình.</p>
                     </div>
                     <div class="mb-8">
                         <div class="flex items-end gap-2">
@@ -1097,38 +1014,34 @@
                     </div>
                     <ul class="space-y-4 mb-10 flex-1 text-sm">
                         <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-400 mt-1"></i><span
-                                class="text-gray-300">Full Video Masterclass (18+ lessons)</span></li>
+                                class="text-gray-300">Toàn bộ Video Masterclass (18+ bài giảng)</span></li>
                         <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-400 mt-1"></i><span
-                                class="text-gray-300">Lifetime Resource & Blueprint Library</span></li>
+                                class="text-gray-300">Truy cập trọn đời Thư viện Blueprint & Tài nguyên</span></li>
                         <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-400 mt-1"></i><span
-                                class="text-gray-300">Community Access</span></li>
+                                class="text-gray-300">Quyền truy cập Cộng đồng</span></li>
                         <li class="flex items-start gap-3 opacity-40"><i
-                                class="fa-solid fa-minus text-gray-500 mt-1"></i><span class="text-gray-500">Weekly
-                                Architecture Reviews</span></li>
+                                class="fa-solid fa-minus text-gray-500 mt-1"></i><span class="text-gray-500">Đánh giá Kiến trúc Hàng tuần</span></li>
                         <li class="flex items-start gap-3 opacity-40"><i
-                                class="fa-solid fa-minus text-gray-500 mt-1"></i><span class="text-gray-500">Dedicated
-                                Strategic Architect</span></li>
+                                class="fa-solid fa-minus text-gray-500 mt-1"></i><span class="text-gray-500">Kiến Trúc Sư Chiến Lược Riêng</span></li>
                         <li class="flex items-start gap-3 opacity-40"><i
-                                class="fa-solid fa-minus text-gray-500 mt-1"></i><span class="text-gray-500">Custom
-                                Implementation Plan</span></li>
+                                class="fa-solid fa-minus text-gray-500 mt-1"></i><span class="text-gray-500">Kế Hoạch Triển Khai Tùy Chỉnh</span></li>
                     </ul>
                     <a href="#survey"
-                        class="w-full py-4 px-6 text-center text-sm font-bold rounded-xl text-white bg-white/10 hover:bg-white/20 transition-all">START
-                        LEARNING NOW</a>
+                        class="w-full py-4 px-6 text-center text-sm font-bold rounded-xl text-white bg-white/10 hover:bg-white/20 transition-all">BẮT ĐẦU HỌC NGAY</a>
                 </div>
                 <!-- Tier 2 -->
                 <div
                     class="glass rounded-3xl p-8 flex flex-col relative overflow-hidden ring-2 ring-accent shadow-[0_0_30px_rgba(255,171,0,0.15)] transform hover:-translate-y-4 hover:shadow-[0_0_40px_rgba(255,171,0,0.3)] transition-all duration-300 lg:-translate-y-2 animate-fade-in-up stagger-1 invisible-init z-10">
                     <div
                         class="absolute top-0 right-0 bg-accent text-dark text-xs font-bold px-4 py-1.5 rounded-bl-xl z-20">
-                        MOST POPULAR</div>
+                        PHỔ BIẾN NHẤT</div>
                     <div
                         class="absolute top-0 left-0 bg-red-500 text-white text-[10px] font-bold px-3 py-1.5 rounded-br-xl z-20">
-                        Limited Cohort Seats</div>
+                        Số Lượng Ghế Giới Hạn</div>
                     <div class="absolute -right-20 -top-20 w-64 h-64 bg-accent/20 rounded-full blur-3xl"></div>
                     <div class="mb-6 relative z-10">
-                        <h3 class="text-2xl font-bold text-accent mb-2">IMPLEMENTATION MASTERCLASS</h3>
-                        <p class="text-gray-300 text-sm">Best for: SMB Owners, Operations Managers.</p>
+                        <h3 class="text-2xl font-bold text-accent mb-2">LỚP MASTERCLASS THỰC CHIẾN</h3>
+                        <p class="text-gray-300 text-sm">Tốt nhất cho: Chủ SMB, Giám đốc Vận hành.</p>
                     </div>
                     <div class="mb-8 relative z-10">
                         <div class="flex items-end gap-2">
@@ -1137,52 +1050,49 @@
                     </div>
                     <ul class="space-y-4 mb-10 flex-1 relative z-10 text-sm">
                         <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-400 mt-1"></i><span
-                                class="text-gray-300">Everything in Self-Paced Library</span></li>
+                                class="text-gray-300">Mọi quyền lợi của Thư Viện Tự Học</span></li>
                         <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-400 mt-1"></i><span
-                                class="text-gray-300">Weekly Architecture Reviews</span></li>
+                                class="text-gray-300">Đánh giá Kiến trúc Hàng tuần</span></li>
                         <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span
-                                class="text-white font-semibold">1-on-1 Guidance with Strategic Architects</span></li>
+                                class="text-white font-semibold">Hướng dẫn 1 kèm 1 với Kiến trúc sư Chiến lược</span></li>
                         <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span
-                                class="text-white font-semibold">Live Debugging & Troubleshooting</span></li>
+                                class="text-white font-semibold">Gỡ lỗi & Xử lý sự cố trực tiếp</span></li>
                         <li class="flex items-start gap-3"><i class="fa-solid fa-check text-accent mt-1"></i><span
-                                class="text-white font-semibold">Agent Deployment Certification</span></li>
+                                class="text-white font-semibold">Chứng nhận Triển khai Agent</span></li>
                         <li class="flex items-start gap-3 opacity-40"><i
-                                class="fa-solid fa-minus text-gray-500 mt-1"></i><span class="text-gray-500">Enterprise
-                                Bespoke Customization</span></li>
+                                class="fa-solid fa-minus text-gray-500 mt-1"></i><span class="text-gray-500">Tùy chỉnh Chuyên sâu cho Doanh nghiệp</span></li>
                     </ul>
                     <a href="#survey"
-                        class="w-full relative z-10 py-4 px-6 text-center text-sm font-black rounded-xl text-dark bg-gradient-to-r from-accent to-yellow-400 hover:to-yellow-300 shadow-xl shadow-accent/20 transition-all hover:scale-105 animate-[pulse-glow_2s_infinite]">SECURE
-                        SEAT FOR NEXT COHORT</a>
+                        class="w-full relative z-10 py-4 px-6 text-center text-sm font-black rounded-xl text-dark bg-gradient-to-r from-accent to-yellow-400 hover:to-yellow-300 shadow-xl shadow-accent/20 transition-all hover:scale-105 animate-[pulse-glow_2s_infinite]">GIỮ CHỖ CHO KHÓA TIẾP THEO</a>
                 </div>
                 <!-- Tier 3 -->
                 <div
                     class="glass-bright rounded-3xl p-8 flex flex-col relative overflow-hidden hover:border-[#00F0FF]/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#00F0FF]/10 transition-all duration-300 animate-fade-in-up stagger-2 invisible-init">
                     <div class="mb-6">
-                        <h3 class="text-2xl font-bold text-white mb-2">ENTERPRISE BESPOKE</h3>
-                        <p class="text-gray-400 text-sm">Full-scale custom academy for your entire team.</p>
+                        <h3 class="text-2xl font-bold text-white mb-2">GIẢI PHÁP DOANH NGHIỆP</h3>
+                        <p class="text-gray-400 text-sm">Đào tạo tùy chỉnh toàn diện cho toàn bộ đội ngũ của bạn.</p>
                     </div>
                     <div class="mb-8">
                         <div class="flex items-end gap-2">
-                            <p class="text-4xl font-black text-[#00F0FF]">Custom</p>
+                            <p class="text-4xl font-black text-[#00F0FF]">Tùy chọn</p>
                         </div>
                     </div>
                     <ul class="space-y-4 mb-10 flex-1 text-sm">
                         <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-400 mt-1"></i><span
-                                class="text-gray-300">Custom Training Plan for your team</span></li>
+                                class="text-gray-300">Kế hoạch Đào tạo Tùy chỉnh cho đội ngũ</span></li>
                         <li class="flex items-start gap-3"><i class="fa-solid fa-check text-green-400 mt-1"></i><span
-                                class="text-gray-300">Dedicated AI Architects for your Business</span></li>
+                                class="text-gray-300">Kiến trúc sư AI chuyên trách cho Doanh nghiệp</span></li>
                         <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[#00F0FF] mt-1"></i><span
-                                class="text-white font-semibold">Self-Hosted Infrastructure Setup</span></li>
+                                class="text-white font-semibold">Thiết lập Cơ sở hạ tầng Tự lưu trữ</span></li>
                         <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[#00F0FF] mt-1"></i><span
-                                class="text-white font-semibold">On-Premises Data Sovereignty Architecture</span></li>
+                                class="text-white font-semibold">Kiến trúc Chủ quyền Dữ liệu Tại chỗ (On-Premises)</span></li>
                         <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[#00F0FF] mt-1"></i><span
-                                class="text-white font-semibold">Direct Consulting with CEO Thanh</span></li>
+                                class="text-white font-semibold">Tư vấn Trực tiếp với CEO Thành</span></li>
                         <li class="flex items-start gap-3"><i class="fa-solid fa-check text-[#00F0FF] mt-1"></i><span
-                                class="text-white font-semibold">NDA & Enterprise SLA</span></li>
+                                class="text-white font-semibold">Bảo mật NDA & Cam kết SLA Doanh nghiệp</span></li>
                     </ul>
                     <a href="https://calendly.com/sportaiv/consultation" target="_blank"
-                        class="w-full py-4 px-6 text-center text-sm font-bold rounded-xl text-[#00F0FF] bg-[#00F0FF]/10 hover:bg-[#00F0FF]/20 transition-all">CONTACT
-                        FOR CONSULTING</a>
+                        class="w-full py-4 px-6 text-center text-sm font-bold rounded-xl text-[#00F0FF] bg-[#00F0FF]/10 hover:bg-[#00F0FF]/20 transition-all">LIÊN HỆ TƯ VẤN</a>
                 </div>
             </div>
         </div>
@@ -1196,112 +1106,100 @@
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-12 animate-fade-in-up invisible-init">
                 <span class="text-accent font-bold tracking-wider uppercase text-sm mb-3 block"><i
-                        class="fa-solid fa-filter mr-1"></i> Application Process</span>
-                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">Cohort Application & <br> Needs
-                    Assessment</h2>
-                <p class="text-gray-400 text-lg">Fill out the form to reserve your seat and get a direct strategy
-                    consultation.</p>
+                        class="fa-solid fa-filter mr-1"></i> Quy Trình Ứng Tuyển</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">Ứng Tuyển Khóa Học & <br> Đánh Giá Nhu Cầu</h2>
+                <p class="text-gray-400 text-lg">Điền vào biểu mẫu để giữ chỗ và nhận tư vấn chiến lược trực tiếp.</p>
             </div>
             <div class="glass rounded-3xl p-8 md:p-12 animate-fade-in-up stagger-1 invisible-init neon-blue">
                 <form id="surveyForm" class="survey-form space-y-6">
                     <h3 class="text-primary font-bold uppercase tracking-wider text-sm border-b border-border pb-3"><i
-                            class="fa-solid fa-user mr-2"></i>Identity Information</h3>
+                            class="fa-solid fa-user mr-2"></i>Thông Tin Cá Nhân</h3>
                     <div class="grid md:grid-cols-2 gap-4">
-                        <div><label class="block text-sm font-bold text-gray-300 mb-2">Full Name <span
+                        <div><label class="block text-sm font-bold text-gray-300 mb-2">Họ và Tên <span
                                     class="text-red-400">*</span></label><input type="text" required
                                 class="w-full px-4 py-3 rounded-xl bg-dark border border-border text-white focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all"
-                                placeholder="Enter your name"></div>
-                        <div><label class="block text-sm font-bold text-gray-300 mb-2">WhatsApp / Phone Number <span
+                                placeholder="Nhập họ tên của bạn"></div>
+                        <div><label class="block text-sm font-bold text-gray-300 mb-2">Số Điện Thoại / WhatsApp <span
                                     class="text-red-400">*</span></label><input type="tel" required
                                 class="w-full px-4 py-3 rounded-xl bg-dark border border-border text-white focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all"
-                                placeholder="+1 xxx xxx xxxx"></div>
+                                placeholder="+84 xxx xxx xxxx"></div>
                     </div>
                     <div class="grid md:grid-cols-2 gap-4">
-                        <div><label class="block text-sm font-bold text-gray-300 mb-2">Job Title <span
+                        <div><label class="block text-sm font-bold text-gray-300 mb-2">Chức Vụ <span
                                     class="text-red-400">*</span></label>
                             <select required
                                 class="w-full px-4 py-3 rounded-xl bg-dark border border-border text-white focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all">
-                                <option value="">Select Title</option>
-                                <option>Business Owner</option>
-                                <option>Senior Manager</option>
+                                <option value="">Chọn Chức Vụ</option>
+                                <option>Chủ Doanh Nghiệp</option>
+                                <option>Quản Lý Cấp Cao</option>
                                 <option>Freelancer</option>
-                                <option>Other</option>
+                                <option>Khác</option>
                             </select>
                         </div>
-                        <div><label class="block text-sm font-bold text-gray-300 mb-2">Company Name &
-                                Industry</label><input type="text"
+                        <div><label class="block text-sm font-bold text-gray-300 mb-2">Tên Công Ty & Lĩnh Vực</label><input type="text"
                                 class="w-full px-4 py-3 rounded-xl bg-dark border border-border text-white focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all"
-                                placeholder="e.g. ABC Corp - Retail"></div>
+                                placeholder="vd: ABC Corp - Bán lẻ"></div>
                     </div>
                     <h3
                         class="text-primary font-bold uppercase tracking-wider text-sm border-b border-border pb-3 pt-4">
-                        <i class="fa-solid fa-heart-pulse mr-2"></i>Pain Points & Needs</h3>
+                        <i class="fa-solid fa-heart-pulse mr-2"></i>Điểm Nghẽn & Nhu Cầu</h3>
                     <div>
-                        <label class="block text-sm font-bold text-gray-300 mb-3">What is the biggest problem your
-                            business is facing?</label>
+                        <label class="block text-sm font-bold text-gray-300 mb-3">Vấn đề lớn nhất mà doanh nghiệp bạn đang gặp phải là gì?</label>
                         <div class="space-y-2">
                             <label
                                 class="flex items-center gap-3 text-gray-400 hover:text-white cursor-pointer p-2 rounded-lg hover:bg-white/5 transition-colors"><input
-                                    type="checkbox" class="accent-primary w-4 h-4"><span>High personnel costs, low
-                                    efficiency.</span></label>
+                                    type="checkbox" class="accent-primary w-4 h-4"><span>Chi phí nhân sự cao, hiệu quả thấp.</span></label>
                             <label
                                 class="flex items-center gap-3 text-gray-400 hover:text-white cursor-pointer p-2 rounded-lg hover:bg-white/5 transition-colors"><input
-                                    type="checkbox" class="accent-primary w-4 h-4"><span>Scattered data, unable to
-                                    leverage it</span></label>
+                                    type="checkbox" class="accent-primary w-4 h-4"><span>Dữ liệu phân tán, không thể tận dụng.</span></label>
                             <label
                                 class="flex items-center gap-3 text-gray-400 hover:text-white cursor-pointer p-2 rounded-lg hover:bg-white/5 transition-colors"><input
-                                    type="checkbox" class="accent-primary w-4 h-4"><span>Fear of information leaks when
-                                    using Cloud AI</span></label>
+                                    type="checkbox" class="accent-primary w-4 h-4"><span>Lo ngại rò rỉ thông tin khi dùng Cloud AI.</span></label>
                             <label
                                 class="flex items-center gap-3 text-gray-400 hover:text-white cursor-pointer p-2 rounded-lg hover:bg-white/5 transition-colors"><input
-                                    type="checkbox" class="accent-primary w-4 h-4"><span>Legacy chatbots are too "dumb",
-                                    ruining CX</span></label>
+                                    type="checkbox" class="accent-primary w-4 h-4"><span>Chatbot truyền thống quá "ngốc", làm hỏng trải nghiệm khách hàng.</span></label>
                         </div>
                     </div>
-                    <div><label class="block text-sm font-bold text-gray-300 mb-2">Where do you want your 24/7 "Digital
-                            Workforce" placed?</label>
+                    <div><label class="block text-sm font-bold text-gray-300 mb-2">Bạn muốn đặt "Lực lượng lao động số" 24/7 ở bộ phận nào?</label>
                         <select
                             class="w-full px-4 py-3 rounded-xl bg-dark border border-border text-white focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all">
-                            <option value="">Select Position</option>
-                            <option>Sales</option>
+                            <option value="">Chọn Bộ Phận</option>
+                            <option>Bán Hàng</option>
                             <option>Marketing</option>
-                            <option>Research</option>
-                            <option>Operations</option>
+                            <option>Nghiên Cứu</option>
+                            <option>Vận Hành</option>
                         </select>
                     </div>
                     <h3
                         class="text-primary font-bold uppercase tracking-wider text-sm border-b border-border pb-3 pt-4">
-                        <i class="fa-solid fa-rocket mr-2"></i>Commitments & Potential</h3>
+                        <i class="fa-solid fa-rocket mr-2"></i>Cam Kết & Tiềm Năng</h3>
                     <div>
-                        <label class="block text-sm font-bold text-gray-300 mb-2">Data Security Priority Level
-                            (1-10)</label>
+                        <label class="block text-sm font-bold text-gray-300 mb-2">Mức Độ Ưu Tiên Bảo Mật Dữ Liệu (1-10)</label>
                         <input type="range" min="1" max="10" value="5" id="securityRange" class="w-full accent-primary"
                             oninput="document.getElementById('secVal').textContent=this.value">
-                        <div class="flex justify-between text-xs text-gray-500 mt-1"><span>1 - Low</span><span
-                                class="text-primary font-bold text-base" id="secVal">5</span><span>10 - Highest</span>
+                        <div class="flex justify-between text-xs text-gray-500 mt-1"><span>1 - Thấp</span><span
+                                class="text-primary font-bold text-base" id="secVal">5</span><span>10 - Cao Nhất</span>
                         </div>
                     </div>
-                    <div><label class="block text-sm font-bold text-gray-300 mb-2">Your biggest goal after the
-                            course?</label>
+                    <div><label class="block text-sm font-bold text-gray-300 mb-2">Mục tiêu lớn nhất của bạn sau khóa học?</label>
                         <textarea rows="3"
                             class="w-full px-4 py-3 rounded-xl bg-dark border border-border text-white focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition-all resize-none"
-                            placeholder="Share your goal..."></textarea>
+                            placeholder="Chia sẻ mục tiêu của bạn..."></textarea>
                     </div>
                     <button type="submit"
                         class="w-full py-4 px-6 rounded-xl text-dark font-extrabold text-lg bg-accent hover:bg-yellow-400 shadow-xl shadow-accent/20 transition-all hover:-translate-y-1">
-                        <i class="fa-solid fa-paper-plane mr-2"></i> Submit Survey & Get Early Bird Code
+                        <i class="fa-solid fa-paper-plane mr-2"></i> Gửi Khảo Sát & Nhận Mã Early Bird
                     </button>
                 </form>
                 <div id="surveySuccess" class="survey-success text-center py-10">
                     <div
                         class="w-20 h-20 rounded-full bg-green-500/20 flex items-center justify-center text-green-400 text-4xl mx-auto mb-6">
                         <i class="fa-solid fa-circle-check"></i></div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Congratulations! 🎉</h3>
-                    <p class="text-gray-400 mb-4">Your Early Bird code is:</p>
+                    <h3 class="text-2xl font-bold text-white mb-3">Chúc Mừng Bạn! 🎉</h3>
+                    <p class="text-gray-400 mb-4">Mã Early Bird của bạn là:</p>
                     <div class="inline-block bg-dark border-2 border-dashed border-accent px-8 py-4 rounded-xl mb-6">
                         <span class="text-3xl font-black text-accent tracking-widest">SPORTAIV-EB</span></div>
-                    <p class="text-gray-400 mb-8">Book your call below to verify your code and start your Agentic AI
-                        journey.</p>
+                    <p class="text-gray-400 mb-8">Đặt lịch gọi bên dưới để xác thực mã và bắt đầu hành trình Agentic AI của bạn.</p>
                     <div class="flex flex-col items-center">
                         <div class="relative mt-2 mb-6 group inline-block">
                             <div
@@ -1310,12 +1208,10 @@
                             <a href="https://calendly.com/sportaiv/consultation" target="_blank" id="calendlyBtn"
                                 onclick="trackCalendlyClick()"
                                 class="relative inline-flex items-center px-8 md:px-10 py-4 md:py-5 rounded-full bg-gradient-to-r from-accent to-yellow-500 text-dark font-black text-lg md:text-xl hover:scale-105 transition-all shadow-xl shadow-accent/30 animate-[pulse-glow_2s_infinite]">
-                                <i class="fa-solid fa-calendar-check mr-3 text-2xl"></i> BOOK A 15-MIN STRATEGY CALL
+                                <i class="fa-solid fa-calendar-check mr-3 text-2xl"></i> ĐẶT LỊCH GỌI CHIẾN LƯỢC 15 PHÚT
                             </a>
                         </div>
-                        <p class="text-gray-400 text-sm md:text-base italic max-w-md mx-auto">* Our team will personally
-                            review your application and send a tailored implementation code within 5 minutes. Don't
-                            hesitate, your business's future starts right here.</p>
+                        <p class="text-gray-400 text-sm md:text-base italic max-w-md mx-auto">* Đội ngũ của chúng tôi sẽ trực tiếp xem xét hồ sơ của bạn và gửi mã triển khai phù hợp trong vòng 5 phút. Đừng chần chừ, tương lai của doanh nghiệp bạn bắt đầu ngay tại đây.</p>
                     </div>
                 </div>
             </div>
@@ -1327,9 +1223,8 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate-fade-in-up invisible-init">
                 <span class="text-primary font-bold tracking-wider uppercase text-sm mb-3 block"><i
-                        class="fa-solid fa-chalkboard-user mr-1"></i> EXPERT INSTRUCTORS</span>
-                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">Learn from the Best in AI &
-                    Strategy</h2>
+                        class="fa-solid fa-chalkboard-user mr-1"></i> GIẢNG VIÊN CHUYÊN GIA</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-black text-white mb-4">Học Hỏi Từ Những Chuyên Gia Hàng Đầu Về AI & Chiến Lược</h2>
             </div>
 
             <!-- Instructor 1: Thanh Nguyen -->
@@ -1338,7 +1233,7 @@
                     <div
                         class="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-transparent rounded-[2rem] blur-xl -z-10">
                     </div>
-                    <img src="./assets/imgs/avataAI.jpg" alt="Nguyễn Hữu Thành - CEO SPORTAIV"
+                    <img src="../assets/imgs/avataAI.jpg" alt="Nguyễn Hữu Thành - CEO SPORTAIV"
                         class="w-full rounded-2xl object-cover shadow-2xl aspect-[4/5] object-top ring-1 ring-white/10 grayscale-[15%] hover:grayscale-0 transition-all duration-700">
                 </div>
                 <div
@@ -1346,20 +1241,14 @@
                     <div
                         class="inline-flex items-center gap-2 mb-4 bg-primary/10 px-4 py-2 rounded-lg border border-primary/20 mx-auto md:mx-0">
                         <i class="fa-solid fa-chalkboard-user text-primary"></i>
-                        <span class="text-primary font-bold uppercase tracking-widest text-xs">Direct Mentor /
-                            CEO</span>
+                        <span class="text-primary font-bold uppercase tracking-widest text-xs">Người Hướng Dẫn Trực Tiếp / CEO</span>
                     </div>
                     <h2 class="font-heading text-4xl md:text-5xl font-black text-white mb-2">Nguyễn Hữu Thành</h2>
-                    <h3 class="text-xl text-primary mb-6 font-medium">CEO & Founder SPORTAIV.com</h3>
+                    <h3 class="text-xl text-primary mb-6 font-medium">CEO & Sáng lập SPORTAIV.com</h3>
                     <div class="space-y-4">
-                        <p class="text-gray-400 leading-relaxed text-lg"><strong class="text-white">Top Rated Plus on
-                                Upwork.</strong> 10+ Years Experience Fullstack & PM. Expert in optimizing AI systems
-                            for the <strong class="text-white">US/EU</strong> market.</p>
-                        <p class="text-gray-400 leading-relaxed">Classes are taught from a practical management
-                            perspective. Students are equipped with process-breakdown thinking before using AI tools.
-                        </p>
-                        <p class="text-gray-500 text-sm"><i class="fa-solid fa-location-dot text-primary mr-1"></i> Da
-                            Nang City, Vietnam</p>
+                        <p class="text-gray-400 leading-relaxed text-lg"><strong class="text-white">Top Rated Plus trên Upwork.</strong> Hơn 10 năm kinh nghiệm Fullstack & PM. Chuyên gia tối ưu hóa các hệ thống AI cho thị trường <strong class="text-white">US/EU</strong>.</p>
+                        <p class="text-gray-400 leading-relaxed">Các lớp học được giảng dạy từ góc nhìn quản lý thực chiến. Học viên được trang bị tư duy bẻ gãy quy trình trước khi sử dụng các công cụ AI.</p>
+                        <p class="text-gray-500 text-sm"><i class="fa-solid fa-location-dot text-primary mr-1"></i> TP. Đà Nẵng, Việt Nam</p>
                     </div>
                     <div class="flex flex-wrap gap-3 mt-6 justify-center md:justify-start">
                         <a href="https://www.linkedin.com/in/thanh-nguyen-16170a329" target="_blank"
@@ -1375,41 +1264,10 @@
                     </div>
                     <div class="bg-dark rounded-2xl p-6 mt-8 border-l-4 border-primary relative text-left">
                         <i class="fa-solid fa-quote-left absolute top-3 left-6 text-2xl text-white/5"></i>
-                        <p class="text-white font-medium leading-relaxed italic relative z-10">"Technology exists to
-                            serve business. If a technology is complicated but fails to generate money, discard it.
-                            Agentic AI is born to generate money."</p>
+                        <p class="text-white font-medium leading-relaxed italic relative z-10">"Công nghệ tồn tại để phục vụ kinh doanh. Nếu một công nghệ phức tạp nhưng không tạo ra tiền, hãy loại bỏ nó. Agentic AI ra đời là để tạo ra tiền."</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Instructor 2: Ha Phan -->
-            <!-- <div class="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-16">
-<div class="w-full md:w-4/12 animate-fade-in-up invisible-init relative">
-<div class="absolute -inset-4 bg-gradient-to-tr from-accent/20 to-transparent rounded-[2rem] blur-xl -z-10"></div>
-<img src="assets/imgs/haPhan.png" alt="Hà Phan - CMO SPORTAIV" class="w-full rounded-2xl object-cover shadow-2xl aspect-[4/5] object-top ring-1 ring-white/10 grayscale-[15%] hover:grayscale-0 transition-all duration-700">
-</div>
-<div class="w-full md:w-8/12 animate-fade-in-up stagger-1 invisible-init text-center md:text-left flex flex-col items-center md:items-start">
-<div class="inline-flex items-center gap-2 mb-4 bg-accent/10 px-4 py-2 rounded-lg border border-accent/20 mx-auto md:mx-0">
-<i class="fa-solid fa-bullhorn text-accent"></i>
-<span class="text-accent font-bold uppercase tracking-widest text-xs">Direct Mentor / CMO</span>
-</div>
-<h2 class="font-heading text-4xl md:text-5xl font-black text-white mb-2">Hà Phan</h2>
-<h3 class="text-xl text-accent mb-6 font-medium">CMO SPORTAIV & Strategy Consultant</h3>
-<div class="space-y-4">
-<p class="text-gray-400 leading-relaxed text-lg"><strong class="text-white">Marketing, Strategy & AI Expert.</strong> 8+ years of experience across global brands (Orange, WPP, Masan Group) and fast-growing startups.</p>
-<p class="text-gray-400 leading-relaxed">With a Master's in Marketing & Customer Experience, she seamlessly blends service design, customer journey optimization, and data-driven insights to foster business growth.</p>
-<p class="text-gray-500 text-sm"><i class="fa-solid fa-location-dot text-accent mr-1"></i> Paris, France & Global</p>
-</div>
-<div class="flex flex-wrap gap-3 mt-6 justify-center md:justify-start">
-<a href="https://haphanmarcom.portfoliobox.net/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-border text-gray-400 hover:text-white hover:border-accent/30 transition-all text-sm"><i class="fa-solid fa-globe"></i> Portfolio</a>
-<a href="https://scholarshipmentorhub.com/" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-border text-gray-400 hover:text-white hover:border-accent/30 transition-all text-sm"><i class="fa-solid fa-graduation-cap"></i> Mentor Hub</a>
-</div>
-<div class="bg-dark rounded-2xl p-6 mt-8 border-l-4 border-accent relative text-left">
-<i class="fa-solid fa-quote-left absolute top-3 left-6 text-2xl text-white/5"></i>
-<p class="text-white font-medium leading-relaxed italic relative z-10">"Using AI is not just about technology; it's about solving real problems, optimizing the customer journey, and turning data into actionable business innovations."</p>
-</div>
-</div>
-</div> -->
 
         </div>
     </section>
@@ -1420,10 +1278,10 @@
             <div class="flex items-center justify-center gap-2 mb-4"><span
                     class="font-extrabold text-xl text-white">SPORTAIV<span class="text-primary">.</span></span></div>
             <div class="flex justify-center gap-6 mb-4">
-                <a href="#" class="text-gray-500 text-sm hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" class="text-gray-500 text-sm hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" class="text-gray-500 text-sm hover:text-white transition-colors">Chính Sách Bảo Mật</a>
+                <a href="#" class="text-gray-500 text-sm hover:text-white transition-colors">Điều Khoản Dịch Vụ</a>
             </div>
-            <p class="text-gray-600 text-xs">&copy; 2025 SPORTAIV. All rights reserved.</p>
+            <p class="text-gray-600 text-xs">&copy; 2026 SPORTAIV. Đã đăng ký bản quyền.</p>
         </div>
     </footer>
 
