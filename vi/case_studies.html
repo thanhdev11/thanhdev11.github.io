@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="alternate" hreflang="en" href="https://sportaiv.com/case_studies.html" />
+    <script>
+        let lang = localStorage.getItem('lang');
+        if (!lang) {
+            lang = (navigator.language || navigator.userLanguage).startsWith('vi') ? 'vi' : 'en';
+            localStorage.setItem('lang', lang);
+        }
+        if (lang === 'en' && window.location.href.includes('/vi/')) {
+            window.location.href = '../case_studies.html';
+        }
+    </script>
     <link rel="icon" type="image/png" href="../assets/imgs/logo.png">
     <title>Dự Án Tiêu Biểu | SPORTAIV Agentic AI</title>
     

@@ -16,6 +16,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="alternate" hreflang="en" href="https://sportaiv.com/index.html" />
+    <script>
+        let lang = localStorage.getItem('lang');
+        if (!lang) {
+            lang = (navigator.language || navigator.userLanguage).startsWith('vi') ? 'vi' : 'en';
+            localStorage.setItem('lang', lang);
+        }
+        if (lang === 'en' && window.location.href.includes('/vi/')) {
+            window.location.href = '../index.html';
+        }
+    </script>
     <meta name="description" content="Studio Agentic AI Chiến Lược. Các giải pháp tự động hóa AI doanh nghiệp, quy trình làm việc tự trị và hệ thống đa Agent tùy chỉnh.">
     <link rel="icon" type="image/png" href="../assets/imgs/logo.png">
     <title>SPORTAIV | Studio Agentic AI Chiến Lược</title>

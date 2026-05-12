@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="alternate" hreflang="vi" href="https://sportaiv.com/vi/case_studies.html" />
     <script>
-        if (localStorage.getItem('lang') === 'vi' && !window.location.href.includes('/vi/')) {
+        let lang = localStorage.getItem('lang');
+        if (!lang) {
+            lang = (navigator.language || navigator.userLanguage).startsWith('vi') ? 'vi' : 'en';
+            localStorage.setItem('lang', lang);
+        }
+        if (lang === 'vi' && !window.location.href.includes('/vi/')) {
             window.location.href = 'vi/case_studies.html';
         }
     </script>

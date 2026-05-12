@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="alternate" hreflang="en" href="https://sportaiv.com/academy.html" />
+    <script>
+        let lang = localStorage.getItem('lang');
+        if (!lang) {
+            lang = (navigator.language || navigator.userLanguage).startsWith('vi') ? 'vi' : 'en';
+            localStorage.setItem('lang', lang);
+        }
+        if (lang === 'en' && window.location.href.includes('/vi/')) {
+            window.location.href = '../academy.html';
+        }
+    </script>
     <link rel="icon" type="image/png" href="../assets/imgs/logo.png">
     <title>Học Viện Agentic AI Dành Cho Nhà Lãnh Đạo Doanh Nghiệp | SPORTAIV</title>
     <meta name="description"
