@@ -3,503 +3,680 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/imgs/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="alternate" hreflang="en" href="https://sportaiv.com/services.html" />
-    <script>
-        let lang = localStorage.getItem('lang');
-        if (!lang) {
-            lang = (navigator.language || navigator.userLanguage).startsWith('vi') ? 'vi' : 'en';
-            localStorage.setItem('lang', lang);
-        }
-        if (lang === 'en' && window.location.href.includes('/vi/')) {
-            window.location.href = '../services.html';
-        }
-    </script>
-    <title>Dịch Vụ Của Chúng Tôi - Giải Pháp Tự Động Hóa AI Agent</title>
+    <title>Giải pháp AI Automation Doanh nghiệp | SPORTAIV</title>
+    <meta name="description" content="Tối ưu chi phí vận hành, bảo mật dữ liệu tuyệt đối với kiến trúc AI Automation dành riêng cho doanh nghiệp Việt Nam.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap & Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css?v=4">
+    
+    <style>
+        :root {
+            --primary-color: #0f172a; /* Navy Blue */
+            --accent-color: #10b981; /* Emerald Green */
+            --accent-hover: #059669;
+            --secondary-color: #2563eb; /* Electric Blue */
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --text-main: #334155;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --danger-color: #ef4444;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-dark);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        /* Navbar */
+        .navbar-light-custom {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand strong {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        /* Buttons */
+        .btn-cta {
+            background-color: var(--accent-color);
+            color: #fff;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 8px;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+            color: #fff;
+        }
+
+        .btn-outline-primary-custom {
+            background-color: transparent;
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-outline-primary-custom:hover {
+            border-color: var(--primary-color);
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--secondary-color);
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(37, 99, 235, 0.2);
+        }
+
+        .hero-mockup {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-mockup-header {
+            background: #f8fafc;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            gap: 8px;
+        }
+
+        .mac-dot {
+            width: 12px; height: 12px; border-radius: 50%;
+        }
+
+        /* Cards */
+        .pain-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pain-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            border-color: #cbd5e1;
+        }
+
+        .pain-icon {
+            width: 56px; height: 56px;
+            background: #fef2f2;
+            color: var(--danger-color);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Flowchart styling */
+        .flow-container {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .flow-node {
+            background: var(--bg-light);
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .flow-node.highlight {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: var(--accent-color);
+            color: var(--accent-hover);
+        }
+
+        .flow-node.human {
+            background: rgba(37, 99, 235, 0.1);
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        .flow-arrow {
+            color: #cbd5e1;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Tabs */
+        .nav-pills-custom .nav-link {
+            color: var(--text-muted);
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            margin-right: 8px;
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+        }
+
+        .nav-pills-custom .nav-link.active {
+            background: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+
+        /* Table */
+        .roi-table {
+            background: var(--bg-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+        }
+        
+        .roi-table th {
+            background: var(--bg-light);
+            font-weight: 600;
+            color: var(--text-dark);
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .roi-table td {
+            padding: 1.5rem;
+            vertical-align: middle;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .roi-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Sticky Zalo */
+        .zalo-sticky {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #0068ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0, 104, 255, 0.4);
+            z-index: 1000;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+        
+        .zalo-sticky:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+        
+        .bg-gray {
+            background-color: var(--bg-white);
+        }
+
+    </style>
 </head>
 <body>
-    <!-- Premium Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-premium fixed-top">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light-custom fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <i class="fas fa-sparkles me-2"></i><strong>Giải Pháp AI Agent</strong>
+                <i class="fas fa-layer-group me-2" style="color: var(--secondary-color);"></i><strong>SPORTAIV</strong>
             </a>
-            <div class="d-flex align-items-center order-lg-last gap-2">
-                <div class="btn-group bg-dark border border-secondary rounded-pill p-1 shadow-sm d-lg-none" role="group">
-                    <a href="../services.html" onclick="localStorage.setItem('lang', 'en');" class="btn btn-sm btn-dark text-muted rounded-pill fw-bold px-2 border-0" style="font-size:0.75rem;">EN</a>
-                    <a href="#" onclick="localStorage.setItem('lang', 'vi'); location.reload();" class="btn btn-sm btn-primary text-white rounded-pill fw-bold px-2 border-0" style="font-size:0.75rem;">VN</a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="academy.html">Học Viện <span class="badge bg-warning text-dark" style="font-size: 0.6rem; vertical-align: top; margin-left:2px;">Soon</span></a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProducts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Sản Phẩm
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownProducts">
-                            <li><a class="dropdown-item" href="../tuvan.html">MOMER AI</a></li>
-                            <li><a class="dropdown-item" href="https://chaomao.sportaiv.com/">Chao Mao AI</a></li>
-                            <li><a class="dropdown-item" href="../geoPulse/geoPulse.html">GeoPulse AI</a></li>
-                            <li><a class="dropdown-item" href="../motorcycle-rescue-danang.html">Motorcycle Rescue AI</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link active" href="services.html">Dịch Vụ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="case_studies.html">Dự Án</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about_us.html">Về Chúng Tôi</a></li>
-                    <li class="nav-item ms-lg-2 my-2 my-lg-0 d-none d-lg-flex align-items-center">
-                        <div class="btn-group bg-dark border border-secondary rounded-pill p-1 shadow-sm" role="group">
-                            <a href="../services.html" onclick="localStorage.setItem('lang', 'en');" class="btn btn-sm btn-dark text-muted rounded-pill fw-bold px-3 border-0" style="font-size:0.8rem;">EN</a>
-                            <a href="#" onclick="localStorage.setItem('lang', 'vi'); location.reload();" class="btn btn-sm btn-primary text-white rounded-pill fw-bold px-3 border-0" style="font-size:0.8rem;">VN</a>
-                        </div>
-                    </li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-cta-nav" href="book_a_call.html">Đặt Lịch Tư Vấn</a>
-                    </li>
-                </ul>
+            <div class="d-flex align-items-center">
+                <a href="#booking" class="btn-cta d-none d-lg-inline-flex" style="padding: 10px 20px; font-size: 0.9rem;">
+                    Đặt Lịch Tư Vấn Kiến Trúc AI (15 Phút)
+                </a>
             </div>
         </div>
     </nav>
 
-    <!-- Global Dark Mode & Typography Override -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif !important;
-            background-color: #000 !important;
-            color: #fff !important;
-        }
-        .navbar-premium {
-            background: rgba(0, 0, 0, 0.8) !important;
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #222;
-        }
-        .navbar-premium .nav-link, .navbar-premium .navbar-brand {
-            color: #fff !important;
-        }
-        /* Custom scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #000; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #555; }
-    </style>
-
-    <!-- Hero Section -->
-    <section class="hero-section" style="padding: 140px 0 100px; background-color: #000; border-bottom: 1px solid #1a1a1a; position: relative; overflow: hidden;">
-        <!-- Background Glow -->
-        <div style="position: absolute; top: -30%; left: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(79, 70, 229, 0.1) 0%, transparent 60%); border-radius: 50%; pointer-events: none;"></div>
-
-        <div class="container hero-content" style="position: relative; z-index: 2;">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <h1 class="display-4 fw-bold mb-4" style="letter-spacing: -1.5px; line-height: 1.1; color: #fff;">Kiến Trúc <span style="background: linear-gradient(to right, #818cf8, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Các Quy Trình Tự Trị</span> Cho Doanh Nghiệp Hiện Đại.</h1>
-                    <p class="lead mb-5" style="font-size: 1.15rem; color: #a1a1aa; line-height: 1.6;">Chúng tôi không chỉ xây dựng chatbot. Chúng tôi thiết kế các hệ thống đa Agent thực thi logic phức tạp, tích hợp liền mạch với hệ thống của bạn và mở rộng quy mô vận hành 24/7.</p>
-                    <a href="book_a_call.html" class="btn btn-primary btn-lg" style="background: #4f46e5; border: none; border-radius: 8px; font-weight: 600; padding: 14px 32px; font-size: 1rem; transition: all 0.3s; box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39); color: #fff; text-decoration: none;">Đặt Lịch Đánh Giá Kiến Trúc Hệ Thống</a>
-                </div>
+    <!-- Section 1: Hero -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
                 <div class="col-lg-6">
-                    <div style="background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 16px; padding: 2rem; position: relative; overflow: hidden; height: 420px; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
-                        <!-- Abstract Node-based workflow illustration -->
-                        <div style="position: absolute; width: 300px; height: 300px; background: radial-gradient(circle, rgba(79, 70, 229, 0.05) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
-                        
-                        <div style="position: absolute; width: 80px; height: 80px; background: #0a0a0a; border: 1px solid #333; border-radius: 16px; top: 15%; left: 15%; display: flex; align-items: center; justify-content: center; z-index: 2; transition: all 0.3s;"><i class="fas fa-brain fa-2x" style="color: #818cf8;"></i></div>
-                        
-                        <div style="position: absolute; width: 90px; height: 90px; background: rgba(79, 70, 229, 0.1); border: 1px solid #4f46e5; border-radius: 20px; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; z-index: 2; box-shadow: 0 0 30px rgba(79, 70, 229, 0.3);"><i class="fas fa-project-diagram fa-2x" style="color: #fff;"></i></div>
-                        
-                        <div style="position: absolute; width: 80px; height: 80px; background: #0a0a0a; border: 1px solid #333; border-radius: 16px; bottom: 15%; right: 15%; display: flex; align-items: center; justify-content: center; z-index: 2;"><i class="fas fa-database fa-2x" style="color: #818cf8;"></i></div>
-
-                        <!-- Connections -->
-                        <!-- Glowing Lines -->
-                        <div style="position: absolute; width: 140px; height: 2px; background: linear-gradient(90deg, #333, #4f46e5); top: 35%; left: 25%; transform: rotate(35deg); z-index: 1;"></div>
-                        <div style="position: absolute; width: 140px; height: 2px; background: linear-gradient(90deg, #4f46e5, #333); bottom: 35%; right: 25%; transform: rotate(35deg); z-index: 1;"></div>
-                        
-                        <!-- Floating Data Particles -->
-                        <div style="position: absolute; width: 6px; height: 6px; background: #fff; border-radius: 50%; top: 35%; left: 35%; box-shadow: 0 0 10px #fff; z-index: 3;"></div>
-                        <div style="position: absolute; width: 6px; height: 6px; background: #fff; border-radius: 50%; bottom: 35%; right: 35%; box-shadow: 0 0 10px #fff; z-index: 3;"></div>
+                    <div class="hero-badge">Dành cho Doanh nghiệp & Quản lý cấp cao</div>
+                    <h1 class="display-5 fw-bold mb-4">
+                        Giải Phóng Nhân Sự. Tối Ưu Chi Phí.<br>
+                        <span style="color: var(--secondary-color);">Kiểm Soát Hoàn Toàn Bằng AI.</span>
+                    </h1>
+                    <p class="lead mb-5" style="color: var(--text-muted); font-size: 1.15rem;">
+                        Chúng tôi thiết kế kiến trúc AI Automation "May Đo" chạy trên Private Cloud nội bộ. Giúp doanh nghiệp tự động hóa CSKH, Vận hành và Marketing mà <strong>không lo rò rỉ dữ liệu</strong>.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#booking" class="btn-cta">
+                            <i class="fas fa-clipboard-check"></i> Nhận Bản Khảo Sát Quy Trình Miễn Phí
+                        </a>
+                        <a href="#roi-table" class="btn-outline-primary-custom">
+                            Xem Bảng Tính ROI
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="hero-mockup">
+                        <div class="hero-mockup-header">
+                            <div class="mac-dot" style="background:#ef4444;"></div>
+                            <div class="mac-dot" style="background:#eab308;"></div>
+                            <div class="mac-dot" style="background:#22c55e;"></div>
+                        </div>
+                        <div class="p-4 bg-white" style="height: 380px; display: flex; flex-direction: column; justify-content: center;">
+                            <!-- Abstract Flowchart UI -->
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <div class="flow-node" style="width: 30%;"><i class="fab fa-wpforms text-primary mb-2"></i><br><small>Khách điền Form</small></div>
+                                <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+                                <div class="flow-node highlight" style="width: 30%;"><i class="fas fa-robot mb-2"></i><br><small>AI Phân Tích</small></div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="flow-arrow" style="width: 30%; text-align: center;"><i class="fas fa-arrow-down"></i></div>
+                                <div class="flow-arrow" style="width: 30%; text-align: center;"><i class="fas fa-arrow-down"></i></div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mt-4">
+                                <div class="flow-node" style="width: 30%;"><i class="fas fa-database text-muted mb-2"></i><br><small>Lưu KiotViet</small></div>
+                                <div class="flow-arrow"><i class="fas fa-check-circle text-success"></i></div>
+                                <div class="flow-node human" style="width: 30%;"><i class="fas fa-user-check mb-2"></i><br><small>Zalo: Báo Sale</small></div>
+                            </div>
+                            <div class="text-center mt-4 text-muted" style="font-size: 0.8rem; font-family: monospace;">
+                                <i class="fas fa-circle text-success ms-1" style="font-size: 0.5rem; vertical-align: middle;"></i> n8n Workflow Active
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Core Services (Bento Box) -->
-    <section class="services-section" style="padding: 120px 0; background-color: #050505; position: relative; overflow: hidden;">
-        <!-- Background Glow -->
-        <div style="position: absolute; top: -20%; right: -10%; width: 50vw; height: 50vw; background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%); border-radius: 50%; pointer-events: none;"></div>
-        
-        <div class="container" style="position: relative; z-index: 2;">
-            <div class="text-center mb-5 pb-3">
-                <h2 class="fw-bold text-white" style="font-size: 2.5rem; letter-spacing: -1px;">Dịch Vụ Cốt Lõi Của Chúng Tôi</h2>
-                <p style="color: #a1a1aa; font-size: 1.15rem; max-width: 600px; margin: 0 auto;">Kiến trúc trí thông minh vào từng lớp của doanh nghiệp bạn.</p>
+    <!-- Section 2: Pain Points -->
+    <section class="section-padding bg-gray">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="mb-3">Thực Trạng Triển Khai AI Tại Việt Nam</h2>
+                <p class="text-muted">Tại sao nhiều doanh nghiệp tốn tiền mua AI nhưng không thấy hiệu quả?</p>
             </div>
             
-            <style>
-                .bento-grid {
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 1.5rem;
-                }
-                .bento-card {
-                    background: #0a0a0a;
-                    border: 1px solid #1a1a1a;
-                    border-radius: 20px;
-                    padding: 3rem;
-                    height: 100%;
-                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-                    position: relative;
-                    overflow: hidden;
-                    display: flex;
-                    flex-direction: column;
-                    text-decoration: none;
-                }
-                .bento-card:hover {
-                    border-color: #4f46e5;
-                    transform: translateY(-5px);
-                    box-shadow: 0 10px 40px -10px rgba(79, 70, 229, 0.3);
-                }
-                .bento-card.full-width {
-                    grid-column: span 2;
-                    flex-direction: row;
-                    align-items: center;
-                    gap: 3rem;
-                }
-                @media (max-width: 991px) {
-                    .bento-grid { grid-template-columns: 1fr; }
-                    .bento-card.full-width { grid-column: span 1; flex-direction: column; align-items: flex-start; }
-                }
-                .bento-icon {
-                    width: 64px; height: 64px;
-                    background: rgba(79, 70, 229, 0.1);
-                    border: 1px solid rgba(79, 70, 229, 0.3);
-                    border-radius: 16px;
-                    display: flex; align-items: center; justify-content: center;
-                    font-size: 1.8rem;
-                    margin-bottom: 1.5rem;
-                    color: #818cf8;
-                    flex-shrink: 0;
-                }
-                .tech-tag {
-                    background: #111;
-                    border: 1px solid #222;
-                    color: #888;
-                    font-size: 0.8rem;
-                    font-weight: 500;
-                    padding: 6px 14px;
-                    border-radius: 20px;
-                    margin-right: 8px;
-                    margin-bottom: 8px;
-                    display: inline-block;
-                    transition: all 0.2s;
-                }
-                .bento-card:hover .tech-tag {
-                    border-color: #333;
-                    color: #ccc;
-                }
-                .roi-highlight {
-                    background: rgba(16, 185, 129, 0.1);
-                    border: 1px solid rgba(16, 185, 129, 0.2);
-                    color: #34d399;
-                    font-size: 0.9rem;
-                    font-weight: 600;
-                    padding: 8px 16px;
-                    border-radius: 8px;
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 8px;
-                    margin-top: 1.5rem;
-                }
-            </style>
-
-            <div class="bento-grid">
-                <!-- Service 1 (Full Width) -->
-                <div class="bento-card full-width">
-                    <div style="flex: 1;">
-                        <div class="bento-icon"><i class="fas fa-project-diagram"></i></div>
-                        <h3 class="fw-bold mb-3 text-white">Điều Phối Quy Trình Làm Việc Tự Trị</h3>
-                        <p style="color: #a1a1aa; margin-bottom: 1.5rem; line-height: 1.6; font-size: 1.1rem;">Chúng tôi thiết kế các hệ thống đa Agent tùy chỉnh bằng LangGraph và n8n để tự động hóa các quy trình vận hành phức tạp dựa trên quyết định.</p>
-                        <div class="mt-auto">
-                            <span class="tech-tag">n8n</span>
-                            <span class="tech-tag">LangGraph</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Supabase</span>
-                        </div>
-                        <div class="roi-highlight">
-                            <i class="fas fa-chart-line"></i> Giảm 70% số giờ vận hành thủ công.
-                        </div>
-                    </div>
-                    <div style="flex: 1; min-width: 300px; display: flex; justify-content: center; width: 100%;">
-                        <!-- Node Mockup -->
-                        <div style="width: 100%; max-width: 400px; height: 250px; background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 12px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 0 20px rgba(0,0,0,0.5);">
-                            <div style="position: absolute; width: 60px; height: 60px; background: #111; border: 1px solid #333; border-radius: 12px; left: 10%; display: flex; align-items: center; justify-content: center; z-index: 2;"><i class="fas fa-envelope text-muted"></i></div>
-                            <div style="position: absolute; width: 70px; height: 70px; background: rgba(79, 70, 229, 0.1); border: 1px solid #4f46e5; border-radius: 16px; left: 40%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(79,70,229,0.3); z-index: 2;"><i class="fas fa-brain fa-lg" style="color: #818cf8;"></i></div>
-                            <div style="position: absolute; width: 60px; height: 60px; background: #111; border: 1px solid #333; border-radius: 12px; right: 10%; top: 20%; display: flex; align-items: center; justify-content: center; z-index: 2;"><i class="fas fa-database text-muted"></i></div>
-                            <div style="position: absolute; width: 60px; height: 60px; background: #111; border: 1px solid #333; border-radius: 12px; right: 10%; bottom: 20%; display: flex; align-items: center; justify-content: center; z-index: 2;"><i class="fas fa-check-circle text-muted"></i></div>
-                            <!-- Lines -->
-                            <div style="position: absolute; width: 80px; height: 2px; background: linear-gradient(90deg, #333, #4f46e5); left: 20%; top: 50%; z-index: 1;"></div>
-                            <div style="position: absolute; width: 80px; height: 2px; background: linear-gradient(90deg, #4f46e5, #333); right: 20%; top: 35%; transform: rotate(-25deg); z-index: 1;"></div>
-                            <div style="position: absolute; width: 80px; height: 2px; background: linear-gradient(90deg, #4f46e5, #333); right: 20%; bottom: 35%; transform: rotate(25deg); z-index: 1;"></div>
-                        </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="pain-card">
+                        <div class="pain-icon"><i class="fas fa-money-bill-wave"></i></div>
+                        <h4 class="h5 fw-bold mb-3">Tốn Kém Nhưng Rời Rạc</h4>
+                        <p class="text-muted mb-0">Tốn hàng chục triệu mua tài khoản (ChatGPT, Claude) lẻ cho từng nhân viên, nhưng mỗi người dùng một kiểu, không đo lường được hiệu suất thực tế.</p>
                     </div>
                 </div>
-
-                <!-- Service 2 -->
-                <div class="bento-card">
-                    <div class="bento-icon"><i class="fas fa-search-dollar"></i></div>
-                    <h4 class="fw-bold mb-3 text-white">Trí Tuệ Thị Trường Với GEO-Pulse</h4>
-                    <p style="color: #a1a1aa; margin-bottom: 2rem; line-height: 1.6; flex-grow: 1;">Triển khai các Agent trinh sát thông minh để phân tích xu hướng thị trường theo thời gian thực, thu thập dữ liệu giá trị và tối ưu hóa dấu chân tìm kiếm toàn cầu của bạn.</p>
-                    <div class="mb-4">
-                        <span class="tech-tag">LLMs</span>
-                        <span class="tech-tag">Web Scraping</span>
-                        <span class="tech-tag">Vector Databases</span>
-                    </div>
-                    <div class="roi-highlight mt-auto" style="color: #60a5fa; background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.2);">
-                        <i class="fas fa-globe-americas"></i> Các quyết định dựa trên dữ liệu được lập bản đồ theo thời gian thực.
+                <div class="col-md-4">
+                    <div class="pain-card">
+                        <div class="pain-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h4 class="h5 fw-bold mb-3">Rủi Ro Rò Rỉ Dữ Liệu</h4>
+                        <p class="text-muted mb-0">Nhân viên đưa data khách hàng, báo cáo tài chính lên các công cụ AI công cộng. Nguy cơ mất bí mật kinh doanh và vi phạm pháp luật bảo mật.</p>
                     </div>
                 </div>
-
-                <!-- Service 3 -->
-                <div class="bento-card">
-                    <div class="bento-icon"><i class="fas fa-comments"></i></div>
-                    <h4 class="fw-bold mb-3 text-white">RAG Nâng Cao & Trợ Lý AI Nội Bộ</h4>
-                    <p style="color: #a1a1aa; margin-bottom: 2rem; line-height: 1.6; flex-grow: 1;">Không chỉ là một chatbot. Chúng tôi xây dựng các trợ lý tri thức nội bộ bảo mật, nhận thức ngữ cảnh, kết nối trực tiếp với Google Drive, Notion và cơ sở dữ liệu nội bộ của bạn.</p>
-                    <div class="mb-4">
-                        <span class="tech-tag">OpenAI</span>
-                        <span class="tech-tag">RAG</span>
-                        <span class="tech-tag">Vector Search</span>
-                        <span class="tech-tag">Vercel</span>
-                    </div>
-                    <div class="roi-highlight mt-auto" style="color: #a78bfa; background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.2);">
-                        <i class="fas fa-lock"></i> Tri thức bảo mật, nhận thức ngữ cảnh.
+                <div class="col-md-4">
+                    <div class="pain-card">
+                        <div class="pain-icon"><i class="fas fa-hourglass-end"></i></div>
+                        <h4 class="h5 fw-bold mb-3">Hệ Thống Nhanh Lỗi Thời</h4>
+                        <p class="text-muted mb-0">AI cập nhật thuật toán mỗi tuần. Các giải pháp "tự build" hoặc mua đứt thường nhanh chóng bị hỏng prompt hoặc không còn tương thích.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- The Architecture Stack -->
-    <section class="stack-section" style="padding: 100px 0; background-color: #000; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a;">
+    <!-- Section 3: Ecosystem & Flow -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="mb-3">Kiến Trúc Tự Động Hóa "May Đo" Cho Từng Phòng Ban</h2>
+                <p class="text-muted">Chúng tôi thiết kế luồng xử lý thông minh (Workflow) tích hợp sâu vào hệ sinh thái có sẵn của bạn.</p>
+            </div>
+
+            <!-- Tabs -->
+            <ul class="nav nav-pills nav-pills-custom justify-content-center mb-5" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-cskh-tab" data-bs-toggle="pill" data-bs-target="#pills-cskh" type="button" role="tab">Chăm Sóc Khách Hàng</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-ops-tab" data-bs-toggle="pill" data-bs-target="#pills-ops" type="button" role="tab">Vận Hành & Nhân Sự</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-mkt-tab" data-bs-toggle="pill" data-bs-target="#pills-mkt" type="button" role="tab">Marketing & Bán Hàng</button>
+                </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="pills-tabContent">
+                <!-- CSKH Tab -->
+                <div class="tab-pane fade show active" id="pills-cskh" role="tabpanel">
+                    <div class="flow-container text-center">
+                        <div class="row align-items-center justify-content-center g-3">
+                            <div class="col-md-2">
+                                <div class="flow-node"><i class="fas fa-comment-dots mb-2 text-primary"></i><br>Khách Chat<br><small class="text-muted">Zalo OA / Fanpage</small></div>
+                            </div>
+                            <div class="col-md-1"><i class="fas fa-arrow-right text-muted"></i></div>
+                            <div class="col-md-2">
+                                <div class="flow-node highlight"><i class="fas fa-brain mb-2"></i><br>AI RAG<br><small class="text-muted">Đọc File Sản Phẩm</small></div>
+                            </div>
+                            <div class="col-md-1"><i class="fas fa-arrow-right text-muted"></i></div>
+                            <div class="col-md-2">
+                                <div class="flow-node human"><i class="fas fa-user-shield mb-2"></i><br>Human-in-Loop<br><small class="text-muted">Sale Duyệt 1 Chạm</small></div>
+                            </div>
+                            <div class="col-md-1"><i class="fas fa-arrow-right text-muted"></i></div>
+                            <div class="col-md-2">
+                                <div class="flow-node"><i class="fas fa-paper-plane mb-2 text-success"></i><br>Phản Hồi<br><small class="text-muted">Tự Động Trả Lời</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OPS Tab -->
+                <div class="tab-pane fade" id="pills-ops" role="tabpanel">
+                    <div class="flow-container text-center">
+                        <div class="row align-items-center justify-content-center g-3">
+                            <div class="col-md-2">
+                                <div class="flow-node"><i class="fas fa-envelope-open-text mb-2 text-primary"></i><br>Email/Ticket<br><small class="text-muted">Nhận yêu cầu</small></div>
+                            </div>
+                            <div class="col-md-1"><i class="fas fa-arrow-right text-muted"></i></div>
+                            <div class="col-md-2">
+                                <div class="flow-node highlight"><i class="fas fa-sitemap mb-2"></i><br>AI Phân Loại<br><small class="text-muted">LangGraph Agent</small></div>
+                            </div>
+                            <div class="col-md-1"><i class="fas fa-arrow-right text-muted"></i></div>
+                            <div class="col-md-2">
+                                <div class="flow-node"><i class="fas fa-tasks mb-2 text-secondary"></i><br>Lark/Trello<br><small class="text-muted">Tạo Task Tự Động</small></div>
+                            </div>
+                            <div class="col-md-1"><i class="fas fa-arrow-right text-muted"></i></div>
+                            <div class="col-md-2">
+                                <div class="flow-node human"><i class="fas fa-bell mb-2 text-success"></i><br>Báo Cáo<br><small class="text-muted">Telegram/Zalo</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MKT Tab -->
+                <div class="tab-pane fade" id="pills-mkt" role="tabpanel">
+                    <div class="flow-container text-center">
+                        <div class="row align-items-center justify-content-center g-3">
+                            <div class="col-md-2">
+                                <div class="flow-node"><i class="fas fa-spider mb-2 text-primary"></i><br>Data Scraping<br><small class="text-muted">Quét Đối Thủ</small></div>
+                            </div>
+                            <div class="col-md-1"><i class="fas fa-arrow-right text-muted"></i></div>
+                            <div class="col-md-2">
+                                <div class="flow-node highlight"><i class="fas fa-chart-line mb-2"></i><br>AI Phân Tích<br><small class="text-muted">Tổng hợp Insight</small></div>
+                            </div>
+                            <div class="col-md-1"><i class="fas fa-arrow-right text-muted"></i></div>
+                            <div class="col-md-2">
+                                <div class="flow-node"><i class="fas fa-file-word mb-2 text-secondary"></i><br>Tạo Content<br><small class="text-muted">Lên Outline</small></div>
+                            </div>
+                            <div class="col-md-1"><i class="fas fa-arrow-right text-muted"></i></div>
+                            <div class="col-md-2">
+                                <div class="flow-node human"><i class="fas fa-user-edit mb-2 text-success"></i><br>Kiểm Duyệt<br><small class="text-muted">Người Đăng Bài</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p class="text-muted fw-medium"><i class="fas fa-check-circle text-success me-2"></i> Tích hợp mượt mà với: <strong>Zalo, Lark Suite, KiotViet, Google Sheets, VietQR.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Architecture & Legal -->
+    <section class="section-padding bg-gray border-top border-bottom">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <h2 class="mb-4">Tuân Thủ Tuyệt Đối Luật Bảo Vệ Dữ Liệu 2025</h2>
+                    <p class="text-muted mb-4">Với quy định nghiêm ngặt từ <strong>Luật Bảo vệ dữ liệu cá nhân (Số 91/2025) và Nghị định 356</strong>, việc dùng AI "lậu" là rủi ro pháp lý khổng lồ.</p>
+                    
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-3 d-flex">
+                            <i class="fas fa-server text-primary mt-1 me-3"></i>
+                            <div>
+                                <strong class="text-dark">Self-hosted & Private Cloud</strong><br>
+                                <span class="text-muted small">Hệ thống n8n, Open WebUI được triển khai độc lập trên VPS riêng của doanh nghiệp tại Việt Nam. Không rò rỉ data.</span>
+                            </div>
+                        </li>
+                        <li class="mb-3 d-flex">
+                            <i class="fas fa-user-lock text-primary mt-1 me-3"></i>
+                            <div>
+                                <strong class="text-dark">Zero Data Retention</strong><br>
+                                <span class="text-muted small">Kết nối API chuẩn Doanh nghiệp. OpenAI/Claude cam kết không lưu trữ hoặc dùng dữ liệu của bạn để huấn luyện.</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#booking" class="btn-outline-primary-custom">Tư vấn hạ tầng bảo mật</a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="p-4" style="background: var(--primary-color); border-radius: 20px; color: white;">
+                        <h5 class="mb-4 text-center text-white opacity-75">Kiến Trúc Dữ Liệu Tiêu Chuẩn</h5>
+                        
+                        <div class="d-flex align-items-center justify-content-between text-center px-3 mb-4">
+                            <div class="flex-fill">
+                                <div class="bg-white text-dark p-3 rounded-3 fw-bold"><i class="fas fa-building text-primary mb-2 d-block fa-2x"></i> Doanh Nghiệp<br><small class="text-muted fw-normal">Dữ liệu nội bộ</small></div>
+                            </div>
+                            <div class="px-3"><i class="fas fa-lock text-success mb-1"></i><br>Mã hóa</div>
+                            <div class="flex-fill">
+                                <div class="border border-secondary p-3 rounded-3" style="background: rgba(255,255,255,0.1);"><i class="fas fa-network-wired text-info mb-2 d-block fa-2x"></i> VPS Cloud<br><small class="opacity-75">n8n / LangGraph</small></div>
+                            </div>
+                            <div class="px-3"><i class="fas fa-exchange-alt opacity-50 mb-1"></i><br>API</div>
+                            <div class="flex-fill">
+                                <div class="bg-dark border border-secondary p-3 rounded-3"><i class="fas fa-robot text-warning mb-2 d-block fa-2x"></i> Core LLM<br><small class="opacity-75">Không lưu Data</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: ROI Table -->
+    <section id="roi-table" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="mb-3">Bài Toán Tối Ưu Chi Phí Rõ Ràng</h2>
+                <p class="text-muted">Chúng tôi không bán phần mềm, chúng tôi tối ưu dòng tiền vận hành của bạn.</p>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table roi-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Tiêu Chí</th>
+                            <th style="width: 37.5%; background: rgba(239, 68, 68, 0.05); border-bottom: 2px solid #ef4444;">Doanh nghiệp tự làm (Mua gói lẻ)</th>
+                            <th style="width: 37.5%; background: rgba(16, 185, 129, 0.05); border-bottom: 2px solid var(--accent-color); color: var(--accent-hover);">Giải pháp Kiến trúc SPORTAIV</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="fw-bold">Chi phí bản quyền</td>
+                            <td>Mua OpenAI Team, Claude Pro cho từng nhân sự<br><strong class="text-danger">$500 - $1,000+/tháng</strong></td>
+                            <td>Dùng mã nguồn mở n8n, Open WebUI self-hosted<br><strong class="text-success">$0 phí bản quyền</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Chi phí sử dụng</td>
+                            <td>Trả mức phí cố định hàng tháng dù dùng ít hay nhiều.</td>
+                            <td>Trả theo lượng Token thực tế qua API. <strong>Giảm tới 70% chi phí</strong>.</td>
+                        </tr>
+                        <tr>
+                            <td class="fw-bold">Quản trị & Bảo mật</td>
+                            <td>Nhân viên dùng tài khoản cá nhân, nguy cơ mất cắp dữ liệu rất cao.</td>
+                            <td>Kiểm soát tập trung trên 1 Server riêng, phân quyền chi tiết từng phòng ban.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: SLA & Trust -->
+    <section class="section-padding bg-gray border-top">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="assets/imgs/logo.png" alt="SPORTAIV Expert" class="img-fluid rounded-circle mb-4" style="width: 100px; background: var(--primary-color); padding: 10px;">
+                    <h2 class="mb-4">Cam Kết Bằng Quy Trình Nghiệm Thu Rõ Ràng</h2>
+                    <p class="text-muted mb-4">Đội ngũ kỹ sư tại SPORTAIV cam kết đồng hành lâu dài cùng sự tiến hóa của doanh nghiệp bạn với quy trình 3 giai đoạn chuẩn mực:</p>
+                    
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(37, 99, 235, 0.1); color: var(--secondary-color); display: flex; align-items: center; justify-content: center; font-weight: bold;">1</div>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold mb-1">Khảo sát & Thiết kế</h5>
+                            <p class="text-muted small">Vẽ luồng quy trình (Flowchart) chuẩn cho doanh nghiệp trước khi code. Khách hàng duyệt giải pháp mới tiến hành làm.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(37, 99, 235, 0.1); color: var(--secondary-color); display: flex; align-items: center; justify-content: center; font-weight: bold;">2</div>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold mb-1">Triển khai & Chuyển giao</h5>
+                            <p class="text-muted small">Bàn giao toàn bộ mã nguồn hệ thống, tài khoản API chính chủ. Tuyệt đối không "giam" source code của khách hàng.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(16, 185, 129, 0.1); color: var(--accent-hover); display: flex; align-items: center; justify-content: center; font-weight: bold;">3</div>
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold mb-1">Dịch vụ "Tiến Hóa AI" (SLA)</h5>
+                            <p class="text-muted small">Cập nhật Prompt định kỳ theo các AI model mới nhất. Tối ưu chi phí Token hàng tháng, đảm bảo hệ thống không bao giờ lỗi thời.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" id="booking">
+                    <div class="p-4 p-lg-5" style="background: var(--bg-white); border-radius: 24px; border: 1px solid var(--border-color); box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);">
+                        <div class="mb-3 d-inline-flex align-items-center" style="padding: 6px 14px; background: rgba(16, 185, 129, 0.1); color: var(--accent-hover); border-radius: 20px; font-weight: 600; font-size: 0.85rem;">
+                            <i class="fas fa-star me-2"></i>Được Đề Xuất
+                        </div>
+                        <h3 class="mb-3">Đặt Lịch Khảo Sát 1-1</h3>
+                        <p class="text-muted mb-4">Sử dụng lịch bên dưới để đặt lịch tư vấn 30 phút với Chuyên gia của chúng tôi. Chúng ta sẽ thảo luận chi tiết bài toán vận hành và phác thảo tiềm năng ROI dự kiến.</p>
+                        
+                        <!-- Calendar Placeholder -->
+                        <div class="text-center p-4 p-md-5 mb-4" style="background: var(--bg-light); border: 1px dashed #cbd5e1; border-radius: 16px;">
+                            <i class="fas fa-calendar-alt fa-3x text-primary mb-3"></i>
+                            <h5 class="mb-2">Đặt Lịch Tư Vấn Miễn Phí</h5>
+                            <p class="text-muted small mb-4">Nhấp vào nút bên dưới để xem các khung giờ trống trên Calendly</p>
+                            <a href="https://calendly.com/momervn/30min" target="_blank" class="btn-cta w-100 justify-content-center" style="font-size: 1.1rem; padding: 14px;">
+                                <i class="fas fa-external-link-alt me-2"></i>Xem Khung Giờ Trống
+                            </a>
+                            <p class="text-muted mt-3 mb-0" style="font-size: 0.8rem;">
+                                <i class="fas fa-info-circle me-1"></i> Mở trong tab mới. Giờ hiển thị theo múi giờ của bạn.
+                            </p>
+                        </div>
+
+                        <!-- What to Expect -->
+                        <div class="mt-4">
+                            <h6 class="mb-3 fw-bold"><i class="fas fa-check-circle text-success me-2"></i>Bạn sẽ nhận được gì:</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2 text-muted"><i class="fas fa-clock text-primary me-2" style="width: 20px; text-align: center;"></i> 30 phút trao đổi chiến lược 1-1</li>
+                                <li class="mb-2 text-muted"><i class="fas fa-chart-line text-primary me-2" style="width: 20px; text-align: center;"></i> Phân tích tiềm năng tối ưu ROI</li>
+                                <li class="mb-2 text-muted"><i class="fas fa-lightbulb text-primary me-2" style="width: 20px; text-align: center;"></i> Đề xuất luồng tự động hóa</li>
+                                <li class="text-muted"><i class="fas fa-file-contract text-primary me-2" style="width: 20px; text-align: center;"></i> Tư vấn miễn phí, không ràng buộc</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking / Footer -->
+    <section class="section-padding border-top" style="background: #0f172a; color: white;">
         <div class="container text-center">
-            <h6 class="text-uppercase mb-5 fw-bold" style="letter-spacing: 2px; color: #555; font-size: 0.85rem;">Được Xây Dựng Trên Các Framework Cấp Doanh Nghiệp</h6>
+            <h2 class="text-white mb-4">Liên Hệ Đội Ngũ SPORTAIV</h2>
+            <p class="text-white-50 mb-5 max-w-lg mx-auto">Chuyên gia Kiến trúc AI của chúng tôi sẽ lắng nghe bài toán của bạn và tư vấn luồng quy trình (Workflow) hoàn toàn miễn phí.</p>
             
-            <style>
-                .logo-grid {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    gap: 4rem;
-                    align-items: center;
-                    opacity: 0.7;
-                }
-                .logo-item {
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                    color: #666;
-                    transition: all 0.3s ease;
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    filter: grayscale(100%);
-                }
-                .logo-item:hover {
-                    color: #fff;
-                    filter: grayscale(0%);
-                    transform: translateY(-2px);
-                }
-                @media (max-width: 768px) {
-                    .logo-grid { gap: 2rem; }
-                    .logo-item { font-size: 1.2rem; width: 40%; justify-content: center; }
-                }
-            </style>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="https://zalo.me/0795777607" target="_blank" class="btn btn-primary" style="padding: 12px 30px; font-weight: 600; border-radius: 8px;">
+                    <i class="fas fa-comment-dots me-2"></i> Chat Zalo Ngay
+                </a>
+                <a href="mailto:hthanh1192@gmail.com" class="btn btn-outline-light" style="padding: 12px 30px; font-weight: 600; border-radius: 8px;">
+                    <i class="fas fa-envelope me-2"></i> Gửi Email
+                </a>
+            </div>
             
-            <div class="logo-grid">
-                <div class="logo-item"><i class="fas fa-project-diagram"></i> n8n</div>
-                <div class="logo-item"><i class="fas fa-network-wired"></i> LangGraph</div>
-                <div class="logo-item"><i class="fas fa-database"></i> Supabase</div>
-                <div class="logo-item"><i class="fas fa-caret-up"></i> Vercel</div>
-                <div class="logo-item"><i class="fas fa-robot"></i> OpenAI</div>
-                <div class="logo-item"><i class="fas fa-brain"></i> Anthropic</div>
-                <div class="logo-item"><i class="fab fa-docker"></i> Docker</div>
+            <div class="mt-5 pt-5 border-top border-secondary text-white-50 small">
+                <p>&copy; 2026 SPORTAIV - Strategic Agentic AI Studio.</p>
             </div>
         </div>
     </section>
 
-    <!-- The Delivery Process -->
-    <section class="process-section" style="padding: 120px 0; background-color: #050505;">
-        <div class="container">
-            <div class="text-center mb-5 pb-4">
-                <h2 class="fw-bold text-white" style="font-size: 2.5rem; letter-spacing: -1px;">Quy Trình Triển Khai</h2>
-                <p style="color: #a1a1aa; font-size: 1.15rem;">Kiến trúc chiến lược trước khi viết dòng code đầu tiên.</p>
-            </div>
-            
-            <style>
-                .timeline {
-                    position: relative;
-                    max-width: 900px;
-                    margin: 0 auto;
-                }
-                .timeline::after {
-                    content: '';
-                    position: absolute;
-                    width: 1px;
-                    background: #222;
-                    top: 0; bottom: 0; left: 50%;
-                }
-                .timeline-item {
-                    padding: 10px 50px;
-                    position: relative;
-                    width: 50%;
-                    margin-bottom: 2rem;
-                }
-                .timeline-item::after {
-                    content: '';
-                    position: absolute;
-                    width: 12px; height: 12px;
-                    right: -6px; background: #050505;
-                    border: 2px solid #fff;
-                    top: 24px; border-radius: 50%;
-                    z-index: 1;
-                }
-                .left { left: 0; text-align: right; }
-                .right { left: 50%; }
-                .right::after { left: -6px; }
-                .timeline-content {
-                    padding: 2rem;
-                    background: #0a0a0a;
-                    border-radius: 16px;
-                    border: 1px solid #1a1a1a;
-                    transition: transform 0.3s ease;
-                }
-                .timeline-item:hover .timeline-content {
-                    border-color: #333;
-                }
-                .phase-badge {
-                    display: inline-block;
-                    padding: 4px 10px;
-                    background: #111;
-                    border: 1px solid #222;
-                    border-radius: 6px;
-                    font-size: 0.75rem;
-                    font-weight: 600;
-                    color: #fff;
-                    margin-bottom: 1rem;
-                    letter-spacing: 1px;
-                    text-transform: uppercase;
-                }
-                @media screen and (max-width: 768px) {
-                    .timeline::after { left: 24px; }
-                    .timeline-item { width: 100%; padding-left: 60px; padding-right: 15px; text-align: left; }
-                    .timeline-item::after { left: 18px; }
-                    .right { left: 0%; }
-                }
-            </style>
-
-            <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <span class="phase-badge">Giai Đoạn 1</span>
-                        <h4 class="fw-bold text-white mb-3">Đánh Giá Kiến Trúc</h4>
-                        <p class="text-muted mb-0" style="line-height: 1.6;">Phân tích các điểm nghẽn và lập bản đồ các luồng vận hành.</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <span class="phase-badge">Giai Đoạn 2</span>
-                        <h4 class="fw-bold text-white mb-3">Thiết Kế Agent & Kỹ Thuật Prompt</h4>
-                        <p class="text-muted mb-0" style="line-height: 1.6;">Thiết kế logic và trí thông minh cho từng Agent riêng biệt.</p>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <span class="phase-badge">Giai Đoạn 3</span>
-                        <h4 class="fw-bold text-white mb-3">Tích Hợp & Triển Khai</h4>
-                        <p class="text-muted mb-0" style="line-height: 1.6;">Tích hợp mượt mà với các hệ thống hiện tại của bạn qua API/Webhooks.</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <span class="phase-badge">Giai Đoạn 4</span>
-                        <h4 class="fw-bold text-white mb-3">Tối Ưu Hóa & Mở Rộng</h4>
-                        <p class="text-muted mb-0" style="line-height: 1.6;">Tối ưu hóa liên tục về độ trễ và quản lý chi phí API.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA Section -->
-    <section class="final-cta" style="padding: 120px 0; background-color: #000; border-top: 1px solid #1a1a1a; text-align: center;">
-        <div class="container">
-            <div style="max-width: 700px; margin: 0 auto; background: linear-gradient(180deg, #0a0a0a 0%, #000 100%); border: 1px solid #222; border-radius: 24px; padding: 4rem 2rem;">
-                <h2 class="display-5 fw-bold mb-4 text-white" style="letter-spacing: -1px;">Sẵn sàng nâng cấp cơ sở hạ tầng của bạn?</h2>
-                <p class="lead mb-5" style="color: #a1a1aa;">Hãy cùng vạch ra kiến trúc tự động hóa của bạn.</p>
-                <a href="book_a_call.html" class="btn btn-light btn-lg" style="border-radius: 8px; font-weight: 600; padding: 16px 36px; transition: transform 0.2s;">Đặt Lịch Tư Vấn</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Clean Footer -->
-    <footer class="footer" style="padding: 80px 0 40px; background-color: #000; color: #a1a1aa; font-size: 0.95rem; border-top: 1px solid #111;">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h5 class="mb-4 text-white fw-bold"><i class="fas fa-sparkles me-2"></i>SPORTAIV</h5>
-                    <p style="max-width: 300px; line-height: 1.6;">Agentic AI Doanh Nghiệp và Các Quy Trình Tự Trị.</p>
-                </div>
-                <div class="col-lg-2 mb-4 mb-lg-0 offset-lg-2">
-                    <h6 class="mb-4 text-white fw-bold">Công Ty</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-3"><a href="about_us.html" style="color: #a1a1aa; text-decoration: none; transition: color 0.2s;">Về Chúng Tôi</a></li>
-                        <li class="mb-3"><a href="services.html" style="color: #fff; text-decoration: none; transition: color 0.2s;">Dịch Vụ</a></li>
-                        <li class="mb-3"><a href="case_studies.html" style="color: #a1a1aa; text-decoration: none; transition: color 0.2s;">Dự Án</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 mb-4 mb-lg-0">
-                    <h6 class="mb-4 text-white fw-bold">Pháp Lý</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-3"><a href="#" style="color: #a1a1aa; text-decoration: none; transition: color 0.2s;">Chính Sách Bảo Mật</a></li>
-                        <li class="mb-3"><a href="#" style="color: #a1a1aa; text-decoration: none; transition: color 0.2s;">Điều Khoản Dịch Vụ</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2">
-                    <h6 class="mb-4 text-white fw-bold">Mạng Xã Hội</h6>
-                    <ul class="list-unstyled">
-                        <li class="mb-3"><a href="#" style="color: #a1a1aa; text-decoration: none; transition: color 0.2s;"><i class="fab fa-linkedin me-2"></i>LinkedIn</a></li>
-                        <li class="mb-3"><a href="#" style="color: #a1a1aa; text-decoration: none; transition: color 0.2s;"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
-                    </ul>
-                </div>
-            </div>
-            <hr style="border-color: #1a1a1a; margin-bottom: 2rem;">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <p class="mb-0">&copy; 2026 SPORTAIV. Đã đăng ký bản quyền.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- Sticky Zalo Button -->
+    <a href="https://zalo.me/0795777607" target="_blank" class="zalo-sticky" title="Chat với chuyên gia">
+        <i class="fas fa-comment-dots"></i>
+    </a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-    // Active menu highlighting
-    document.addEventListener('DOMContentLoaded', function() {
-        const currentPage = window.location.pathname.split('/').pop();
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        navLinks.forEach(link => {
-            const linkPage = link.getAttribute('href');
-            if (linkPage === currentPage || 
-                (currentPage === '' && linkPage === 'index.html')) {
-                link.classList.add('active');
-            }
-        });
-    });
-    </script>
 </body>
 </html>
